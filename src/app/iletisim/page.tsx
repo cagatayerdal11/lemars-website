@@ -32,8 +32,8 @@ export default function Iletisim() {
           <p className="text-primary-500 text-xs font-semibold tracking-[0.3em] uppercase mb-6">İletişim</p>
           <h1 className="text-5xl md:text-6xl font-bold text-white leading-tight max-w-3xl">Bize Ulaşın</h1>
           <p className="text-gray-400 text-lg mt-6 max-w-xl">
-            Alkollü içecek tedarik ihtiyaçlarınız için bizimle iletişime geçin.
-            En kısa sürede size dönelim.
+            Dağıtım ve pazarlama stratejinizi birlikte oluşturalım.
+            İşletmenize özel çözümler için bize ulaşın.
           </p>
         </div>
       </section>

@@ -27,9 +27,9 @@ export default function Hizmetlerimiz() {
               <p className="text-primary-700 text-xs font-semibold tracking-[0.3em] uppercase mb-6">01 &mdash; HoReCa</p>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">Restoran, Bar &<br />Otel Tedarikçisi</h2>
               <p className="text-gray-500 leading-relaxed mb-8">
-                HoReCa sektöründeki işletmelerin alkollü içecek ihtiyaçlarını
-                eksiksiz ve zamanında karşılıyoruz. Özel müşteri temsilciniz
-                aracılığıyla işletmenize özel tedarik planları oluşturuyoruz.
+                HoReCa sektöründeki işletmelerin tedarik süreçlerini
+                eksiksiz ve zamanında yönetiyoruz. Özel müşteri temsilciniz
+                aracılığıyla işletmenize özel dağıtım planları oluşturuyoruz.
               </p>
               <ul className="space-y-3">
                 {["Restoran ve kafeler için düzenli tedarik", "Bar ve gece kulüpleri için özel çözümler", "Otel ve tatil köyleri için toplu sipariş", "Etkinlik ve organizasyonlar için özel hizmet"].map((item, i) => (

@@ -141,7 +141,7 @@ export default function Home() {
             {[
               {
                 title: "HoReCa Tedarikçisi",
-                desc: "Restoran, bar, meyhane ve eğlence mekânlarının alkollü içecek ihtiyaçlarını düzenli ve zamanında karşılıyoruz.",
+                desc: "Restoran, bar, meyhane ve eğlence mekânlarının tedarik süreçlerini düzenli ve zamanında yönetiyoruz.",
               },
               {
                 title: "Perakende Satış",
@@ -174,7 +174,7 @@ export default function Home() {
             <br />Tedarik Ortağı
           </h2>
           <p className="text-gray-400 mb-12 max-w-xl mx-auto">
-            Alkollü içecek ihtiyaçlarınız için bizimle iletişime geçin.
+            Dağıtım ve tedarik stratejinizi birlikte oluşturalım.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/iletisim" className="btn-white">İletişime Geçin</Link>
