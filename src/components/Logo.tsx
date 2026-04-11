@@ -11,27 +11,31 @@ export default function Logo({
 }) {
   const height = Math.round(width * 0.35);
 
+  // Koyu arka plan (giriş ekranı, footer, hero):
+  // grayscale + contrast ile arka planı saf beyaza, logoyu saf siyaha çevir
+  // sonra invert ile logoyu beyaz, arka planı siyah yap
+  // mix-blend-screen ile siyah kısımlar (arka plan) transparan olur
   if (variant === "light") {
-    // Koyu arka plan: logo beyaz zemin üzerinde, köşeleri yuvarlatılmış badge
     return (
-      <div
-        className={`inline-flex items-center justify-center bg-white rounded-xl px-6 py-3 ${className}`}
-      >
+      <div className={className}>
         <Image
           src="/logo.png"
           alt="LeMars Gıda İçecek"
           width={width}
           height={height}
-          className="mix-blend-multiply object-contain"
+          className="object-contain mix-blend-screen"
+          style={{
+            filter: "grayscale(1) contrast(20) invert(1)",
+          }}
           priority
         />
       </div>
     );
   }
 
-  // Beyaz arka plan: mix-blend-multiply gri JPEG arka planını yok eder
+  // Beyaz arka plan (header): mix-blend-multiply gri JPEG arka planını yok eder
   return (
-    <div className={`relative ${className}`}>
+    <div className={className}>
       <Image
         src="/logo.png"
         alt="LeMars Gıda İçecek"
