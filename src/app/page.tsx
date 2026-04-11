@@ -1,12 +1,13 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   return (
     <>
       {/* Hero */}
       <section className="relative bg-gray-900 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-900/95 to-gray-800" />
-        <div className="absolute top-0 right-0 w-1/2 h-full bg-primary-700/5" />
+        <Image src="/istanbul.jpg" alt="" fill className="object-cover opacity-20" priority />
+        <div className="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-900/95 to-gray-800/80" />
 
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8 py-32 md:py-44">
           <div className="max-w-3xl">

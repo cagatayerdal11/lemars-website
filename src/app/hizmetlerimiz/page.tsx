@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata = {
   title: "Hizmetlerimiz | LeMars Gıda İçecek",
@@ -38,19 +39,25 @@ export default function Hizmetlerimiz() {
                 ))}
               </ul>
             </div>
-            <div className="bg-gray-900 p-16 flex items-center justify-center aspect-square max-h-96">
-              <div className="text-center">
-                <p className="text-primary-500 text-6xl font-bold mb-2">01</p>
-                <p className="text-white text-sm tracking-[0.2em] uppercase">HoReCa Sektörü</p>
+            <div className="relative aspect-square max-h-96 rounded-lg overflow-hidden">
+              <Image src="/delivery-truck.jpg" alt="HoReCa tedarik" fill className="object-cover" />
+              <div className="absolute inset-0 bg-gray-900/60 flex items-center justify-center">
+                <div className="text-center">
+                  <p className="text-primary-500 text-6xl font-bold mb-2">01</p>
+                  <p className="text-white text-sm tracking-[0.2em] uppercase">HoReCa Sektörü</p>
+                </div>
               </div>
             </div>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-            <div className="order-2 lg:order-1 bg-gray-900 p-16 flex items-center justify-center aspect-square max-h-96">
-              <div className="text-center">
-                <p className="text-primary-500 text-6xl font-bold mb-2">02</p>
-                <p className="text-white text-sm tracking-[0.2em] uppercase">Perakende</p>
+            <div className="order-2 lg:order-1 relative aspect-square max-h-96 rounded-lg overflow-hidden">
+              <Image src="/hero-warehouse.jpg" alt="Perakende tedarik" fill className="object-cover" />
+              <div className="absolute inset-0 bg-gray-900/60 flex items-center justify-center">
+                <div className="text-center">
+                  <p className="text-primary-500 text-6xl font-bold mb-2">02</p>
+                  <p className="text-white text-sm tracking-[0.2em] uppercase">Perakende</p>
+                </div>
               </div>
             </div>
             <div className="order-1 lg:order-2">
@@ -86,10 +93,13 @@ export default function Hizmetlerimiz() {
                 ))}
               </ul>
             </div>
-            <div className="bg-gray-900 p-16 flex items-center justify-center aspect-square max-h-96">
-              <div className="text-center">
-                <p className="text-primary-500 text-6xl font-bold mb-2">03</p>
-                <p className="text-white text-sm tracking-[0.2em] uppercase">Lojistik</p>
+            <div className="relative aspect-square max-h-96 rounded-lg overflow-hidden">
+              <Image src="/logistics.jpg" alt="Lojistik dağıtım" fill className="object-cover" />
+              <div className="absolute inset-0 bg-gray-900/60 flex items-center justify-center">
+                <div className="text-center">
+                  <p className="text-primary-500 text-6xl font-bold mb-2">03</p>
+                  <p className="text-white text-sm tracking-[0.2em] uppercase">Lojistik</p>
+                </div>
               </div>
             </div>
           </div>

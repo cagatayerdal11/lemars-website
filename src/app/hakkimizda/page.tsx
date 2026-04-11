@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata = {
   title: "Hakkımızda | LeMars Gıda İçecek",
@@ -8,8 +9,9 @@ export const metadata = {
 export default function Hakkimizda() {
   return (
     <>
-      <section className="bg-gray-900 py-24 md:py-32">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <section className="relative bg-gray-900 py-24 md:py-32 overflow-hidden">
+        <Image src="/istanbul.jpg" alt="" fill className="object-cover opacity-15" />
+        <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
           <p className="text-primary-500 text-xs font-semibold tracking-[0.3em] uppercase mb-6">Hakkımızda</p>
           <h1 className="text-5xl md:text-6xl font-bold text-white leading-tight max-w-3xl">
             LeMars Gıda İçecek
