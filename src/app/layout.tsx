@@ -6,9 +6,9 @@ import Footer from "@/components/Footer";
 import TAPDKBanner from "@/components/TAPDKBanner";
 
 export const metadata: Metadata = {
-  title: "LeMars Gida Icecek | Toptan Alkolu Icecek Dagitimi",
+  title: "LeMars Gıda İçecek | Toptan Alkollü İçecek Dağıtımı",
   description:
-    "Istanbul Avrupa Yakasi'nda restoran, bar ve perakende satis noktalarina alkolu icecek toptan satis ve dagitim hizmeti.",
+    "İstanbul Avrupa Yakası'nda restoran, bar ve perakende satış noktalarına alkollü içecek toptan satış ve dağıtım hizmeti.",
 };
 
 export default function RootLayout({

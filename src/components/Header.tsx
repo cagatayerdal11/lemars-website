@@ -8,61 +8,66 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navigation = [
-    { name: "Ana Sayfa", href: "/" },
-    { name: "Hakkimizda", href: "/hakkimizda" },
-    { name: "Hizmetlerimiz", href: "/hizmetlerimiz" },
-    { name: "Iletisim", href: "/iletisim" },
+    { name: "ANASAYFA", href: "/" },
+    { name: "HAKKIMIZDA", href: "/hakkimizda" },
+    { name: "HİZMETLERİMİZ", href: "/hizmetlerimiz" },
+    { name: "İLETİŞİM", href: "/iletisim" },
   ];
 
   return (
-    <header className="bg-white/95 backdrop-blur-sm border-b border-gray-100 sticky top-0 z-50">
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo */}
+    <header className="bg-white border-b border-gray-100 sticky top-0 z-50">
+      <nav className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="flex items-center justify-between h-24">
           <Link href="/" className="flex items-center">
-            <Logo width={140} variant="orange" />
+            <Logo width={150} variant="orange" />
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-1">
+          <div className="hidden md:flex items-center gap-8">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="px-4 py-2 text-sm font-medium text-gray-600 hover:text-primary-700 hover:bg-primary-50 rounded-lg transition-all duration-200"
+                className="text-xs font-semibold tracking-widest text-gray-700 hover:text-primary-700 transition-colors duration-200"
               >
                 {item.name}
               </Link>
             ))}
-            <Link href="/iletisim" className="ml-4 btn-primary text-sm">
-              Bize Ulasin
+          </div>
+
+          <div className="hidden md:flex items-center gap-4">
+            <a
+              href="tel:+902121234567"
+              className="text-xs font-semibold tracking-wider text-gray-500 hover:text-primary-700 transition-colors"
+            >
+              +90 (212) 123 45 67
+            </a>
+            <Link href="/iletisim" className="btn-primary">
+              İletişim
             </Link>
           </div>
 
-          {/* Mobile menu button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 rounded-lg text-gray-600 hover:bg-gray-100"
+            className="md:hidden p-2 text-gray-700"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               {mobileMenuOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6 18L18 6M6 6l12 12" />
               ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 6h16M4 12h16M4 18h16" />
               )}
             </svg>
           </button>
         </div>
 
-        {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <div className="md:hidden pb-4 border-t border-gray-100 mt-2 pt-4">
+          <div className="md:hidden pb-6 pt-2 border-t border-gray-100">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="block px-4 py-3 text-sm font-medium text-gray-600 hover:text-primary-700 hover:bg-primary-50 rounded-lg transition-all"
+                className="block py-3 text-xs font-semibold tracking-widest text-gray-700 hover:text-primary-700 transition-colors"
               >
                 {item.name}
               </Link>
@@ -70,9 +75,9 @@ export default function Header() {
             <Link
               href="/iletisim"
               onClick={() => setMobileMenuOpen(false)}
-              className="block mt-2 btn-primary text-sm text-center"
+              className="block mt-4 btn-primary text-center"
             >
-              Bize Ulasin
+              İletişim
             </Link>
           </div>
         )}

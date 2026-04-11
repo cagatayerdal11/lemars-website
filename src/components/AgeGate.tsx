@@ -9,20 +9,12 @@ export default function AgeGate({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     const ageVerified = sessionStorage.getItem("lemars-age-verified");
-    if (ageVerified === "true") {
-      setVerified(true);
-    } else {
-      setVerified(false);
-    }
+    setVerified(ageVerified === "true");
   }, []);
 
   const handleVerify = () => {
     sessionStorage.setItem("lemars-age-verified", "true");
     setVerified(true);
-  };
-
-  const handleDeny = () => {
-    setDenied(true);
   };
 
   if (verified === null) {
@@ -35,90 +27,61 @@ export default function AgeGate({ children }: { children: React.ReactNode }) {
 
   if (!verified) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 flex items-center justify-center px-4">
-        <div className="max-w-lg w-full">
-          {/* Logo */}
-          <div className="flex justify-center mb-10">
-            <Logo width={200} variant="light" />
+      <div className="min-h-screen bg-gray-900 flex items-center justify-center px-4">
+        <div className="max-w-md w-full">
+          <div className="flex justify-center mb-12">
+            <Logo width={180} variant="light" />
           </div>
 
-          {/* Yas Dogrulama Karti */}
-          <div className="bg-white rounded-2xl shadow-2xl p-8 md:p-10">
+          <div className="bg-white rounded-lg p-10">
             {denied ? (
               <div className="text-center">
-                <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                </div>
-                <h2 className="text-xl font-bold text-gray-900 mb-2">
-                  Erisim Engellendi
-                </h2>
-                <p className="text-gray-600 text-sm mb-6">
-                  Bu web sitesine erisim icin 18 yasindan buyuk olmaniz
-                  gerekmektedir. 4733 Sayili Kanun geregi alkolu iceceklerin 18
-                  yasindan kucuklere satisi yasaktir.
+                <h2 className="text-xl font-bold text-gray-900 mb-3">Erişim Engellendi</h2>
+                <p className="text-gray-500 text-sm mb-6">
+                  Bu web sitesine erişim için 18 yaşından büyük olmanız gerekmektedir.
+                  4733 Sayılı Kanun gereği alkollü içeceklerin 18 yaşından küçüklere satışı yasaktır.
                 </p>
-                <button
-                  onClick={() => setDenied(false)}
-                  className="text-primary-700 text-sm font-medium hover:underline"
-                >
-                  Geri Don
+                <button onClick={() => setDenied(false)} className="text-primary-700 text-sm font-semibold hover:underline">
+                  Geri Dön
                 </button>
               </div>
             ) : (
               <>
-                {/* Uyari Ikonu */}
-                <div className="text-center mb-6">
-                  <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg className="w-8 h-8 text-primary-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4.5c-.77-.833-2.694-.833-3.464 0L3.34 16.5c-.77.833.192 2.5 1.732 2.5z" />
-                    </svg>
-                  </div>
-                  <h2 className="text-2xl font-bold text-gray-900 mb-2">
-                    Yas Dogrulamasi
-                  </h2>
-                  <p className="text-gray-600 text-sm">
-                    Bu web sitesi alkolu icecek toptan satisi hakkinda bilgi
-                    icermektedir.
+                <div className="text-center mb-8">
+                  <h2 className="text-xl font-bold text-gray-900 mb-2">Yaş Doğrulaması</h2>
+                  <p className="text-gray-500 text-sm">
+                    Bu web sitesi alkollü içecek toptan satışı hakkında bilgi içermektedir.
                   </p>
                 </div>
 
-                {/* Uyari Metni */}
-                <div className="bg-orange-50 border border-orange-200 rounded-xl p-4 mb-6">
+                <div className="bg-orange-50 border border-orange-200 rounded-lg p-4 mb-8">
                   <p className="text-orange-800 text-sm text-center font-medium">
-                    Alkol, sagliga zararlidir. 18 yasindan kucuklere alkol
-                    satisi yasaktir.
+                    Alkol sağlığa zararlıdır. 18 yaşından küçüklere alkol satışı yasaktır.
                   </p>
                 </div>
 
-                {/* Soru */}
-                <p className="text-center text-gray-800 font-semibold mb-6">
-                  18 yasindan buyuk musunuz?
+                <p className="text-center text-gray-900 font-semibold mb-6">
+                  18 yaşından büyük müsünüz?
                 </p>
 
-                {/* Butonlar */}
                 <div className="flex gap-4">
                   <button
                     onClick={handleVerify}
-                    className="flex-1 py-3.5 bg-primary-700 text-white font-semibold rounded-xl hover:bg-primary-800 transition-all duration-200 shadow-sm"
+                    className="flex-1 py-3.5 bg-primary-700 text-white font-semibold rounded-lg hover:bg-primary-800 transition-all text-sm"
                   >
-                    Evet, 18 Yasindan Buyugum
+                    Evet, 18 Yaşından Büyüğüm
                   </button>
                   <button
-                    onClick={handleDeny}
-                    className="flex-1 py-3.5 bg-gray-100 text-gray-700 font-semibold rounded-xl hover:bg-gray-200 transition-all duration-200"
+                    onClick={() => setDenied(true)}
+                    className="flex-1 py-3.5 bg-gray-100 text-gray-700 font-semibold rounded-lg hover:bg-gray-200 transition-all text-sm"
                   >
-                    Hayir
+                    Hayır
                   </button>
                 </div>
 
-                {/* Yasal Bilgi */}
-                <p className="text-xs text-gray-400 text-center mt-6 leading-relaxed">
-                  Bu siteye girerek, 4733 Sayili Kanun ve TAPDK duzenlemeleri
-                  kapsaminda 18 yasindan buyuk oldugunuzu teyit etmis
-                  olursunuz. Alkolu iceceklerin reklamina, tanitimina ve
-                  pazarlamasina iliskin yasal sinirlamalar gecerlidir.
+                <p className="text-[10px] text-gray-400 text-center mt-6 leading-relaxed">
+                  Bu siteye girerek, 4733 Sayılı Kanun ve TAPDK düzenlemeleri kapsamında
+                  18 yaşından büyük olduğunuzu teyit etmiş olursunuz.
                 </p>
               </>
             )}

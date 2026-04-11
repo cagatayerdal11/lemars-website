@@ -1,13 +1,9 @@
 export default function TAPDKBanner() {
   return (
-    <div className="bg-amber-50 border-b border-amber-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2">
-        <p className="text-amber-800 text-xs text-center font-medium">
-          Bu site yalnizca bilgilendirme amaciyla hazirlanmis olup, alkolu
-          iceceklerin tanitimi veya reklamini icermemektedir. TAPDK
-          duzenlemelerine uygundur.
-        </p>
-      </div>
+    <div className="bg-gray-900 text-gray-400 text-center py-2 px-4">
+      <p className="text-[10px] tracking-wider uppercase">
+        Bu site bilgilendirme amaçlıdır, alkollü içeceklerin tanıtımını veya reklamını içermez &mdash; TAPDK düzenlemelerine uygundur
+      </p>
     </div>
   );
 }
