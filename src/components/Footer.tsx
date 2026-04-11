@@ -58,8 +58,8 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="mailto:info@lemars.com.tr" className="hover:text-primary-400 transition-colors">
-                  info@lemars.com.tr
+                <a href="mailto:info@lemars.com" className="hover:text-primary-400 transition-colors">
+                  info@lemars.com
                 </a>
               </li>
               <li>

@@ -18,7 +18,7 @@ export async function POST(request: Request) {
 
     await resend.emails.send({
       from: "LeMars Web <onboarding@resend.dev>",
-      to: ["info@lemars.com.tr"],
+      to: ["info@lemars.com"],
       subject: emailSubject,
       html: `
         <h2>Yeni İletişim Formu Mesajı</h2>

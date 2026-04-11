@@ -80,8 +80,8 @@ export default function KVKK() {
               <h2 className="text-lg font-bold text-gray-900 mb-3">7. İletişim</h2>
               <p>
                 KVKK kapsamındaki haklarınızı kullanmak için{" "}
-                <a href="mailto:info@lemars.com.tr" className="text-primary-700 font-semibold hover:underline">
-                  info@lemars.com.tr
+                <a href="mailto:info@lemars.com" className="text-primary-700 font-semibold hover:underline">
+                  info@lemars.com
                 </a>{" "}
                 adresine başvurabilirsiniz.
               </p>
