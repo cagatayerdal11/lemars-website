@@ -6,9 +6,7 @@ import Logo from "./Logo";
 export default function AgeGate({ children }: { children: React.ReactNode }) {
   const [verified, setVerified] = useState<boolean | null>(null);
   const [denied, setDenied] = useState(false);
-  const [day, setDay] = useState("");
-  const [month, setMonth] = useState("");
-  const [year, setYear] = useState("");
+  const [birthDate, setBirthDate] = useState("");
   const [error, setError] = useState("");
 
   useEffect(() => {
@@ -20,20 +18,16 @@ export default function AgeGate({ children }: { children: React.ReactNode }) {
     e.preventDefault();
     setError("");
 
-    const d = parseInt(day);
-    const m = parseInt(month);
-    const y = parseInt(year);
-
-    if (!d || !m || !y || d < 1 || d > 31 || m < 1 || m > 12 || y < 1900 || y > 2100) {
-      setError("Lütfen geçerli bir doğum tarihi giriniz.");
+    if (!birthDate) {
+      setError("Lütfen doğum tarihinizi seçiniz.");
       return;
     }
 
-    const birthDate = new Date(y, m - 1, d);
+    const birth = new Date(birthDate);
     const today = new Date();
-    let age = today.getFullYear() - birthDate.getFullYear();
-    const monthDiff = today.getMonth() - birthDate.getMonth();
-    if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+    let age = today.getFullYear() - birth.getFullYear();
+    const monthDiff = today.getMonth() - birth.getMonth();
+    if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birth.getDate())) {
       age--;
     }
 
@@ -44,6 +38,9 @@ export default function AgeGate({ children }: { children: React.ReactNode }) {
       setDenied(true);
     }
   };
+
+  // Max date: bugünden 18 yıl öncesi değil, bugün (doğrulama kodda yapılıyor)
+  const today = new Date().toISOString().split("T")[0];
 
   if (verified === null) {
     return (
@@ -57,8 +54,9 @@ export default function AgeGate({ children }: { children: React.ReactNode }) {
     return (
       <div className="min-h-screen bg-gray-900 flex items-center justify-center px-4">
         <div className="max-w-md w-full">
+          {/* Logo - koyu arka planla uyumlu */}
           <div className="flex justify-center mb-12">
-            <Logo width={180} variant="light" />
+            <Logo width={200} variant="light" />
           </div>
 
           <div className="bg-white rounded-lg p-10">
@@ -72,8 +70,10 @@ export default function AgeGate({ children }: { children: React.ReactNode }) {
                   4733 Sayılı Kanun ve 4250 Sayılı Kanun gereği alkollü içeceklerin
                   18 yaşından küçüklere satışı ve sunumu yasaktır.
                 </p>
-                <button onClick={() => { setDenied(false); setDay(""); setMonth(""); setYear(""); }}
-                  className="text-primary-700 text-sm font-semibold hover:underline">
+                <button
+                  onClick={() => { setDenied(false); setBirthDate(""); }}
+                  className="text-primary-700 text-sm font-semibold hover:underline"
+                >
                   Geri Dön
                 </button>
               </div>
@@ -82,7 +82,7 @@ export default function AgeGate({ children }: { children: React.ReactNode }) {
                 <div className="text-center mb-8">
                   <h2 className="text-xl font-bold text-gray-900 mb-2">Yaş Doğrulaması</h2>
                   <p className="text-gray-500 text-sm">
-                    Bu web sitesine erişmek için lütfen doğum tarihinizi giriniz.
+                    Bu web sitesine erişmek için lütfen doğum tarihinizi seçiniz.
                   </p>
                 </div>
 
@@ -94,45 +94,28 @@ export default function AgeGate({ children }: { children: React.ReactNode }) {
                 </div>
 
                 <form onSubmit={handleVerify}>
-                  <p className="text-xs font-semibold text-gray-700 mb-3 uppercase tracking-wider text-center">
+                  <label className="block text-xs font-semibold text-gray-700 mb-3 uppercase tracking-wider text-center">
                     Doğum Tarihiniz
-                  </p>
-                  <div className="grid grid-cols-3 gap-3 mb-4">
-                    <div>
-                      <input
-                        type="number" placeholder="GG" min="1" max="31"
-                        value={day} onChange={(e) => setDay(e.target.value)}
-                        className="w-full px-3 py-3 bg-gray-50 border border-gray-200 rounded-lg text-center text-sm font-medium text-gray-900 focus:outline-none focus:ring-2 focus:ring-primary-500"
-                        required
-                      />
-                      <p className="text-[10px] text-gray-400 text-center mt-1">Gün</p>
-                    </div>
-                    <div>
-                      <input
-                        type="number" placeholder="AA" min="1" max="12"
-                        value={month} onChange={(e) => setMonth(e.target.value)}
-                        className="w-full px-3 py-3 bg-gray-50 border border-gray-200 rounded-lg text-center text-sm font-medium text-gray-900 focus:outline-none focus:ring-2 focus:ring-primary-500"
-                        required
-                      />
-                      <p className="text-[10px] text-gray-400 text-center mt-1">Ay</p>
-                    </div>
-                    <div>
-                      <input
-                        type="number" placeholder="YYYY" min="1900" max="2100"
-                        value={year} onChange={(e) => setYear(e.target.value)}
-                        className="w-full px-3 py-3 bg-gray-50 border border-gray-200 rounded-lg text-center text-sm font-medium text-gray-900 focus:outline-none focus:ring-2 focus:ring-primary-500"
-                        required
-                      />
-                      <p className="text-[10px] text-gray-400 text-center mt-1">Yıl</p>
-                    </div>
-                  </div>
+                  </label>
+
+                  <input
+                    type="date"
+                    value={birthDate}
+                    onChange={(e) => setBirthDate(e.target.value)}
+                    max={today}
+                    min="1920-01-01"
+                    required
+                    className="w-full px-4 py-3.5 bg-gray-50 border border-gray-200 rounded-lg text-center text-sm font-medium text-gray-900 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent cursor-pointer"
+                  />
 
                   {error && (
-                    <p className="text-red-600 text-xs text-center mb-4">{error}</p>
+                    <p className="text-red-600 text-xs text-center mt-3">{error}</p>
                   )}
 
-                  <button type="submit"
-                    className="w-full py-3.5 bg-primary-700 text-white font-semibold rounded-lg hover:bg-primary-800 transition-all text-sm">
+                  <button
+                    type="submit"
+                    className="w-full mt-6 py-3.5 bg-primary-700 text-white font-semibold rounded-lg hover:bg-primary-800 transition-all text-sm"
+                  >
                     Giriş Yap
                   </button>
                 </form>

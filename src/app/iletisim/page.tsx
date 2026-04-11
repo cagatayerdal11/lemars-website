@@ -185,7 +185,7 @@ export default function Iletisim() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
           <div className="bg-white rounded-lg overflow-hidden border border-gray-200">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3011.6!2d28.7!3d41.0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDAwJzAwLjAiTiAyOMKwNDInMDAuMCJF!5e0!3m2!1str!2str!4v1700000000000!5m2!1str!2str"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3011.6!2d28.6836383!3d41.0011672!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa180546a3103%3A0x4209c1f34f774f1!2sLEMARS%20GIDA%20%C4%B0%C3%87ECEK!5e0!3m2!1str!2str!4v1700000000000!5m2!1str!2str"
               width="100%" height="350" style={{ border: 0 }} allowFullScreen loading="lazy"
               referrerPolicy="no-referrer-when-downgrade" title="LeMars Gıda İçecek Konum" />
             <div className="p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
