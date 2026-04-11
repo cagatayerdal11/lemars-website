@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className="bg-gray-900 text-gray-400">
       <div className="bg-primary-700 text-white text-center py-3 px-4">
         <p className="text-xs font-medium tracking-wider">
-          Alkol sağlığa zararlıdır. 18 yaşından küçüklere alkol satışı yapılması yasaktır.
+          Alkol sağlığa zararlıdır. Alkol dostunuz değildir. Alkollü içecekler 18 yaşını doldurmamış kişilere satılamaz ve sunulamaz.
         </p>
       </div>
 
@@ -71,13 +71,33 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-16 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-gray-600">
-            &copy; {new Date().getFullYear()} LeMars Gıda İçecek. Tüm hakları saklıdır.
-          </p>
-          <p className="text-xs text-gray-600">
-            TAPDK mevzuatına uygun olarak hazırlanmıştır.
-          </p>
+        {/* Yasal Uyarı */}
+        <div className="border-t border-gray-800 mt-12 pt-8">
+          <div className="bg-gray-800/50 rounded-lg p-6 mb-8">
+            <p className="text-xs text-gray-400 leading-relaxed text-center">
+              <strong className="text-gray-300">Yasal Bilgilendirme:</strong> Bu internet sitesi yalnızca kurumsal ve teknik bilgilendirme amacıyla hazırlanmıştır.
+              İçerikler, 4250 sayılı İspirto ve İspirtolu İçkiler İnhisarı Kanunu ile ilgili ikincil mevzuat kapsamında
+              tüketicilere yönelik reklam, tanıtım, özendirme, promosyon, kampanya veya satış iletişimi niteliği taşımaz.
+              Bu site üzerinden tüketiciye çevrim içi satış yapılmaz, sipariş alınmaz ve satışa yönlendirme amacı güdülmez.
+              İçerikler ilgili mevzuat dikkate alınarak hazırlanmıştır.
+            </p>
+          </div>
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+            <p className="text-xs text-gray-600">
+              &copy; {new Date().getFullYear()} LeMars Gıda İçecek. Tüm hakları saklıdır.
+            </p>
+            <div className="flex items-center gap-6">
+              <Link href="/yasal/kullanim-kosullari" className="text-xs text-gray-500 hover:text-primary-400 transition-colors">
+                Kullanım Koşulları
+              </Link>
+              <Link href="/yasal/kvkk" className="text-xs text-gray-500 hover:text-primary-400 transition-colors">
+                KVKK & Çerez Politikası
+              </Link>
+              <Link href="/yasal/sorumluluk-reddi" className="text-xs text-gray-500 hover:text-primary-400 transition-colors">
+                Sorumluluk Reddi
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
