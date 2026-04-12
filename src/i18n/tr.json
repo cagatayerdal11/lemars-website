@@ -13,17 +13,17 @@
   },
   "ageGate": {
     "title": "Yaş Doğrulaması",
-    "subtitle": "Bu web sitesine erişmek için 18 yaşından büyük olmaniz gerekmektedir.",
+    "subtitle": "Bu web sitesine erişmek için 18 yaşından büyük olmanız gerekmektedir.",
     "warning": "Alkol sağlığa zararlıdır. Alkol dostunuz değildir.",
     "warningLine2": "18 yaşından küçüklere alkol satışı yasaktır.",
     "question": "18 yaşından büyük müsünüz?",
     "yes": "Evet",
     "no": "Hayır",
     "deniedTitle": "Erişim Engellendi",
-    "deniedText": "Bu web sitesine erişim için 18 yaşından büyük olmaniz gerekmektedir.",
+    "deniedText": "Bu web sitesine erişim için 18 yaşından büyük olmanız gerekmektedir.",
     "deniedLegal": "4733 Sayılı Kanun ve 4250 Sayılı Kanun gereği alkollü içeceklerin 18 yaşından küçüklere satışı ve sunumu yasaktır.",
     "goBack": "Geri Dön",
-    "legalNote": "Bu siteye girerek, 4733 Sayılı Tütün, Tütün Mamulleri ve Alkollü İçkiler Piyasası Düzenleme Kurumu Kanunu ve 4250 Sayılı İspirto ve İspirtolu İçkiler İnhisarı Kanunu kapsamında 18 yaşından büyük olduğunuzu teyit etmis olursunuz. Bu site herhangi bir alkollü içki markasının satışıni, pazarlamasını veya araci hizmetini yapmamaktadır. İçerikler tamamen bilgilendirme amaçlıdır.",
+    "legalNote": "Bu siteye girerek, 4733 Sayılı Tütün, Tütün Mamulleri ve Alkollü İçkiler Piyasası Düzenleme Kurumu Kanunu ve 4250 Sayılı İspirto ve İspirtolu İçkiler İnhisarı Kanunu kapsamında 18 yaşından büyük olduğunuzu teyit etmiş olursunuz. Bu site herhangi bir alkollü içki markasının satışını, pazarlamasını veya aracı hizmetini yapmamaktadır. İçerikler tamamen bilgilendirme amaçlıdır.",
     "birthYearNotSaved": "Doğum yılınız kaydedilmeyecektir."
   },
   "cookie": {
@@ -33,7 +33,7 @@
     "learnMore": "Daha Fazla Bilgi"
   },
   "tapdk": {
-    "banner": "Bu internet sitesi, 4250 sayılı Kanun ve ilgili mevzuat çerçevesinde yalnızca kurumsal ve bilgilendirme amacıyla hazırlanmıştır. Alkollü içeceklere ilişkin reklam, tanıtım, satışa teşvik veya çevrim ici satış amaci taşımaz."
+    "banner": "Bu internet sitesi, 4250 sayılı Kanun ve ilgili mevzuat çerçevesinde yalnızca kurumsal ve bilgilendirme amacıyla hazırlanmıştır. Alkollü içeceklere ilişkin reklam, tanıtım, satışa teşvik veya çevrim içi satış amacı taşımaz."
   },
   "home": {
     "heroEyebrow": "İstanbul • Avrupa Yakası • Toptan Dağıtım",
@@ -243,23 +243,23 @@
       "lastUpdate": "Son güncelleme: 2024",
       "section1": {
         "title": "1. Genel Hükümler",
-        "content": "Bu web sitesi, LeMars Gıda İçecek Sanayi ve Ticaret Limited Şirketi (\"LeMars\") tarafından yalnızca bilgilendirme amacıyla hazırlanmıştır. Siteye erişerek ve siteyi kullanarak asağıdaki koşulları kabul etmis sayılırsiniz."
+        "content": "Bu web sitesi, LeMars Gıda İçecek Sanayi ve Ticaret Limited Şirketi (\"LeMars\") tarafından yalnızca bilgilendirme amacıyla hazırlanmıştır. Siteye erişerek ve siteyi kullanarak aşağıdaki koşulları kabul etmiş sayılırsınız."
       },
       "section2": {
-        "title": "2. Sitenin Amaci",
-        "content": "Bu site, herhangi bir alkollü içki markasının satışıni, pazarlamasını veya araci hizmetini yapmamaktadır. İçerikler tamamen kurumsal bilgilendirme amaçlı olup, 4733 Sayılı Tütün, Tütün Mamulleri ve Alkollü İçkiler Piyasası Düzenleme Kurumu Teşkilât ve Görevleri Hakkında Kanun ve 4250 Sayılı İspirto ve İspirtolu İçkiler İnhisarı Kanunu ile ilgili yönetmeliklerin reklam yasağı hükümlerine uygun olarak hazırlanmıştır."
+        "title": "2. Sitenin Amacı",
+        "content": "Bu site, herhangi bir alkollü içki markasının satışını, pazarlamasını veya aracı hizmetini yapmamaktadır. İçerikler tamamen kurumsal bilgilendirme amaçlı olup, 4733 Sayılı Tütün, Tütün Mamulleri ve Alkollü İçkiler Piyasası Düzenleme Kurumu Teşkilât ve Görevleri Hakkında Kanun ve 4250 Sayılı İspirto ve İspirtolu İçkiler İnhisarı Kanunu ile ilgili yönetmeliklerin reklam yasağı hükümlerine uygun olarak hazırlanmıştır."
       },
       "section3": {
         "title": "3. Yaş Sınırlaması",
-        "content": "Bu web sitesine erişim, 18 yaşından büyük kişilerle sınırlıdır. Siteye giriş yaparak 18 yaşından büyük olduğunuzu teyit etmis olursunuz. 18 yaşından küçük kişilerin bu siteyi kullanmasi kesinlikle yasaktır."
+        "content": "Bu web sitesine erişim, 18 yaşından büyük kişilerle sınırlıdır. Siteye giriş yaparak 18 yaşından büyük olduğunuzu teyit etmiş olursunuz. 18 yaşından küçük kişilerin bu siteyi kullanması kesinlikle yasaktır."
       },
       "section4": {
         "title": "4. Fikri Mülkiyet Hakları",
-        "content": "Bu sitedeki tüm içerikler, tasarımlar, logolar ve metinler LeMars Gıda İçecek'in mülkiyetinde olup, telif hakları ile korunmaktadır. İzinsiz kopyalanması, çoğaltılması veya dağıtilmasi yasaktır."
+        "content": "Bu sitedeki tüm içerikler, tasarımlar, logolar ve metinler LeMars Gıda İçecek'in mülkiyetinde olup, telif hakları ile korunmaktadır. İzinsiz kopyalanması, çoğaltılması veya dağıtılması yasaktır."
       },
       "section5": {
         "title": "5. Değişiklik Hakkı",
-        "content": "LeMars Gıda İçecek, bu kullanım koşullarını önceden bildirimde bulunmaksızın değiştirme hakkını saklı tutar. Güncel kosullar her zaman bu sayfada yayınlanır."
+        "content": "LeMars Gıda İçecek, bu kullanım koşullarını önceden bildirimde bulunmaksızın değiştirme hakkını saklı tutar. Güncel koşullar her zaman bu sayfada yayınlanır."
       },
       "section6": {
         "title": "6. Uygulanacak Hukuk",
@@ -271,22 +271,22 @@
       "subtitle": "6698 Sayılı Kişisel Verilerin Korunması Kanunu",
       "section1": {
         "title": "1. Veri Sorumlusu",
-        "content": "LeMars Gıda İçecek Sanayi ve Ticaret Limited Şirketi olarak, 6698 Sayılı Kişisel Verilerin Korunması Kanunu (\"KVKK\") kapsamında veri sorumlusu sıfatıyla kişisel verilerinizi asağıda açıklanan amaclar doğrultusunda işlemekteyiz."
+        "content": "LeMars Gıda İçecek Sanayi ve Ticaret Limited Şirketi olarak, 6698 Sayılı Kişisel Verilerin Korunması Kanunu (\"KVKK\") kapsamında veri sorumlusu sıfatıyla kişisel verilerinizi asağıda açıklanan amaçlar doğrultusunda işlemekteyiz."
       },
       "section2": {
         "title": "2. Toplanan Kişisel Veriler",
-        "content": "İletişim formumuz aracılığıyla asağıdaki kişisel veriler toplanmaktadır:",
+        "content": "İletişim formumuz aracılığıyla aşağıdaki kişisel veriler toplanmaktadır:",
         "list": [
           "Ad ve soyad",
           "E-posta adresi",
           "Telefon numarası",
           "Şirket/işletme adı",
-          "İletişim mesaji içeriği"
+          "İletişim mesajı içeriği"
         ]
       },
       "section3": {
-        "title": "3. Verilerin İşlenme Amaci",
-        "content": "Kişisel verileriniz yalnızca asağıdaki amaclarla işlenmektedir:",
+        "title": "3. Verilerin İşlenme Amacı",
+        "content": "Kişisel verileriniz yalnızca aşağıdaki amaçlarla işlenmektedir:",
         "list": [
           "İletişim taleplerinize yanıt verilmesi",
           "Ticari iletişim ve bilgilendirme faaliyetleri",
@@ -295,27 +295,27 @@
       },
       "section4": {
         "title": "4. Verilerin Aktarılması",
-        "content": "Kişisel verileriniz, yasal zorunluluklar dışında üçüncü taraflarla paylasilmamaktadır. Verileriniz yurt dışına aktarilmamaktadır."
+        "content": "Kişisel verileriniz, yasal zorunluluklar dışında üçüncü taraflarla paylaşılmamaktadır. Verileriniz yurt dışına aktarılmamaktadır."
       },
       "section5": {
         "title": "5. Çerez Politikası",
-        "content": "Bu web sitesi, kullanıcı deneyimini iyileştirmek amacıyla çerez (cookie) kullanabilmektedir. Zorunlu çerezler sitenin düzgün çalışması için gereklidir. Analitik veya pazarlama amaçlı çerez kullanilmamaktadır."
+        "content": "Bu web sitesi, kullanıcı deneyimini iyileştirmek amacıyla çerez (cookie) kullanabilmektedir. Zorunlu çerezler sitenin düzgün çalışması için gereklidir. Analitik veya pazarlama amaçlı çerez kullanılmamaktadır."
       },
       "section6": {
-        "title": "6. Haklarıniz",
-        "content": "KVKK'nin 11. maddesi kapsamında asağıdaki haklara sahipsiniz:",
+        "title": "6. Haklarınız",
+        "content": "KVKK'nin 11. maddesi kapsamında aşağıdaki haklara sahipsiniz:",
         "list": [
           "Kişisel verilerinizin işlenip işlenmediğini öğrenme",
           "İşlenmişse buna ilişkin bilgi talep etme",
-          "İşlenme amacini ve bunlarin amacina uygun kullanılıp kullanilmadıgini öğrenme",
+          "İşlenme amacını ve bunların amacına uygun kullanılıp kullanılmadığını öğrenme",
           "Yurt içinde veya yurt dışında aktarıldığı üçüncü kişileri bilme",
-          "Eksik veya yanlis işlenmişse düzeltilmesini isteme",
+          "Eksik veya yanlış işlenmişse düzeltilmesini isteme",
           "KVKK'nin 7. maddesindeki şartlar çerçevesinde silinmesini veya yok edilmesini isteme"
         ]
       },
       "section7": {
         "title": "7. İletişim",
-        "content": "KVKK kapsamındaki haklarınizi kullanmak için info@lemars.com adresine başvurabilirsiniz."
+        "content": "KVKK kapsamındaki haklarınızı kullanmak için info@lemars.com adresine başvurabilirsiniz."
       }
     },
     "disclaimer": {
@@ -323,23 +323,23 @@
       "subtitle": "Yasal Uyarı ve Feragat Bildirimi",
       "section1": {
         "title": "1. Genel Bilgilendirme",
-        "content": "Bu web sitesinde yer alan bilgiler, LeMars Gıda İçecek Sanayi ve Ticaret Limited Şirketi tarafından genel bilgilendirme amacıyla sunulmaktadır. Bu site, herhangi bir alkollü içki markasının satışıni, pazarlamasını veya araci hizmetini yapmamaktadır."
+        "content": "Bu web sitesinde yer alan bilgiler, LeMars Gıda İçecek Sanayi ve Ticaret Limited Şirketi tarafından genel bilgilendirme amacıyla sunulmaktadır. Bu site, herhangi bir alkollü içki markasının satışını, pazarlamasını veya aracı hizmetini yapmamaktadır."
       },
       "section2": {
         "title": "2. Reklam Yasağı Uyumu",
-        "content": "Bu site, 4733 Sayılı Kanun ve 4250 Sayılı İspirto ve İspirtolu İçkiler İnhisarı Kanunu ile TAPDK düzenlemelerinin reklam ve tanıtım yasağı hükümlerine tam uyum gösterecek şekilde hazırlanmıştır. Sitede yer alan hiçbir icerik, alkollü içecek tüketimini teşvik veya özendirme amaci tasimamaktadır."
+        "content": "Bu site, 4733 Sayılı Kanun ve 4250 Sayılı İspirto ve İspirtolu İçkiler İnhisarı Kanunu ile TAPDK düzenlemelerinin reklam ve tanıtım yasağı hükümlerine tam uyum gösterecek şekilde hazırlanmıştır. Sitede yer alan hiçbir içerik, alkollü içecek tüketimini teşvik veya özendirme amacı taşımamaktadır."
       },
       "section3": {
-        "title": "3. Bilgilerin Doğrulugu",
-        "content": "Sitede sunulan bilgilerin doğrulugu ve güncelliği konusunda azami özen gösterilmekle birlikte, bu bilgilerin eksiksiz, doğru veya güncel olduğuna dair herhangi bir garanti verilmemektedir. LeMars Gıda İçecek, sitedeki bilgilerin kullanılmasından doğabilecek doğrudan veya dolaylı zararlardan sorumlu tutulamaz."
+        "title": "3. Bilgilerin Doğruluğu",
+        "content": "Sitede sunulan bilgilerin doğruluğu ve güncelliği konusunda azami özen gösterilmekle birlikte, bu bilgilerin eksiksiz, doğru veya güncel olduğuna dair herhangi bir garanti verilmemektedir. LeMars Gıda İçecek, sitedeki bilgilerin kullanılmasından doğabilecek doğrudan veya dolaylı zararlardan sorumlu tutulamaz."
       },
       "section4": {
-        "title": "4. Ücüncü Taraf Bağlantıları",
-        "content": "Bu site, üçüncü taraf web sitelerine bağlantılar içerebilir. Bu bağlantılar kolaylik sağlamak amacıyla sunulmakta olup, söz konusu sitelerin içeriklerinden veya gizlilik politikalarından LeMars Gıda İçecek sorumlu değildir."
+        "title": "4. Üçüncü Taraf Bağlantıları",
+        "content": "Bu site, üçüncü taraf web sitelerine bağlantılar içerebilir. Bu bağlantılar kolaylık sağlamak amacıyla sunulmakta olup, söz konusu sitelerin içeriklerinden veya gizlilik politikalarından LeMars Gıda İçecek sorumlu değildir."
       },
       "section5": {
         "title": "5. Sorumluluk Sınırlaması",
-        "content": "Sitedeki bilgilerin yanlis kullanımindan, eksik veya hatalı anlaşılmasından doğacak zararlardan LeMars Gıda İçecek yönetimi sorumlu tutulamaz. Kullanıcılar, sitedeki bilgileri kendi sorumluluklarında kullanmayı kabul eder."
+        "content": "Sitedeki bilgilerin yanlış kullanımından, eksik veya hatalı anlaşılmasından doğacak zararlardan LeMars Gıda İçecek yönetimi sorumlu tutulamaz. Kullanıcılar, sitedeki bilgileri kendi sorumluluklarında kullanmayı kabul eder."
       },
       "warning": "Alkol sağlığa zararlıdır. Alkol dostunuz değildir. 18 yaşından küçüklere alkollü içecek satışı ve sunumu, 4733 ve 4250 Sayılı Kanunlar kapsamında yasaktır."
     }
@@ -364,8 +364,8 @@
     "cumbus": "Cümbüş"
   },
   "footer": {
-    "desc": "İstanbul Avrupa Yakası'nda alkollü içecekler alanında toptan satış ve dağıtım hizmeti sunan firmamiz, restoran, bar ve perakende satış noktalarına güvenilir tedarik çözümleri sağlar.",
-    "tapdkNote": "Alkol sağlığa zararlıdır. Alkol dostunuz değildir. Alkollü içecekler 18 yaşını doldurmamış kisilere satılamaz ve sunulamaz.",
+    "desc": "İstanbul Avrupa Yakası'nda alkollü içecekler alanında toptan satış ve dağıtım hizmeti sunan firmamız, restoran, bar ve perakende satış noktalarına güvenilir tedarik çözümleri sağlar.",
+    "tapdkNote": "Alkol sağlığa zararlıdır. Alkol dostunuz değildir. Alkollü içecekler 18 yaşını doldurmamış kişilere satılamaz ve sunulamaz.",
     "pagesTitle": "Sayfalar",
     "contactTitle": "İletişim",
     "address": "Cihangir, Güvercin Cd. No: 2/90-91",
@@ -374,8 +374,8 @@
     "phone": "+90 (212) 809 18 83",
     "instagram": "@lemarsgida",
     "linkedin": "LinkedIn",
-    "legalNote": "Yasal Bilgilendirme: Bu internet sitesi yalnızca kurumsal ve teknik bilgilendirme amacıyla hazırlanmıştır. İçerikler, 4250 sayılı İspirto ve İspirtolu İçkiler İnhisarı Kanunu ile ilgili ikincil mevzuat kapsamında tüketicilere yönelik reklam, tanıtım, özendirme, promosyon, kampanya veya satış iletişimi niteliği taşımaz. Bu site üzerinden tüketiciye çevrim ici satış yapılmaz, sipariş alınmaz ve satışa yönlendirme amacı güdülmez. İçerikler ilgili mevzuat dikkate alınarak hazırlanmıştır.",
-    "copyright": "© {year} LeMars Gıda İçecek. Tüm hakları saklıdir.",
+    "legalNote": "Yasal Bilgilendirme: Bu internet sitesi yalnızca kurumsal ve teknik bilgilendirme amacıyla hazırlanmıştır. İçerikler, 4250 sayılı İspirto ve İspirtolu İçkiler İnhisarı Kanunu ile ilgili ikincil mevzuat kapsamında tüketicilere yönelik reklam, tanıtım, özendirme, promosyon, kampanya veya satış iletişimi niteliği taşımaz. Bu site üzerinden tüketiciye çevrim içi satış yapılmaz, sipariş alınmaz ve satışa yönlendirme amacı güdülmez. İçerikler ilgili mevzuat dikkate alınarak hazırlanmıştır.",
+    "copyright": "© {year} LeMars Gıda İçecek. Tüm hakları saklıdır.",
     "termsLink": "Kullanım Koşulları",
     "privacyLink": "KVKK & Çerez Politikası",
     "disclaimerLink": "Sorumluluk Reddi"
