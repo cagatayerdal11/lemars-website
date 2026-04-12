@@ -68,8 +68,12 @@ export default function Hakkimizda() {
                   desc: "Değişen piyasa koşullarını ve tüketici tercihlerini yakından takip ederek, iş ortaklarımızın doğru ürün ve stok kararları vermesine destek oluruz.",
                 },
                 {
-                  title: "Tedarik Zinciri Yönetimi",
+                  title: "Tedarik Zinciri & Lojistik Yönetimi",
                   desc: "Tedarikçiden satış noktasına kadar tüm süreci verimli ve kesintisiz yöneterek, işletmelerin operasyonel yükünü hafifletiriz.",
+                },
+                {
+                  title: "Pazarlama, Satış & Dağıtım",
+                  desc: "Ürünlerinizi geniş portföyümüz ve 1800+ satış noktasına ulaşan güçlü dağıtım ağımız ile tüketicilerle buluşturuyoruz. Satış noktasında görünürlük, tanıtım desteği ve pazar penetrasyonu sağlıyoruz.",
                 },
                 {
                   title: "Nitelikli İnsan Kaynağı & Modern Yönetim",
@@ -77,7 +81,7 @@ export default function Hakkimizda() {
                 },
               ].map((item, i) => (
                 <div key={i} className="flex gap-6 pb-8 border-b border-gray-100 last:border-0">
-                  <span className="text-primary-700 text-xs font-bold tracking-widest mt-1">0{i + 1}</span>
+                  <span className="text-primary-700 text-xs font-bold tracking-widest mt-1">{String(i + 1).padStart(2, '0')}</span>
                   <div>
                     <h4 className="font-bold text-gray-900 mb-2">{item.title}</h4>
                     <p className="text-sm text-gray-500 leading-relaxed">{item.desc}</p>
