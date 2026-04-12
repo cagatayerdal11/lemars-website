@@ -36,13 +36,13 @@
     "banner": "This website has been prepared solely for corporate and informational purposes in accordance with Turkish Law No. 4250 and related regulations. It does not serve the purpose of advertising, promotion, sales incentive, or online sales of alcoholic beverages."
   },
   "home": {
-    "heroEyebrow": "Istanbul \u2022 European Side \u2022 Wholesale Distribution",
+    "heroEyebrow": "Istanbul • European Side • Wholesale Distribution",
     "heroTitle": "Reliable Supply,",
     "heroTitleAccent": "Strong Partnership.",
     "heroDesc": "We provide fast, reliable, and quality wholesale alcoholic beverage distribution services to restaurants, bars, and retail outlets.",
     "ctaAbout": "Get to Know Us",
     "ctaServices": "Our Services",
-    "tapdkBar": "TAPDK LICENSED DISTRIBUTION \u2014 20+ YEARS OF EXPERIENCE",
+    "tapdkBar": "TAPDK LICENSED DISTRIBUTION — 20+ YEARS OF EXPERIENCE",
     "stat1": "1,800+ Points of Sale",
     "stat2": "1,000+ Product Varieties",
     "stat3": "99% Satisfaction",
@@ -119,7 +119,7 @@
     "heroEyebrow": "Our Services",
     "heroTitle": "Supply Solutions",
     "heroDesc": "We offer TAPDK-compliant, reliable, and fast alcoholic beverage supply services tailored to businesses of every scale.",
-    "s1Eyebrow": "01 \u2014 HoReCa",
+    "s1Eyebrow": "01 — HoReCa",
     "s1Title": "Restaurant, Bar &\nHotel Supplier",
     "s1Desc": "We manage the supply chain for HoReCa businesses seamlessly and on time. Through your dedicated account representative, we create distribution plans tailored to your establishment.",
     "s1Items": [
@@ -128,7 +128,7 @@
       "Bulk ordering for hotels and resorts",
       "Specialized services for events and functions"
     ],
-    "s2Eyebrow": "02 \u2014 Retail",
+    "s2Eyebrow": "02 — Retail",
     "s2Title": "Retail Points\nof Sale",
     "s2Desc": "We simplify inventory management and provide consistent, reliable supply for grocery stores, liquor shops, and other retail outlets.",
     "s2Items": [
@@ -137,7 +137,7 @@
       "Inventory tracking and management support",
       "Competitive wholesale pricing policy"
     ],
-    "s3Eyebrow": "03 \u2014 Logistics",
+    "s3Eyebrow": "03 — Logistics",
     "s3Title": "Logistics &\nDistribution Network",
     "s3Desc": "We deliver fast, secure, and hassle-free service across all of Istanbul's European side using our own fleet and distribution network.",
     "s3Items": [
@@ -146,7 +146,7 @@
       "Cold chain logistics infrastructure",
       "GPS-tracked secure delivery"
     ],
-    "s4Eyebrow": "04 \u2014 Marketing & Distribution",
+    "s4Eyebrow": "04 — Marketing & Distribution",
     "s4Title": "Marketing, Promotion\n& Distribution",
     "s4Desc": "We connect your products with consumers through our extensive portfolio and robust distribution network. We provide point-of-sale visibility, promotional support, and market penetration.",
     "s4Items": [
@@ -361,7 +361,7 @@
     "hlibny-dar": "Hlibny Dar",
     "scotch-blue": "Scotch Blue",
     "suvorov": "Suvorov",
-    "enjoy": "Enjoy",
+    "enjoy": "Enjoy Shot",
     "cumbus": "Cumbus"
   },
   "footer": {
@@ -376,7 +376,7 @@
     "instagram": "@lemarsgida",
     "linkedin": "LinkedIn",
     "legalNote": "Legal Notice: This website has been prepared solely for corporate and technical informational purposes. Its content does not constitute advertising, promotion, incentive, campaign, or sales communication directed at consumers under Law No. 4250 (Alcohol and Alcoholic Beverages Monopoly Act) and related secondary legislation. No online consumer sales are conducted, no orders are accepted, and no sales referrals are intended through this website. All content has been prepared in consideration of applicable legislation.",
-    "copyright": "\u00a9 {year} LeMars Food & Beverage. All rights reserved.",
+    "copyright": "© {year} LeMars Food & Beverage. All rights reserved.",
     "termsLink": "Terms of Use",
     "privacyLink": "Privacy & Cookie Policy",
     "disclaimerLink": "Disclaimer"

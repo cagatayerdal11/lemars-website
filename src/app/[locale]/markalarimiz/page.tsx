@@ -2,13 +2,13 @@ import Link from "next/link";
 import { getDictionary, Locale } from "@/i18n/config";
 
 const brands = [
-  { slug: "marengo", key: "marengo", origin: { tr: "İtalya", en: "Italy" }, category: { tr: "Köpüklü Şarap", en: "Sparkling Wine" } },
-  { slug: "isabey", key: "isabey", origin: { tr: "Türkiye", en: "Turkey" }, category: { tr: "Şarap", en: "Wine" } },
-  { slug: "hlibny-dar", key: "hlibny-dar", origin: { tr: "Ukrayna", en: "Ukraine" }, category: { tr: "Votka", en: "Vodka" } },
-  { slug: "scotch-blue", key: "scotch-blue", origin: { tr: "İskoçya", en: "Scotland" }, category: { tr: "Viski", en: "Whisky" } },
-  { slug: "suvorov", key: "suvorov", origin: { tr: "Ukrayna", en: "Ukraine" }, category: { tr: "Votka", en: "Vodka" } },
-  { slug: "enjoy", key: "enjoy", origin: { tr: "Ukrayna", en: "Ukraine" }, category: { tr: "Likör", en: "Liqueur" } },
-  { slug: "cumbus", key: "cumbus", origin: { tr: "Türkiye", en: "Turkey" }, category: { tr: "Rakı", en: "Rakı" } },
+  { slug: "marengo", key: "marengo", origin: { tr: "İtalya", en: "Italy" }, category: { tr: "Köpüklü Şarap & Vermut", en: "Sparkling Wine & Vermouth" }, producer: "Bayadera Group" },
+  { slug: "isabey", key: "isabey", origin: { tr: "Türkiye", en: "Turkey" }, category: { tr: "Şarap", en: "Wine" }, producer: "Sevilen Şarapları" },
+  { slug: "hlibny-dar", key: "hlibny-dar", origin: { tr: "Ukrayna", en: "Ukraine" }, category: { tr: "Votka", en: "Vodka" }, producer: "Bayadera Group" },
+  { slug: "scotch-blue", key: "scotch-blue", origin: { tr: "Güney Kore", en: "South Korea" }, category: { tr: "Harman Viski", en: "Blended Whisky" }, producer: "Lotte Chilsung" },
+  { slug: "suvorov", key: "suvorov", origin: { tr: "Moldova", en: "Moldova" }, category: { tr: "Divin (Konyak)", en: "Divin (Brandy)" }, producer: "KVINT" },
+  { slug: "enjoy", key: "enjoy", origin: { tr: "Türkiye", en: "Turkey" }, category: { tr: "Aromatize Şarap İçeceği", en: "Aromatized Wine Beverage" }, producer: "Enjoy Shot" },
+  { slug: "cumbus", key: "cumbus", origin: { tr: "Türkiye", en: "Turkey" }, category: { tr: "Şarap", en: "Wine" }, producer: "Aykut Özkan Şarapçılık" },
 ];
 
 export default async function Markalarimiz({ params }: { params: { locale: string } }) {
