@@ -6,41 +6,16 @@ import Logo from "./Logo";
 export default function AgeGate({ children }: { children: React.ReactNode }) {
   const [verified, setVerified] = useState<boolean | null>(null);
   const [denied, setDenied] = useState(false);
-  const [birthDate, setBirthDate] = useState("");
-  const [error, setError] = useState("");
 
   useEffect(() => {
     const ageVerified = sessionStorage.getItem("lemars-age-verified");
     setVerified(ageVerified === "true");
   }, []);
 
-  const handleVerify = (e: React.FormEvent) => {
-    e.preventDefault();
-    setError("");
-
-    if (!birthDate) {
-      setError("Lütfen doğum tarihinizi seçiniz.");
-      return;
-    }
-
-    const birth = new Date(birthDate);
-    const today = new Date();
-    let age = today.getFullYear() - birth.getFullYear();
-    const monthDiff = today.getMonth() - birth.getMonth();
-    if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birth.getDate())) {
-      age--;
-    }
-
-    if (age >= 18) {
-      sessionStorage.setItem("lemars-age-verified", "true");
-      setVerified(true);
-    } else {
-      setDenied(true);
-    }
+  const handleYes = () => {
+    sessionStorage.setItem("lemars-age-verified", "true");
+    setVerified(true);
   };
-
-  // Max date: bugünden 18 yıl öncesi değil, bugün (doğrulama kodda yapılıyor)
-  const today = new Date().toISOString().split("T")[0];
 
   if (verified === null) {
     return (
@@ -54,7 +29,7 @@ export default function AgeGate({ children }: { children: React.ReactNode }) {
     return (
       <div className="min-h-screen bg-gray-900 flex items-center justify-center px-4">
         <div className="max-w-md w-full">
-          {/* Logo - koyu arka planla uyumlu */}
+          {/* Logo */}
           <div className="flex justify-center mb-12">
             <Logo width={200} variant="light" />
           </div>
@@ -71,7 +46,7 @@ export default function AgeGate({ children }: { children: React.ReactNode }) {
                   18 yaşından küçüklere satışı ve sunumu yasaktır.
                 </p>
                 <button
-                  onClick={() => { setDenied(false); setBirthDate(""); }}
+                  onClick={() => setDenied(false)}
                   className="text-primary-700 text-sm font-semibold hover:underline"
                 >
                   Geri Dön
@@ -82,43 +57,35 @@ export default function AgeGate({ children }: { children: React.ReactNode }) {
                 <div className="text-center mb-8">
                   <h2 className="text-xl font-bold text-gray-900 mb-2">Yaş Doğrulaması</h2>
                   <p className="text-gray-500 text-sm">
-                    Bu web sitesine erişmek için lütfen doğum tarihinizi seçiniz.
+                    Bu web sitesine erişmek için 18 yaşından büyük olmanız gerekmektedir.
                   </p>
                 </div>
 
-                <div className="bg-orange-50 border border-orange-200 rounded-lg p-4 mb-6">
+                <div className="bg-orange-50 border border-orange-200 rounded-lg p-4 mb-8">
                   <p className="text-orange-800 text-xs text-center font-medium leading-relaxed">
                     Alkol sağlığa zararlıdır. Alkol dostunuz değildir.
                     <br />18 yaşından küçüklere alkol satışı yasaktır.
                   </p>
                 </div>
 
-                <form onSubmit={handleVerify}>
-                  <label className="block text-xs font-semibold text-gray-700 mb-3 uppercase tracking-wider text-center">
-                    Doğum Tarihiniz
-                  </label>
+                <p className="text-center text-sm font-semibold text-gray-700 mb-6">
+                  18 yaşından büyük müsünüz?
+                </p>
 
-                  <input
-                    type="date"
-                    value={birthDate}
-                    onChange={(e) => setBirthDate(e.target.value)}
-                    max={today}
-                    min="1920-01-01"
-                    required
-                    className="w-full px-4 py-3.5 bg-gray-50 border border-gray-200 rounded-lg text-center text-sm font-medium text-gray-900 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent cursor-pointer"
-                  />
-
-                  {error && (
-                    <p className="text-red-600 text-xs text-center mt-3">{error}</p>
-                  )}
-
+                <div className="flex gap-4">
                   <button
-                    type="submit"
-                    className="w-full mt-6 py-3.5 bg-primary-700 text-white font-semibold rounded-lg hover:bg-primary-800 transition-all text-sm"
+                    onClick={handleYes}
+                    className="flex-1 py-3.5 bg-primary-700 text-white font-semibold rounded-lg hover:bg-primary-800 transition-all text-sm"
                   >
-                    Giriş Yap
+                    Evet
                   </button>
-                </form>
+                  <button
+                    onClick={() => setDenied(true)}
+                    className="flex-1 py-3.5 bg-gray-100 text-gray-700 font-semibold rounded-lg hover:bg-gray-200 transition-all text-sm"
+                  >
+                    Hayır
+                  </button>
+                </div>
 
                 <div className="mt-6 pt-6 border-t border-gray-100">
                   <p className="text-[10px] text-gray-400 text-center leading-relaxed">
