@@ -1,10 +1,21 @@
 import Link from "next/link";
+import Image from "next/image";
 import { getDictionary, Locale } from "@/i18n/config";
+
+const distributors = [
+  { name: "Bayadera Group", logo: "/brands/marengo.png", logoBg: "", brands: { tr: "Marengo, Hlibny Dar", en: "Marengo, Hlibny Dar" } },
+  { name: "Lotte Chilsung", logo: "/brands/scotch-blue.png", logoBg: "", brands: { tr: "Scotch Blue", en: "Scotch Blue" } },
+  { name: "Suvorov Vin", logo: "/brands/suvorov.png", logoBg: "bg-gray-900", brands: { tr: "Suvorov Şarap", en: "Suvorov Wine" } },
+  { name: "Enjoy Shot", logo: "/brands/enjoy.png", logoBg: "", brands: { tr: "Enjoy Shot", en: "Enjoy Shot" } },
+  { name: "Aykut Özkan Şarapçılık", logo: "/brands/aykut-ozkan.png", logoBg: "", brands: { tr: "Cümbüş Şarap", en: "Cümbüş Wine" } },
+  { name: "Hlibny Dar", logo: "/brands/hlibny-dar.png", logoBg: "", brands: { tr: "Hlibny Dar Votka", en: "Hlibny Dar Vodka" } },
+];
 
 export default async function Distributorluklerimiz({ params }: { params: { locale: string } }) {
   const dict = await getDictionary(params.locale as Locale);
   const t = dict.distributorships as Record<string, unknown>;
   const locale = params.locale;
+  const lang = locale === "en" ? "en" : "tr";
 
   return (
     <>
@@ -36,15 +47,25 @@ export default async function Distributorluklerimiz({ params }: { params: { loca
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-            {Array.from({ length: 8 }).map((_, i) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {distributors.map((dist) => (
               <div
-                key={i}
-                className="aspect-[3/2] bg-gray-50 border border-gray-100 rounded-lg flex items-center justify-center p-8 hover:shadow-lg hover:border-primary-200 transition-all duration-300"
+                key={dist.name}
+                className="bg-gray-50 border border-gray-100 rounded-lg overflow-hidden hover:shadow-lg hover:border-primary-200 transition-all duration-300"
               >
-                <p className="text-gray-300 text-sm font-medium text-center">
-                  {t.placeholder as string}
-                </p>
+                <div className={`aspect-[3/2] ${dist.logoBg || "bg-white"} flex items-center justify-center p-8`}>
+                  <Image
+                    src={dist.logo}
+                    alt={dist.name}
+                    width={220}
+                    height={140}
+                    className="object-contain max-h-full"
+                  />
+                </div>
+                <div className="p-6 border-t border-gray-100">
+                  <h3 className="font-bold text-gray-900 text-sm mb-1">{dist.name}</h3>
+                  <p className="text-xs text-gray-400">{dist.brands[lang]}</p>
+                </div>
               </div>
             ))}
           </div>
