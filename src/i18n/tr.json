@@ -36,13 +36,13 @@
     "banner": "Bu internet sitesi, 4250 sayılı Kanun ve ilgili mevzuat çerçevesinde yalnızca kurumsal ve bilgilendirme amacıyla hazırlanmıştır. Alkollü içeceklere ilişkin reklam, tanıtım, satışa teşvik veya çevrim ici satış amaci taşımaz."
   },
   "home": {
-    "heroEyebrow": "İstanbul \u2022 Avrupa Yakası \u2022 Toptan Dağıtım",
+    "heroEyebrow": "İstanbul • Avrupa Yakası • Toptan Dağıtım",
     "heroTitle": "Güvenilir Tedarik,",
-    "heroTitleAccent": "Güclü Ortaklik.",
+    "heroTitleAccent": "Güçlü Ortaklık.",
     "heroDesc": "Restoran, bar ve perakende satış noktalarına hızlı, güvenilir ve kaliteli alkollü içecek toptan satış hizmeti sunuyoruz.",
     "ctaAbout": "Bizi Tanıyın",
     "ctaServices": "Hizmetlerimiz",
-    "tapdkBar": "TAPDK LİSANSLI DAĞITIM \u2014 20+ YILLIK DENEYİM",
+    "tapdkBar": "TAPDK LİSANSLI DAĞITIM — 20+ YILLIK DENEYİM",
     "stat1": "1800+ Satış Noktası",
     "stat2": "1000+ Ürün Çeşidi",
     "stat3": "%99 Memnuniyet",
@@ -111,7 +111,7 @@
     "adv5Desc": "Alanında uzman, müşteri odaklı kadromuzla her aşamada profesyonel destek sağlıyoruz.",
     "adv6Title": "TAPDK Lisanslı Güvence",
     "adv6Desc": "Tüm faaliyetlerimiz ilgili mevzuata uygun, lisanslı ve denetlenebilir şekilde yürütülmektedir.",
-    "ctaTitle": "İş Birliğine Hazir Mısınız?",
+    "ctaTitle": "İş Birliğine Hazır Mısınız?",
     "ctaDesc": "Dağıtım ve tedarik stratejinizi birlikte oluşturalım.",
     "ctaButton": "İletişime Geçin"
   },
@@ -119,7 +119,7 @@
     "heroEyebrow": "Hizmetlerimiz",
     "heroTitle": "Tedarik Çözümlerimiz",
     "heroDesc": "Her ölçekteki işletmeye özel, TAPDK uyumlu, güvenilir ve hızlı alkollü içecek tedarik hizmetleri sunuyoruz.",
-    "s1Eyebrow": "01 \u2014 HoReCa",
+    "s1Eyebrow": "01 — HoReCa",
     "s1Title": "Restoran, Bar &\nOtel Tedarikçisi",
     "s1Desc": "HoReCa sektöründeki işletmelerin tedarik süreçlerini eksiksiz ve zamanında yönetiyoruz. Özel müşteri temsilciniz aracılığıyla işletmenize özel dağıtım planlari oluşturuyoruz.",
     "s1Items": [
@@ -128,7 +128,7 @@
       "Otel ve tatil köyleri için toplu sipariş",
       "Etkinlik ve organizasyonlar için özel hizmet"
     ],
-    "s2Eyebrow": "02 \u2014 Perakende",
+    "s2Eyebrow": "02 — Perakende",
     "s2Title": "Perakende Satış\nNoktalari",
     "s2Desc": "Market, tekel bayii ve diger perakende satış noktalarının stok yönetimini kolaylaştırıyor, düzenli ve güvenilir tedarik sağlıyoruz.",
     "s2Items": [
@@ -137,7 +137,7 @@
       "Stok takip ve yönetim desteği",
       "Rekabetçi toptan fiyat politikası"
     ],
-    "s3Eyebrow": "03 \u2014 Lojistik",
+    "s3Eyebrow": "03 — Lojistik",
     "s3Title": "Lojistik &\nDağıtım Ağı",
     "s3Desc": "Kendi filo ve dağıtım ağımız ile İstanbul Avrupa Yakası'nin tamamina hızlı, güvenli ve sorunsuz teslimat hizmeti sunuyoruz.",
     "s3Items": [
@@ -146,7 +146,7 @@
       "Soğuk zincir lojistik altyapısı",
       "GPS takipli güvenli teslimat"
     ],
-    "s4Eyebrow": "04 \u2014 Pazarlama & Dağıtım",
+    "s4Eyebrow": "04 — Pazarlama & Dağıtım",
     "s4Title": "Pazarlama, Tanıtım\n& Dağıtım",
     "s4Desc": "Ürünlerinizi geniş portföyümüz ve güçlü dağıtım ağımız ile tüketicilerle buluşturuyoruz. Satış noktalarinda görünürlük, tanıtım desteği ve pazar penetrasyonu sağlıyoruz.",
     "s4Items": [
@@ -376,7 +376,7 @@
     "instagram": "@lemarsgida",
     "linkedin": "LinkedIn",
     "legalNote": "Yasal Bilgilendirme: Bu internet sitesi yalnızca kurumsal ve teknik bilgilendirme amacıyla hazırlanmıştır. İçerikler, 4250 sayılı İspirto ve İspirtolu İçkiler İnhisarı Kanunu ile ilgili ikincil mevzuat kapsamında tüketicilere yönelik reklam, tanıtım, özendirme, promosyon, kampanya veya satış iletişimi niteliği taşımaz. Bu site üzerinden tüketiciye çevrim ici satış yapılmaz, sipariş alınmaz ve satışa yönlendirme amacı güdülmez. İçerikler ilgili mevzuat dikkate alınarak hazırlanmıştır.",
-    "copyright": "\u00a9 {year} LeMars Gıda İçecek. Tüm hakları saklıdir.",
+    "copyright": "© {year} LeMars Gıda İçecek. Tüm hakları saklıdir.",
     "termsLink": "Kullanım Koşulları",
     "privacyLink": "KVKK & Çerez Politikası",
     "disclaimerLink": "Sorumluluk Reddi"

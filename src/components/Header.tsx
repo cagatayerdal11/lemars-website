@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import Logo from "./Logo";
 import LanguageSwitcher from "./LanguageSwitcher";
+import { localeUpper } from "@/i18n/utils";
 
 interface NavDict {
   home: string;
@@ -40,11 +41,13 @@ export default function Header({
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mobileBrandsOpen, setMobileBrandsOpen] = useState(false);
 
+  const up = (s: string) => localeUpper(s, locale);
+
   const navigation = [
-    { name: dict.home.toUpperCase(), href: `/${locale}` },
-    { name: dict.about.toUpperCase(), href: `/${locale}/hakkimizda` },
-    { name: dict.services.toUpperCase(), href: `/${locale}/hizmetlerimiz` },
-    { name: dict.distributorships.toUpperCase(), href: `/${locale}/distributorluklerimiz` },
+    { name: up(dict.home), href: `/${locale}` },
+    { name: up(dict.about), href: `/${locale}/hakkimizda` },
+    { name: up(dict.services), href: `/${locale}/hizmetlerimiz` },
+    { name: up(dict.distributorships), href: `/${locale}/distributorluklerimiz` },
   ];
 
   return (
@@ -72,7 +75,7 @@ export default function Header({
                 href={`/${locale}/markalarimiz`}
                 className="text-[11px] font-semibold tracking-wider text-gray-700 hover:text-primary-700 transition-colors duration-200 flex items-center gap-1"
               >
-                {dict.brands.toUpperCase()}
+                {up(dict.brands)}
                 <svg className="w-3 h-3 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
@@ -83,7 +86,7 @@ export default function Header({
                     href={`/${locale}/markalarimiz`}
                     className="block px-4 py-2 text-xs font-semibold tracking-wider text-primary-700 hover:bg-gray-50 transition-colors border-b border-gray-100"
                   >
-                    {dict.brands.toUpperCase()}
+                    {up(dict.brands)}
                   </Link>
                   {brands.map((brand) => (
                     <Link
@@ -101,7 +104,7 @@ export default function Header({
 
           <div className="hidden lg:flex items-center gap-3">
             <Link href={`/${locale}/iletisim`} className="btn-primary text-xs px-5 py-2.5">
-              {dict.contact.toUpperCase()}
+              {up(dict.contact)}
             </Link>
             <LanguageSwitcher locale={locale} />
             <div className="flex items-center gap-2.5 ml-1">
@@ -156,7 +159,7 @@ export default function Header({
                 onClick={() => setMobileBrandsOpen(!mobileBrandsOpen)}
                 className="w-full flex items-center justify-between py-3 text-xs font-semibold tracking-widest text-gray-700 hover:text-primary-700 transition-colors"
               >
-                {dict.brands.toUpperCase()}
+                {up(dict.brands)}
                 <svg className={`w-3 h-3 transition-transform ${mobileBrandsOpen ? "rotate-180" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
@@ -168,7 +171,7 @@ export default function Header({
                     onClick={() => setMobileMenuOpen(false)}
                     className="block py-2 text-xs font-semibold tracking-wider text-primary-700"
                   >
-                    {dict.brands.toUpperCase()}
+                    {up(dict.brands)}
                   </Link>
                   {brands.map((brand) => (
                     <Link
@@ -189,7 +192,7 @@ export default function Header({
               onClick={() => setMobileMenuOpen(false)}
               className="block mt-4 btn-primary text-center"
             >
-              {dict.contact.toUpperCase()}
+              {up(dict.contact)}
             </Link>
             <div className="flex items-center justify-between mt-4">
               <div className="flex items-center gap-4">
