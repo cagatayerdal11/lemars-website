@@ -8,6 +8,10 @@ export default function Home() {
       <section className="relative bg-gray-900 overflow-hidden">
         <Image src="/istanbul.jpg" alt="" fill className="object-cover opacity-20" priority />
         <div className="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-900/95 to-gray-800/80" />
+        {/* Caricature drink illustration - blurred decorative element */}
+        <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[55%] h-[85%] pointer-events-none select-none opacity-[0.12]" style={{ filter: "blur(3px) saturate(1.4) contrast(1.1)" }}>
+          <Image src="/drinks-illustration.svg" alt="" fill className="object-contain object-right" />
+        </div>
 
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8 py-32 md:py-44">
           <div className="max-w-3xl">
@@ -43,7 +47,7 @@ export default function Home() {
               TAPDK LİSANSLI DAĞITIM &mdash; 20+ YILLIK DENEYİM
             </p>
             <div className="flex items-center gap-8">
-              {["1800+ Satış Noktası", "20+ Yıl Deneyim", "%99 Memnuniyet"].map((s, i) => (
+              {["1800+ Satış Noktası", "1000+ Ürün Çeşidi", "%99 Memnuniyet"].map((s, i) => (
                 <span key={i} className="text-gray-500 text-xs tracking-wider">{s}</span>
               ))}
             </div>
