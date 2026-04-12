@@ -11,6 +11,8 @@ export default function Header() {
     { name: "ANASAYFA", href: "/" },
     { name: "HAKKIMIZDA", href: "/hakkimizda" },
     { name: "HİZMETLERİMİZ", href: "/hizmetlerimiz" },
+    { name: "DİSTRİBÜTÖRLÜKLERİMİZ", href: "/distributorluklerimiz" },
+    { name: "MARKALARIMIZ", href: "/markalarimiz" },
     { name: "İLETİŞİM", href: "/iletisim" },
   ];
 
@@ -22,7 +24,7 @@ export default function Header() {
             <Logo width={150} variant="orange" />
           </Link>
 
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-6">
             {navigation.map((item) => (
               <Link
                 key={item.name}
@@ -34,12 +36,12 @@ export default function Header() {
             ))}
           </div>
 
-          <div className="hidden md:flex items-center gap-4">
+          <div className="hidden lg:flex items-center gap-4">
             <a
-              href="tel:+902121234567"
+              href="tel:+902128091883"
               className="text-xs font-semibold tracking-wider text-gray-500 hover:text-primary-700 transition-colors"
             >
-              +90 (212) 123 45 67
+              +90 (212) 809 18 83
             </a>
             <Link href="/iletisim" className="btn-primary">
               İletişim
@@ -48,7 +50,7 @@ export default function Header() {
 
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 text-gray-700"
+            className="lg:hidden p-2 text-gray-700"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               {mobileMenuOpen ? (
@@ -61,7 +63,7 @@ export default function Header() {
         </div>
 
         {mobileMenuOpen && (
-          <div className="md:hidden pb-6 pt-2 border-t border-gray-100">
+          <div className="lg:hidden pb-6 pt-2 border-t border-gray-100">
             {navigation.map((item) => (
               <Link
                 key={item.name}
@@ -72,6 +74,12 @@ export default function Header() {
                 {item.name}
               </Link>
             ))}
+            <a
+              href="tel:+902128091883"
+              className="block py-3 text-xs font-semibold tracking-wider text-gray-500 hover:text-primary-700 transition-colors"
+            >
+              +90 (212) 809 18 83
+            </a>
             <Link
               href="/iletisim"
               onClick={() => setMobileMenuOpen(false)}

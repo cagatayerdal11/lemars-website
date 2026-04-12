@@ -35,6 +35,8 @@ export default function Footer() {
                 { name: "Anasayfa", href: "/" },
                 { name: "Hakkımızda", href: "/hakkimizda" },
                 { name: "Hizmetlerimiz", href: "/hizmetlerimiz" },
+                { name: "Distribütörlüklerimiz", href: "/distributorluklerimiz" },
+                { name: "Markalarımız", href: "/markalarimiz" },
                 { name: "İletişim", href: "/iletisim" },
               ].map((item) => (
                 <li key={item.name}>
@@ -63,8 +65,8 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="tel:+902121234567" className="hover:text-primary-400 transition-colors">
-                  +90 (212) 123 45 67
+                <a href="tel:+902128091883" className="hover:text-primary-400 transition-colors">
+                  +90 (212) 809 18 83
                 </a>
               </li>
             </ul>
