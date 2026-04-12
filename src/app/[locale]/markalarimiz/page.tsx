@@ -1,14 +1,14 @@
 import Link from "next/link";
+import Image from "next/image";
 import { getDictionary, Locale } from "@/i18n/config";
 
 const brands = [
-  { slug: "marengo", key: "marengo", origin: { tr: "İtalya", en: "Italy" }, category: { tr: "Köpüklü Şarap & Vermut", en: "Sparkling Wine & Vermouth" }, producer: "Bayadera Group" },
-  { slug: "isabey", key: "isabey", origin: { tr: "Türkiye", en: "Turkey" }, category: { tr: "Şarap", en: "Wine" }, producer: "Sevilen Şarapları" },
-  { slug: "hlibny-dar", key: "hlibny-dar", origin: { tr: "Ukrayna", en: "Ukraine" }, category: { tr: "Votka", en: "Vodka" }, producer: "Bayadera Group" },
-  { slug: "scotch-blue", key: "scotch-blue", origin: { tr: "Güney Kore", en: "South Korea" }, category: { tr: "Harman Viski", en: "Blended Whisky" }, producer: "Lotte Chilsung" },
-  { slug: "suvorov", key: "suvorov", origin: { tr: "Moldova", en: "Moldova" }, category: { tr: "Şarap", en: "Wine" }, producer: "Suvorov" },
-  { slug: "enjoy", key: "enjoy", origin: { tr: "Türkiye", en: "Turkey" }, category: { tr: "Aromatize Şarap İçeceği", en: "Aromatized Wine Beverage" }, producer: "Enjoy Shot" },
-  { slug: "cumbus", key: "cumbus", origin: { tr: "Türkiye", en: "Turkey" }, category: { tr: "Şarap", en: "Wine" }, producer: "Aykut Özkan Şarapçılık" },
+  { slug: "marengo", key: "marengo", origin: { tr: "İtalya", en: "Italy" }, category: { tr: "Köpüklü Şarap & Vermut", en: "Sparkling Wine & Vermouth" }, producer: "Bayadera Group", logo: "/brands/marengo.png", logoBg: "" },
+  { slug: "hlibny-dar", key: "hlibny-dar", origin: { tr: "Ukrayna", en: "Ukraine" }, category: { tr: "Votka", en: "Vodka" }, producer: "Bayadera Group", logo: "/brands/hlibny-dar.png", logoBg: "" },
+  { slug: "scotch-blue", key: "scotch-blue", origin: { tr: "Güney Kore", en: "South Korea" }, category: { tr: "Harman Viski", en: "Blended Whisky" }, producer: "Lotte Chilsung", logo: "/brands/scotch-blue.png", logoBg: "" },
+  { slug: "suvorov", key: "suvorov", origin: { tr: "Moldova", en: "Moldova" }, category: { tr: "Şarap", en: "Wine" }, producer: "Suvorov Vin", logo: "/brands/suvorov.png", logoBg: "bg-gray-900" },
+  { slug: "enjoy", key: "enjoy", origin: { tr: "Türkiye", en: "Turkey" }, category: { tr: "Aromatize Şarap İçeceği", en: "Aromatized Wine Beverage" }, producer: "Enjoy Shot", logo: "/brands/enjoy.png", logoBg: "" },
+  { slug: "cumbus", key: "cumbus", origin: { tr: "Türkiye", en: "Turkey" }, category: { tr: "Şarap", en: "Wine" }, producer: "Aykut Özkan Şarapçılık", logo: "/brands/aykut-ozkan.png", logoBg: "" },
 ];
 
 export default async function Markalarimiz({ params }: { params: { locale: string } }) {
@@ -55,11 +55,15 @@ export default async function Markalarimiz({ params }: { params: { locale: strin
                 href={`/${locale}/markalarimiz/${brand.slug}`}
                 className="bg-gray-50 border border-gray-100 rounded-lg p-8 hover:shadow-lg hover:border-primary-200 transition-all duration-300 group"
               >
-                {/* Logo placeholder */}
-                <div className="aspect-[3/2] bg-white border border-gray-100 rounded-md flex items-center justify-center mb-6">
-                  <p className="text-2xl font-bold text-gray-200 group-hover:text-primary-300 transition-colors">
-                    {brandList[brand.key] || brand.slug}
-                  </p>
+                {/* Brand Logo */}
+                <div className={`aspect-[3/2] ${brand.logoBg || "bg-white"} border border-gray-100 rounded-md flex items-center justify-center p-6 mb-6`}>
+                  <Image
+                    src={brand.logo}
+                    alt={brandList[brand.key] || brand.slug}
+                    width={200}
+                    height={120}
+                    className="object-contain max-h-full"
+                  />
                 </div>
 
                 <h3 className="text-lg font-bold text-gray-900 group-hover:text-primary-700 transition-colors mb-2">

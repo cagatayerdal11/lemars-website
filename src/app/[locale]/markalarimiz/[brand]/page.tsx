@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { getDictionary, Locale } from "@/i18n/config";
 import { notFound } from "next/navigation";
 
@@ -6,6 +7,8 @@ interface BrandInfo {
   name: string;
   origin: { tr: string; en: string };
   category: { tr: string; en: string };
+  logo: string;
+  logoBg?: string;
   descTr: string;
   descEn: string;
 }
@@ -15,50 +18,50 @@ const brandData: Record<string, BrandInfo> = {
     name: "Marengo",
     origin: { tr: "İtalya", en: "Italy" },
     category: { tr: "Köpüklü Şarap & Vermut", en: "Sparkling Wine & Vermouth" },
-    descTr: "Marengo, Bayadera Group portföyünde yer alan İtalya esintili bir köpüklü şarap markasıdır. Köpüklü şarap ve vermut segmentlerinde konumlanan marka, Bayadera Group ortağı Vinicola Decordi tesislerinde klasik İtalyan teknolojisiyle üretilmektedir. En iyi üzüm çeşitlerinden elde edilen narin ve ferahlatıcı tatlarıyla tanınan Marengo; meyve, şeftali, çilek ve çiçek aromaları barındıran köpüklü şaraplarıyla şık bir kutlama deneyimi sunar.",
-    descEn: "Marengo is an Italian-inspired sparkling wine brand within the Bayadera Group portfolio. Positioned across sparkling wine and vermouth segments, the brand is produced using classic Italian technology at Bayadera Group partner Vinicola Decordi facilities. Known for its delicate and refreshing flavors from the finest grape varieties, Marengo offers an elegant celebration experience with sparkling wines featuring notes of fruit, peach, strawberry, and floral aromas.",
-  },
-  isabey: {
-    name: "İsabey",
-    origin: { tr: "Türkiye", en: "Turkey" },
-    category: { tr: "Şarap", en: "Wine" },
-    descTr: "İsabey, Sevilen Şarapları bünyesinde yer alan ve bağ temelli üretim yaklaşımıyla bütünleşen bir şarap markasıdır. 1960'lardan bu yana süregelen bağcılık geleneği ve kurucu mirasıyla şekillenen İsabey, beyaz ve kırmızı şarap kategorilerinde farklı üzüm çeşitleri üzerinden gelişen zengin bir ürün portföyüne sahiptir. Türk bağcılık kültürünün köklü birikimini yansıtan markalardan biri olarak öne çıkmaktadır.",
-    descEn: "İsabey is a wine brand within the Sevilen Wines portfolio, integrated with a vineyard-based production approach. Shaped by the company's winemaking tradition dating back to the 1960s and its founder's legacy, İsabey features a rich product portfolio developed across white and red wine categories through different grape varieties. It stands out as one of the brands reflecting the deep heritage of Turkish viticulture.",
+    logo: "/brands/marengo.png",
+    descTr: "Marengo, Bayadera Group bünyesinde İtalya esintili köpüklü şarap ve vermut kategorilerinde konumlanan bir markadır. \"Luxurious, temperamental and open-minded\" sloganıyla tanıtılan marka, Vinicola Decordi tesislerinde klasik İtalyan yöntemleriyle üretilen şaraplardan oluşur. En iyi üzüm çeşitlerinden elde edilen narin ve ferahlatıcı tatlarıyla tanınan Marengo, şık bir kutlama deneyimi sunar.",
+    descEn: "Marengo is an Italian-inspired brand within the Bayadera Group, positioned in sparkling wine and vermouth categories. Presented with the slogan \"Luxurious, temperamental and open-minded,\" the brand consists of wines produced using classic Italian methods at Vinicola Decordi facilities. Known for its delicate and refreshing flavors from the finest grape varieties, Marengo offers an elegant celebration experience.",
   },
   "hlibny-dar": {
     name: "Hlibny Dar",
     origin: { tr: "Ukrayna", en: "Ukraine" },
     category: { tr: "Votka", en: "Vodka" },
-    descTr: "Hlibny Dar, Ukrayna kökenli ve 2002 yılında pazara sunulan uluslararası ödüllü bir votka markasıdır. Bayadera Group portföyünde yer alan marka, tahıl temelli üretim kültürüne referans veren tarihsel arka planıyla şekillenmiştir. Resmî marka anlatımında isim \"ekmeğin hediyesi\" (gift of bread) ifadesiyle açıklanmaktadır. Yalnızca doğal malzemelerden, yüksek kaliteli lüks alkol ve artezyen kuyusundan elde edilen ekolojik su kullanılarak üretilen Hlibny Dar, yeni nesil teknolojilerle elde edilen kristal berraklığıyla tanınmaktadır. Küresel derecelendirmelerde Smirnoff ve Absolut gibi devlerle birlikte en iyi beş votka arasında yer almaktadır.",
-    descEn: "Hlibny Dar is an award-winning Ukrainian vodka brand introduced to the market in 2002. Part of the Bayadera Group portfolio, the brand is shaped by a historical narrative referencing grain-based production culture. In the official brand story, the name is explained as \"gift of bread.\" Produced exclusively from natural ingredients, high-quality luxury spirits, and ecological water from an artesian well, Hlibny Dar is renowned for its diamond clarity achieved through new-generation technologies. It rightfully ranks among the top five vodka leaders globally, alongside well-known giants such as Smirnoff and Absolut.",
+    logo: "/brands/hlibny-dar.png",
+    descTr: "Hlibny Dar, Bayadera Group'un Ukrayna menşeli votka markasıdır. Uluslararası ödüllere sahip olan bu \"kusursuz Ukrayna vodkası\", dünyanın en çok satan beş votka markası arasında yer aldığı vurgusuyla tanıtılır. Resmî marka anlatımında isim \"ekmeğin hediyesi\" (gift of bread) ifadesiyle açıklanmaktadır. Yalnızca doğal malzemelerden, yüksek kaliteli lüks alkol ve artezyen kuyusundan elde edilen ekolojik su kullanılarak üretilen Hlibny Dar, yeni nesil teknolojilerle elde edilen kristal berraklığıyla tanınmaktadır.",
+    descEn: "Hlibny Dar is Bayadera Group's Ukrainian vodka brand. This award-winning \"flawless Ukrainian vodka\" is promoted as ranking among the world's five best-selling vodka brands. In the official brand narrative, the name is explained as \"gift of bread.\" Produced exclusively from natural ingredients, high-quality luxury spirits, and ecological water from an artesian well, Hlibny Dar is renowned for its diamond clarity achieved through new-generation technologies.",
   },
   "scotch-blue": {
     name: "Scotch Blue",
     origin: { tr: "Güney Kore", en: "South Korea" },
     category: { tr: "Harman Viski", en: "Blended Whisky" },
-    descTr: "Scotch Blue, Lotte Chilsung Beverage bünyesinde 1997 yılında tanıtılan bir harman viski markasıdır. Kore damak zevkine uygun olarak özel olarak harmanlanan marka, Güney Kore viski pazarında öncü konumdadır. Yumuşak ve dengeli tat profiliyle tanınan Scotch Blue, Lotte grubunun içki portföyünde önemli bir yere sahiptir.",
-    descEn: "Scotch Blue is a blended whisky brand introduced in 1997 under Lotte Chilsung Beverage. Specially blended to suit the Korean palate, the brand holds a pioneering position in the South Korean whisky market. Known for its smooth and balanced flavor profile, Scotch Blue occupies an important place in the Lotte group's beverage portfolio.",
+    logo: "/brands/scotch-blue.png",
+    descTr: "Scotch Blue, Lotte Chilsung Beverage tarafından Kore pazarına yönelik olarak üretilen bir harman viski markasıdır. 1997'de tanıtılan marka, Kore damak zevkine uyarlanmış harmanlanmış viskileriyle bilinir. L.A. Whiskey Society tarafından da değerlendirilen Scotch Blue, yumuşak ve dengeli tat profiliyle Güney Kore viski pazarında öncü konumdadır.",
+    descEn: "Scotch Blue is a blended whisky brand produced by Lotte Chilsung Beverage for the Korean market. Introduced in 1997, the brand is known for its blended whiskies tailored to the Korean palate. Also reviewed by the L.A. Whiskey Society, Scotch Blue holds a pioneering position in the South Korean whisky market with its smooth and balanced flavor profile.",
   },
   suvorov: {
     name: "Suvorov",
     origin: { tr: "Moldova", en: "Moldova" },
     category: { tr: "Şarap", en: "Wine" },
-    descTr: "Suvorov, Moldova menşeli bir şarap markasıdır. Moldova'nın köklü bağcılık geleneği ve zengin terroir yapısından beslenen marka, kaliteli üzüm çeşitlerinden elde edilen şaraplarıyla tanınmaktadır. Kırmızı ve beyaz şarap kategorilerinde ürün yelpazesine sahip olan Suvorov, Moldova şarap kültürünün birikimini yansıtan markalardan biri olarak öne çıkmaktadır.",
-    descEn: "Suvorov is a wine brand of Moldovan origin. Drawing from Moldova's deep-rooted viticulture tradition and rich terroir, the brand is known for its wines crafted from quality grape varieties. With a product range spanning red and white wine categories, Suvorov stands out as one of the brands reflecting the heritage of Moldovan wine culture.",
+    logo: "/brands/suvorov.png",
+    logoBg: "bg-gray-900",
+    descTr: "Suvorov, Tiraspol Şarap ve İçki Fabrikası (KVINT) tarafından üretilen Moldova menşeli bir şarap ve divin markasıdır. İlk kez 1992'de Tiraspol'un 200. yıl dönümünü anmak için üretilen marka, KVINT'in köklü şarap üretim geleneğiyle bütünleşmektedir. Meşe fıçılarda uzun süre olgunlaştırılan ürünleriyle tanınan Suvorov, Moldova'nın zengin terroir yapısından beslenen kaliteli şaraplar ve divinlerden oluşan bir portföye sahiptir.",
+    descEn: "Suvorov is a Moldovan wine and divin brand produced by the Tiraspol Wine and Spirits Factory (KVINT). First created in 1992 to commemorate the 200th anniversary of Tiraspol, the brand integrates KVINT's deep-rooted wine production heritage. Known for its products aged in oak barrels over extended periods, Suvorov features a portfolio of quality wines and divins that draw from Moldova's rich terroir.",
   },
   enjoy: {
     name: "Enjoy Shot",
     origin: { tr: "Türkiye", en: "Turkey" },
     category: { tr: "Aromatize Şarap Bazlı İçecek", en: "Aromatized Wine-Based Beverage" },
-    descTr: "Enjoy Shot, Türkiye'de aromatize şarap bazlı içecek üreten yerli bir markadır. Isparta Süleyman Demirel Organize Sanayi Bölgesi'nde kurulan fabrikasında 2019 yılında üretime başlayan marka, ülke genelindeki üzümleri işleyerek aromatize şarap bazlı içkiler üretmektedir. Saatlik 18.000 şişe üretim kapasitesine sahip tesiste kalite-fiyat dengesine önem veren bir misyon ve AR-GE odaklı bir vizyon ile çalışılmaktadır.",
-    descEn: "Enjoy Shot is a Turkish brand producing aromatized wine-based beverages. The brand began production in 2019 at its factory established in the Isparta Süleyman Demirel Organized Industrial Zone, processing grapes from across the country to create aromatized wine-based drinks. Operating with an hourly capacity of 18,000 bottles, the facility works with a mission focused on quality-price balance and an R&D-driven vision.",
+    logo: "/brands/enjoy.png",
+    descTr: "Enjoy Shot, 2017'de kurulan Enjoy Alkollü Alkolsüz İçecekler A.Ş.'nin Isparta'daki tesisinde aromatize şarap bazlı içecekler üreten yerli markasıdır. Fabrika 2019'da faaliyete geçmiş olup, saatlik 18.000 şişelik kapasiteyle yerli üzümleri işleyerek ürün gamı oluşturur. Kalite-fiyat oranına önem veren bir misyon ve AR-GE odaklı vizyon ile çalışılmaktadır.",
+    descEn: "Enjoy Shot is the domestic brand of Enjoy Alkollü Alkolsüz İçecekler A.Ş., founded in 2017, producing aromatized wine-based beverages at its facility in Isparta. The factory became operational in 2019, processing domestic grapes with an hourly capacity of 18,000 bottles to build its product range. The company operates with a mission focused on quality-price balance and an R&D-driven vision.",
   },
   cumbus: {
     name: "Cümbüş",
     origin: { tr: "Türkiye", en: "Turkey" },
     category: { tr: "Şarap", en: "Wine" },
-    descTr: "Cümbüş, Aykut Özkan Şarapçılık'a ait bir şarap markasıdır. Çal/Denizli terroirini temel alan marka, kırmızı, beyaz ve roze çeşitleriyle üretim yapmaktadır. Çalkarası ve Boğazkere gibi yerli üzüm çeşitlerinden elde edilen şaraplarıyla tanınan Cümbüş, burunda kırmızı meyve aromaları ve damakta taze, kolay içimli bir karakter sunmaktadır.",
-    descEn: "Cümbüş is a wine brand owned by Aykut Özkan Winery. Based on the Çal/Denizli terroir, the brand produces red, white, and rosé varieties. Known for its wines crafted from indigenous grape varieties such as Çalkarası and Boğazkere, Cümbüş offers red fruit aromas on the nose with a fresh, easy-drinking character on the palate.",
+    logo: "/brands/aykut-ozkan.png",
+    descTr: "Cümbüş, Aykut Özkan Şarapçılık portföyünde Çal/Denizli terroirine dayanan yerel bir şarap markasıdır. Kırmızı, beyaz ve roze çeşitleri bulunan marka; Çalkarası-Boğazkere, Sultaniye ve Çalkarası gibi yerel üzüm çeşitlerinden yapılmış şaraplarla öne çıkar. Çalkarası-Boğazkere kırmızı şarabı burunda kırmızı meyve aromaları, damakta taze ve kolay içimli bir karakter sunmaktadır.",
+    descEn: "Cümbüş is a local wine brand within the Aykut Özkan Winery portfolio, based on the Çal/Denizli terroir. Featuring red, white, and rosé varieties, the brand stands out with wines made from local grape varieties such as Çalkarası-Boğazkere, Sultaniye, and Çalkarası. The Çalkarası-Boğazkere red wine offers red fruit aromas on the nose with a fresh, easy-drinking character on the palate.",
   },
 };
 
@@ -123,12 +126,16 @@ export default async function BrandPage({
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
-            {/* Logo placeholder */}
-            <div className="aspect-[4/3] bg-gray-50 border border-gray-100 rounded-lg flex items-center justify-center">
-              <div className="text-center">
-                <p className="text-gray-300 text-sm font-medium mb-2">{t.logoPlaceholder}</p>
-                <p className="text-4xl font-bold text-gray-200">{info.name}</p>
-              </div>
+            {/* Brand Logo */}
+            <div className={`aspect-[4/3] ${info.logoBg || "bg-gray-50"} border border-gray-100 rounded-lg flex items-center justify-center p-10`}>
+              <Image
+                src={info.logo}
+                alt={info.name}
+                width={400}
+                height={300}
+                className="object-contain max-h-full"
+                priority
+              />
             </div>
 
             {/* Brand info */}

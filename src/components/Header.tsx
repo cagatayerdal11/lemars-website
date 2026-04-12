@@ -21,8 +21,7 @@ interface BrandListDict {
 
 const brands = [
   { slug: "marengo", key: "marengo" },
-  { slug: "isabey", key: "isabey" },
-  { slug: "hlibny-dar", key: "hlibny-dar" },
+{ slug: "hlibny-dar", key: "hlibny-dar" },
   { slug: "scotch-blue", key: "scotch-blue" },
   { slug: "suvorov", key: "suvorov" },
   { slug: "enjoy", key: "enjoy" },
