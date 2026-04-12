@@ -103,6 +103,34 @@ export default function Hizmetlerimiz() {
               </div>
             </div>
           </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+            <div className="order-2 lg:order-1 relative aspect-square max-h-96 rounded-lg overflow-hidden">
+              <Image src="/customer-handshake.jpg" alt="Pazarlama ve tanıtım" fill className="object-cover" />
+              <div className="absolute inset-0 bg-gray-900/60 flex items-center justify-center">
+                <div className="text-center">
+                  <p className="text-primary-500 text-6xl font-bold mb-2">04</p>
+                  <p className="text-white text-sm tracking-[0.2em] uppercase">Pazarlama & Dağıtım</p>
+                </div>
+              </div>
+            </div>
+            <div className="order-1 lg:order-2">
+              <p className="text-primary-700 text-xs font-semibold tracking-[0.3em] uppercase mb-6">04 &mdash; Pazarlama & Dağıtım</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">Pazarlama, Tanıtım<br />& Dağıtım</h2>
+              <p className="text-gray-500 leading-relaxed mb-8">
+                Ürünlerinizi geniş portföyümüz ve güçlü dağıtım ağımız ile
+                tüketicilerle buluşturuyoruz. Satış noktalarında görünürlük,
+                tanıtım desteği ve pazar penetrasyonu sağlıyoruz.
+              </p>
+              <ul className="space-y-3">
+                {["Satış noktasında ürün yerleştirme ve görünürlük", "Marka tanıtım ve promosyon desteği", "1800+ satış noktasına erişim ağı", "Pazar analizi ve satış stratejisi danışmanlığı"].map((item, i) => (
+                  <li key={i} className="flex items-center gap-3 text-sm text-gray-600">
+                    <span className="w-1.5 h-1.5 bg-primary-700 rounded-full flex-shrink-0" />{item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 

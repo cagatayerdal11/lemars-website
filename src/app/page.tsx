@@ -141,7 +141,7 @@ export default function Home() {
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900">Tedarik Çözümlerimiz</h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
             {[
               {
                 title: "HoReCa Tedarikçisi",
@@ -154,6 +154,10 @@ export default function Home() {
               {
                 title: "Lojistik & Dağıtım",
                 desc: "İstanbul Avrupa Yakası genelinde kendi filo ve lojistik ağımızla hızlı ve güvenli dağıtım.",
+              },
+              {
+                title: "Pazarlama & Tanıtım",
+                desc: "Ürünlerinizi geniş portföyümüz ve güçlü dağıtım ağımız ile tüketicilerle buluşturuyoruz.",
               },
             ].map((item, i) => (
               <div key={i} className="group">
