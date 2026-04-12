@@ -6,7 +6,7 @@ const brands = [
   { slug: "isabey", key: "isabey", origin: { tr: "Türkiye", en: "Turkey" }, category: { tr: "Şarap", en: "Wine" }, producer: "Sevilen Şarapları" },
   { slug: "hlibny-dar", key: "hlibny-dar", origin: { tr: "Ukrayna", en: "Ukraine" }, category: { tr: "Votka", en: "Vodka" }, producer: "Bayadera Group" },
   { slug: "scotch-blue", key: "scotch-blue", origin: { tr: "Güney Kore", en: "South Korea" }, category: { tr: "Harman Viski", en: "Blended Whisky" }, producer: "Lotte Chilsung" },
-  { slug: "suvorov", key: "suvorov", origin: { tr: "Moldova", en: "Moldova" }, category: { tr: "Divin (Konyak)", en: "Divin (Brandy)" }, producer: "KVINT" },
+  { slug: "suvorov", key: "suvorov", origin: { tr: "Moldova", en: "Moldova" }, category: { tr: "Şarap", en: "Wine" }, producer: "Suvorov" },
   { slug: "enjoy", key: "enjoy", origin: { tr: "Türkiye", en: "Turkey" }, category: { tr: "Aromatize Şarap İçeceği", en: "Aromatized Wine Beverage" }, producer: "Enjoy Shot" },
   { slug: "cumbus", key: "cumbus", origin: { tr: "Türkiye", en: "Turkey" }, category: { tr: "Şarap", en: "Wine" }, producer: "Aykut Özkan Şarapçılık" },
 ];

@@ -42,9 +42,9 @@ const brandData: Record<string, BrandInfo> = {
   suvorov: {
     name: "Suvorov",
     origin: { tr: "Moldova", en: "Moldova" },
-    category: { tr: "Divin (Konyak)", en: "Divin (Brandy)" },
-    descTr: "Suvorov, Tiraspol Şarap ve İçki Fabrikası (KVINT) tarafından üretilen prestijli bir divin (konyak tarzı brendi) markasıdır. 1992 yılında Tiraspol'un 200. yıl dönümü için ilk kez üretilen marka, KVINT'e ait damıtma karışımlarından en az 40 yıl meşe fıçılarda olgunlaştırılarak hazırlanmaktadır. XO serisiyle tanınan Suvorov, uzun olgunlaşma süreci ve derin aroma profiliyle koleksiyoncular ve uzmanlar tarafından değer görmektedir.",
-    descEn: "Suvorov is a prestigious divin (cognac-style brandy) brand produced by the Tiraspol Wine and Spirits Factory (KVINT). First created in 1992 to commemorate the 200th anniversary of Tiraspol, the brand is crafted from KVINT's proprietary distillation blends aged for a minimum of 40 years in oak barrels. Known for its XO series, Suvorov is valued by collectors and connoisseurs for its extended aging process and deep aroma profile.",
+    category: { tr: "Şarap", en: "Wine" },
+    descTr: "Suvorov, Moldova menşeli bir şarap markasıdır. Moldova'nın köklü bağcılık geleneği ve zengin terroir yapısından beslenen marka, kaliteli üzüm çeşitlerinden elde edilen şaraplarıyla tanınmaktadır. Kırmızı ve beyaz şarap kategorilerinde ürün yelpazesine sahip olan Suvorov, Moldova şarap kültürünün birikimini yansıtan markalardan biri olarak öne çıkmaktadır.",
+    descEn: "Suvorov is a wine brand of Moldovan origin. Drawing from Moldova's deep-rooted viticulture tradition and rich terroir, the brand is known for its wines crafted from quality grape varieties. With a product range spanning red and white wine categories, Suvorov stands out as one of the brands reflecting the heritage of Moldovan wine culture.",
   },
   enjoy: {
     name: "Enjoy Shot",
