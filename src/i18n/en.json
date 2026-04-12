@@ -23,7 +23,14 @@
     "deniedText": "You must be 18 years or older to access this website.",
     "deniedLegal": "In accordance with Turkish Law No. 4733 and Law No. 4250, the sale and serving of alcoholic beverages to persons under 18 years of age is strictly prohibited.",
     "goBack": "Go Back",
-    "legalNote": "By entering this site, you confirm that you are 18 years of age or older in accordance with Turkish Law No. 4733 (TAPDK Regulation) and Law No. 4250 (Alcoholic Beverages Regulation). This website does not sell, market, or act as an intermediary for any alcoholic beverage brand. All content is for informational purposes only."
+    "legalNote": "By entering this site, you confirm that you are 18 years of age or older in accordance with Turkish Law No. 4733 (TAPDK Regulation) and Law No. 4250 (Alcoholic Beverages Regulation). This website does not sell, market, or act as an intermediary for any alcoholic beverage brand. All content is for informational purposes only.",
+    "birthYearNotSaved": "Your birth year will not be saved."
+  },
+  "cookie": {
+    "message": "This website uses cookies to improve user experience. You can manage your cookie preferences in accordance with KVKK (Turkish Personal Data Protection Law).",
+    "accept": "Accept",
+    "reject": "Reject",
+    "learnMore": "Learn More"
   },
   "tapdk": {
     "banner": "This website has been prepared solely for corporate and informational purposes in accordance with Turkish Law No. 4250 and related regulations. It does not serve the purpose of advertising, promotion, sales incentive, or online sales of alcoholic beverages."

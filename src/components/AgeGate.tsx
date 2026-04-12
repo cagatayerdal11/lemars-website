@@ -16,6 +16,7 @@ interface AgeGateDict {
   deniedLegal: string;
   goBack: string;
   legalNote: string;
+  birthYearNotSaved: string;
 }
 
 export default function AgeGate({
@@ -106,6 +107,10 @@ export default function AgeGate({
                     {dict.no}
                   </button>
                 </div>
+
+                <p className="text-center text-[11px] text-gray-400 mt-4 italic">
+                  {dict.birthYearNotSaved}
+                </p>
 
                 <div className="mt-6 pt-6 border-t border-gray-100">
                   <p className="text-[10px] text-gray-400 text-center leading-relaxed">

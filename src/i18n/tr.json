@@ -23,7 +23,14 @@
     "deniedText": "Bu web sitesine erisim icin 18 yasindan büyük olmaniz gerekmektedir.",
     "deniedLegal": "4733 Sayili Kanun ve 4250 Sayili Kanun geregi alkollü iceceklerin 18 yasindan küçüklere satisi ve sunumu yasaktir.",
     "goBack": "Geri Dön",
-    "legalNote": "Bu siteye girerek, 4733 Sayili Tütün, Tütün Mamulleri ve Alkollü Ickiler Piyasasi Düzenleme Kurumu Kanunu ve 4250 Sayili Ispirto ve Ispirtolu Ickiler Inhisari Kanunu kapsaminda 18 yasindan büyük oldugunuzu teyit etmis olursunuz. Bu site herhangi bir alkollü icki markasinin satisini, pazarlamasini veya araci hizmetini yapmamaktadir. Icerikler tamamen bilgilendirme amaclidir."
+    "legalNote": "Bu siteye girerek, 4733 Sayili Tütün, Tütün Mamulleri ve Alkollü Ickiler Piyasasi Düzenleme Kurumu Kanunu ve 4250 Sayili Ispirto ve Ispirtolu Ickiler Inhisari Kanunu kapsaminda 18 yasindan büyük oldugunuzu teyit etmis olursunuz. Bu site herhangi bir alkollü icki markasinin satisini, pazarlamasini veya araci hizmetini yapmamaktadir. Icerikler tamamen bilgilendirme amaclidir.",
+    "birthYearNotSaved": "Doğum yılınız kaydedilmeyecektir."
+  },
+  "cookie": {
+    "message": "Bu web sitesi, kullanıcı deneyimini iyileştirmek amacıyla çerez kullanmaktadır. 6698 Sayılı KVKK kapsamında çerez tercihlerinizi yönetebilirsiniz.",
+    "accept": "Kabul Et",
+    "reject": "Reddet",
+    "learnMore": "Daha Fazla Bilgi"
   },
   "tapdk": {
     "banner": "Bu internet sitesi, 4250 sayili Kanun ve ilgili mevzuat cercevesinde yalnizca kurumsal ve bilgilendirme amaciyla hazirlanmistir. Alkollü iceceklere iliskin reklam, tanitim, satisa tesvik veya cevrim ici satis amaci tasimaz."

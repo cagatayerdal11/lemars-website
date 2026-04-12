@@ -4,6 +4,7 @@ import AgeGate from "@/components/AgeGate";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import TAPDKBanner from "@/components/TAPDKBanner";
+import CookieBanner from "@/components/CookieBanner";
 
 export async function generateMetadata({
   params,
@@ -43,6 +44,14 @@ export default async function LocaleLayout({
     deniedLegal: string;
     goBack: string;
     legalNote: string;
+    birthYearNotSaved: string;
+  };
+
+  const cookieDict = dict.cookie as {
+    message: string;
+    accept: string;
+    reject: string;
+    learnMore: string;
   };
 
   const tapdkDict = dict.tapdk as { banner: string };
@@ -82,6 +91,7 @@ export default async function LocaleLayout({
       <Header locale={locale} dict={navDict} brandList={brandList} />
       <main className="flex-1">{children}</main>
       <Footer locale={locale} dict={footerDict} navDict={navDict} />
+      <CookieBanner dict={cookieDict} locale={locale} />
     </AgeGate>
   );
 }
