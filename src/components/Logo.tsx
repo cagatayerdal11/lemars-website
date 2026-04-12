@@ -11,13 +11,13 @@ export default function Logo({
 }) {
   const logoHeight = Math.round(width * 0.335);
   const src = variant === "light" ? "/logo-white.png" : "/logo-transparent.png";
+  const lineColor = "#d45a1e";
   const subColor = variant === "light" ? "#ffffff" : "#1f2730";
-  const lineColor = variant === "light" ? "#d45a1e" : "#d45a1e";
-  const fontSize = Math.max(8, Math.round(width * 0.078));
-  const lineTop = Math.round(logoHeight * 0.92);
+  const fontSize = Math.max(8, Math.round(width * 0.075));
+  const lineHeight = Math.max(2, Math.round(width * 0.016));
 
   return (
-    <div className={className} style={{ width, position: "relative" }}>
+    <div className={className} style={{ width }}>
       <Image
         src={src}
         alt="LeMars Gıda İçecek"
@@ -26,25 +26,23 @@ export default function Logo({
         className="object-contain"
         priority
       />
-      {/* Turuncu çizgi */}
+      {/* Turuncu çizgi - LEMARS yazısının tam altında, soldan sağa */}
       <div
         style={{
-          position: "absolute",
-          top: lineTop,
-          left: 0,
-          width: "65%",
-          height: 2,
+          width: "100%",
+          height: lineHeight,
           background: lineColor,
+          marginTop: -Math.round(logoHeight * 0.12),
         }}
       />
-      {/* GIDA İÇECEK altyazısı */}
+      {/* GIDA İÇECEK - sağa yaslı */}
       <p
         style={{
           margin: 0,
-          marginTop: 2,
+          marginTop: Math.round(width * 0.02),
           fontSize,
           fontWeight: 800,
-          letterSpacing: "0.18em",
+          letterSpacing: "0.15em",
           color: subColor,
           textAlign: "right",
           lineHeight: 1,
