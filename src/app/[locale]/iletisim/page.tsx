@@ -1,13 +1,23 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { getDictionary, Locale } from "@/i18n/config";
 
-export default function Iletisim() {
+export default function Iletisim({ params }: { params: { locale: string } }) {
+  const locale = params.locale;
+  const [t, setT] = useState<Record<string, unknown> | null>(null);
+
   const [formData, setFormData] = useState({
     name: "", company: "", email: "", phone: "", subject: "", message: "",
   });
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    getDictionary(locale as Locale).then((dict) => {
+      setT(dict.contact as Record<string, unknown>);
+    });
+  }, [locale]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -19,21 +29,30 @@ export default function Iletisim() {
         body: JSON.stringify(formData),
       });
     } catch {
-      // Form gönderildi olarak işaretle
+      // Form submitted
     }
     setLoading(false);
     setSubmitted(true);
   };
 
+  if (!t) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="w-8 h-8 border-2 border-primary-400 border-t-transparent rounded-full animate-spin" />
+      </div>
+    );
+  }
+
+  const subjectOptions = t.formSubjectOptions as string[];
+
   return (
     <>
       <section className="bg-gray-900 py-24 md:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <p className="text-primary-500 text-xs font-semibold tracking-[0.3em] uppercase mb-6">İletişim</p>
-          <h1 className="text-5xl md:text-6xl font-bold text-white leading-tight max-w-3xl">Bize Ulaşın</h1>
+          <p className="text-primary-500 text-xs font-semibold tracking-[0.3em] uppercase mb-6">{t.heroEyebrow as string}</p>
+          <h1 className="text-5xl md:text-6xl font-bold text-white leading-tight max-w-3xl">{t.heroTitle as string}</h1>
           <p className="text-gray-400 text-lg mt-6 max-w-xl">
-            Dağıtım ve pazarlama stratejinizi birlikte oluşturalım.
-            İşletmenize özel çözümler için bize ulaşın.
+            {t.heroDesc as string}
           </p>
         </div>
       </section>
@@ -42,7 +61,7 @@ export default function Iletisim() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
             <div className="space-y-6">
-              <h2 className="text-2xl font-bold text-gray-900 mb-8">İletişim Bilgileri</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-8">{t.infoTitle as string}</h2>
 
               <a href="tel:+902128091883" className="flex items-start gap-4 p-5 bg-gray-50 rounded-lg hover:bg-orange-50 transition-colors group">
                 <div className="w-10 h-10 bg-orange-100 text-primary-700 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -51,9 +70,9 @@ export default function Iletisim() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-900 text-sm">Telefon</h3>
-                  <p className="text-primary-700 font-medium text-sm">+90 (212) 809 18 83</p>
-                  <p className="text-gray-400 text-xs mt-1">Pzt - Cuma: 09:00 - 18:00</p>
+                  <h3 className="font-semibold text-gray-900 text-sm">{t.phoneLabel as string}</h3>
+                  <p className="text-primary-700 font-medium text-sm">{t.phoneNumber as string}</p>
+                  <p className="text-gray-400 text-xs mt-1">{t.phoneHours as string}</p>
                 </div>
               </a>
 
@@ -64,9 +83,9 @@ export default function Iletisim() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-900 text-sm">E-posta</h3>
-                  <p className="text-primary-700 font-medium text-sm">info@lemars.com</p>
-                  <p className="text-gray-400 text-xs mt-1">24 saat içinde dönüş</p>
+                  <h3 className="font-semibold text-gray-900 text-sm">{t.emailLabel as string}</h3>
+                  <p className="text-primary-700 font-medium text-sm">{t.emailAddress as string}</p>
+                  <p className="text-gray-400 text-xs mt-1">{t.emailNote as string}</p>
                 </div>
               </a>
 
@@ -78,10 +97,10 @@ export default function Iletisim() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-900 text-sm">Adres</h3>
-                  <p className="text-gray-600 text-sm">Cihangir, Güvercin Cd. No: 2/90-91</p>
-                  <p className="text-gray-600 text-sm">34310 Avcılar/İstanbul</p>
-                  <p className="text-primary-700 text-xs mt-1 font-medium">Yol tarifi al &rarr;</p>
+                  <h3 className="font-semibold text-gray-900 text-sm">{t.addressLabel as string}</h3>
+                  <p className="text-gray-600 text-sm">{t.addressLine1 as string}</p>
+                  <p className="text-gray-600 text-sm">{t.addressLine2 as string}</p>
+                  <p className="text-primary-700 text-xs mt-1 font-medium">{t.addressDirection as string} &rarr;</p>
                 </div>
               </a>
 
@@ -92,9 +111,9 @@ export default function Iletisim() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-900 text-sm">WhatsApp</h3>
-                  <p className="text-green-700 font-medium text-sm">+90 (543) 235 77 86</p>
-                  <p className="text-gray-400 text-xs mt-1">Hızlı iletişim</p>
+                  <h3 className="font-semibold text-gray-900 text-sm">{t.whatsappLabel as string}</h3>
+                  <p className="text-green-700 font-medium text-sm">{t.whatsappNumber as string}</p>
+                  <p className="text-gray-400 text-xs mt-1">{t.whatsappNote as string}</p>
                 </div>
               </a>
             </div>
@@ -108,69 +127,62 @@ export default function Iletisim() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">Mesajınız İletildi</h3>
-                    <p className="text-gray-500 text-sm mb-6">En kısa sürede sizinle iletişime geçeceğiz.</p>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">{t.successTitle as string}</h3>
+                    <p className="text-gray-500 text-sm mb-6">{t.successDesc as string}</p>
                     <button onClick={() => { setSubmitted(false); setFormData({ name: "", company: "", email: "", phone: "", subject: "", message: "" }); }} className="text-primary-700 text-sm font-semibold hover:underline">
-                      Yeni Mesaj Gönder
+                      {t.successNew as string}
                     </button>
                   </div>
                 ) : (
                   <>
-                    <h2 className="text-xl font-bold text-gray-900 mb-1">Bize Mesaj Gönderin</h2>
-                    <p className="text-gray-500 text-sm mb-8">Aşağıdaki formu doldurarak bize ulaşabilirsiniz.</p>
+                    <h2 className="text-xl font-bold text-gray-900 mb-1">{t.formTitle as string}</h2>
+                    <p className="text-gray-500 text-sm mb-8">{t.formDesc as string}</p>
 
                     <form onSubmit={handleSubmit} className="space-y-5">
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                         <div>
-                          <label className="block text-xs font-semibold text-gray-700 mb-2 uppercase tracking-wider">Ad Soyad *</label>
+                          <label className="block text-xs font-semibold text-gray-700 mb-2 uppercase tracking-wider">{t.formName as string}</label>
                           <input type="text" required value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                            className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                            placeholder="Adınız Soyadınız" />
+                            className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent" />
                         </div>
                         <div>
-                          <label className="block text-xs font-semibold text-gray-700 mb-2 uppercase tracking-wider">Şirket / İşletme</label>
+                          <label className="block text-xs font-semibold text-gray-700 mb-2 uppercase tracking-wider">{t.formCompany as string}</label>
                           <input type="text" value={formData.company} onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                            className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                            placeholder="İşletme adınız" />
+                            className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent" />
                         </div>
                       </div>
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                         <div>
-                          <label className="block text-xs font-semibold text-gray-700 mb-2 uppercase tracking-wider">E-posta *</label>
+                          <label className="block text-xs font-semibold text-gray-700 mb-2 uppercase tracking-wider">{t.formEmail as string}</label>
                           <input type="email" required value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                            className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                            placeholder="ornek@sirket.com" />
+                            className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent" />
                         </div>
                         <div>
-                          <label className="block text-xs font-semibold text-gray-700 mb-2 uppercase tracking-wider">Telefon *</label>
+                          <label className="block text-xs font-semibold text-gray-700 mb-2 uppercase tracking-wider">{t.formPhone as string}</label>
                           <input type="tel" required value={formData.phone} onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                            className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                            placeholder="+90 (5XX) XXX XX XX" />
+                            className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent" />
                         </div>
                       </div>
                       <div>
-                        <label className="block text-xs font-semibold text-gray-700 mb-2 uppercase tracking-wider">Konu</label>
+                        <label className="block text-xs font-semibold text-gray-700 mb-2 uppercase tracking-wider">{t.formSubject as string}</label>
                         <select value={formData.subject} onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                           className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent">
-                          <option value="">Konu Seçin</option>
-                          <option value="tedarik">Tedarik Talebi</option>
-                          <option value="fiyat">Fiyat Bilgisi</option>
-                          <option value="isbirligi">İş Birliği</option>
-                          <option value="diger">Diğer</option>
+                          {subjectOptions.map((opt, i) => (
+                            <option key={i} value={i === 0 ? "" : opt}>{opt}</option>
+                          ))}
                         </select>
                       </div>
                       <div>
-                        <label className="block text-xs font-semibold text-gray-700 mb-2 uppercase tracking-wider">Mesajınız *</label>
+                        <label className="block text-xs font-semibold text-gray-700 mb-2 uppercase tracking-wider">{t.formMessage as string}</label>
                         <textarea required rows={5} value={formData.message} onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                          className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent resize-none"
-                          placeholder="Mesajınızı yazın..." />
+                          className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent resize-none" />
                       </div>
                       <p className="text-[10px] text-gray-400">
-                        Kişisel verileriniz 6698 Sayılı KVKK kapsamında korunmaktadır.
+                        {t.formKvkk as string}
                       </p>
                       <button type="submit" disabled={loading}
                         className="w-full py-3.5 bg-primary-700 text-white font-semibold rounded-lg hover:bg-primary-800 transition-all text-sm uppercase tracking-wider disabled:opacity-50">
-                        {loading ? "Gönderiliyor..." : "Mesajı Gönder"}
+                        {loading ? (t.formSubmitting as string) : (t.formSubmit as string)}
                       </button>
                     </form>
                   </>
@@ -187,14 +199,14 @@ export default function Iletisim() {
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3011.6!2d28.6836383!3d41.0011672!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa180546a3103%3A0x4209c1f34f774f1!2sLEMARS%20GIDA%20%C4%B0%C3%87ECEK!5e0!3m2!1str!2str!4v1700000000000!5m2!1str!2str"
               width="100%" height="350" style={{ border: 0 }} allowFullScreen loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade" title="LeMars Gıda İçecek Konum" />
+              referrerPolicy="no-referrer-when-downgrade" title="LeMars" />
             <div className="p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
               <div>
-                <h3 className="font-bold text-gray-900 text-sm mb-1">LeMars Gıda İçecek</h3>
-                <p className="text-gray-500 text-sm">Cihangir, Güvercin Cd. No: 2/90-91, 34310 Avcılar/İstanbul</p>
+                <h3 className="font-bold text-gray-900 text-sm mb-1">{t.mapTitle as string}</h3>
+                <p className="text-gray-500 text-sm">{t.mapAddress as string}</p>
               </div>
               <a href="https://maps.app.goo.gl/7XnNs1arH4NeqCcp6" target="_blank" rel="noopener noreferrer" className="btn-primary">
-                Yol Tarifi Al
+                {t.mapDirection as string}
               </a>
             </div>
           </div>

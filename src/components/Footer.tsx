@@ -1,12 +1,56 @@
 import Link from "next/link";
 import Logo from "./Logo";
 
-export default function Footer() {
+interface FooterDict {
+  desc: string;
+  tapdkNote: string;
+  pagesTitle: string;
+  contactTitle: string;
+  address: string;
+  addressCity: string;
+  email: string;
+  phone: string;
+  instagram: string;
+  linkedin: string;
+  legalNote: string;
+  copyright: string;
+  termsLink: string;
+  privacyLink: string;
+  disclaimerLink: string;
+}
+
+interface NavDict {
+  home: string;
+  about: string;
+  services: string;
+  distributorships: string;
+  brands: string;
+  contact: string;
+}
+
+export default function Footer({
+  locale,
+  dict,
+  navDict,
+}: {
+  locale: string;
+  dict: FooterDict;
+  navDict: NavDict;
+}) {
+  const pages = [
+    { name: navDict.home, href: `/${locale}` },
+    { name: navDict.about, href: `/${locale}/hakkimizda` },
+    { name: navDict.services, href: `/${locale}/hizmetlerimiz` },
+    { name: navDict.distributorships, href: `/${locale}/distributorluklerimiz` },
+    { name: navDict.brands, href: `/${locale}/markalarimiz` },
+    { name: navDict.contact, href: `/${locale}/iletisim` },
+  ];
+
   return (
     <footer className="bg-gray-900 text-gray-400">
       <div className="bg-primary-700 text-white text-center py-3 px-4">
         <p className="text-xs font-medium tracking-wider">
-          Alkol sağlığa zararlıdır. Alkol dostunuz değildir. Alkollü içecekler 18 yaşını doldurmamış kişilere satılamaz ve sunulamaz.
+          {dict.tapdkNote}
         </p>
       </div>
 
@@ -17,9 +61,7 @@ export default function Footer() {
               <Logo width={140} variant="light" />
             </div>
             <p className="text-sm leading-relaxed max-w-sm mb-8">
-              İstanbul Avrupa Yakası&apos;nda alkollü içecekler alanında toptan
-              satış ve dağıtım hizmeti sunan firmamız, restoran, bar ve
-              perakende satış noktalarına güvenilir tedarik çözümleri sağlar.
+              {dict.desc}
             </p>
             <p className="text-xs text-gray-600">
               TAPDK Lisans Bilgisi: Toptan Alkollü İçecek Satış Belgesi
@@ -28,17 +70,10 @@ export default function Footer() {
 
           <div>
             <h3 className="text-white text-xs font-semibold tracking-[0.2em] uppercase mb-6">
-              Sayfalar
+              {dict.pagesTitle}
             </h3>
             <ul className="space-y-4">
-              {[
-                { name: "Anasayfa", href: "/" },
-                { name: "Hakkımızda", href: "/hakkimizda" },
-                { name: "Hizmetlerimiz", href: "/hizmetlerimiz" },
-                { name: "Distribütörlüklerimiz", href: "/distributorluklerimiz" },
-                { name: "Markalarımız", href: "/markalarimiz" },
-                { name: "İletişim", href: "/iletisim" },
-              ].map((item) => (
+              {pages.map((item) => (
                 <li key={item.name}>
                   <Link href={item.href} className="text-sm hover:text-primary-400 transition-colors">
                     {item.name}
@@ -50,65 +85,61 @@ export default function Footer() {
 
           <div>
             <h3 className="text-white text-xs font-semibold tracking-[0.2em] uppercase mb-6">
-              İletişim
+              {dict.contactTitle}
             </h3>
             <ul className="space-y-4 text-sm">
               <li>
                 <a href="https://maps.app.goo.gl/7XnNs1arH4NeqCcp6" target="_blank" rel="noopener noreferrer" className="hover:text-primary-400 transition-colors">
-                  Cihangir, Güvercin Cd. No: 2/90-91
-                  <br />34310 Avcılar/İstanbul
+                  {dict.address}
+                  <br />{dict.addressCity}
                 </a>
               </li>
               <li>
                 <a href="mailto:info@lemars.com" className="hover:text-primary-400 transition-colors">
-                  info@lemars.com
+                  {dict.email}
                 </a>
               </li>
               <li>
                 <a href="tel:+902128091883" className="hover:text-primary-400 transition-colors">
-                  +90 (212) 809 18 83
+                  {dict.phone}
                 </a>
               </li>
               <li>
                 <a href="https://instagram.com/lemarsgida" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 hover:text-primary-400 transition-colors">
                   <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-                  @lemarsgida
+                  {dict.instagram}
                 </a>
               </li>
               <li>
                 <a href="https://www.linkedin.com/company/lemars-g%C4%B1da-i%C3%A7ecek/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 hover:text-primary-400 transition-colors">
                   <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                  LinkedIn
+                  {dict.linkedin}
                 </a>
               </li>
             </ul>
           </div>
         </div>
 
-        {/* Yasal Uyarı */}
+        {/* Legal Notice */}
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="bg-gray-800/50 rounded-lg p-6 mb-8">
             <p className="text-xs text-gray-400 leading-relaxed text-center">
-              <strong className="text-gray-300">Yasal Bilgilendirme:</strong> Bu internet sitesi yalnızca kurumsal ve teknik bilgilendirme amacıyla hazırlanmıştır.
-              İçerikler, 4250 sayılı İspirto ve İspirtolu İçkiler İnhisarı Kanunu ile ilgili ikincil mevzuat kapsamında
-              tüketicilere yönelik reklam, tanıtım, özendirme, promosyon, kampanya veya satış iletişimi niteliği taşımaz.
-              Bu site üzerinden tüketiciye çevrim içi satış yapılmaz, sipariş alınmaz ve satışa yönlendirme amacı güdülmez.
-              İçerikler ilgili mevzuat dikkate alınarak hazırlanmıştır.
+              <strong className="text-gray-300">{locale === "tr" ? "Yasal Bilgilendirme:" : "Legal Notice:"}</strong> {dict.legalNote}
             </p>
           </div>
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-xs text-gray-600">
-              &copy; {new Date().getFullYear()} LeMars Gıda İçecek. Tüm hakları saklıdır.
+              {dict.copyright.replace("{year}", new Date().getFullYear().toString())}
             </p>
             <div className="flex items-center gap-6">
-              <Link href="/yasal/kullanim-kosullari" className="text-xs text-gray-500 hover:text-primary-400 transition-colors">
-                Kullanım Koşulları
+              <Link href={`/${locale}/yasal/kullanim-kosullari`} className="text-xs text-gray-500 hover:text-primary-400 transition-colors">
+                {dict.termsLink}
               </Link>
-              <Link href="/yasal/kvkk" className="text-xs text-gray-500 hover:text-primary-400 transition-colors">
-                KVKK & Çerez Politikası
+              <Link href={`/${locale}/yasal/kvkk`} className="text-xs text-gray-500 hover:text-primary-400 transition-colors">
+                {dict.privacyLink}
               </Link>
-              <Link href="/yasal/sorumluluk-reddi" className="text-xs text-gray-500 hover:text-primary-400 transition-colors">
-                Sorumluluk Reddi
+              <Link href={`/${locale}/yasal/sorumluluk-reddi`} className="text-xs text-gray-500 hover:text-primary-400 transition-colors">
+                {dict.disclaimerLink}
               </Link>
             </div>
           </div>

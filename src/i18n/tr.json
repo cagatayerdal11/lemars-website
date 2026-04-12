@@ -1,0 +1,377 @@
+{
+  "meta": {
+    "title": "LeMars Gida Icecek | Toptan Alkollü Icecek Dagitim",
+    "description": "Istanbul Avrupa Yakasi'nda restoran, bar ve perakende satis noktalarina hizli, güvenilir ve kaliteli alkollü icecek toptan satis ve dagitim hizmeti."
+  },
+  "nav": {
+    "home": "Anasayfa",
+    "about": "Hakkimizda",
+    "services": "Hizmetlerimiz",
+    "distributorships": "Distribütörlüklerimiz",
+    "brands": "Markalarimiz",
+    "contact": "Iletisim"
+  },
+  "ageGate": {
+    "title": "Yas Dogrulamasi",
+    "subtitle": "Bu web sitesine erismek icin 18 yasindan büyük olmaniz gerekmektedir.",
+    "warning": "Alkol sagliga zararlidir. Alkol dostunuz degildir.",
+    "warningLine2": "18 yasindan küçüklere alkol satisi yasaktir.",
+    "question": "18 yasindan büyük müsünüz?",
+    "yes": "Evet",
+    "no": "Hayir",
+    "deniedTitle": "Erisim Engellendi",
+    "deniedText": "Bu web sitesine erisim icin 18 yasindan büyük olmaniz gerekmektedir.",
+    "deniedLegal": "4733 Sayili Kanun ve 4250 Sayili Kanun geregi alkollü iceceklerin 18 yasindan küçüklere satisi ve sunumu yasaktir.",
+    "goBack": "Geri Dön",
+    "legalNote": "Bu siteye girerek, 4733 Sayili Tütün, Tütün Mamulleri ve Alkollü Ickiler Piyasasi Düzenleme Kurumu Kanunu ve 4250 Sayili Ispirto ve Ispirtolu Ickiler Inhisari Kanunu kapsaminda 18 yasindan büyük oldugunuzu teyit etmis olursunuz. Bu site herhangi bir alkollü icki markasinin satisini, pazarlamasini veya araci hizmetini yapmamaktadir. Icerikler tamamen bilgilendirme amaclidir."
+  },
+  "tapdk": {
+    "banner": "Bu internet sitesi, 4250 sayili Kanun ve ilgili mevzuat cercevesinde yalnizca kurumsal ve bilgilendirme amaciyla hazirlanmistir. Alkollü iceceklere iliskin reklam, tanitim, satisa tesvik veya cevrim ici satis amaci tasimaz."
+  },
+  "home": {
+    "heroEyebrow": "Istanbul \u2022 Avrupa Yakasi \u2022 Toptan Dagitim",
+    "heroTitle": "Güvenilir Tedarik,",
+    "heroTitleAccent": "Güclü Ortaklik.",
+    "heroDesc": "Restoran, bar ve perakende satis noktalarina hizli, güvenilir ve kaliteli alkollü icecek toptan satis hizmeti sunuyoruz.",
+    "ctaAbout": "Bizi Taniyin",
+    "ctaServices": "Hizmetlerimiz",
+    "tapdkBar": "TAPDK LISANSLI DAGITIM \u2014 20+ YILLIK DENEYIM",
+    "stat1": "1800+ Satis Noktasi",
+    "stat2": "1000+ Ürün Cesidi",
+    "stat3": "%99 Memnuniyet",
+    "feat1Title": "Hizli Teslimat",
+    "feat1Desc": "Istanbul Avrupa Yakasi genelinde ayni gün teslimat imkani ile isletmenizi hic stoksuz birakmiyoruz.",
+    "feat2Title": "Lisansli Dagitim",
+    "feat2Desc": "TAPDK lisansli, tüm yasal mevzuata uygun toptan satis ve dagitim hizmeti sunuyoruz.",
+    "feat3Title": "Profesyonel Hizmet",
+    "feat3Desc": "Deneyimli ekibimizle isletmenize özel cözümler sunuyor, her asamada destek sagliyoruz.",
+    "aboutEyebrow": "Hakkimizda",
+    "aboutTitle": "Istanbul'un\nGüvenilir Dagitim\nOrtagi",
+    "aboutDesc": "LeMars Gida Icecek olarak, Istanbul Avrupa Yakasi'nda alkollü icecekler alaninda toptan satis ve dagitim hizmeti sunmaktayiz. Kaliteli ürün yelpazemiz ve güvenilir lojistik agimiz ile isletmelerin ihtiyaclarini karsiliyoruz.",
+    "aboutMore": "Daha Fazla",
+    "stat_sales": "Satis Noktasi",
+    "stat_experience": "Yillik Deneyim",
+    "stat_products": "Ürün Cesidi",
+    "stat_satisfaction": "Müsteri Memnuniyeti",
+    "servicesEyebrow": "Hizmetlerimiz",
+    "servicesTitle": "Tedarik Cözümlerimiz",
+    "svc1Title": "HoReCa Tedarikçisi",
+    "svc1Desc": "Restoran, bar, meyhane ve eglence mekanlarinin tedarik süreclerini düzenli ve zamaninda yönetiyoruz.",
+    "svc2Title": "Perakende Satis",
+    "svc2Desc": "Market, tekel bayii ve perakende satis noktalarinin stok yönetimi ve düzenli tedarik cözümleri.",
+    "svc3Title": "Lojistik & Dagitim",
+    "svc3Desc": "Istanbul Avrupa Yakasi genelinde kendi filo ve lojistik agimizla hizli ve güvenli dagitim.",
+    "svc4Title": "Pazarlama & Tanitim",
+    "svc4Desc": "Ürünlerinizi genis portföyümüz ve güclü dagitim agimiz ile tüketicilerle bulusturuyoruz.",
+    "svcMore": "Detayli Bilgi",
+    "ctaEyebrow": "Iletisim",
+    "ctaTitle": "Isletmeniz Icin Dogru\nTedarik Ortagi",
+    "ctaDesc": "Dagitim ve tedarik stratejinizi birlikte olusturalim.",
+    "ctaButton": "Iletisime Gecin",
+    "ctaPhone": "+90 (212) 809 18 83"
+  },
+  "about": {
+    "heroEyebrow": "Hakkimizda",
+    "heroTitle": "LeMars Gida Icecek",
+    "heroDesc": "Istanbul Avrupa Yakasi'nda alkollü icecekler alaninda toptan satis ve dagitim hizmeti sunan güvenilir cözüm ortaginiz.",
+    "expEyebrow": "20+ Yillik Deneyim",
+    "expTitle": "Sektörün Deneyimli ve Güvenilir Ismi",
+    "expP1": "LeMars Gida Icecek, 20 yili askin sektör deneyimiyle Istanbul Avrupa Yakasi'nda alkollü icecekler alaninda toptan satis ve dagitim hizmeti sunan, TAPDK lisansli bir firmadir.",
+    "expP2": "Yillar icinde edindigimiz piyasa bilgisi ve tüketici aliskanliklarina hakimiyetimiz, is ortaklarimiza stratejik avantaj saglar. Tedarik zinciri yönetiminden lojistik planlamaya kadar her asamada biriktirdigimiz know-how, sektördeki en degerli varligimizdir.",
+    "expP3": "Nitelikli insan kaynagimiz ve modern yönetim anlayisimiz ile restoran, bar, otel, market ve tekel bayii gibi 1800'den fazla satis noktasina kesintisiz hizmet sunmaktayiz.",
+    "compEyebrow": "Yetkinliklerimiz",
+    "comp1Title": "Sektörel Know-How",
+    "comp1Desc": "20 yili askin deneyimle biriktirdigimiz bilgi birikimi, piyasa dinamiklerini dogru okumamizi ve is ortaklarimiza katma deger saglamamizi mümkün kilar.",
+    "comp2Title": "Piyasa Bilgisi & Tüketici Aliskanliklari",
+    "comp2Desc": "Degisen piyasa kosullarini ve tüketici tercihlerini yakindan takip ederek, is ortaklarimizin dogru ürün ve stok kararlari vermesine destek oluruz.",
+    "comp3Title": "Tedarik Zinciri & Lojistik Yönetimi",
+    "comp3Desc": "Tedarikçiden satis noktasina kadar tüm süreci verimli ve kesintisiz yöneterek, isletmelerin operasyonel yükünü hafifletiriz.",
+    "comp4Title": "Pazarlama, Satis & Dagitim",
+    "comp4Desc": "Ürünlerinizi genis portföyümüz ve 1800+ satis noktasina ulasan güclü dagitim agimiz ile tüketicilerle bulusturuyoruz. Satis noktasinda görünürlük, tanitim destegi ve pazar penetrasyonu sagliyoruz.",
+    "comp5Title": "Nitelikli Insan Kaynagi & Modern Yönetim",
+    "comp5Desc": "Alaninda uzman kadromuz ve cagdas yönetim anlayisimizla, hizli karar alma ve cözüm odakli hizmet sunuyoruz.",
+    "whyEyebrow": "Avantajlarimiz",
+    "whyTitle": "Neden LeMars?",
+    "adv1Title": "Genis Tedarikçi & Ürün Yelpazesi",
+    "adv1Desc": "Yerli ve ithal markalardan olusan 1000'den fazla ürün cesidi ile her isletmenin ihtiyacini tek noktadan karsiliyoruz.",
+    "adv2Title": "Esnek Dagitim Agi",
+    "adv2Desc": "Istanbul Avrupa Yakasi'nin tamamini kapsayan, ayni gün teslimat sunan esnek ve güclü dagitim altyapimiz.",
+    "adv3Title": "Cözüm Odakli Yönetim",
+    "adv3Desc": "Her müsteriye özel tedarik planlari olusturan, sorunlari proaktif cözen modern yönetim anlayisimiz.",
+    "adv4Title": "20+ Yillik Sektör Deneyimi",
+    "adv4Desc": "Piyasa bilgisi, tüketici aliskanliklari ve tedarik zinciri yönetiminde yillarin birikimiyle hizmet veriyoruz.",
+    "adv5Title": "Nitelikli Ekip",
+    "adv5Desc": "Alaninda uzman, müsteri odakli kadromuzla her asamada profesyonel destek sagliyoruz.",
+    "adv6Title": "TAPDK Lisansli Güvence",
+    "adv6Desc": "Tüm faaliyetlerimiz ilgili mevzuata uygun, lisansli ve denetlenebilir sekilde yürütülmektedir.",
+    "ctaTitle": "Is Birligine Hazir Misiniz?",
+    "ctaDesc": "Dagitim ve tedarik stratejinizi birlikte olusturalim.",
+    "ctaButton": "Iletisime Gecin"
+  },
+  "services": {
+    "heroEyebrow": "Hizmetlerimiz",
+    "heroTitle": "Tedarik Cözümlerimiz",
+    "heroDesc": "Her ölcekteki isletmeye özel, TAPDK uyumlu, güvenilir ve hizli alkollü icecek tedarik hizmetleri sunuyoruz.",
+    "s1Eyebrow": "01 \u2014 HoReCa",
+    "s1Title": "Restoran, Bar &\nOtel Tedarikçisi",
+    "s1Desc": "HoReCa sektöründeki isletmelerin tedarik süreclerini eksiksiz ve zamaninda yönetiyoruz. Özel müsteri temsilciniz araciligiyla isletmenize özel dagitim planlari olusturuyoruz.",
+    "s1Items": [
+      "Restoran ve kafeler icin düzenli tedarik",
+      "Bar ve gece kulüpleri icin özel cözümler",
+      "Otel ve tatil köyleri icin toplu siparis",
+      "Etkinlik ve organizasyonlar icin özel hizmet"
+    ],
+    "s2Eyebrow": "02 \u2014 Perakende",
+    "s2Title": "Perakende Satis\nNoktalari",
+    "s2Desc": "Market, tekel bayii ve diger perakende satis noktalarinin stok yönetimini kolaylastiriyor, düzenli ve güvenilir tedarik sagliyoruz.",
+    "s2Items": [
+      "Market ve bakkallar icin düzenli tedarik",
+      "Tekel bayileri icin genis ürün yelpazesi",
+      "Stok takip ve yönetim destegi",
+      "Rekabetci toptan fiyat politikasi"
+    ],
+    "s3Eyebrow": "03 \u2014 Lojistik",
+    "s3Title": "Lojistik &\nDagitim Agi",
+    "s3Desc": "Kendi filo ve dagitim agimiz ile Istanbul Avrupa Yakasi'nin tamamina hizli, güvenli ve sorunsuz teslimat hizmeti sunuyoruz.",
+    "s3Items": [
+      "Kendi arac filomuz ile dagitim",
+      "Ayni gün teslimat secenegi",
+      "Soguk zincir lojistik altyapisi",
+      "GPS takipli güvenli teslimat"
+    ],
+    "s4Eyebrow": "04 \u2014 Pazarlama & Dagitim",
+    "s4Title": "Pazarlama, Tanitim\n& Dagitim",
+    "s4Desc": "Ürünlerinizi genis portföyümüz ve güclü dagitim agimiz ile tüketicilerle bulusturuyoruz. Satis noktalarinda görünürlük, tanitim destegi ve pazar penetrasyonu sagliyoruz.",
+    "s4Items": [
+      "Satis noktasinda ürün yerlestirme ve görünürlük",
+      "Marka tanitim ve promosyon destegi",
+      "1800+ satis noktasina erisim agi",
+      "Pazar analizi ve satis stratejisi danismanligi"
+    ],
+    "productsEyebrow": "Ürünlerimiz",
+    "productsTitle": "Ürün Kategorileri",
+    "categories": [
+      "Bira Cesitleri",
+      "Sarap Cesitleri",
+      "Raki",
+      "Viski",
+      "Votka",
+      "Cin",
+      "Tekila",
+      "Likör Cesitleri"
+    ],
+    "productsNote": "Bu kategoriler yalnizca bilgilendirme amaclidir. Detayli bilgi icin bizimle iletisime gecebilirsiniz.",
+    "ctaTitle": "Isletmenize Özel Teklif Alin",
+    "ctaDesc": "Ihtiyaclarinizi dinliyor, size özel tedarik plani olusturuyoruz.",
+    "ctaButton": "Teklif Alin"
+  },
+  "contact": {
+    "heroEyebrow": "Iletisim",
+    "heroTitle": "Bize Ulasin",
+    "heroDesc": "Dagitim ve pazarlama stratejinizi birlikte olusturalim. Isletmenize özel cözümler icin bize ulasin.",
+    "infoTitle": "Iletisim Bilgileri",
+    "phoneLabel": "Telefon",
+    "phoneNumber": "+90 (212) 809 18 83",
+    "phoneHours": "Pzt - Cuma: 09:00 - 18:00",
+    "emailLabel": "E-posta",
+    "emailAddress": "info@lemars.com",
+    "emailNote": "24 saat icinde dönüs",
+    "addressLabel": "Adres",
+    "addressLine1": "Cihangir, Güvercin Cd. No: 2/90-91",
+    "addressLine2": "34310 Avcilar/Istanbul",
+    "addressDirection": "Yol tarifi al",
+    "whatsappLabel": "WhatsApp",
+    "whatsappNumber": "+90 (543) 235 77 86",
+    "whatsappNote": "Hizli iletisim",
+    "formTitle": "Bize Mesaj Gönderin",
+    "formDesc": "Asagidaki formu doldurarak bize ulasabilirsiniz.",
+    "formName": "Ad Soyad *",
+    "formCompany": "Sirket / Isletme",
+    "formEmail": "E-posta *",
+    "formPhone": "Telefon *",
+    "formSubject": "Konu",
+    "formMessage": "Mesajiniz *",
+    "formSubjectOptions": [
+      "Konu Secin",
+      "Tedarik Talebi",
+      "Fiyat Bilgisi",
+      "Is Birligi",
+      "Diger"
+    ],
+    "formKvkk": "Kisisel verileriniz 6698 Sayili KVKK kapsaminda korunmaktadir.",
+    "formSubmit": "Mesaji Gönder",
+    "formSubmitting": "Gönderiliyor...",
+    "successTitle": "Mesajiniz Iletildi",
+    "successDesc": "En kisa sürede sizinle iletisime gececegiz.",
+    "successNew": "Yeni Mesaj Gönder",
+    "mapTitle": "LeMars Gida Icecek",
+    "mapAddress": "Cihangir, Güvercin Cd. No: 2/90-91, 34310 Avcilar/Istanbul",
+    "mapDirection": "Yol Tarifi Al"
+  },
+  "distributorships": {
+    "heroEyebrow": "Is Ortaklarimiz",
+    "heroTitle": "Distribütörlüklerimiz",
+    "heroDesc": "Türkiye'nin ve dünyanin önde gelen icecek üreticilerinin Istanbul Avrupa Yakasi distribütörüyüz.",
+    "sectionEyebrow": "Calistigimiz Firmalar",
+    "sectionTitle": "Distribütörlük Portföyümüz",
+    "sectionDesc": "Asagidaki firmalarin yetkili distribütörü olarak Istanbul Avrupa Yakasi genelinde toptan satis ve dagitim hizmeti sunmaktayiz.",
+    "placeholder": "Firma Logosu",
+    "ctaDesc": "Distribütörlük portföyümüz hakkinda detayli bilgi almak icin bizimle iletisime gecin.",
+    "ctaButton": "Iletisime Gecin"
+  },
+  "brands": {
+    "heroEyebrow": "Ürün Portföyü",
+    "heroTitle": "Markalarimiz",
+    "heroDesc": "Genis ürün portföyümüzle isletmenizin ihtiyacina uygun cözümler sunuyoruz.",
+    "sectionEyebrow": "Sattigimiz Ürünler",
+    "sectionTitle": "Marka Portföyümüz",
+    "sectionDesc": "Dünya ve Türkiye'nin önde gelen icecek markalarini isletmenize ulastiriyoruz.",
+    "placeholder": "Marka Logosu",
+    "ctaDesc": "Ürün portföyümüz ve fiyat bilgileri icin bizimle iletisime gecin.",
+    "ctaButton": "Fiyat Bilgisi Alin"
+  },
+  "legal": {
+    "terms": {
+      "title": "Kullanim Kosullari",
+      "lastUpdate": "Son güncelleme: 2024",
+      "section1": {
+        "title": "1. Genel Hükümler",
+        "content": "Bu web sitesi, LeMars Gida Icecek Sanayi ve Ticaret Limited Sirketi (\"LeMars\") tarafindan yalnizca bilgilendirme amaciyla hazirlanmistir. Siteye eriserek ve siteyi kullanarak asagidaki kosullari kabul etmis sayilirsiniz."
+      },
+      "section2": {
+        "title": "2. Sitenin Amaci",
+        "content": "Bu site, herhangi bir alkollü icki markasinin satisini, pazarlamasini veya araci hizmetini yapmamaktadir. Icerikler tamamen kurumsal bilgilendirme amacli olup, 4733 Sayili Tütün, Tütün Mamulleri ve Alkollü Ickiler Piyasasi Düzenleme Kurumu Teskilat ve Görevleri Hakkinda Kanun ve 4250 Sayili Ispirto ve Ispirtolu Ickiler Inhisari Kanunu ile ilgili yönetmeliklerin reklam yasagi hükümlerine uygun olarak hazirlanmistir."
+      },
+      "section3": {
+        "title": "3. Yas Sinirlamasi",
+        "content": "Bu web sitesine erisim, 18 yasindan büyük kisilerle sinirlidir. Siteye giris yaparak 18 yasindan büyük oldugunuzu teyit etmis olursunuz. 18 yasindan küçük kisilerin bu siteyi kullanmasi kesinlikle yasaktir."
+      },
+      "section4": {
+        "title": "4. Fikri Mülkiyet Haklari",
+        "content": "Bu sitedeki tüm icerikler, tasarimlar, logolar ve metinler LeMars Gida Icecek'in mülkiyetinde olup, telif haklari ile korunmaktadir. Izinsiz kopyalanmasi, cogaltilmasi veya dagitilmasi yasaktir."
+      },
+      "section5": {
+        "title": "5. Degisiklik Hakki",
+        "content": "LeMars Gida Icecek, bu kullanim kosullarini önceden bildirimde bulunmaksizin degistirme hakkini sakli tutar. Güncel kosullar her zaman bu sayfada yayinlanir."
+      },
+      "section6": {
+        "title": "6. Uygulanacak Hukuk",
+        "content": "Bu kullanim kosullari Türkiye Cumhuriyeti kanunlarina tabidir. Uyusmazliklarda Istanbul Mahkemeleri ve Icra Daireleri yetkilidir."
+      }
+    },
+    "privacy": {
+      "title": "KVKK Aydinlatma Metni ve Cerez Politikasi",
+      "subtitle": "6698 Sayili Kisisel Verilerin Korunmasi Kanunu",
+      "section1": {
+        "title": "1. Veri Sorumlusu",
+        "content": "LeMars Gida Icecek Sanayi ve Ticaret Limited Sirketi olarak, 6698 Sayili Kisisel Verilerin Korunmasi Kanunu (\"KVKK\") kapsaminda veri sorumlusu sifatiyla kisisel verilerinizi asagida aciklanan amaclar dogrultusunda islemekteyiz."
+      },
+      "section2": {
+        "title": "2. Toplanan Kisisel Veriler",
+        "content": "Iletisim formumuz araciligiyla asagidaki kisisel veriler toplanmaktadir:",
+        "list": [
+          "Ad ve soyad",
+          "E-posta adresi",
+          "Telefon numarasi",
+          "Sirket/isletme adi",
+          "Iletisim mesaji icerigi"
+        ]
+      },
+      "section3": {
+        "title": "3. Verilerin Islenme Amaci",
+        "content": "Kisisel verileriniz yalnizca asagidaki amaclarla islenmektedir:",
+        "list": [
+          "Iletisim taleplerinize yanit verilmesi",
+          "Ticari iletisim ve bilgilendirme faaliyetleri",
+          "Yasal yükümlülüklerin yerine getirilmesi"
+        ]
+      },
+      "section4": {
+        "title": "4. Verilerin Aktarilmasi",
+        "content": "Kisisel verileriniz, yasal zorunluluklar disinda ücüncü taraflarla paylasilmamaktadir. Verileriniz yurt disina aktarilmamaktadir."
+      },
+      "section5": {
+        "title": "5. Cerez Politikasi",
+        "content": "Bu web sitesi, kullanici deneyimini iyilestirmek amaciyla cerez (cookie) kullanabilmektedir. Zorunlu cerezler sitenin düzgün calismasi icin gereklidir. Analitik veya pazarlama amacli cerez kullanilmamaktadir."
+      },
+      "section6": {
+        "title": "6. Haklariniz",
+        "content": "KVKK'nin 11. maddesi kapsaminda asagidaki haklara sahipsiniz:",
+        "list": [
+          "Kisisel verilerinizin islenip islenmedigini ögrenme",
+          "Islenmisse buna iliskin bilgi talep etme",
+          "Islenme amacini ve bunlarin amacina uygun kullanilip kullanilmadigini ögrenme",
+          "Yurt icinde veya yurt disinda aktarildigi ücüncü kisileri bilme",
+          "Eksik veya yanlis islenmisse düzeltilmesini isteme",
+          "KVKK'nin 7. maddesindeki sartlar cercevesinde silinmesini veya yok edilmesini isteme"
+        ]
+      },
+      "section7": {
+        "title": "7. Iletisim",
+        "content": "KVKK kapsamindaki haklarinizi kullanmak icin info@lemars.com adresine basvurabilirsiniz."
+      }
+    },
+    "disclaimer": {
+      "title": "Sorumluluk Reddi Beyani",
+      "subtitle": "Yasal Uyari ve Feragat Bildirimi",
+      "section1": {
+        "title": "1. Genel Bilgilendirme",
+        "content": "Bu web sitesinde yer alan bilgiler, LeMars Gida Icecek Sanayi ve Ticaret Limited Sirketi tarafindan genel bilgilendirme amaciyla sunulmaktadir. Bu site, herhangi bir alkollü icki markasinin satisini, pazarlamasini veya araci hizmetini yapmamaktadir."
+      },
+      "section2": {
+        "title": "2. Reklam Yasagi Uyumu",
+        "content": "Bu site, 4733 Sayili Kanun ve 4250 Sayili Ispirto ve Ispirtolu Ickiler Inhisari Kanunu ile TAPDK düzenlemelerinin reklam ve tanitim yasagi hükümlerine tam uyum gösterecek sekilde hazirlanmistir. Sitede yer alan hicbir icerik, alkollü icecek tüketimini tesvik veya özendirme amaci tasimamaktadir."
+      },
+      "section3": {
+        "title": "3. Bilgilerin Dogrulugu",
+        "content": "Sitede sunulan bilgilerin dogrulugu ve güncelligi konusunda azami özen gösterilmekle birlikte, bu bilgilerin eksiksiz, dogru veya güncel olduguna dair herhangi bir garanti verilmemektedir. LeMars Gida Icecek, sitedeki bilgilerin kullanilmasindan dogabilecek dogrudan veya dolayli zararlardan sorumlu tutulamaz."
+      },
+      "section4": {
+        "title": "4. Ücüncü Taraf Baglantilari",
+        "content": "Bu site, ücüncü taraf web sitelerine baglantilar icerebilir. Bu baglantilar kolaylik saglamak amaciyla sunulmakta olup, söz konusu sitelerin iceriklerinden veya gizlilik politikalarindan LeMars Gida Icecek sorumlu degildir."
+      },
+      "section5": {
+        "title": "5. Sorumluluk Sinirlamasi",
+        "content": "Sitedeki bilgilerin yanlis kullanimindan, eksik veya hatali anlasilmasindan dogacak zararlardan LeMars Gida Icecek yönetimi sorumlu tutulamaz. Kullanicilar, sitedeki bilgileri kendi sorumluluklarinda kullanmayi kabul eder."
+      },
+      "warning": "Alkol sagliga zararlidir. Alkol dostunuz degildir. 18 yasindan küçüklere alkollü icecek satisi ve sunumu, 4733 ve 4250 Sayili Kanunlar kapsaminda yasaktir."
+    }
+  },
+  "brandPage": {
+    "backLink": "Markalarimiza Dön",
+    "heroEyebrow": "Marka Detay",
+    "descPlaceholder": "Bu marka hakkinda detayli bilgi yakinda eklenecektir. Ürün portföyümüz ve fiyat bilgileri icin bizimle iletisime gecin.",
+    "logoPlaceholder": "Marka Logosu",
+    "ctaTitle": "Bu Marka Hakkinda Bilgi Alin",
+    "ctaDesc": "Ürün cesitleri ve fiyat bilgileri icin bizimle iletisime gecin.",
+    "ctaButton": "Iletisime Gecin",
+    "notFound": "Marka bulunamadi.",
+    "notFoundBack": "Markalarimiza Dön"
+  },
+  "brandList": {
+    "marengo": "Marengo",
+    "isabey": "Isabey",
+    "hlibny-dar": "Hlibny Dar",
+    "scotch-blue": "Scotch Blue",
+    "suvorov": "Suvorov",
+    "enjoy": "Enjoy",
+    "cumbus": "Cümbus"
+  },
+  "footer": {
+    "desc": "Istanbul Avrupa Yakasi'nda alkollü icecekler alaninda toptan satis ve dagitim hizmeti sunan firmamiz, restoran, bar ve perakende satis noktalarina güvenilir tedarik cözümleri saglar.",
+    "tapdkNote": "Alkol sagliga zararlidir. Alkol dostunuz degildir. Alkollü icecekler 18 yasini doldurmamis kisilere satilamaz ve sunulamaz.",
+    "pagesTitle": "Sayfalar",
+    "contactTitle": "Iletisim",
+    "address": "Cihangir, Güvercin Cd. No: 2/90-91",
+    "addressCity": "34310 Avcilar/Istanbul",
+    "email": "info@lemars.com",
+    "phone": "+90 (212) 809 18 83",
+    "instagram": "@lemarsgida",
+    "linkedin": "LinkedIn",
+    "legalNote": "Yasal Bilgilendirme: Bu internet sitesi yalnizca kurumsal ve teknik bilgilendirme amaciyla hazirlanmistir. Icerikler, 4250 sayili Ispirto ve Ispirtolu Ickiler Inhisari Kanunu ile ilgili ikincil mevzuat kapsaminda tüketicilere yönelik reklam, tanitim, özendirme, promosyon, kampanya veya satis iletisimi niteligi tasimaz. Bu site üzerinden tüketiciye cevrim ici satis yapilmaz, siparis alinmaz ve satisa yönlendirme amaci güdülmez. Icerikler ilgili mevzuat dikkate alinarak hazirlanmistir.",
+    "copyright": "\u00a9 {year} LeMars Gida Icecek. Tüm haklari saklidir.",
+    "termsLink": "Kullanim Kosullari",
+    "privacyLink": "KVKK & Cerez Politikasi",
+    "disclaimerLink": "Sorumluluk Reddi"
+  }
+}

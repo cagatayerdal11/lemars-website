@@ -1,14 +1,40 @@
 import Link from "next/link";
 import Image from "next/image";
+import { getDictionary, Locale } from "@/i18n/config";
 
-export default function Home() {
+export default async function Home({ params }: { params: { locale: string } }) {
+  const dict = await getDictionary(params.locale as Locale);
+  const t = dict.home as Record<string, unknown>;
+  const locale = params.locale;
+
+  const features = [
+    { title: t.feat1Title as string, desc: t.feat1Desc as string, num: "01" },
+    { title: t.feat2Title as string, desc: t.feat2Desc as string, num: "02" },
+    { title: t.feat3Title as string, desc: t.feat3Desc as string, num: "03" },
+  ];
+
+  const stats = [
+    { number: "1800+", label: t.stat_sales as string },
+    { number: "20+", label: t.stat_experience as string },
+    { number: "1000+", label: t.stat_products as string },
+    { number: "%99", label: t.stat_satisfaction as string },
+  ];
+
+  const services = [
+    { title: t.svc1Title as string, desc: t.svc1Desc as string },
+    { title: t.svc2Title as string, desc: t.svc2Desc as string },
+    { title: t.svc3Title as string, desc: t.svc3Desc as string },
+    { title: t.svc4Title as string, desc: t.svc4Desc as string },
+  ];
+
+  const aboutTitleLines = (t.aboutTitle as string).split("\n");
+
   return (
     <>
       {/* Hero */}
       <section className="relative bg-gray-900 overflow-hidden">
         <Image src="/istanbul.jpg" alt="" fill className="object-cover opacity-20" priority />
         <div className="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-900/95 to-gray-800/80" />
-        {/* Caricature drink photo - blurred decorative element */}
         <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[60%] h-full pointer-events-none select-none opacity-25">
           <Image src="/drinks-hero.jpg" alt="" fill className="object-contain object-right" />
         </div>
@@ -16,26 +42,25 @@ export default function Home() {
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8 py-32 md:py-44">
           <div className="max-w-3xl">
             <p className="text-primary-500 text-xs font-semibold tracking-[0.3em] uppercase mb-8">
-              İstanbul &bull; Avrupa Yakası &bull; Toptan Dağıtım
+              {t.heroEyebrow as string}
             </p>
 
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] mb-8">
-              Güvenilir Tedarik,
+              {t.heroTitle as string}
               <br />
-              <span className="text-primary-500">Güçlü Ortaklık.</span>
+              <span className="text-primary-500">{t.heroTitleAccent as string}</span>
             </h1>
 
             <p className="text-lg text-gray-400 leading-relaxed mb-12 max-w-xl">
-              Restoran, bar ve perakende satış noktalarına hızlı, güvenilir
-              ve kaliteli alkollü içecek toptan satış hizmeti sunuyoruz.
+              {t.heroDesc as string}
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/iletisim" className="btn-primary">
-                Bizi Tanıyın
+              <Link href={`/${locale}/iletisim`} className="btn-primary">
+                {t.ctaAbout as string}
               </Link>
-              <Link href="/hizmetlerimiz" className="btn-outline border-white/20 text-white hover:bg-white/10 hover:text-white">
-                Hizmetlerimiz
+              <Link href={`/${locale}/hizmetlerimiz`} className="btn-outline border-white/20 text-white hover:bg-white/10 hover:text-white">
+                {t.ctaServices as string}
               </Link>
             </div>
           </div>
@@ -44,10 +69,10 @@ export default function Home() {
         <div className="relative border-t border-white/10">
           <div className="max-w-7xl mx-auto px-6 lg:px-8 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-gray-500 text-xs tracking-wider">
-              TAPDK LİSANSLI DAĞITIM &mdash; 20+ YILLIK DENEYİM
+              {t.tapdkBar as string}
             </p>
             <div className="flex items-center gap-8">
-              {["1800+ Satış Noktası", "1000+ Ürün Çeşidi", "%99 Memnuniyet"].map((s, i) => (
+              {[t.stat1 as string, t.stat2 as string, t.stat3 as string].map((s, i) => (
                 <span key={i} className="text-gray-500 text-xs tracking-wider">{s}</span>
               ))}
             </div>
@@ -55,27 +80,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Özellikler */}
+      {/* Features */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-gray-200">
-            {[
-              {
-                title: "Hızlı Teslimat",
-                desc: "İstanbul Avrupa Yakası genelinde aynı gün teslimat imkânı ile işletmenizi hiç stoksuz bırakmıyoruz.",
-                num: "01",
-              },
-              {
-                title: "Lisanslı Dağıtım",
-                desc: "TAPDK lisanslı, tüm yasal mevzuata uygun toptan satış ve dağıtım hizmeti sunuyoruz.",
-                num: "02",
-              },
-              {
-                title: "Profesyonel Hizmet",
-                desc: "Deneyimli ekibimizle işletmenize özel çözümler sunuyor, her aşamada destek sağlıyoruz.",
-                num: "03",
-              },
-            ].map((item, i) => (
+            {features.map((item, i) => (
               <div key={i} className="bg-white p-12 group hover:bg-gray-50 transition-colors duration-300">
                 <span className="text-primary-600 text-xs font-bold tracking-widest">{item.num}</span>
                 <h3 className="text-xl font-bold text-gray-900 mt-4 mb-4">{item.title}</h3>
@@ -86,30 +95,30 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Hakkımızda */}
+      {/* About */}
       <section className="bg-gray-50">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 py-24">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <div>
               <p className="text-primary-700 text-xs font-semibold tracking-[0.3em] uppercase mb-6">
-                Hakkımızda
+                {t.aboutEyebrow as string}
               </p>
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-8">
-                İstanbul&apos;un
-                <br />Güvenilir Dağıtım
-                <br />Ortağı
+                {aboutTitleLines.map((line, i) => (
+                  <span key={i}>
+                    {line}
+                    {i < aboutTitleLines.length - 1 && <br />}
+                  </span>
+                ))}
               </h2>
               <p className="text-gray-500 leading-relaxed mb-10">
-                LeMars Gıda İçecek olarak, İstanbul Avrupa Yakası&apos;nda
-                alkollü içecekler alanında toptan satış ve dağıtım hizmeti
-                sunmaktayız. Kaliteli ürün yelpazemiz ve güvenilir lojistik
-                ağımız ile işletmelerin ihtiyaçlarını karşılıyoruz.
+                {t.aboutDesc as string}
               </p>
               <Link
-                href="/hakkimizda"
+                href={`/${locale}/hakkimizda`}
                 className="inline-flex items-center gap-3 text-primary-700 text-sm font-semibold tracking-wider uppercase hover:gap-5 transition-all duration-300"
               >
-                Daha Fazla
+                {t.aboutMore as string}
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
@@ -117,12 +126,7 @@ export default function Home() {
             </div>
 
             <div className="grid grid-cols-2 gap-6">
-              {[
-                { number: "1800+", label: "Satış Noktası" },
-                { number: "20+", label: "Yıllık Deneyim" },
-                { number: "1000+", label: "Ürün Çeşidi" },
-                { number: "%99", label: "Müşteri Memnuniyeti" },
-              ].map((stat, i) => (
+              {stats.map((stat, i) => (
                 <div key={i} className="bg-white p-8 text-center border border-gray-100">
                   <div className="text-3xl font-bold text-primary-700 mb-2">{stat.number}</div>
                   <div className="text-xs text-gray-500 tracking-wider uppercase">{stat.label}</div>
@@ -133,39 +137,22 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Hizmetler */}
+      {/* Services */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-20">
-            <p className="text-primary-700 text-xs font-semibold tracking-[0.3em] uppercase mb-6">Hizmetlerimiz</p>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900">Tedarik Çözümlerimiz</h2>
+            <p className="text-primary-700 text-xs font-semibold tracking-[0.3em] uppercase mb-6">{t.servicesEyebrow as string}</p>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900">{t.servicesTitle as string}</h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-            {[
-              {
-                title: "HoReCa Tedarikçisi",
-                desc: "Restoran, bar, meyhane ve eğlence mekânlarının tedarik süreçlerini düzenli ve zamanında yönetiyoruz.",
-              },
-              {
-                title: "Perakende Satış",
-                desc: "Market, tekel bayii ve perakende satış noktalarının stok yönetimi ve düzenli tedarik çözümleri.",
-              },
-              {
-                title: "Lojistik & Dağıtım",
-                desc: "İstanbul Avrupa Yakası genelinde kendi filo ve lojistik ağımızla hızlı ve güvenli dağıtım.",
-              },
-              {
-                title: "Pazarlama & Tanıtım",
-                desc: "Ürünlerinizi geniş portföyümüz ve güçlü dağıtım ağımız ile tüketicilerle buluşturuyoruz.",
-              },
-            ].map((item, i) => (
+            {services.map((item, i) => (
               <div key={i} className="group">
                 <div className="w-full h-px bg-primary-700 mb-8 origin-left group-hover:scale-x-100 scale-x-50 transition-transform duration-500" />
                 <h3 className="text-lg font-bold text-gray-900 mb-4">{item.title}</h3>
                 <p className="text-gray-500 text-sm leading-relaxed mb-6">{item.desc}</p>
-                <Link href="/hizmetlerimiz" className="text-primary-700 text-xs font-semibold tracking-wider uppercase hover:tracking-[0.2em] transition-all">
-                  Detaylı Bilgi &rarr;
+                <Link href={`/${locale}/hizmetlerimiz`} className="text-primary-700 text-xs font-semibold tracking-wider uppercase hover:tracking-[0.2em] transition-all">
+                  {t.svcMore as string} &rarr;
                 </Link>
               </div>
             ))}
@@ -176,18 +163,22 @@ export default function Home() {
       {/* CTA */}
       <section className="bg-gray-900 py-24">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
-          <p className="text-primary-500 text-xs font-semibold tracking-[0.3em] uppercase mb-6">İletişim</p>
+          <p className="text-primary-500 text-xs font-semibold tracking-[0.3em] uppercase mb-6">{t.ctaEyebrow as string}</p>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
-            İşletmeniz İçin Doğru
-            <br />Tedarik Ortağı
+            {(t.ctaTitle as string).split("\n").map((line, i) => (
+              <span key={i}>
+                {line}
+                {i === 0 && <br />}
+              </span>
+            ))}
           </h2>
           <p className="text-gray-400 mb-12 max-w-xl mx-auto">
-            Dağıtım ve tedarik stratejinizi birlikte oluşturalım.
+            {t.ctaDesc as string}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/iletisim" className="btn-white">İletişime Geçin</Link>
+            <Link href={`/${locale}/iletisim`} className="btn-white">{t.ctaButton as string}</Link>
             <a href="tel:+902128091883" className="inline-flex items-center justify-center gap-2 px-7 py-3.5 border border-white/20 text-white font-semibold rounded-md hover:bg-white/10 transition-all text-sm uppercase tracking-wider">
-              +90 (212) 809 18 83
+              {t.ctaPhone as string}
             </a>
           </div>
         </div>
