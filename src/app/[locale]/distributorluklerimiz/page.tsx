@@ -53,7 +53,7 @@ export default async function Distributorluklerimiz({ params }: { params: { loca
                 key={dist.name}
                 className="bg-gray-50 border border-gray-100 rounded-lg overflow-hidden hover:shadow-lg hover:border-primary-200 transition-all duration-300"
               >
-                <div className={`aspect-[3/2] ${dist.logoBg || "bg-white"} flex items-center justify-center p-8`}>
+                <div className={`aspect-[3/2] ${dist.logoBg || "bg-gray-50"} flex items-center justify-center p-8`}>
                   <Image
                     src={dist.logo}
                     alt={dist.name}

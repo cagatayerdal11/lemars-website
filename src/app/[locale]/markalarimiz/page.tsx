@@ -56,7 +56,7 @@ export default async function Markalarimiz({ params }: { params: { locale: strin
                 className="bg-gray-50 border border-gray-100 rounded-lg p-8 hover:shadow-lg hover:border-primary-200 transition-all duration-300 group"
               >
                 {/* Brand Logo */}
-                <div className={`aspect-[3/2] ${brand.logoBg || "bg-white"} border border-gray-100 rounded-md flex items-center justify-center p-6 mb-6`}>
+                <div className={`aspect-[3/2] ${brand.logoBg || "bg-gray-50"} border border-gray-100 rounded-md flex items-center justify-center p-6 mb-6`}>
                   <Image
                     src={brand.logo}
                     alt={brandList[brand.key] || brand.slug}

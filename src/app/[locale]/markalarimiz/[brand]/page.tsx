@@ -127,7 +127,7 @@ export default async function BrandPage({
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
             {/* Brand Logo */}
-            <div className={`aspect-[4/3] ${info.logoBg || "bg-gray-50"} border border-gray-100 rounded-lg flex items-center justify-center p-10`}>
+            <div className={`aspect-[4/3] ${info.logoBg || "bg-transparent"} border border-gray-100 rounded-lg flex items-center justify-center p-10`}>
               <Image
                 src={info.logo}
                 alt={info.name}
