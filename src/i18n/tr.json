@@ -356,12 +356,13 @@
     "notFoundBack": "Markalarımıza Dön"
   },
   "brandList": {
-    "marengo": "Marengo",
-    "hlibny-dar": "Hlibny Dar",
     "scotch-blue": "Scotch Blue",
+    "hlibny-dar": "Hlibny Dar",
+    "marengo": "Marengo",
     "suvorov": "Suvorov",
     "enjoy": "Enjoy Shot",
-    "cumbus": "Cümbüş"
+    "cumbus": "Cümbüş",
+    "isabey": "İsabey"
   },
   "footer": {
     "desc": "İstanbul Avrupa Yakası'nda alkollü içecekler alanında toptan satış ve dağıtım hizmeti sunan firmamız, restoran, bar ve perakende satış noktalarına güvenilir tedarik çözümleri sağlar.",

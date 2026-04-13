@@ -356,12 +356,13 @@
     "notFoundBack": "Back to Our Brands"
   },
   "brandList": {
-    "marengo": "Marengo",
-    "hlibny-dar": "Hlibny Dar",
     "scotch-blue": "Scotch Blue",
+    "hlibny-dar": "Hlibny Dar",
+    "marengo": "Marengo",
     "suvorov": "Suvorov",
     "enjoy": "Enjoy Shot",
-    "cumbus": "Cumbus"
+    "cumbus": "Cümbüş",
+    "isabey": "İsabey"
   },
   "footer": {
     "desc": "Our company provides wholesale distribution services for alcoholic beverages across Istanbul's European side, offering reliable supply solutions to restaurants, bars, and retail outlets.",

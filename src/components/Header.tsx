@@ -20,12 +20,13 @@ interface BrandListDict {
 }
 
 const brands = [
-  { slug: "marengo", key: "marengo" },
-{ slug: "hlibny-dar", key: "hlibny-dar" },
   { slug: "scotch-blue", key: "scotch-blue" },
+  { slug: "hlibny-dar", key: "hlibny-dar" },
+  { slug: "marengo", key: "marengo" },
   { slug: "suvorov", key: "suvorov" },
   { slug: "enjoy", key: "enjoy" },
   { slug: "cumbus", key: "cumbus" },
+  { slug: "isabey", key: "isabey" },
 ];
 
 export default function Header({
