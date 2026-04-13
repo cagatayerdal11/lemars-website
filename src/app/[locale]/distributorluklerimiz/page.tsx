@@ -4,6 +4,14 @@ import DistributorCard from "@/components/DistributorCard";
 
 const distributors = [
   {
+    name: "Hlibny Dar",
+    logo: "/brands/hlibny-dar.png",
+    logoBg: "",
+    brands: { tr: "Hlibny Dar Votka", en: "Hlibny Dar Vodka" },
+    descTr: "Hlibny Dar, Bayadera Group'un uluslararası bilinirliği yüksek, köklü ve güçlü votka markalarından biridir. Ukrayna üretim geleneğini modern marka yapısıyla birleştiren Hlibny Dar, kategorisinde güven veren ve yüksek tanınırlığa sahip iş ortaklarımız arasında yer almaktadır.",
+    descEn: "Hlibny Dar is one of Bayadera Group's internationally recognized, well-established and powerful vodka brands. Combining the Ukrainian production tradition with a modern brand structure, Hlibny Dar is among our trusted and highly recognized business partners in its category.",
+  },
+  {
     name: "Lotte Chilsung Beverage",
     logo: "/brands/scotch-blue.png",
     logoBg: "",
@@ -12,12 +20,12 @@ const distributors = [
     descEn: "Scotch Blue is a significant blended whisky brand developed under Lotte Chilsung Beverage with a strong presence in the South Korean market. The brand stands out in our portfolio as one of the distinguished international brands with its established corporate infrastructure and firmly positioned market standing.",
   },
   {
-    name: "Bayadera Group",
-    logo: "/brands/marengo.png",
+    name: "Aykut Özkan Şarapçılık",
+    logo: "/brands/aykut-ozkan.png",
     logoBg: "",
-    brands: { tr: "Marengo, Hlibny Dar", en: "Marengo, Hlibny Dar" },
-    descTr: "Marengo, Bayadera Group portföyü içinde köpüklü şarap segmentinde öne çıkan ve İtalyan üretim yaklaşımını güçlü bir marka kimliğiyle birleştiren markalardan biridir. Hlibny Dar ise Bayadera Group'un uluslararası bilinirliği yüksek, köklü ve güçlü votka markalarından biridir. Ukrayna üretim geleneğini modern marka yapısıyla birleştiren Hlibny Dar, kategorisinde güven veren ve yüksek tanınırlığa sahip iş ortaklarımız arasında yer almaktadır.",
-    descEn: "Marengo is one of the brands within the Bayadera Group portfolio that stands out in the sparkling wine segment, combining the Italian production approach with a strong brand identity. Hlibny Dar is one of Bayadera Group's internationally recognized, well-established and powerful vodka brands. Combining the Ukrainian production tradition with a modern brand structure, Hlibny Dar is among our trusted and highly recognized business partners in its category.",
+    brands: { tr: "Cümbüş, İsabey", en: "Cümbüş, İsabey" },
+    descTr: "İsabey, Aykut Özkan Şarapçılık bünyesinde Çal / Denizli bağcılık geleneğini yansıtan, yerel üretim kültürüyle bütünleşmiş güçlü bir şarap markasıdır. Cümbüş ise aynı portföyde yer alan ve Çal / Denizli terroirini sade, ulaşılabilir ve dengeli bir ürün yaklaşımıyla yansıtan yerel şarap markalarından biridir. Kırmızı, beyaz ve roze çeşitleriyle markalar, bölgesel üzüm karakterini geniş kitlelerle buluşturmaktadır.",
+    descEn: "İsabey is a strong wine brand within the Aykut Özkan Winery, reflecting the Çal/Denizli viticulture tradition and integrated with local production culture. Cümbüş is a local wine brand in the same portfolio, reflecting the Çal/Denizli terroir with a simple, accessible, and balanced product approach. With red, white, and rosé varieties, both brands bring regional grape character to a wide audience.",
   },
   {
     name: "KVINT",
@@ -28,20 +36,20 @@ const distributors = [
     descEn: "Suvorov is one of KVINT's prestigious divin brands, reflecting its deep-rooted production heritage and distinguished by its long-aging approach. With its strong production history and mature product character, the brand represents a valuable partnership in the premium segment.",
   },
   {
+    name: "Bayadera Group",
+    logo: "/brands/marengo.png",
+    logoBg: "",
+    brands: { tr: "Marengo", en: "Marengo" },
+    descTr: "Marengo, Bayadera Group portföyü içinde köpüklü şarap ve vermut segmentinde öne çıkan ve İtalyan üretim yaklaşımını güçlü bir marka kimliğiyle birleştiren markalardan biridir.",
+    descEn: "Marengo is one of the brands within the Bayadera Group portfolio that stands out in the sparkling wine and vermouth segment, combining the Italian production approach with a strong brand identity.",
+  },
+  {
     name: "Enjoy Alkollü Alkolsüz İçecekler A.Ş.",
     logo: "/brands/enjoy.png",
     logoBg: "",
     brands: { tr: "Enjoy Shot", en: "Enjoy Shot" },
     descTr: "Enjoy Shot, Türkiye'de aromatize şarap bazlı içecek kategorisinde üretim yapan, dinamik ve gelişime açık yerli markalardan biridir. Isparta'daki üretim altyapısı, yaygın dağıtım yaklaşımı ve ürün çeşitliliğiyle marka, yerel pazarda güçlü bir potansiyel taşımaktadır.",
     descEn: "Enjoy Shot is one of the dynamic and growth-oriented domestic brands producing in the aromatized wine-based beverage category in Turkey. With its production infrastructure in Isparta, widespread distribution approach, and product diversity, the brand carries strong potential in the local market.",
-  },
-  {
-    name: "Aykut Özkan Şarapçılık",
-    logo: "/brands/aykut-ozkan.png",
-    logoBg: "",
-    brands: { tr: "Cümbüş, İsabey", en: "Cümbüş, İsabey" },
-    descTr: "İsabey, Aykut Özkan Şarapçılık bünyesinde Çal / Denizli bağcılık geleneğini yansıtan, yerel üretim kültürüyle bütünleşmiş güçlü bir şarap markasıdır. Cümbüş ise aynı portföyde yer alan ve Çal / Denizli terroirini sade, ulaşılabilir ve dengeli bir ürün yaklaşımıyla yansıtan yerel şarap markalarından biridir. Kırmızı, beyaz ve roze çeşitleriyle markalar, bölgesel üzüm karakterini geniş kitlelerle buluşturmaktadır.",
-    descEn: "İsabey is a strong wine brand within the Aykut Özkan Winery, reflecting the Çal/Denizli viticulture tradition and integrated with local production culture. Cümbüş is a local wine brand in the same portfolio, reflecting the Çal/Denizli terroir with a simple, accessible, and balanced product approach. With red, white, and rosé varieties, both brands bring regional grape character to a wide audience.",
   },
 ];
 
