@@ -95,7 +95,7 @@ export default function Footer({
                 </a>
               </li>
               <li>
-                <a href="mailto:info@lemars.com" className="hover:text-primary-400 transition-colors">
+                <a href="mailto:info@lemarsgida.com" className="hover:text-primary-400 transition-colors">
                   {dict.email}
                 </a>
               </li>

@@ -92,8 +92,8 @@ export default async function KVKK({ params }: { params: { locale: string } }) {
               <h2 className="text-lg font-bold text-gray-900 mb-3">{plainSections[3].title}</h2>
               <p>
                 {plainSections[3].content}{" "}
-                <a href="mailto:info@lemars.com" className="text-primary-700 font-semibold hover:underline">
-                  info@lemars.com
+                <a href="mailto:info@lemarsgida.com" className="text-primary-700 font-semibold hover:underline">
+                  info@lemarsgida.com
                 </a>
               </p>
             </div>

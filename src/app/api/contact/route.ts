@@ -17,8 +17,8 @@ export async function POST(request: Request) {
     const emailSubject = `Yeni İletişim Formu: ${subjectMap[subject] || "Genel"}`;
 
     await resend.emails.send({
-      from: "LeMars Web <onboarding@resend.dev>",
-      to: ["info@lemars.com"],
+      from: "LeMars Gıda İçecek <onboarding@resend.dev>",
+      to: ["info@lemarsgida.com"],
       subject: emailSubject,
       html: `
         <h2>Yeni İletişim Formu Mesajı</h2>
@@ -32,7 +32,7 @@ export async function POST(request: Request) {
           <tr><td style="padding:8px;" colspan="2">${message}</td></tr>
         </table>
         <hr style="margin-top:20px;" />
-        <p style="font-size:12px;color:#999;">Bu mesaj lemars.com.tr iletişim formundan gönderilmiştir.</p>
+        <p style="font-size:12px;color:#999;">Bu mesaj lemarsgida.com iletişim formundan gönderilmiştir.</p>
       `,
     });
 

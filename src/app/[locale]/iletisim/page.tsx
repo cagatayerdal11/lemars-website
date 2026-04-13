@@ -76,7 +76,7 @@ export default function Iletisim({ params }: { params: { locale: string } }) {
                 </div>
               </a>
 
-              <a href="mailto:info@lemars.com" className="flex items-start gap-4 p-5 bg-gray-50 rounded-lg hover:bg-orange-50 transition-colors group">
+              <a href="mailto:info@lemarsgida.com" className="flex items-start gap-4 p-5 bg-gray-50 rounded-lg hover:bg-orange-50 transition-colors group">
                 <div className="w-10 h-10 bg-orange-100 text-primary-700 rounded-lg flex items-center justify-center flex-shrink-0">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
