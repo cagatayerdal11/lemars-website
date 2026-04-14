@@ -43,10 +43,10 @@ export default async function Home({ params }: { params: { locale: string } }) {
             sizes="(max-width: 768px) 100vw, 55vw"
             quality={95}
           />
-          {/* Soldan sağa blend — görsel koyu arka plana yumuşak geçiş yapar */}
-          <div className="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-900/60 to-transparent" />
-          {/* Mobilde üstten alta blend */}
-          <div className="absolute inset-0 bg-gradient-to-b from-gray-900 via-gray-900/40 to-gray-900/20 md:hidden" />
+          {/* Sol kenarda dar geçiş — sadece metin/görsel birleşim noktası */}
+          <div className="absolute inset-y-0 left-0 w-[30%] bg-gradient-to-r from-gray-900 to-transparent" />
+          {/* Mobilde üstte dar geçiş — metin okunabilirliği için */}
+          <div className="absolute inset-x-0 top-0 h-[40%] bg-gradient-to-b from-gray-900 to-transparent md:hidden" />
         </div>
 
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8 py-28 md:py-40">
