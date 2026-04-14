@@ -118,7 +118,7 @@
   "services": {
     "heroEyebrow": "Our Services",
     "heroTitle": "Supply Solutions",
-    "heroDesc": "We offer TAPDK-compliant, reliable, and fast alcoholic beverage supply services tailored to businesses of every scale.",
+    "heroDesc": "We offer services tailored to businesses of every scale, compliant with TAPDK regulations, providing reliable and fast alcoholic beverage supply.",
     "s1Eyebrow": "01 — HoReCa",
     "s1Title": "Restaurant, Bar &\nHotel Supplier",
     "s1Desc": "We manage the supply chain for HoReCa businesses seamlessly and on time. Through your dedicated account representative, we create distribution plans tailored to your establishment.",
@@ -184,7 +184,7 @@
     "emailAddress": "info@lemarsgida.com",
     "emailNote": "Response within 24 hours",
     "addressLabel": "Address",
-    "addressLine1": "Cihangir, Guvercin Cd. No: 2/90-91",
+    "addressLine1": "Cihangir Mah. Guvercin Cd. No: 2/90-91",
     "addressLine2": "34310 Avcilar/Istanbul, Turkey",
     "addressDirection": "Get directions",
     "whatsappLabel": "WhatsApp",
@@ -212,7 +212,7 @@
     "successDesc": "We will get back to you as soon as possible.",
     "successNew": "Send Another Message",
     "mapTitle": "LeMars Food & Beverage",
-    "mapAddress": "Cihangir, Guvercin Cd. No: 2/90-91, 34310 Avcilar/Istanbul, Turkey",
+    "mapAddress": "Cihangir Mah. Guvercin Cd. No: 2/90-91, 34310 Avcilar/Istanbul, Turkey",
     "mapDirection": "Get Directions"
   },
   "distributorships": {
@@ -369,7 +369,7 @@
     "tapdkNote": "Alcohol is harmful to your health. Alcohol is not your friend. Alcoholic beverages may not be sold or served to persons under 18 years of age.",
     "pagesTitle": "Pages",
     "contactTitle": "Contact",
-    "address": "Cihangir, Guvercin Cd. No: 2/90-91",
+    "address": "Cihangir Mah. Guvercin Cd. No: 2/90-91",
     "addressCity": "34310 Avcilar/Istanbul, Turkey",
     "email": "info@lemarsgida.com",
     "phone": "+90 (212) 809 18 83",

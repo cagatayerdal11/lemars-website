@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import TAPDKBanner from "@/components/TAPDKBanner";
 import CookieBanner from "@/components/CookieBanner";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 export async function generateMetadata({
   params,
@@ -92,6 +93,7 @@ export default async function LocaleLayout({
       <main className="flex-1">{children}</main>
       <Footer locale={locale} dict={footerDict} navDict={navDict} />
       <CookieBanner dict={cookieDict} locale={locale} />
+      <WhatsAppButton />
     </AgeGate>
   );
 }
