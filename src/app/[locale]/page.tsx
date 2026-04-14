@@ -76,18 +76,6 @@ export default async function Home({ params }: { params: { locale: string } }) {
           </div>
         </div>
 
-        <div className="relative border-t border-white/10">
-          <div className="max-w-7xl mx-auto px-6 lg:px-8 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-gray-500 text-xs tracking-wider">
-              {t.tapdkBar as string}
-            </p>
-            <div className="flex items-center gap-8">
-              {[t.stat1 as string, t.stat2 as string].map((s, i) => (
-                <span key={i} className="text-gray-500 text-xs tracking-wider">{s}</span>
-              ))}
-            </div>
-          </div>
-        </div>
       </section>
 
       {/* Features */}
