@@ -82,7 +82,7 @@ export default async function Home({ params }: { params: { locale: string } }) {
               {t.tapdkBar as string}
             </p>
             <div className="flex items-center gap-8">
-              {[t.stat1 as string, t.stat2 as string, t.stat3 as string].map((s, i) => (
+              {[t.stat1 as string, t.stat2 as string].map((s, i) => (
                 <span key={i} className="text-gray-500 text-xs tracking-wider">{s}</span>
               ))}
             </div>
