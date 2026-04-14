@@ -16,8 +16,7 @@ export default async function Home({ params }: { params: { locale: string } }) {
   const stats = [
     { number: "1800+", label: t.stat_sales as string },
     { number: "20+", label: t.stat_experience as string },
-    { number: "1000+", label: t.stat_products as string },
-    { number: "%99", label: t.stat_satisfaction as string },
+    { number: "400+", label: t.stat_products as string },
   ];
 
   const services = [
@@ -131,11 +130,11 @@ export default async function Home({ params }: { params: { locale: string } }) {
               </Link>
             </div>
 
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid grid-cols-3 gap-5">
               {stats.map((stat, i) => (
-                <div key={i} className="bg-white p-8 text-center border border-gray-100">
-                  <div className="text-3xl font-bold text-primary-700 mb-2">{stat.number}</div>
-                  <div className="text-xs text-gray-500 tracking-wider uppercase">{stat.label}</div>
+                <div key={i} className="bg-white p-6 md:p-8 text-center border border-gray-100 rounded-lg">
+                  <div className="text-2xl md:text-3xl font-bold text-primary-700 mb-2">{stat.number}</div>
+                  <div className="text-[10px] md:text-xs text-gray-500 tracking-wider uppercase">{stat.label}</div>
                 </div>
               ))}
             </div>
