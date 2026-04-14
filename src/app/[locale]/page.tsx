@@ -31,36 +31,37 @@ export default async function Home({ params }: { params: { locale: string } }) {
   return (
     <>
       {/* Hero */}
-      <section className="relative bg-gray-900 overflow-hidden min-h-[600px] md:min-h-[700px]">
-        <Image
-          src="/hero-truck.jpg"
-          alt="LeMars Gıda İçecek — Toptan Dağıtım"
-          fill
-          className="object-cover object-center"
-          priority
-          sizes="100vw"
-          quality={95}
-        />
-        {/* Hafif genel karartma — operasyon görünür kalsın */}
-        <div className="absolute inset-0 bg-black/30" />
-        {/* Sol tarafta metin okunabilirliği için dar gradient */}
-        <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 via-gray-900/50 to-transparent w-[60%]" />
-        {/* Mobilde alt kısım karartma (metin okunabilirliği) */}
-        <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 via-gray-900/20 to-transparent md:from-gray-900/40 md:via-transparent" />
+      <section className="relative bg-gray-900 overflow-hidden">
+        {/* Sağ tarafta görsel — masaüstünde yarım, mobilde alt kısımda */}
+        <div className="absolute inset-y-0 right-0 w-full md:w-[55%] lg:w-[50%]">
+          <Image
+            src="/hero-truck.jpg"
+            alt="LeMars Gıda İçecek — Toptan Dağıtım"
+            fill
+            className="object-cover object-center"
+            priority
+            sizes="(max-width: 768px) 100vw, 55vw"
+            quality={95}
+          />
+          {/* Soldan sağa blend — görsel koyu arka plana yumuşak geçiş yapar */}
+          <div className="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-900/60 to-transparent" />
+          {/* Mobilde üstten alta blend */}
+          <div className="absolute inset-0 bg-gradient-to-b from-gray-900 via-gray-900/40 to-gray-900/20 md:hidden" />
+        </div>
 
-        <div className="relative max-w-7xl mx-auto px-6 lg:px-8 py-32 md:py-44">
-          <div className="max-w-2xl">
-            <p className="text-primary-400 text-xs font-semibold tracking-[0.3em] uppercase mb-8 drop-shadow-lg">
+        <div className="relative max-w-7xl mx-auto px-6 lg:px-8 py-28 md:py-40">
+          <div className="max-w-xl lg:max-w-lg">
+            <p className="text-primary-500 text-xs font-semibold tracking-[0.3em] uppercase mb-8">
               {t.heroEyebrow as string}
             </p>
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.1] mb-8 drop-shadow-lg">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.1] mb-8">
               {t.heroTitle as string}
               <br />
-              <span className="text-primary-400">{t.heroTitleAccent as string}</span>
+              <span className="text-primary-500">{t.heroTitleAccent as string}</span>
             </h1>
 
-            <p className="text-base md:text-lg text-gray-200 leading-relaxed mb-12 max-w-lg drop-shadow-md">
+            <p className="text-base md:text-lg text-gray-400 leading-relaxed mb-12 max-w-md">
               {t.heroDesc as string}
             </p>
 
@@ -68,7 +69,7 @@ export default async function Home({ params }: { params: { locale: string } }) {
               <Link href={`/${locale}/iletisim`} className="btn-primary">
                 {t.ctaAbout as string}
               </Link>
-              <Link href={`/${locale}/hizmetlerimiz`} className="btn-outline border-white/30 text-white hover:bg-white/10 hover:text-white backdrop-blur-sm">
+              <Link href={`/${locale}/hizmetlerimiz`} className="btn-outline border-white/20 text-white hover:bg-white/10 hover:text-white">
                 {t.ctaServices as string}
               </Link>
             </div>
