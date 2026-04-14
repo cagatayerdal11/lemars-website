@@ -31,7 +31,7 @@ export default async function Home({ params }: { params: { locale: string } }) {
   return (
     <>
       {/* Hero */}
-      <section className="relative bg-gray-900 overflow-hidden">
+      <section className="relative bg-gray-900 overflow-hidden min-h-[600px] md:min-h-[700px]">
         <Image
           src="/hero-truck.jpg"
           alt="LeMars Gıda İçecek — Toptan Dağıtım"
@@ -41,22 +41,26 @@ export default async function Home({ params }: { params: { locale: string } }) {
           sizes="100vw"
           quality={95}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-900/80 to-gray-900/40" />
-        <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-transparent to-transparent md:hidden" />
+        {/* Hafif genel karartma — operasyon görünür kalsın */}
+        <div className="absolute inset-0 bg-black/30" />
+        {/* Sol tarafta metin okunabilirliği için dar gradient */}
+        <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 via-gray-900/50 to-transparent w-[60%]" />
+        {/* Mobilde alt kısım karartma (metin okunabilirliği) */}
+        <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 via-gray-900/20 to-transparent md:from-gray-900/40 md:via-transparent" />
 
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8 py-32 md:py-44">
-          <div className="max-w-3xl">
-            <p className="text-primary-500 text-xs font-semibold tracking-[0.3em] uppercase mb-8">
+          <div className="max-w-2xl">
+            <p className="text-primary-400 text-xs font-semibold tracking-[0.3em] uppercase mb-8 drop-shadow-lg">
               {t.heroEyebrow as string}
             </p>
 
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] mb-8">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.1] mb-8 drop-shadow-lg">
               {t.heroTitle as string}
               <br />
-              <span className="text-primary-500">{t.heroTitleAccent as string}</span>
+              <span className="text-primary-400">{t.heroTitleAccent as string}</span>
             </h1>
 
-            <p className="text-lg text-gray-400 leading-relaxed mb-12 max-w-xl">
+            <p className="text-base md:text-lg text-gray-200 leading-relaxed mb-12 max-w-lg drop-shadow-md">
               {t.heroDesc as string}
             </p>
 
@@ -64,7 +68,7 @@ export default async function Home({ params }: { params: { locale: string } }) {
               <Link href={`/${locale}/iletisim`} className="btn-primary">
                 {t.ctaAbout as string}
               </Link>
-              <Link href={`/${locale}/hizmetlerimiz`} className="btn-outline border-white/20 text-white hover:bg-white/10 hover:text-white">
+              <Link href={`/${locale}/hizmetlerimiz`} className="btn-outline border-white/30 text-white hover:bg-white/10 hover:text-white backdrop-blur-sm">
                 {t.ctaServices as string}
               </Link>
             </div>
