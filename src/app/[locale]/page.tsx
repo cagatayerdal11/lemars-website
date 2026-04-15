@@ -31,51 +31,74 @@ export default async function Home({ params }: { params: { locale: string } }) {
   return (
     <>
       {/* Hero */}
-      <section className="relative bg-gray-900 overflow-hidden">
-        {/* Sağ tarafta görsel — masaüstünde yarım, mobilde alt kısımda */}
-        <div className="absolute inset-y-0 right-0 w-full md:w-[55%] lg:w-[50%]">
+      <section className="bg-gray-900 overflow-hidden">
+        <div className="relative">
+          {/* Desktop: görsel sağ tarafta, absolute */}
+          <div className="hidden md:block absolute inset-y-0 right-0 md:w-[55%] lg:w-[50%]">
+            <Image
+              src="/hero-truck.jpg"
+              alt="LeMars Gıda İçecek — Toptan Dağıtım"
+              fill
+              className="object-cover object-center"
+              priority
+              sizes="55vw"
+              quality={95}
+            />
+            <div className="absolute inset-y-0 left-0 w-[30%] bg-gradient-to-r from-gray-900 to-transparent" />
+          </div>
+
+          <div className="relative max-w-7xl mx-auto px-6 lg:px-8 py-16 md:py-40">
+            <div className="max-w-xl lg:max-w-lg">
+              <p className="text-primary-500 text-xs font-semibold tracking-[0.3em] uppercase mb-6 md:mb-8">
+                {t.heroEyebrow as string}
+              </p>
+
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.1] mb-6 md:mb-8">
+                {t.heroTitle as string}
+                <br />
+                <span className="text-primary-500">{t.heroTitleAccent as string}</span>
+              </h1>
+
+              <p className="text-sm md:text-lg text-gray-400 leading-relaxed mb-8 md:mb-12 max-w-md">
+                {t.heroDesc as string}
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link href={`/${locale}/iletisim`} className="btn-primary">
+                  {t.ctaAbout as string}
+                </Link>
+                <Link href={`/${locale}/hizmetlerimiz`} className="btn-outline border-white/20 text-white hover:bg-white/10 hover:text-white">
+                  {t.ctaServices as string}
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Mobil: görsel metin altında, net ve bağımsız blok */}
+        <div className="relative md:hidden h-[280px]">
           <Image
             src="/hero-truck.jpg"
             alt="LeMars Gıda İçecek — Toptan Dağıtım"
             fill
             className="object-cover object-center"
             priority
-            sizes="(max-width: 768px) 100vw, 55vw"
+            sizes="100vw"
             quality={95}
           />
-          {/* Sol kenarda dar geçiş — sadece metin/görsel birleşim noktası */}
-          <div className="absolute inset-y-0 left-0 w-[30%] bg-gradient-to-r from-gray-900 to-transparent" />
-          {/* Mobilde üstte dar geçiş — metin okunabilirliği için */}
-          <div className="absolute inset-x-0 top-0 h-[40%] bg-gradient-to-b from-gray-900 to-transparent md:hidden" />
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-6 lg:px-8 py-28 md:py-40">
-          <div className="max-w-xl lg:max-w-lg">
-            <p className="text-primary-500 text-xs font-semibold tracking-[0.3em] uppercase mb-8">
-              {t.heroEyebrow as string}
-            </p>
-
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.1] mb-8">
-              {t.heroTitle as string}
-              <br />
-              <span className="text-primary-500">{t.heroTitleAccent as string}</span>
-            </h1>
-
-            <p className="text-base md:text-lg text-gray-400 leading-relaxed mb-12 max-w-md">
-              {t.heroDesc as string}
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link href={`/${locale}/iletisim`} className="btn-primary">
-                {t.ctaAbout as string}
-              </Link>
-              <Link href={`/${locale}/hizmetlerimiz`} className="btn-outline border-white/20 text-white hover:bg-white/10 hover:text-white">
-                {t.ctaServices as string}
-              </Link>
-            </div>
+        {/* 3 Highlight — her zaman yan yana */}
+        <div className="border-t border-white/10">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8 py-5 grid grid-cols-3 text-center">
+            {stats.map((stat, i) => (
+              <div key={i}>
+                <span className="text-lg md:text-xl font-bold text-white">{stat.number}</span>
+                <span className="block text-[10px] md:text-xs text-gray-500 uppercase tracking-wider mt-1">{stat.label}</span>
+              </div>
+            ))}
           </div>
         </div>
-
       </section>
 
       {/* Features */}
