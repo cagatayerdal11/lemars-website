@@ -54,7 +54,7 @@ export default async function Markalarimiz({ params }: { params: { locale: strin
               <Link
                 key={brand.slug}
                 href={`/${locale}/markalarimiz/${brand.slug}`}
-                className="bg-gray-50 border border-gray-100 rounded-lg p-8 hover:shadow-lg hover:border-primary-200 transition-all duration-300 group"
+                className="bg-gray-50 border border-gray-100 rounded-lg p-8 hover:shadow-xl hover:border-primary-200 hover:-translate-y-1 transition-all duration-300 group"
               >
                 {/* Brand Logo */}
                 <div className={`aspect-[3/2] ${brand.logoBg || "bg-gray-50"} border border-gray-100 rounded-md flex items-center justify-center p-6 mb-6`}>
@@ -63,7 +63,7 @@ export default async function Markalarimiz({ params }: { params: { locale: strin
                     alt={brandList[brand.key] || brand.slug}
                     width={200}
                     height={120}
-                    className="object-contain max-h-full"
+                    className="object-contain max-h-full group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
 

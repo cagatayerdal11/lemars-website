@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { getDictionary, Locale } from "@/i18n/config";
+import MarsLoader from "@/components/MarsLoader";
 
 export default function Iletisim({ params }: { params: { locale: string } }) {
   const locale = params.locale;
@@ -37,8 +38,8 @@ export default function Iletisim({ params }: { params: { locale: string } }) {
 
   if (!t) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="w-8 h-8 border-2 border-primary-400 border-t-transparent rounded-full animate-spin" />
+      <div className="min-h-screen flex items-center justify-center bg-gray-50">
+        <MarsLoader size={56} text={locale === "tr" ? "Yükleniyor..." : "Loading..."} />
       </div>
     );
   }
@@ -196,8 +197,13 @@ export default function Iletisim({ params }: { params: { locale: string } }) {
                         {t.formKvkk as string}
                       </p>
                       <button type="submit" disabled={loading}
-                        className="w-full py-3.5 bg-primary-700 text-white font-semibold rounded-lg hover:bg-primary-800 transition-all text-sm uppercase tracking-wider disabled:opacity-50">
-                        {loading ? (t.formSubmitting as string) : (t.formSubmit as string)}
+                        className="w-full py-3.5 bg-primary-700 text-white font-semibold rounded-lg hover:bg-primary-800 transition-all text-sm uppercase tracking-wider disabled:opacity-50 flex items-center justify-center gap-3">
+                        {loading ? (
+                          <>
+                            <MarsLoader size={24} />
+                            {t.formSubmitting as string}
+                          </>
+                        ) : (t.formSubmit as string)}
                       </button>
                     </form>
                   </>
