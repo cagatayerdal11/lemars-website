@@ -13,7 +13,6 @@ export default async function Hizmetlerimiz({ params }: { params: { locale: stri
   const s3Items = t.s3Items as string[];
   const s4Items = t.s4Items as string[];
   const categories = t.categories as string[];
-  const flowLeftLabels = t.flowLeftLabels as string[];
   const flowRightLabels = t.flowRightLabels as string[];
 
   return (
@@ -34,11 +33,10 @@ export default async function Hizmetlerimiz({ params }: { params: { locale: stri
           <FlowDiagram
             title={t.flowTitle as string}
             subtitle={t.flowSubtitle as string}
-            leftTitle={t.flowEyebrow as string}
-            rightTitle={t.flowRightEyebrow as string}
-            centerLabel="LEMARS"
-            leftLabels={flowLeftLabels}
+            leftLabel={t.flowLeftLabel as string}
+            rightHeader={t.flowRightEyebrow as string}
             rightLabels={flowRightLabels}
+            centerLabel="LEMARS"
           />
         </div>
       </section>

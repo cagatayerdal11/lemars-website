@@ -153,12 +153,11 @@
       "1800+ satış noktasına erişim",
       "Pazar analizi ve satış stratejisi danışmanlığı"
     ],
-    "flowEyebrow": "MARKALARIMIZ",
     "flowRightEyebrow": "İŞLETMENİZ",
-    "flowTitle": "Markalarımızdan İşletmenize",
-    "flowSubtitle": "400+ premium markamızı kendi filomuz ve güvenilir lojistik ağımız ile İstanbul Avrupa Yakası'nda işletmenize ulaştırıyoruz.",
-    "flowLeftLabels": ["Viski", "Şarap", "Votka"],
-    "flowRightLabels": ["Restoran & Bar", "Otel", "Market"],
+    "flowTitle": "Depomuzdan İşletmenize",
+    "flowSubtitle": "400+ premium ürünümüzü kendi araç filomuz ile doğrudan deponuza, barınıza, restoranınıza veya otelinize teslim ediyoruz.",
+    "flowLeftLabel": "Ürün",
+    "flowRightLabels": ["Market", "Bar", "Restoran", "Otel", "Depo"],
     "productsEyebrow": "Ürünlerimiz",
     "productsTitle": "Ürün Kategorileri",
     "categories": [
