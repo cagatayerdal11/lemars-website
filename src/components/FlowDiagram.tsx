@@ -196,8 +196,7 @@ export default function FlowDiagram({
   return (
     <div className="w-full">
       <div className="text-center mb-14">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{title}</h2>
-        <p className="text-gray-500 max-w-2xl mx-auto">{subtitle}</p>
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-900">{title}</h2>
       </div>
 
       <div className="overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0">
@@ -405,6 +404,23 @@ export default function FlowDiagram({
               </g>
             );
           })}
+        </svg>
+      </div>
+
+      {/* Scroll-down cue — directs users to the detail sections below */}
+      <div className="mt-10 flex flex-col items-center gap-2 text-gray-400">
+        <span className="text-[11px] font-semibold tracking-[0.3em] uppercase">
+          {subtitle}
+        </span>
+        <svg
+          className="w-5 h-5 animate-bounce text-primary-500"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2.5"
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+        >
+          <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
         </svg>
       </div>
     </div>
