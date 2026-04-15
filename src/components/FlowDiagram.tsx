@@ -124,19 +124,6 @@ function BottleCrateIcon({ cx, cy }: { cx: number; cy: number }) {
       <line x1="28" y1="70" x2="28" y2="94" stroke="#78350f" strokeWidth="0.6" opacity="0.5" />
       <line x1="50" y1="70" x2="50" y2="94" stroke="#78350f" strokeWidth="0.6" opacity="0.5" />
       <line x1="72" y1="70" x2="72" y2="94" stroke="#78350f" strokeWidth="0.6" opacity="0.5" />
-      {/* LEMARS branding label on crate */}
-      <rect x="30" y="78" width="40" height="10" rx="1" fill="#fef3c7" stroke="#92400e" strokeWidth="0.8" />
-      <text
-        x="50"
-        y="85.5"
-        textAnchor="middle"
-        fontSize="7"
-        fontWeight="900"
-        fill="#92400e"
-        letterSpacing="0.5"
-      >
-        LEMARS
-      </text>
     </g>
   );
 }
@@ -376,18 +363,6 @@ export default function FlowDiagram({
             letterSpacing="3"
           >
             GIDA İÇECEK
-          </text>
-          {/* Tagline */}
-          <text
-            x={centerX}
-            y={centerY + 72}
-            textAnchor="middle"
-            fontSize="11"
-            fontWeight="600"
-            fill="#9ca3af"
-            letterSpacing="2"
-          >
-            TOPTAN DAĞITIM MERKEZİ
           </text>
 
           {/* ---- RIGHT NODES: 5 business types (no header badge) ---- */}
