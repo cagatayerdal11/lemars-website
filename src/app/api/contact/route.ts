@@ -72,7 +72,7 @@ export async function POST(request: Request) {
     // E-posta ve WhatsApp bildirimi paralel gönder
     await Promise.all([
       resend.emails.send({
-        from: "LeMars Gıda İçecek <onboarding@resend.dev>",
+        from: "LEMARS Gıda İçecek <onboarding@resend.dev>",
         to: ["info@lemarsgida.com"],
         subject: emailSubject,
         html: `

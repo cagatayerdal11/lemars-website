@@ -72,7 +72,7 @@ export default async function Hakkimizda({ params }: { params: { locale: string 
         </div>
       </section>
 
-      {/* Why LeMars */}
+      {/* Why LEMARS */}
       <section className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-20">

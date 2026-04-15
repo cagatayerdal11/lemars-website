@@ -39,7 +39,7 @@ export default async function Home({ params }: { params: { locale: string } }) {
           <div className="hidden md:block absolute inset-y-0 right-0 md:w-[55%] lg:w-[50%]">
             <Image
               src="/hero-truck.jpg"
-              alt="LeMars Gıda İçecek — Toptan Dağıtım"
+              alt="LEMARS Gıda İçecek — Toptan Dağıtım"
               fill
               className="object-cover object-center"
               priority
@@ -89,7 +89,7 @@ export default async function Home({ params }: { params: { locale: string } }) {
         <div className="relative md:hidden h-[280px]">
           <Image
             src="/hero-truck.jpg"
-            alt="LeMars Gıda İçecek — Toptan Dağıtım"
+            alt="LEMARS Gıda İçecek — Toptan Dağıtım"
             fill
             className="object-cover object-center"
             priority

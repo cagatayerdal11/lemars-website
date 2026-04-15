@@ -20,7 +20,7 @@ export default function Logo({
     <div className={className} style={{ width }}>
       <Image
         src={src}
-        alt="LeMars Gıda İçecek"
+        alt="LEMARS Gıda İçecek"
         width={width}
         height={logoHeight}
         className="object-contain"
