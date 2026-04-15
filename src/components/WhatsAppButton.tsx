@@ -1,14 +1,41 @@
 "use client";
 
+import { usePathname } from "next/navigation";
+
+const brandNames: Record<string, string> = {
+  "scotch-blue": "Scotch Blue",
+  "hlibny-dar": "Hlibny Dar",
+  "marengo": "Marengo",
+  "suvorov": "Suvorov",
+  "enjoy": "Enjoy Shot",
+  "cumbus": "Cümbüş",
+  "isabey": "İsabey",
+};
+
 export default function WhatsAppButton() {
+  const pathname = usePathname();
   const phone = "905553643434";
-  const message = encodeURIComponent(
-    "Merhaba, LeMars Gıda İçecek websitesinden ulaşıyorum. Bilgi almak istiyorum."
-  );
+
+  let message = "Merhaba, LeMars Gıda İçecek websitesinden ulaşıyorum. Bilgi almak istiyorum.";
+
+  const brandMatch = pathname.match(/\/markalarimiz\/([^/]+)/);
+  if (brandMatch && brandNames[brandMatch[1]]) {
+    message = `Merhaba, ${brandNames[brandMatch[1]]} markası hakkında bilgi almak istiyorum.`;
+  } else if (pathname.includes("/iletisim")) {
+    message = "Merhaba, tedarik teklifi almak istiyorum.";
+  } else if (pathname.includes("/hizmetlerimiz")) {
+    message = "Merhaba, hizmetleriniz hakkında bilgi almak istiyorum.";
+  } else if (pathname.includes("/distributorluklerimiz")) {
+    message = "Merhaba, distribütörlük portföyünüz hakkında bilgi almak istiyorum.";
+  } else if (pathname.includes("/hakkimizda")) {
+    message = "Merhaba, LeMars Gıda İçecek hakkında bilgi almak istiyorum.";
+  }
+
+  const encodedMessage = encodeURIComponent(message);
 
   return (
     <a
-      href={`https://wa.me/${phone}?text=${message}`}
+      href={`https://wa.me/${phone}?text=${encodedMessage}`}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="WhatsApp"
