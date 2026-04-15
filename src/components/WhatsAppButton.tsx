@@ -1,7 +1,7 @@
 "use client";
 
 export default function WhatsAppButton() {
-  const phone = "905432357786";
+  const phone = "905553643434";
   const message = encodeURIComponent(
     "Merhaba, LeMars Gıda İçecek websitesinden ulaşıyorum. Bilgi almak istiyorum."
   );
