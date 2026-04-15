@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { getDictionary, Locale } from "@/i18n/config";
+import FlowDiagram from "@/components/FlowDiagram";
 
 export default async function Hizmetlerimiz({ params }: { params: { locale: string } }) {
   const dict = await getDictionary(params.locale as Locale);
@@ -12,6 +13,8 @@ export default async function Hizmetlerimiz({ params }: { params: { locale: stri
   const s3Items = t.s3Items as string[];
   const s4Items = t.s4Items as string[];
   const categories = t.categories as string[];
+  const flowLeftLabels = t.flowLeftLabels as string[];
+  const flowRightLabels = t.flowRightLabels as string[];
 
   return (
     <>
@@ -22,6 +25,21 @@ export default async function Hizmetlerimiz({ params }: { params: { locale: stri
           <p className="text-gray-400 text-lg mt-6 max-w-xl">
             {t.heroDesc as string}
           </p>
+        </div>
+      </section>
+
+      {/* Flow Diagram — Brands → LEMARS → Your Business */}
+      <section className="py-24 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <FlowDiagram
+            title={t.flowTitle as string}
+            subtitle={t.flowSubtitle as string}
+            leftTitle={t.flowEyebrow as string}
+            rightTitle={t.flowRightEyebrow as string}
+            centerLabel="LEMARS"
+            leftLabels={flowLeftLabels}
+            rightLabels={flowRightLabels}
+          />
         </div>
       </section>
 

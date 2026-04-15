@@ -153,6 +153,12 @@
       "Access to a network of 1,800+ points of sale",
       "Market analysis and sales strategy consulting"
     ],
+    "flowEyebrow": "OUR BRANDS",
+    "flowRightEyebrow": "YOUR BUSINESS",
+    "flowTitle": "From Our Brands to Your Business",
+    "flowSubtitle": "We deliver our 400+ premium brands across Istanbul's European side to your business through our own fleet and reliable logistics network.",
+    "flowLeftLabels": ["Whisky", "Wine", "Vodka"],
+    "flowRightLabels": ["Restaurant & Bar", "Hotel", "Retail"],
     "productsEyebrow": "Our Products",
     "productsTitle": "Product Categories",
     "categories": [
