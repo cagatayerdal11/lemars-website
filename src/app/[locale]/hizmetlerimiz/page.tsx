@@ -109,7 +109,7 @@ export default async function Hizmetlerimiz({ params }: { params: { locale: stri
               <div className="absolute inset-0 bg-gray-900/60 flex items-center justify-center">
                 <div className="text-center">
                   <p className="text-primary-500 text-6xl font-bold mb-2">04</p>
-                  <p className="text-white text-sm tracking-[0.2em] uppercase">{locale === "tr" ? "Pazarlama & Dagitim" : "Marketing & Distribution"}</p>
+                  <p className="text-white text-sm tracking-[0.2em] uppercase">{locale === "tr" ? "Pazarlama & Satış" : "Marketing & Sales"}</p>
                 </div>
               </div>
             </div>
@@ -144,7 +144,25 @@ export default async function Hizmetlerimiz({ params }: { params: { locale: stri
             ))}
           </div>
           <p className="mt-8 text-center text-xs text-gray-400">
-            {t.productsNote as string}
+            {locale === "tr"
+              ? "Bu kategoriler yalnızca bilgilendirme amaçlıdır. Detaylı bilgi için "
+              : "These categories are for informational purposes only. For detailed information, "}
+            <a
+              href="https://wa.me/905553643434?text=Merhaba%2C%20ürün%20kategorileri%20hakkında%20bilgi%20almak%20istiyorum."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-green-600 hover:text-green-700 font-semibold underline underline-offset-2"
+            >
+              WhatsApp
+            </a>
+            {locale === "tr" ? " veya " : " or "}
+            <Link
+              href={`/${locale}/iletisim`}
+              className="text-primary-700 hover:text-primary-800 font-semibold underline underline-offset-2"
+            >
+              {locale === "tr" ? "iletişim sayfamız" : "our contact page"}
+            </Link>
+            {locale === "tr" ? " üzerinden bizimle iletişime geçebilirsiniz." : " to reach us."}
           </p>
         </div>
       </section>
