@@ -66,20 +66,9 @@ export default async function Home({ params }: { params: { locale: string } }) {
               </ScrollReveal>
 
               <ScrollReveal delay={0.2}>
-                <p className="text-sm md:text-lg text-gray-400 leading-relaxed mb-8 md:mb-12 max-w-md">
+                <p className="text-sm md:text-lg text-gray-400 leading-relaxed max-w-md">
                   {t.heroDesc as string}
                 </p>
-              </ScrollReveal>
-
-              <ScrollReveal delay={0.3}>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Link href={`/${locale}/iletisim`} className="btn-primary">
-                    {t.ctaAbout as string}
-                  </Link>
-                  <Link href={`/${locale}/hizmetlerimiz`} className="btn-outline border-white/20 text-white hover:bg-white/10 hover:text-white">
-                    {t.ctaServices as string}
-                  </Link>
-                </div>
               </ScrollReveal>
             </div>
           </div>
@@ -116,10 +105,10 @@ export default async function Home({ params }: { params: { locale: string } }) {
       {/* Features */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-gray-200">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
             {features.map((item, i) => (
               <ScrollReveal key={i} delay={i * 0.15}>
-                <div className="bg-white p-12 group hover:bg-gray-50 transition-colors duration-300">
+                <div className="h-full bg-white p-10 md:p-12 border border-gray-100 rounded-lg group hover:border-primary-200 hover:shadow-md transition-all duration-300">
                   <span className="text-primary-600 text-xs font-bold tracking-widest">{item.num}</span>
                   <h3 className="text-xl font-bold text-gray-900 mt-4 mb-4">{item.title}</h3>
                   <p className="text-gray-500 text-sm leading-relaxed">{item.desc}</p>
