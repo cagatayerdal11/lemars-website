@@ -33,10 +33,9 @@ export default async function Hizmetlerimiz({ params }: { params: { locale: stri
           <FlowDiagram
             title={t.flowTitle as string}
             subtitle={t.flowSubtitle as string}
+            leftNumber={t.flowLeftNumber as string}
             leftLabel={t.flowLeftLabel as string}
-            rightHeader={t.flowRightEyebrow as string}
             rightLabels={flowRightLabels}
-            centerLabel="LEMARS"
           />
         </div>
       </section>

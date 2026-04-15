@@ -3,36 +3,54 @@
 interface FlowDiagramProps {
   title: string;
   subtitle: string;
+  leftNumber: string;
   leftLabel: string;
-  rightHeader: string;
   rightLabels: string[];
-  centerLabel: string;
 }
 
-// Delivery truck that rides along an SVG path — rotate="auto" so it leans
-// into curves like it's following the road. Centered at local (0,0) so
-// animateMotion translates it cleanly.
+// Delivery truck that rides along an SVG path with rotate="auto" so it
+// leans into curves. Centered at local (0,0).
 function DeliveryTruck({ pathId, begin, dur }: { pathId: string; begin: number; dur: number }) {
   return (
     <g>
-      {/* Soft ground shadow */}
-      <ellipse cx="0" cy="12" rx="16" ry="2" fill="#000" opacity="0.12" />
-      {/* Cargo box (orange LEMARS branding) */}
-      <rect x="-16" y="-10" width="23" height="16" rx="2" fill="#ea580c" stroke="#9a3412" strokeWidth="0.4" />
-      {/* White stripe across cargo (subtle LEMARS band) */}
-      <rect x="-14" y="-5" width="19" height="4" fill="white" opacity="0.95" />
-      <rect x="-14" y="1.5" width="19" height="1.2" fill="white" opacity="0.5" />
+      <ellipse cx="0" cy="12" rx="17" ry="2" fill="#000" opacity="0.14" />
+      {/* Cargo box */}
+      <rect
+        x="-17"
+        y="-11"
+        width="24"
+        height="17"
+        rx="2"
+        fill="#ea580c"
+        stroke="#9a3412"
+        strokeWidth="0.6"
+      />
+      {/* White LEMARS band */}
+      <rect x="-15" y="-6" width="20" height="5" fill="white" opacity="0.96" />
+      <text
+        x="-5"
+        y="-2"
+        textAnchor="middle"
+        fontSize="4"
+        fontWeight="900"
+        fill="#ea580c"
+        letterSpacing="0.3"
+      >
+        LEMARS
+      </text>
+      {/* Lower accent stripe */}
+      <rect x="-15" y="1.5" width="20" height="1.4" fill="white" opacity="0.55" />
       {/* Cab */}
       <path d="M 7 -5 L 11 -5 L 15 -1 L 15 6 L 7 6 Z" fill="#9a3412" />
       {/* Windshield */}
       <rect x="8" y="-3.5" width="5" height="3.5" rx="0.5" fill="#bae6fd" />
       {/* Headlight */}
       <circle cx="14.5" cy="4" r="0.7" fill="#fef3c7" />
-      {/* Wheels (tire + rim) */}
-      <circle cx="-10" cy="8" r="3.2" fill="#1f2937" />
-      <circle cx="-10" cy="8" r="1.4" fill="#9ca3af" />
-      <circle cx="9.5" cy="8" r="3.2" fill="#1f2937" />
-      <circle cx="9.5" cy="8" r="1.4" fill="#9ca3af" />
+      {/* Wheels */}
+      <circle cx="-11" cy="8" r="3.3" fill="#1f2937" />
+      <circle cx="-11" cy="8" r="1.4" fill="#9ca3af" />
+      <circle cx="10" cy="8" r="3.3" fill="#1f2937" />
+      <circle cx="10" cy="8" r="1.4" fill="#9ca3af" />
 
       <animateMotion dur={`${dur}s`} repeatCount="indefinite" rotate="auto" begin={`${begin}s`}>
         <mpath href={`#${pathId}`} />
@@ -41,63 +59,124 @@ function DeliveryTruck({ pathId, begin, dur }: { pathId: string; begin: number; 
   );
 }
 
-// 40x40 icon paths (stroke-based)
-const icons = {
-  // Stacked package/products box — "400+ Ürün"
-  package:
-    "M 20 4 L 34 11 L 34 28 L 20 35 L 6 28 L 6 11 Z M 6 11 L 20 18 L 34 11 M 20 18 L 20 35 M 13 7.5 L 27 14.5",
-  // Retail / Market
-  shop:
-    "M 7 14 L 33 14 L 31 28 L 9 28 Z M 9 18 L 31 18 M 13 34 m -2 0 a 2 2 0 1 0 4 0 a 2 2 0 1 0 -4 0 M 27 34 m -2 0 a 2 2 0 1 0 4 0 a 2 2 0 1 0 -4 0 M 7 14 L 10 6 L 30 6 L 33 14",
-  // Bar — cocktail / martini glass
-  bar:
-    "M 7 8 L 33 8 L 22 22 L 22 32 L 28 36 L 12 36 L 18 32 L 18 22 Z M 13 12 L 27 12",
-  // Restaurant — plate with fork & knife
-  restaurant:
-    "M 20 22 m -13 0 a 13 13 0 1 0 26 0 a 13 13 0 1 0 -26 0 M 20 22 m -8 0 a 8 8 0 1 0 16 0 a 8 8 0 1 0 -16 0 M 14 5 L 14 14 M 26 5 L 26 14",
-  // Hotel — multi-story building with windows
-  hotel:
-    "M 8 7 L 32 7 L 32 36 L 8 36 Z M 8 7 L 20 2 L 32 7 M 12 13 L 16 13 M 24 13 L 28 13 M 12 19 L 16 19 M 24 19 L 28 19 M 12 25 L 16 25 M 24 25 L 28 25 M 17 36 L 17 30 L 23 30 L 23 36",
-  // Depo — warehouse with roll-up door
-  warehouse:
-    "M 4 18 L 20 7 L 36 18 M 8 18 L 8 36 L 32 36 L 32 18 M 14 36 L 14 24 L 26 24 L 26 36 M 14 28 L 26 28 M 14 32 L 26 32",
-};
+// Cartoon crate with 3 liquor bottles sticking out — 100x100 local coords
+function BottleCrateIcon({ cx, cy }: { cx: number; cy: number }) {
+  return (
+    <g transform={`translate(${cx - 50}, ${cy - 50})`}>
+      {/* ---- Bottle 1: Wine (left, dark red) ---- */}
+      <rect x="14" y="8" width="12" height="4" rx="1" fill="#451a03" />
+      <rect x="16" y="12" width="8" height="6" fill="#7f1d1d" />
+      <path
+        d="M 10 22 Q 10 26 14 27 L 14 66 Q 14 68 16 68 L 24 68 Q 26 68 26 66 L 26 27 Q 30 26 30 22 Z"
+        fill="#991b1b"
+        stroke="#7f1d1d"
+        strokeWidth="0.8"
+      />
+      {/* Wine label */}
+      <rect x="12" y="38" width="16" height="14" rx="0.5" fill="#fef3c7" stroke="#92400e" strokeWidth="0.5" />
+      <rect x="14" y="42" width="12" height="1.2" fill="#7f1d1d" />
+      <rect x="14" y="45" width="8" height="1" fill="#92400e" opacity="0.6" />
+      <rect x="14" y="47" width="10" height="1" fill="#92400e" opacity="0.6" />
+      {/* Highlight */}
+      <rect x="12" y="28" width="1.8" height="34" rx="0.5" fill="white" opacity="0.28" />
 
-// Larger LEMARS warehouse icon for center node (100x60)
-const lemarsWarehouseIcon =
-  "M 5 28 L 50 6 L 95 28 M 12 28 L 12 58 L 88 58 L 88 28 M 35 58 L 35 38 L 65 38 L 65 58 M 35 46 L 65 46 M 35 52 L 65 52 M 20 36 L 28 36 L 28 42 L 20 42 Z M 72 36 L 80 36 L 80 42 L 72 42 Z";
+      {/* ---- Bottle 2: Whisky (center, tallest, amber) ---- */}
+      <rect x="42" y="4" width="14" height="4" rx="1" fill="#451a03" />
+      <rect x="44" y="8" width="10" height="8" fill="#b45309" />
+      <path
+        d="M 38 18 Q 38 22 42 23 L 42 66 Q 42 68 44 68 L 54 68 Q 56 68 56 66 L 56 23 Q 60 22 60 18 Z"
+        fill="#d97706"
+        stroke="#92400e"
+        strokeWidth="0.8"
+      />
+      {/* Whisky label */}
+      <rect x="40" y="36" width="18" height="16" rx="0.5" fill="#fef3c7" stroke="#92400e" strokeWidth="0.5" />
+      <rect x="42" y="40" width="14" height="1.5" fill="#92400e" />
+      <rect x="42" y="44" width="10" height="1" fill="#92400e" opacity="0.6" />
+      <rect x="42" y="46" width="12" height="1" fill="#92400e" opacity="0.6" />
+      {/* Highlight */}
+      <rect x="40" y="24" width="2" height="38" rx="0.5" fill="white" opacity="0.28" />
 
-const rightIconSet = [
-  icons.shop, // Market
-  icons.bar, // Bar
-  icons.restaurant, // Restoran
-  icons.hotel, // Otel
-  icons.warehouse, // Depo
+      {/* ---- Bottle 3: Clear spirit (right, blue tint) ---- */}
+      <rect x="72" y="10" width="12" height="4" rx="1" fill="#1e293b" />
+      <rect x="74" y="14" width="8" height="6" fill="#94a3b8" />
+      <path
+        d="M 68 24 Q 68 28 72 29 L 72 66 Q 72 68 74 68 L 82 68 Q 84 68 84 66 L 84 29 Q 88 28 88 24 Z"
+        fill="#cbd5e1"
+        stroke="#64748b"
+        strokeWidth="0.8"
+      />
+      {/* Clear-spirit label */}
+      <rect x="70" y="40" width="16" height="14" rx="0.5" fill="#fef3c7" stroke="#92400e" strokeWidth="0.5" />
+      <rect x="72" y="44" width="12" height="1.2" fill="#1e40af" />
+      <rect x="72" y="47" width="8" height="1" fill="#1e40af" opacity="0.6" />
+      {/* Highlight */}
+      <rect x="70" y="30" width="1.8" height="32" rx="0.5" fill="white" opacity="0.35" />
+
+      {/* ---- Wooden Crate ---- */}
+      <rect x="4" y="66" width="92" height="28" rx="2" fill="#92400e" stroke="#78350f" strokeWidth="1.2" />
+      {/* Top rim (darker, opening) */}
+      <rect x="4" y="66" width="92" height="4" fill="#78350f" />
+      {/* Wood plank lines */}
+      <line x1="4" y1="76" x2="96" y2="76" stroke="#78350f" strokeWidth="0.6" opacity="0.7" />
+      <line x1="4" y1="85" x2="96" y2="85" stroke="#78350f" strokeWidth="0.6" opacity="0.7" />
+      {/* Vertical slats */}
+      <line x1="28" y1="70" x2="28" y2="94" stroke="#78350f" strokeWidth="0.6" opacity="0.5" />
+      <line x1="50" y1="70" x2="50" y2="94" stroke="#78350f" strokeWidth="0.6" opacity="0.5" />
+      <line x1="72" y1="70" x2="72" y2="94" stroke="#78350f" strokeWidth="0.6" opacity="0.5" />
+      {/* LEMARS branding label on crate */}
+      <rect x="30" y="78" width="40" height="10" rx="1" fill="#fef3c7" stroke="#92400e" strokeWidth="0.8" />
+      <text
+        x="50"
+        y="85.5"
+        textAnchor="middle"
+        fontSize="7"
+        fontWeight="900"
+        fill="#92400e"
+        letterSpacing="0.5"
+      >
+        LEMARS
+      </text>
+    </g>
+  );
+}
+
+// Right-side business icons (stroke-based, 40x40 local)
+const rightIcons = [
+  // 0 — Market (shopping bag with handle)
+  "M 8 14 L 32 14 L 30 36 L 10 36 Z M 14 14 L 14 9 Q 14 4 20 4 Q 26 4 26 9 L 26 14",
+  // 1 — Bar (martini glass)
+  "M 7 8 L 33 8 L 22 22 L 22 32 L 28 36 L 12 36 L 18 32 L 18 22 Z M 13 12 L 27 12",
+  // 2 — Restaurant (plate + fork & knife)
+  "M 20 22 m -8 0 a 8 8 0 1 0 16 0 a 8 8 0 1 0 -16 0 M 20 22 m -5.5 0 a 5.5 5.5 0 1 0 11 0 a 5.5 5.5 0 1 0 -11 0 M 8 6 L 8 32 M 6 6 L 6 13 M 10 6 L 10 13 M 32 6 L 32 32 M 30 6 L 30 13 Q 30 15 32 15",
+  // 3 — Hotel (multi-story building)
+  "M 8 6 L 32 6 L 32 36 L 8 36 Z M 12 12 L 16 12 M 24 12 L 28 12 M 12 18 L 16 18 M 24 18 L 28 18 M 12 24 L 16 24 M 24 24 L 28 24 M 17 36 L 17 30 L 23 30 L 23 36",
+  // 4 — Depo (warehouse with roll-up door)
+  "M 4 18 L 20 7 L 36 18 M 8 18 L 8 36 L 32 36 L 32 18 M 14 36 L 14 24 L 26 24 L 26 36 M 14 28 L 26 28 M 14 32 L 26 32",
 ];
 
 export default function FlowDiagram({
   title,
   subtitle,
+  leftNumber,
   leftLabel,
-  rightHeader,
   rightLabels,
-  centerLabel,
 }: FlowDiagramProps) {
   const width = 1200;
-  const height = 680;
+  const height = 720;
   const centerX = width / 2;
   const centerY = height / 2;
-  const leftX = 160;
+  const leftX = 170;
   const rightX = width - 160;
-  const nodeSize = 86;
-  const centerSize = 190;
-  const leftNodeSize = 120;
+  const nodeSize = 92;
+  const centerSize = 220;
+  const leftNodeSize = 160;
 
   const leftPosition = { x: leftX, y: centerY };
 
   const computeRightPositions = (count: number, x: number) => {
-    const topY = 90;
-    const bottomY = height - 90;
+    const topY = 100;
+    const bottomY = height - 100;
     const step = count > 1 ? (bottomY - topY) / (count - 1) : 0;
     return Array.from({ length: count }, (_, i) => ({
       x,
@@ -107,7 +186,7 @@ export default function FlowDiagram({
 
   const rightPositions = computeRightPositions(rightLabels.length, rightX);
 
-  // Single curved path from left node to center
+  // Curved path from left node to center
   const leftPath = (() => {
     const sx = leftPosition.x + leftNodeSize / 2;
     const sy = leftPosition.y;
@@ -129,10 +208,7 @@ export default function FlowDiagram({
 
   return (
     <div className="w-full">
-      <div className="text-center mb-12">
-        <p className="text-primary-700 text-xs font-semibold tracking-[0.3em] uppercase mb-4">
-          {leftLabel} &rarr; {centerLabel} &rarr; {rightHeader}
-        </p>
+      <div className="text-center mb-14">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{title}</h2>
         <p className="text-gray-500 max-w-2xl mx-auto">{subtitle}</p>
       </div>
@@ -140,16 +216,18 @@ export default function FlowDiagram({
       <div className="overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0">
         <svg
           viewBox={`0 0 ${width} ${height}`}
-          className="w-full min-w-[920px] h-auto"
+          className="w-full min-w-[960px] h-auto"
           preserveAspectRatio="xMidYMid meet"
           role="img"
-          aria-label={`${leftLabel} to ${rightHeader} via ${centerLabel}`}
+          aria-label={`${leftNumber} ${leftLabel} → LEMARS → ${rightLabels.join(", ")}`}
         >
           <defs>
-            <linearGradient id="lemarsCenterGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#fb923c" />
-              <stop offset="100%" stopColor="#c2410c" />
-            </linearGradient>
+            <filter id="centerShadow" x="-30%" y="-30%" width="160%" height="160%">
+              <feDropShadow dx="0" dy="6" stdDeviation="12" floodColor="#ea580c" floodOpacity="0.18" />
+            </filter>
+            <filter id="nodeShadow" x="-30%" y="-30%" width="160%" height="160%">
+              <feDropShadow dx="0" dy="3" stdDeviation="6" floodColor="#000" floodOpacity="0.08" />
+            </filter>
 
             <path id="fd-leftPath" d={leftPath} />
             {rightPaths.map((d, i) => (
@@ -157,7 +235,7 @@ export default function FlowDiagram({
             ))}
           </defs>
 
-          {/* Path strokes */}
+          {/* Path strokes — dashed */}
           <path
             d={leftPath}
             stroke="#e5e7eb"
@@ -171,39 +249,44 @@ export default function FlowDiagram({
               key={`rps-${i}`}
               d={d}
               stroke="#e5e7eb"
-              strokeWidth="2"
+              strokeWidth="2.5"
               fill="none"
-              strokeDasharray="5 5"
+              strokeDasharray="6 6"
               strokeLinecap="round"
             />
           ))}
 
           {/* Center pulse halo */}
-          <circle cx={centerX} cy={centerY} r={centerSize / 2 + 15} fill="#fb923c" opacity="0.2">
+          <circle cx={centerX} cy={centerY} r={centerSize / 2 + 18} fill="#fb923c" opacity="0.18">
             <animate
               attributeName="r"
-              values={`${centerSize / 2 + 10};${centerSize / 2 + 34};${centerSize / 2 + 10}`}
+              values={`${centerSize / 2 + 12};${centerSize / 2 + 36};${centerSize / 2 + 12}`}
               dur="3s"
               repeatCount="indefinite"
             />
             <animate
               attributeName="opacity"
-              values="0.25;0.05;0.25"
+              values="0.22;0.05;0.22"
               dur="3s"
               repeatCount="indefinite"
             />
           </circle>
 
-          {/* Moving dots on left path — multiple dots showing "400+ products flowing in" */}
-          {[0, 0.5, 1.0, 1.5, 2.0].map((delay, i) => (
-            <circle key={`lmd-${i}`} r={i % 2 === 0 ? "8" : "5"} fill="#ea580c" opacity={i % 2 === 0 ? "1" : "0.6"}>
-              <animateMotion dur="2.8s" repeatCount="indefinite" begin={`${delay}s`}>
+          {/* Moving product dots on left path */}
+          {[0, 0.6, 1.2, 1.8, 2.4].map((delay, i) => (
+            <circle
+              key={`lmd-${i}`}
+              r={i % 2 === 0 ? "8" : "5"}
+              fill="#ea580c"
+              opacity={i % 2 === 0 ? "1" : "0.6"}
+            >
+              <animateMotion dur="3s" repeatCount="indefinite" begin={`${delay}s`}>
                 <mpath href="#fd-leftPath" />
               </animateMotion>
             </circle>
           ))}
 
-          {/* LEMARS delivery trucks — one per destination, staggered */}
+          {/* LEMARS delivery trucks on each right path */}
           {rightPaths.map((_, i) => (
             <DeliveryTruck
               key={`truck-${i}`}
@@ -213,136 +296,122 @@ export default function FlowDiagram({
             />
           ))}
 
-          {/* Left node — 400+ Ürün */}
-          <g>
+          {/* ---- LEFT NODE: 400+ Ürün Çeşidi with bottle-crate illustration ---- */}
+          <g filter="url(#nodeShadow)">
             <rect
               x={leftPosition.x - leftNodeSize / 2}
               y={leftPosition.y - leftNodeSize / 2}
               width={leftNodeSize}
               height={leftNodeSize}
-              rx="24"
+              rx="26"
               fill="white"
               stroke="#fed7aa"
-              strokeWidth="2.5"
+              strokeWidth="2"
             />
-            <path
-              d={icons.package}
-              transform={`translate(${leftPosition.x - 20}, ${leftPosition.y - 38})`}
-              stroke="#ea580c"
-              strokeWidth="2.5"
-              fill="none"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <text
-              x={leftPosition.x}
-              y={leftPosition.y + 16}
-              textAnchor="middle"
-              fontSize="26"
-              fontWeight="800"
-              fill="#ea580c"
-            >
-              400+
-            </text>
-            <text
-              x={leftPosition.x}
-              y={leftPosition.y + 38}
-              textAnchor="middle"
-              fontSize="14"
-              fontWeight="600"
-              fill="#6b7280"
-              letterSpacing="1"
-            >
-              {leftLabel}
-            </text>
           </g>
+          <BottleCrateIcon cx={leftPosition.x} cy={leftPosition.y - 6} />
 
-          {/* Center LEMARS node — warehouse icon + label */}
-          <g>
+          {/* Left labels below the node */}
+          <text
+            x={leftPosition.x}
+            y={leftPosition.y + leftNodeSize / 2 + 36}
+            textAnchor="middle"
+            fontSize="32"
+            fontWeight="900"
+            fill="#ea580c"
+          >
+            {leftNumber}
+          </text>
+          <text
+            x={leftPosition.x}
+            y={leftPosition.y + leftNodeSize / 2 + 60}
+            textAnchor="middle"
+            fontSize="16"
+            fontWeight="700"
+            fill="#6b7280"
+            letterSpacing="1.5"
+          >
+            {leftLabel.toUpperCase()}
+          </text>
+
+          {/* ---- CENTER NODE: white card with LEMARS logo image ---- */}
+          <g filter="url(#centerShadow)">
             <rect
               x={centerX - centerSize / 2}
               y={centerY - centerSize / 2}
               width={centerSize}
               height={centerSize}
-              rx="34"
-              fill="url(#lemarsCenterGrad)"
-            />
-            <path
-              d={lemarsWarehouseIcon}
-              transform={`translate(${centerX - 50}, ${centerY - 56})`}
-              stroke="white"
-              strokeWidth="3.5"
-              fill="none"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <line
-              x1={centerX - 55}
-              y1={centerY + 22}
-              x2={centerX + 55}
-              y2={centerY + 22}
-              stroke="white"
-              strokeWidth="1.5"
-              opacity="0.4"
-            />
-            <text
-              x={centerX}
-              y={centerY + 50}
-              textAnchor="middle"
-              fontSize="26"
-              fontWeight="800"
+              rx="36"
               fill="white"
-              letterSpacing="4"
-            >
-              {centerLabel}
-            </text>
-          </g>
-
-          {/* Right section header — İŞLETMENİZ */}
-          <g>
-            <rect
-              x={rightX - 70}
-              y={30}
-              width={140}
-              height={32}
-              rx="16"
-              fill="#fff7ed"
               stroke="#fed7aa"
-              strokeWidth="1.5"
+              strokeWidth="3"
             />
-            <text
-              x={rightX}
-              y={51}
-              textAnchor="middle"
-              fontSize="14"
-              fontWeight="700"
-              fill="#ea580c"
-              letterSpacing="3"
-            >
-              {rightHeader}
-            </text>
           </g>
+          {/* LEMARS logo PNG */}
+          <image
+            href="/logo-transparent.png"
+            x={centerX - 78}
+            y={centerY - 56}
+            width="156"
+            height="60"
+            preserveAspectRatio="xMidYMid meet"
+          />
+          {/* Orange separator line under the logo */}
+          <rect
+            x={centerX - 78}
+            y={centerY + 8}
+            width="156"
+            height="4"
+            rx="1"
+            fill="#ea580c"
+          />
+          {/* GIDA İÇECEK text */}
+          <text
+            x={centerX + 78}
+            y={centerY + 38}
+            textAnchor="end"
+            fontSize="18"
+            fontWeight="900"
+            fill="#1f2937"
+            letterSpacing="3"
+          >
+            GIDA İÇECEK
+          </text>
+          {/* Tagline */}
+          <text
+            x={centerX}
+            y={centerY + 72}
+            textAnchor="middle"
+            fontSize="11"
+            fontWeight="600"
+            fill="#9ca3af"
+            letterSpacing="2"
+          >
+            TOPTAN DAĞITIM MERKEZİ
+          </text>
 
-          {/* Right nodes — business types */}
+          {/* ---- RIGHT NODES: 5 business types (no header badge) ---- */}
           {rightLabels.map((label, i) => {
             const pos = rightPositions[i];
-            const iconPath = rightIconSet[i] || rightIconSet[0];
+            const iconPath = rightIcons[i] || rightIcons[0];
             return (
               <g key={`rnode-${i}`}>
-                <rect
-                  x={pos.x - nodeSize / 2}
-                  y={pos.y - nodeSize / 2}
-                  width={nodeSize}
-                  height={nodeSize}
-                  rx="20"
-                  fill="white"
-                  stroke="#e5e7eb"
-                  strokeWidth="1.5"
-                />
+                <g filter="url(#nodeShadow)">
+                  <rect
+                    x={pos.x - nodeSize / 2}
+                    y={pos.y - nodeSize / 2}
+                    width={nodeSize}
+                    height={nodeSize}
+                    rx="22"
+                    fill="white"
+                    stroke="#e5e7eb"
+                    strokeWidth="1.5"
+                  />
+                </g>
                 <path
                   d={iconPath}
                   transform={`translate(${pos.x - 20}, ${pos.y - 20})`}
-                  stroke="#9ca3af"
+                  stroke="#6b7280"
                   strokeWidth="2.5"
                   fill="none"
                   strokeLinecap="round"
@@ -350,11 +419,11 @@ export default function FlowDiagram({
                 />
                 <text
                   x={pos.x}
-                  y={pos.y + nodeSize / 2 + 24}
+                  y={pos.y + nodeSize / 2 + 28}
                   textAnchor="middle"
-                  fontSize="17"
-                  fontWeight="600"
-                  fill="#4b5563"
+                  fontSize="18"
+                  fontWeight="700"
+                  fill="#374151"
                 >
                   {label}
                 </text>

@@ -153,10 +153,10 @@
       "Access to a network of 1,800+ points of sale",
       "Market analysis and sales strategy consulting"
     ],
-    "flowRightEyebrow": "YOUR BUSINESS",
     "flowTitle": "From Our Warehouse to Your Business",
-    "flowSubtitle": "We deliver our 400+ premium products directly to your warehouse, bar, restaurant, or hotel through our own fleet of vehicles.",
-    "flowLeftLabel": "Products",
+    "flowSubtitle": "We deliver our 400+ premium products directly to retail stores, bars, restaurants, hotels, and warehouses through our own fleet of vehicles.",
+    "flowLeftNumber": "400+",
+    "flowLeftLabel": "Product Varieties",
     "flowRightLabels": ["Retail", "Bar", "Restaurant", "Hotel", "Warehouse"],
     "productsEyebrow": "Our Products",
     "productsTitle": "Product Categories",
