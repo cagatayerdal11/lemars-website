@@ -43,14 +43,6 @@ const distributors = [
     descTr: "Marengo, Bayadera Group portföyü içinde köpüklü şarap ve vermut segmentinde öne çıkan ve İtalyan üretim yaklaşımını güçlü bir marka kimliğiyle birleştiren markalardan biridir.",
     descEn: "Marengo is one of the brands within the Bayadera Group portfolio that stands out in the sparkling wine and vermouth segment, combining the Italian production approach with a strong brand identity.",
   },
-  {
-    name: "Enjoy Alkollü Alkolsüz İçecekler A.Ş.",
-    logo: "/brands/enjoy.png",
-    logoBg: "",
-    brands: { tr: "Enjoy Shot", en: "Enjoy Shot" },
-    descTr: "Enjoy Shot, Türkiye'de aromatize şarap bazlı içecek kategorisinde üretim yapan, dinamik ve gelişime açık yerli markalardan biridir. Isparta'daki üretim altyapısı, yaygın dağıtım yaklaşımı ve ürün çeşitliliğiyle marka, yerel pazarda güçlü bir potansiyel taşımaktadır.",
-    descEn: "Enjoy Shot is one of the dynamic and growth-oriented domestic brands producing in the aromatized wine-based beverage category in Turkey. With its production infrastructure in Isparta, widespread distribution approach, and product diversity, the brand carries strong potential in the local market.",
-  },
 ];
 
 export default async function Distributorluklerimiz({ params }: { params: { locale: string } }) {

@@ -85,14 +85,6 @@ const brandData: Record<string, BrandInfo> = {
     descTr: "Suvorov, Tiraspol Şarap ve İçki Fabrikası (KVINT) tarafından üretilen Moldova menşeli bir divin markasıdır. İlk kez 1992'de Tiraspol'un 200. yıl dönümünü anmak için üretilen markanın amiral gemisi Suvorov XO, en az 40 yıl meşe fıçılarda olgunlaştırılmış şarap ruhlarından yapılır. Tadı kuru meyve, vanilya, meşe ve hafif baharat notalarıyla zengin, uyumlu ve derindir; içimi yumuşak ve zariftir. Alkol oranı yaklaşık %40'tır.",
     descEn: "Suvorov is a Moldovan divin brand produced by the Tiraspol Wine and Spirits Factory (KVINT). First created in 1992 to commemorate the 200th anniversary of Tiraspol, its flagship Suvorov XO is made from wine spirits aged for at least 40 years in oak barrels. The palate is rich, harmonious, and deep with notes of dried fruit, vanilla, oak, and subtle spice; the mouthfeel is smooth and elegant. ABV is approximately 40%.",
   },
-  enjoy: {
-    name: "Enjoy Shot",
-    origin: { tr: "Türkiye", en: "Turkey" },
-    category: { tr: "Aromatize Şarap Bazlı İçecek", en: "Aromatized Wine-Based Beverage" },
-    logo: "/brands/enjoy.png",
-    descTr: "Enjoy Shot, 2017'de kurulan Enjoy Alkollü Alkolsüz İçecekler A.Ş.'nin Isparta'daki tesisinde üretilen aromatize şarap bazlı içecek markasıdır. Fabrika 2019'da faaliyete geçmiş olup, saatlik 18.000 şişelik kapasiteyle yerli üzümleri işleyerek ürün gamı oluşturur. Tatlı-meyvemsi karakterde olan ürünler aromalı shot içkisi olarak tüketilir. Markanın adındaki \"14.4\", ürünlerin yaklaşık %14,4 alkol oranına işaret eder. AR-GE odaklı vizyon ve kalite-fiyat dengesi ile çalışılmaktadır.",
-    descEn: "Enjoy Shot is an aromatized wine-based beverage brand produced at the facility of Enjoy Alkollü Alkolsüz İçecekler A.Ş. in Isparta, founded in 2017. The factory became operational in 2019, processing domestic grapes with an hourly capacity of 18,000 bottles. The products have a sweet-fruity character and are consumed as flavored shot beverages. The \"14.4\" in the brand name refers to the approximate 14.4% alcohol content of the products. The company operates with an R&D-driven vision and quality-price balance.",
-  },
   cumbus: {
     name: "Cümbüş",
     origin: { tr: "Türkiye", en: "Turkey" },
