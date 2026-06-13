@@ -7,6 +7,7 @@ const brandNames: Record<string, string> = {
   "hlibny-dar": "Hlibny Dar",
   "marengo": "Marengo",
   "suvorov": "Suvorov",
+  "cool": "COOL Likör",
   "cumbus": "Cümbüş",
   "isabey": "İsabey",
 };

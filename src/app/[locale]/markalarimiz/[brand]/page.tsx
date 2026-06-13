@@ -85,6 +85,14 @@ const brandData: Record<string, BrandInfo> = {
     descTr: "Suvorov, Tiraspol Şarap ve İçki Fabrikası (KVINT) tarafından üretilen Moldova menşeli bir divin markasıdır. İlk kez 1992'de Tiraspol'un 200. yıl dönümünü anmak için üretilen markanın amiral gemisi Suvorov XO, en az 40 yıl meşe fıçılarda olgunlaştırılmış şarap ruhlarından yapılır. Tadı kuru meyve, vanilya, meşe ve hafif baharat notalarıyla zengin, uyumlu ve derindir; içimi yumuşak ve zariftir. Alkol oranı yaklaşık %40'tır.",
     descEn: "Suvorov is a Moldovan divin brand produced by the Tiraspol Wine and Spirits Factory (KVINT). First created in 1992 to commemorate the 200th anniversary of Tiraspol, its flagship Suvorov XO is made from wine spirits aged for at least 40 years in oak barrels. The palate is rich, harmonious, and deep with notes of dried fruit, vanilla, oak, and subtle spice; the mouthfeel is smooth and elegant. ABV is approximately 40%.",
   },
+  cool: {
+    name: "COOL Likör",
+    origin: { tr: "Türkiye", en: "Turkey" },
+    category: { tr: "Likör", en: "Liqueur" },
+    logo: "/brands/cool.png",
+    descTr: "COOL, Brysis tarafından üretilen aromalı likör serisidir. %15 alkol oranına sahip 35 cl'lik şişelerde sunulan marka, Çilek, Yeşil Elma ve Espresso Karamel gibi farklı tat seçenekleriyle bar, restoran ve perakende satış noktalarında tüketicilere ulaşmaktadır. Meyvemsi ve tatlı karakteriyle öne çıkan COOL, kokteyl bazı olarak veya soğuk shot olarak tüketilmektedir.",
+    descEn: "COOL is a flavored liqueur series produced by Brysis. Offered in 35 cl bottles at 15% ABV, the brand reaches consumers at bars, restaurants, and retail outlets with various flavor options including Strawberry, Green Apple, and Espresso Caramel. Standing out with its fruity and sweet character, COOL is consumed as a cocktail base or as a cold shot.",
+  },
   cumbus: {
     name: "Cümbüş",
     origin: { tr: "Türkiye", en: "Turkey" },

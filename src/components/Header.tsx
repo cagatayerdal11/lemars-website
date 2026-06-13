@@ -24,6 +24,7 @@ const brands = [
   { slug: "hlibny-dar", key: "hlibny-dar" },
   { slug: "marengo", key: "marengo" },
   { slug: "suvorov", key: "suvorov" },
+  { slug: "cool", key: "cool" },
   { slug: "cumbus", key: "cumbus" },
   { slug: "isabey", key: "isabey" },
 ];
