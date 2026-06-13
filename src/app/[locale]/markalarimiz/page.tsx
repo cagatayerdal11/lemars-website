@@ -7,7 +7,7 @@ const brands = [
   { slug: "hlibny-dar", key: "hlibny-dar", origin: { tr: "Ukrayna", en: "Ukraine" }, category: { tr: "Votka", en: "Vodka" }, producer: "Bayadera Group", logo: "/brands/hlibny-dar.png", logoBg: "" },
   { slug: "marengo", key: "marengo", origin: { tr: "İtalya", en: "Italy" }, category: { tr: "Köpüklü Şarap & Vermut", en: "Sparkling Wine & Vermouth" }, producer: "Bayadera Group", logo: "/brands/marengo.png", logoBg: "" },
   { slug: "suvorov", key: "suvorov", origin: { tr: "Moldova", en: "Moldova" }, category: { tr: "Divin & Şarap", en: "Divin & Wine" }, producer: "KVINT", logo: "/brands/suvorov.png", logoBg: "bg-gray-900" },
-  { slug: "cool", key: "cool", origin: { tr: "Türkiye", en: "Turkey" }, category: { tr: "Likör", en: "Liqueur" }, producer: "Brysis", logo: "/brands/cool.png", logoBg: "" },
+  { slug: "cool", key: "cool", origin: { tr: "Türkiye", en: "Turkey" }, category: { tr: "Likör", en: "Liqueur" }, producer: "Brysis", logo: "/brands/cool.webp", logoBg: "" },
   { slug: "cumbus", key: "cumbus", origin: { tr: "Türkiye", en: "Turkey" }, category: { tr: "Şarap", en: "Wine" }, producer: "Aykut Özkan Şarapçılık", logo: "/brands/aykut-ozkan.png", logoBg: "" },
   { slug: "isabey", key: "isabey", origin: { tr: "Türkiye", en: "Turkey" }, category: { tr: "Şarap", en: "Wine" }, producer: "Aykut Özkan Şarapçılık", logo: "/brands/aykut-ozkan.png", logoBg: "" },
 ];
