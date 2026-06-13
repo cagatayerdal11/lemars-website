@@ -2,12 +2,21 @@ import Link from "next/link";
 import Image from "next/image";
 import { getDictionary, Locale } from "@/i18n/config";
 
-const brands = [
+const brands: {
+  slug: string;
+  key: string;
+  origin: { tr: string; en: string };
+  category: { tr: string; en: string };
+  producer: string;
+  logo: string;
+  logoBg: string;
+  imageFit?: "contain" | "cover";
+}[] = [
   { slug: "scotch-blue", key: "scotch-blue", origin: { tr: "Güney Kore", en: "South Korea" }, category: { tr: "Harman Viski", en: "Blended Whisky" }, producer: "Lotte Chilsung", logo: "/brands/scotch-blue.png", logoBg: "" },
   { slug: "hlibny-dar", key: "hlibny-dar", origin: { tr: "Ukrayna", en: "Ukraine" }, category: { tr: "Votka", en: "Vodka" }, producer: "Bayadera Group", logo: "/brands/hlibny-dar.png", logoBg: "" },
   { slug: "marengo", key: "marengo", origin: { tr: "İtalya", en: "Italy" }, category: { tr: "Köpüklü Şarap & Vermut", en: "Sparkling Wine & Vermouth" }, producer: "Bayadera Group", logo: "/brands/marengo.png", logoBg: "" },
   { slug: "suvorov", key: "suvorov", origin: { tr: "Moldova", en: "Moldova" }, category: { tr: "Divin & Şarap", en: "Divin & Wine" }, producer: "KVINT", logo: "/brands/suvorov.png", logoBg: "bg-gray-900" },
-  { slug: "cool", key: "cool", origin: { tr: "Türkiye", en: "Turkey" }, category: { tr: "Likör", en: "Liqueur" }, producer: "Brysis", logo: "/brands/cool.webp", logoBg: "" },
+  { slug: "cool", key: "cool", origin: { tr: "Türkiye", en: "Turkey" }, category: { tr: "Likör", en: "Liqueur" }, producer: "Brysis", logo: "/brands/cool.webp", logoBg: "", imageFit: "cover" },
   { slug: "cumbus", key: "cumbus", origin: { tr: "Türkiye", en: "Turkey" }, category: { tr: "Şarap", en: "Wine" }, producer: "Aykut Özkan Şarapçılık", logo: "/brands/aykut-ozkan.png", logoBg: "" },
   { slug: "isabey", key: "isabey", origin: { tr: "Türkiye", en: "Turkey" }, category: { tr: "Şarap", en: "Wine" }, producer: "Aykut Özkan Şarapçılık", logo: "/brands/aykut-ozkan.png", logoBg: "" },
 ];
@@ -57,14 +66,24 @@ export default async function Markalarimiz({ params }: { params: { locale: strin
                 className="bg-gray-50 border border-gray-100 rounded-lg p-8 hover:shadow-xl hover:border-primary-200 hover:-translate-y-1 transition-all duration-300 group"
               >
                 {/* Brand Logo */}
-                <div className={`aspect-[3/2] ${brand.logoBg || "bg-gray-50"} border border-gray-100 rounded-md flex items-center justify-center p-6 mb-6`}>
-                  <Image
-                    src={brand.logo}
-                    alt={brandList[brand.key] || brand.slug}
-                    width={200}
-                    height={120}
-                    className="object-contain max-h-full group-hover:scale-105 transition-transform duration-300"
-                  />
+                <div className={`relative aspect-[3/2] ${brand.logoBg || "bg-gray-50"} border border-gray-100 rounded-md overflow-hidden mb-6 ${brand.imageFit === "cover" ? "" : "flex items-center justify-center p-6"}`}>
+                  {brand.imageFit === "cover" ? (
+                    <Image
+                      src={brand.logo}
+                      alt={brandList[brand.key] || brand.slug}
+                      fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1280px) 33vw, 25vw"
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  ) : (
+                    <Image
+                      src={brand.logo}
+                      alt={brandList[brand.key] || brand.slug}
+                      width={200}
+                      height={120}
+                      className="object-contain max-h-full group-hover:scale-105 transition-transform duration-300"
+                    />
+                  )}
                 </div>
 
                 <h3 className="text-lg font-bold text-gray-900 group-hover:text-primary-700 transition-colors mb-2">

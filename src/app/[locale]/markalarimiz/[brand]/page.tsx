@@ -20,6 +20,7 @@ interface BrandInfo {
   category: { tr: string; en: string };
   logo: string;
   logoBg?: string;
+  imageFit?: "contain" | "cover";
   descTr: string;
   descEn: string;
   varieties?: ProductVariety[];
@@ -90,6 +91,7 @@ const brandData: Record<string, BrandInfo> = {
     origin: { tr: "Türkiye", en: "Turkey" },
     category: { tr: "Likör", en: "Liqueur" },
     logo: "/brands/cool.webp",
+    imageFit: "cover",
     descTr: "COOL, Brysis tarafından üretilen aromalı likör serisidir. %15 alkol oranına sahip 35 cl'lik şişelerde sunulan marka, Çilek, Yeşil Elma ve Espresso Karamel gibi farklı tat seçenekleriyle bar, restoran ve perakende satış noktalarında tüketicilere ulaşmaktadır. Meyvemsi ve tatlı karakteriyle öne çıkan COOL, kokteyl bazı olarak veya soğuk shot olarak tüketilmektedir.",
     descEn: "COOL is a flavored liqueur series produced by Brysis. Offered in 35 cl bottles at 15% ABV, the brand reaches consumers at bars, restaurants, and retail outlets with various flavor options including Strawberry, Green Apple, and Espresso Caramel. Standing out with its fruity and sweet character, COOL is consumed as a cocktail base or as a cold shot.",
   },
@@ -267,15 +269,26 @@ export default async function BrandPage({
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
             {/* Brand Logo */}
-            <div className={`aspect-[4/3] ${info.logoBg || "bg-transparent"} border border-gray-100 rounded-lg flex items-center justify-center p-10`}>
-              <Image
-                src={info.logo}
-                alt={info.name}
-                width={400}
-                height={300}
-                className="object-contain max-h-full"
-                priority
-              />
+            <div className={`relative aspect-[4/3] ${info.logoBg || "bg-transparent"} border border-gray-100 rounded-lg overflow-hidden ${info.imageFit === "cover" ? "" : "flex items-center justify-center p-10"}`}>
+              {info.imageFit === "cover" ? (
+                <Image
+                  src={info.logo}
+                  alt={info.name}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover"
+                  priority
+                />
+              ) : (
+                <Image
+                  src={info.logo}
+                  alt={info.name}
+                  width={400}
+                  height={300}
+                  className="object-contain max-h-full"
+                  priority
+                />
+              )}
             </div>
 
             {/* Brand info */}
