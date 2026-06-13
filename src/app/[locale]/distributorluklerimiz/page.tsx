@@ -43,6 +43,14 @@ const distributors = [
     descTr: "Marengo, Bayadera Group portföyü içinde köpüklü şarap ve vermut segmentinde öne çıkan ve İtalyan üretim yaklaşımını güçlü bir marka kimliğiyle birleştiren markalardan biridir.",
     descEn: "Marengo is one of the brands within the Bayadera Group portfolio that stands out in the sparkling wine and vermouth segment, combining the Italian production approach with a strong brand identity.",
   },
+  {
+    name: "Brysis İçecek Sanayi ve Ticaret A.Ş.",
+    logo: "/brands/brysis.png",
+    logoBg: "bg-gray-900",
+    brands: { tr: "COOL Likör", en: "COOL Liqueur" },
+    descTr: "BRYSIS İçecek Sanayi ve Ticaret A.Ş., Kırklareli'ndeki 30.750 m²'lik modern tesisinde İtalyan mühendisliği ve tam otomasyonlu (SCADA) sistemlerle üretim yapan bir içecek üreticisidir. Buğday bazlı yüksek saflıkta etil alkol üretimi ve yıllık 17 milyon litreyi aşan lisanslı kapasitesiyle entegre bir üretim modeli benimser. %100 yenilenebilir güneş enerjisiyle çalışan marka, COOL likör serisiyle portföyümüzde yer alan güçlü ve modern bir üretim ortağıdır.",
+    descEn: "BRYSIS İçecek Sanayi ve Ticaret A.Ş. is a beverage producer operating from a modern 30,750 m² facility in Kırklareli, equipped with Italian engineering and fully automated (SCADA) systems. With an integrated production model built on high-purity wheat-based ethyl alcohol and a licensed capacity exceeding 17 million liters per year, the company runs its operations on 100% renewable solar energy. With its COOL liqueur series, BRYSIS is a strong and modern production partner within our portfolio.",
+  },
 ];
 
 export default async function Distributorluklerimiz({ params }: { params: { locale: string } }) {
