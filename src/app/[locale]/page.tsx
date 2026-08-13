@@ -3,10 +3,12 @@ import Image from "next/image";
 import { getDictionary, Locale } from "@/i18n/config";
 import ScrollReveal from "@/components/ScrollReveal";
 import AnimatedCounter from "@/components/AnimatedCounter";
+import CoverageMap from "@/components/CoverageMap";
 
 export default async function Home({ params }: { params: { locale: string } }) {
   const dict = await getDictionary(params.locale as Locale);
   const t = dict.home as Record<string, unknown>;
+  const cov = dict.coverage as Record<string, string>;
   const locale = params.locale;
 
   const features = [
@@ -118,6 +120,19 @@ export default async function Home({ params }: { params: { locale: string } }) {
           </div>
         </div>
       </section>
+
+      {/* Coverage Map */}
+      <CoverageMap
+        eyebrow={cov.eyebrow}
+        title={cov.title}
+        desc={cov.desc}
+        seaLabel={cov.seaLabel}
+        stats={[
+          { value: cov.stat1Value, label: cov.stat1Label },
+          { value: cov.stat2Value, label: cov.stat2Label },
+          { value: cov.stat3Value, label: cov.stat3Label },
+        ]}
+      />
 
       {/* About */}
       <section className="bg-gray-50">

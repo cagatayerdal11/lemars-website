@@ -75,6 +75,18 @@
     "ctaButton": "Get in Touch",
     "ctaPhone": "+90 (212) 809 18 83"
   },
+  "coverage": {
+    "eyebrow": "Our Service Area",
+    "title": "We reach all of Istanbul's European Side",
+    "desc": "From our central depot in Avcılar, our fleet reaches 1800+ points of sale across the European Side the same day. Wherever your business is, supply never stops.",
+    "stat1Value": "1800+",
+    "stat1Label": "Points of Sale Reached",
+    "stat2Value": "All Districts",
+    "stat2Label": "European Side",
+    "stat3Value": "Same-Day",
+    "stat3Label": "Delivery",
+    "seaLabel": "SEA OF MARMARA"
+  },
   "about": {
     "heroEyebrow": "About Us",
     "heroTitle": "LEMARS Food & Beverage",
