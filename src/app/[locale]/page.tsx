@@ -23,13 +23,6 @@ export default async function Home({ params }: { params: { locale: string } }) {
     { number: 400, suffix: "+", label: t.stat_products as string },
   ];
 
-  const services = [
-    { title: t.svc1Title as string, desc: t.svc1Desc as string },
-    { title: t.svc2Title as string, desc: t.svc2Desc as string },
-    { title: t.svc3Title as string, desc: t.svc3Desc as string },
-    { title: t.svc4Title as string, desc: t.svc4Desc as string },
-  ];
-
   const aboutTitleLines = (t.aboutTitle as string).split("\n");
 
   return (
@@ -178,33 +171,6 @@ export default async function Home({ params }: { params: { locale: string } }) {
                 ))}
               </div>
             </ScrollReveal>
-          </div>
-        </div>
-      </section>
-
-      {/* Services */}
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <ScrollReveal>
-            <div className="text-center mb-20">
-              <p className="text-primary-700 text-xs font-semibold tracking-[0.3em] uppercase mb-6">{t.servicesEyebrow as string}</p>
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900">{t.servicesTitle as string}</h2>
-            </div>
-          </ScrollReveal>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-            {services.map((item, i) => (
-              <ScrollReveal key={i} delay={i * 0.1}>
-                <div className="group">
-                  <div className="w-full h-px bg-primary-700 mb-8 origin-left group-hover:scale-x-100 scale-x-50 transition-transform duration-500" />
-                  <h3 className="text-lg font-bold text-gray-900 mb-4">{item.title}</h3>
-                  <p className="text-gray-500 text-sm leading-relaxed mb-6">{item.desc}</p>
-                  <Link href={`/${locale}/hizmetlerimiz`} className="text-primary-700 text-xs font-semibold tracking-wider uppercase hover:tracking-[0.2em] transition-all">
-                    {t.svcMore as string} &rarr;
-                  </Link>
-                </div>
-              </ScrollReveal>
-            ))}
           </div>
         </div>
       </section>
