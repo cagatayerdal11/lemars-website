@@ -78,12 +78,12 @@
   "coverage": {
     "eyebrow": "Hizmet Bölgemiz",
     "title": "İstanbul Avrupa Yakası'nın tamamına ulaşıyoruz",
-    "desc": "Avcılar'daki merkez depomuzdan çıkan araçlarımız, Avrupa Yakası genelindeki 1800'den fazla satış noktasına aynı gün ulaşır. İşletmeniz nerede olursa olsun, tedarik kesintisiz devam eder.",
+    "desc": "Avcılar'daki merkez depomuzdan çıkan araçlarımız, Avrupa Yakası genelindeki 1800'den fazla satış noktasına güvenli şekilde ulaşır. İşletmeniz nerede olursa olsun, tedarik kesintisiz devam eder.",
     "stat1Value": "1800+",
     "stat1Label": "Ulaşılan Satış Noktası",
     "stat2Value": "Tüm İlçeler",
     "stat2Label": "Avrupa Yakası",
-    "stat3Value": "Aynı Gün",
+    "stat3Value": "Güvenli",
     "stat3Label": "Teslimat",
     "seaLabel": "MARMARA DENİZİ"
   },
