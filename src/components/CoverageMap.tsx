@@ -6,8 +6,8 @@ interface CoverageStat {
 interface CoverageMapProps {
   eyebrow: string;
   title: string;
-  desc: string;
-  stats: CoverageStat[];
+  desc?: string;
+  stats?: CoverageStat[];
   seaLabel: string;
 }
 
@@ -64,10 +64,10 @@ export default function CoverageMap({
           <p className="text-primary-500 text-xs font-semibold tracking-[0.3em] uppercase mb-6">
             {eyebrow}
           </p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight text-balance mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight text-balance">
             {title}
           </h2>
-          <p className="text-gray-400 leading-relaxed">{desc}</p>
+          {desc && <p className="text-gray-400 leading-relaxed mt-6">{desc}</p>}
         </div>
 
         {/* Map */}
@@ -238,21 +238,23 @@ export default function CoverageMap({
         </div>
 
         {/* Stats */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-14 max-w-3xl mx-auto">
-          {stats.map((s, i) => (
-            <div
-              key={i}
-              className="text-center bg-white/[0.03] border border-white/10 rounded-xl py-6 px-4"
-            >
-              <div className="text-2xl md:text-3xl font-bold text-primary-500 mb-1">
-                {s.value}
+        {stats && stats.length > 0 && (
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-14 max-w-3xl mx-auto">
+            {stats.map((s, i) => (
+              <div
+                key={i}
+                className="text-center bg-white/[0.03] border border-white/10 rounded-xl py-6 px-4"
+              >
+                <div className="text-2xl md:text-3xl font-bold text-primary-500 mb-1">
+                  {s.value}
+                </div>
+                <div className="text-[11px] md:text-xs text-gray-400 uppercase tracking-wider">
+                  {s.label}
+                </div>
               </div>
-              <div className="text-[11px] md:text-xs text-gray-400 uppercase tracking-wider">
-                {s.label}
-              </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );

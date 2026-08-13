@@ -118,13 +118,7 @@ export default async function Home({ params }: { params: { locale: string } }) {
       <CoverageMap
         eyebrow={cov.eyebrow}
         title={cov.title}
-        desc={cov.desc}
         seaLabel={cov.seaLabel}
-        stats={[
-          { value: cov.stat1Value, label: cov.stat1Label },
-          { value: cov.stat2Value, label: cov.stat2Label },
-          { value: cov.stat3Value, label: cov.stat3Label },
-        ]}
       />
 
       {/* About */}
