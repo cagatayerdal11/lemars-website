@@ -196,7 +196,7 @@ export default function FlowDiagram({
   return (
     <div className="w-full">
       <div className="text-center mb-14">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900">{title}</h2>
+        <h2 className="text-2xl md:text-4xl font-bold text-gray-900 max-w-4xl mx-auto text-balance leading-tight">{title}</h2>
       </div>
 
       <div className="overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0">
