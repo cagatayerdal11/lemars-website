@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { CONSENT_EVENT } from "@/lib/analytics/gtag";
 
 interface CookieDict {
   message: string;
@@ -28,11 +29,14 @@ export default function CookieBanner({
 
   const handleAccept = () => {
     localStorage.setItem("lemars-cookie-consent", "accepted");
+    // GA4 Consent Mode'u anında güncelle (sayfa yenilemeden).
+    window.dispatchEvent(new Event(CONSENT_EVENT));
     setVisible(false);
   };
 
   const handleReject = () => {
     localStorage.setItem("lemars-cookie-consent", "rejected");
+    window.dispatchEvent(new Event(CONSENT_EVENT));
     setVisible(false);
   };
 

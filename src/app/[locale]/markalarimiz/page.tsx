@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
+import type { Metadata } from "next";
 import { getDictionary, Locale } from "@/i18n/config";
+import { buildMetadata } from "@/lib/seo";
 
 const brands: {
   slug: string;
@@ -21,6 +23,12 @@ const brands: {
   { slug: "isabey", key: "isabey", origin: { tr: "Türkiye", en: "Turkey" }, category: { tr: "Şarap", en: "Wine" }, producer: "Aykut Özkan Şarapçılık", logo: "/brands/aykut-ozkan.png", logoBg: "" },
 ];
 
+export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
+  const dict = await getDictionary(params.locale as Locale);
+  const s = (dict.seo as Record<string, { title: string; description: string }>).brands;
+  return buildMetadata({ locale: params.locale, path: "/markalarimiz", title: s.title, description: s.description });
+}
+
 export default async function Markalarimiz({ params }: { params: { locale: string } }) {
   const dict = await getDictionary(params.locale as Locale);
   const t = dict.brands as Record<string, unknown>;
@@ -30,12 +38,12 @@ export default async function Markalarimiz({ params }: { params: { locale: strin
 
   return (
     <>
-      <section className="bg-gray-900 py-24 md:py-32">
+      <section className="bg-gray-900 py-24 md:py-32 hero-glow">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <p className="text-primary-500 text-xs font-semibold tracking-[0.3em] uppercase mb-6">
             {t.heroEyebrow as string}
           </p>
-          <h1 className="text-5xl md:text-6xl font-bold text-white leading-tight max-w-3xl">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold text-white leading-tight max-w-3xl break-words">
             {t.heroTitle as string}
           </h1>
           <p className="text-gray-400 text-lg mt-6 max-w-xl">
@@ -63,7 +71,7 @@ export default async function Markalarimiz({ params }: { params: { locale: strin
               <Link
                 key={brand.slug}
                 href={`/${locale}/markalarimiz/${brand.slug}`}
-                className="bg-gray-50 border border-gray-100 rounded-lg p-8 hover:shadow-xl hover:border-primary-200 hover:-translate-y-1 transition-all duration-300 group"
+                className="brand-card bg-gray-50 border border-gray-100 rounded-lg p-8 hover:shadow-xl hover:border-primary-200 hover:-translate-y-1 active:-translate-y-1 transition-all duration-300 group"
               >
                 {/* Brand Logo */}
                 <div className={`relative aspect-[3/2] ${brand.logoBg || "bg-gray-50"} border border-gray-100 rounded-md overflow-hidden mb-6 ${brand.imageFit === "cover" ? "" : "flex items-center justify-center p-6"}`}>
@@ -73,7 +81,7 @@ export default async function Markalarimiz({ params }: { params: { locale: strin
                       alt={brandList[brand.key] || brand.slug}
                       fill
                       sizes="(max-width: 640px) 100vw, (max-width: 1280px) 33vw, 25vw"
-                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                      className="object-cover group-hover:scale-105 group-active:scale-105 transition-transform duration-300"
                     />
                   ) : (
                     <Image
@@ -81,7 +89,7 @@ export default async function Markalarimiz({ params }: { params: { locale: strin
                       alt={brandList[brand.key] || brand.slug}
                       width={200}
                       height={120}
-                      className="object-contain max-h-full group-hover:scale-105 transition-transform duration-300"
+                      className="object-contain max-h-full group-hover:scale-105 group-active:scale-105 transition-transform duration-300"
                     />
                   )}
                 </div>

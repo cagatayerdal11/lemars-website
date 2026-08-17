@@ -131,7 +131,7 @@ export default function Footer({
             <p className="text-xs text-gray-600">
               {dict.copyright.replace("{year}", new Date().getFullYear().toString())}
             </p>
-            <div className="flex items-center gap-6">
+            <div className="flex flex-wrap justify-center items-center gap-x-6 gap-y-2">
               <Link href={`/${locale}/yasal/kullanim-kosullari`} className="text-xs text-gray-500 hover:text-primary-400 transition-colors">
                 {dict.termsLink}
               </Link>

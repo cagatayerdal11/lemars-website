@@ -1,7 +1,8 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+// Resend, key yoksa constructor'da throw eder. Module scope'ta değil, handler
+// içinde (guard'lı) oluşturuyoruz — aksi halde key eksikse build/route çöker.
 
 async function sendWhatsAppNotification(data: {
   name: string;
@@ -68,6 +69,16 @@ export async function POST(request: Request) {
     };
 
     const emailSubject = `Yeni İletişim Formu: ${subjectMap[subject] || "Genel"}`;
+
+    const apiKey = process.env.RESEND_API_KEY;
+    if (!apiKey) {
+      console.error("RESEND_API_KEY tanımlı değil — form e-postası gönderilemedi.");
+      return NextResponse.json(
+        { error: "E-posta servisi yapılandırılmamış." },
+        { status: 503 }
+      );
+    }
+    const resend = new Resend(apiKey);
 
     // E-posta ve WhatsApp bildirimi paralel gönder
     await Promise.all([

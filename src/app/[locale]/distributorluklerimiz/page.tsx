@@ -1,5 +1,7 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { getDictionary, Locale } from "@/i18n/config";
+import { buildMetadata } from "@/lib/seo";
 import DistributorCard from "@/components/DistributorCard";
 
 const distributors = [
@@ -53,6 +55,12 @@ const distributors = [
   },
 ];
 
+export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
+  const dict = await getDictionary(params.locale as Locale);
+  const s = (dict.seo as Record<string, { title: string; description: string }>).distributorships;
+  return buildMetadata({ locale: params.locale, path: "/distributorluklerimiz", title: s.title, description: s.description });
+}
+
 export default async function Distributorluklerimiz({ params }: { params: { locale: string } }) {
   const dict = await getDictionary(params.locale as Locale);
   const t = dict.distributorships as Record<string, unknown>;
@@ -61,12 +69,12 @@ export default async function Distributorluklerimiz({ params }: { params: { loca
 
   return (
     <>
-      <section className="bg-gray-900 py-24 md:py-32">
+      <section className="bg-gray-900 py-24 md:py-32 hero-glow">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <p className="text-primary-500 text-xs font-semibold tracking-[0.3em] uppercase mb-6">
             {t.heroEyebrow as string}
           </p>
-          <h1 className="text-5xl md:text-6xl font-bold text-white leading-tight max-w-4xl">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold text-white leading-tight max-w-4xl break-words">
             {t.heroTitle as string}
           </h1>
           <p className="text-gray-400 text-lg mt-6 max-w-xl">

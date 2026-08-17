@@ -1,9 +1,18 @@
 import Link from "next/link";
 import Image from "next/image";
+import type { Metadata } from "next";
 import { getDictionary, Locale } from "@/i18n/config";
+import { buildMetadata } from "@/lib/seo";
 import ScrollReveal from "@/components/ScrollReveal";
 import AnimatedCounter from "@/components/AnimatedCounter";
+import StatRing from "@/components/StatRing";
 import CoverageMap from "@/components/CoverageMap";
+
+export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
+  const dict = await getDictionary(params.locale as Locale);
+  const s = (dict.seo as Record<string, { title: string; description: string }>).home;
+  return buildMetadata({ locale: params.locale, path: "", title: s.title, description: s.description });
+}
 
 export default async function Home({ params }: { params: { locale: string } }) {
   const dict = await getDictionary(params.locale as Locale);
@@ -154,13 +163,15 @@ export default async function Home({ params }: { params: { locale: string } }) {
             </ScrollReveal>
 
             <ScrollReveal direction="right">
-              <div className="grid grid-cols-3 gap-5">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 {stats.map((stat, i) => (
-                  <div key={i} className="bg-white p-6 md:p-8 text-center border border-gray-100 rounded-lg">
-                    <div className="text-2xl md:text-3xl font-bold text-primary-700 mb-2">
-                      <AnimatedCounter target={stat.number} suffix={stat.suffix} />
-                    </div>
-                    <div className="text-[10px] md:text-xs text-gray-500 tracking-wider uppercase">{stat.label}</div>
+                  <div key={i} className="bg-white p-6 flex items-center justify-center border border-gray-100 rounded-lg">
+                    <StatRing
+                      target={stat.number}
+                      suffix={stat.suffix}
+                      label={stat.label}
+                      pct={[0.9, 0.7, 0.55][i] ?? 0.7}
+                    />
                   </div>
                 ))}
               </div>

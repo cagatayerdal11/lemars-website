@@ -3,6 +3,17 @@
     "title": "LEMARS Food & Beverage | Wholesale Alcoholic Beverage Distribution",
     "description": "Fast, reliable, and quality wholesale alcoholic beverage distribution services for restaurants, bars, and retail outlets across Istanbul's European side."
   },
+  "seo": {
+    "home": { "title": "LEMARS | B2B Sales, Supply & Distribution", "description": "LEMARS provides professional B2B sales, supply and distribution services to businesses across Istanbul's European Side." },
+    "about": { "title": "About Us | LEMARS", "description": "With 20+ years of experience, LEMARS is a trusted B2B sales, supply and distribution partner across Istanbul's European Side." },
+    "services": { "title": "Services | LEMARS", "description": "HoReCa supply, retail distribution, logistics and sales development — LEMARS's B2B supply solutions across Istanbul's European Side." },
+    "distributorships": { "title": "Distributorships | LEMARS", "description": "LEMARS's authorized distributorship portfolio and wholesale distribution partnerships across Istanbul's European Side." },
+    "brands": { "title": "Brands | LEMARS", "description": "The brand portfolio LEMARS delivers to businesses across Istanbul's European Side." },
+    "contact": { "title": "Contact | LEMARS", "description": "Contact LEMARS — B2B sales, supply and distribution across Istanbul's European Side. Address, phone and contact form." },
+    "terms": { "title": "Terms of Use | LEMARS", "description": "LEMARS Gıda İçecek website terms of use." },
+    "privacy": { "title": "Privacy & Cookie Policy | LEMARS", "description": "Processing of personal data and cookie policy under Turkish KVKK (Law No. 6698)." },
+    "disclaimer": { "title": "Disclaimer | LEMARS", "description": "LEMARS Gıda İçecek legal notice and disclaimer." }
+  },
   "nav": {
     "home": "Home",
     "about": "About Us",

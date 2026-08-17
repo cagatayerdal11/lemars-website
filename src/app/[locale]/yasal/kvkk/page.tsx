@@ -1,4 +1,12 @@
+import type { Metadata } from "next";
 import { getDictionary, Locale } from "@/i18n/config";
+import { buildMetadata } from "@/lib/seo";
+
+export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
+  const dict = await getDictionary(params.locale as Locale);
+  const s = (dict.seo as Record<string, { title: string; description: string }>).privacy;
+  return buildMetadata({ locale: params.locale, path: "/yasal/kvkk", title: s.title, description: s.description });
+}
 
 export default async function KVKK({ params }: { params: { locale: string } }) {
   const dict = await getDictionary(params.locale as Locale);

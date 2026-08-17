@@ -7,7 +7,7 @@ const brandNames: Record<string, string> = {
   "hlibny-dar": "Hlibny Dar",
   "marengo": "Marengo",
   "suvorov": "Suvorov",
-  "cool": "COOL Likör",
+  "cool": "COOL",
   "cumbus": "Cümbüş",
   "isabey": "İsabey",
 };
@@ -16,19 +16,25 @@ export default function WhatsAppButton() {
   const pathname = usePathname();
   const phone = "905553643434";
 
-  let message = "Merhaba, LEMARS Gıda İçecek websitesinden ulaşıyorum. Bilgi almak istiyorum.";
-
+  const isEn = pathname.startsWith("/en");
   const brandMatch = pathname.match(/\/markalarimiz\/([^/]+)/);
-  if (brandMatch && brandNames[brandMatch[1]]) {
-    message = `Merhaba, ${brandNames[brandMatch[1]]} markası hakkında bilgi almak istiyorum.`;
-  } else if (pathname.includes("/iletisim")) {
-    message = "Merhaba, tedarik teklifi almak istiyorum.";
-  } else if (pathname.includes("/hizmetlerimiz")) {
-    message = "Merhaba, hizmetleriniz hakkında bilgi almak istiyorum.";
-  } else if (pathname.includes("/distributorluklerimiz")) {
-    message = "Merhaba, distribütörlük portföyünüz hakkında bilgi almak istiyorum.";
-  } else if (pathname.includes("/hakkimizda")) {
-    message = "Merhaba, LEMARS Gıda İçecek hakkında bilgi almak istiyorum.";
+  const brand = brandMatch ? brandNames[brandMatch[1]] : undefined;
+
+  let message: string;
+  if (isEn) {
+    if (brand) message = `Hello, I'd like to get information about the ${brand} brand.`;
+    else if (pathname.includes("/iletisim")) message = "Hello, I'd like to request a supply quote.";
+    else if (pathname.includes("/hizmetlerimiz")) message = "Hello, I'd like to get information about your services.";
+    else if (pathname.includes("/distributorluklerimiz")) message = "Hello, I'd like to get information about your distributorship portfolio.";
+    else if (pathname.includes("/hakkimizda")) message = "Hello, I'd like to get information about LEMARS Gıda İçecek.";
+    else message = "Hello, I'm reaching out via the LEMARS Gıda İçecek website. I'd like to get some information.";
+  } else {
+    if (brand) message = `Merhaba, ${brand} markası hakkında bilgi almak istiyorum.`;
+    else if (pathname.includes("/iletisim")) message = "Merhaba, tedarik teklifi almak istiyorum.";
+    else if (pathname.includes("/hizmetlerimiz")) message = "Merhaba, hizmetleriniz hakkında bilgi almak istiyorum.";
+    else if (pathname.includes("/distributorluklerimiz")) message = "Merhaba, distribütörlük portföyünüz hakkında bilgi almak istiyorum.";
+    else if (pathname.includes("/hakkimizda")) message = "Merhaba, LEMARS Gıda İçecek hakkında bilgi almak istiyorum.";
+    else message = "Merhaba, LEMARS Gıda İçecek websitesinden ulaşıyorum. Bilgi almak istiyorum.";
   }
 
   const encodedMessage = encodeURIComponent(message);
@@ -39,6 +45,7 @@ export default function WhatsAppButton() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="WhatsApp"
+      data-cta="floating_button"
       className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#25D366] hover:bg-[#1DA851] text-white rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
     >
       <svg className="w-7 h-7" viewBox="0 0 24 24" fill="currentColor">

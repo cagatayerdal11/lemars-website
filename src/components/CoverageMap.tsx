@@ -139,6 +139,36 @@ export default function CoverageMap({
               ))}
             </g>
 
+            {/* Dağıtım akışı — Avcılar merkezden ilçelere akan tedarik paketleri */}
+            <g>
+              {DISTRICTS.map((d, i) => {
+                const begin = `${(i % 5) * 0.55}s`;
+                const path = `M ${HUB.x} ${HUB.y} L ${d.x} ${d.y}`;
+                return (
+                  <circle key={`pk-${d.n}`} r="2.6" fill="#fdba74">
+                    <animateMotion
+                      dur="3.2s"
+                      begin={begin}
+                      repeatCount="indefinite"
+                      path={path}
+                      calcMode="spline"
+                      keyPoints="0;1"
+                      keyTimes="0;1"
+                      keySplines="0.4 0 0.2 1"
+                    />
+                    <animate
+                      attributeName="opacity"
+                      values="0;1;1;0"
+                      keyTimes="0;0.12;0.82;1"
+                      dur="3.2s"
+                      begin={begin}
+                      repeatCount="indefinite"
+                    />
+                  </circle>
+                );
+              })}
+            </g>
+
             {/* Broadcast rings from hub */}
             {[0, 1.6, 3.2].map((begin, i) => (
               <circle
@@ -178,13 +208,13 @@ export default function CoverageMap({
                     r="9"
                     fill="#f97316"
                     opacity="0"
-                    className="transition-opacity duration-300 group-hover:opacity-20"
+                    className="transition-opacity duration-300 group-hover:opacity-20 group-active:opacity-20"
                   />
                   <circle
                     cx={d.x}
                     cy={d.y}
                     r="4.5"
-                    className="fill-slate-500 transition-colors duration-300 group-hover:fill-primary-500"
+                    className="fill-slate-500 transition-colors duration-300 group-hover:fill-primary-500 group-active:fill-primary-500"
                   />
                   <text
                     x={la.x}
@@ -192,7 +222,7 @@ export default function CoverageMap({
                     textAnchor={la.anchor}
                     fontSize="14"
                     fontWeight="600"
-                    className="fill-slate-400 transition-colors duration-300 group-hover:fill-white"
+                    className="fill-slate-400 transition-colors duration-300 group-hover:fill-white group-active:fill-white"
                     style={{ fontFamily: "inherit" }}
                   >
                     {d.n}

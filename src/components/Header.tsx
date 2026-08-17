@@ -128,7 +128,8 @@ export default function Header({
 
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-2 text-gray-700"
+            className="lg:hidden p-2 text-gray-700 min-h-[44px] min-w-[44px] flex items-center justify-center"
+            aria-label="Menü"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               {mobileMenuOpen ? (
@@ -147,7 +148,7 @@ export default function Header({
                 key={item.name}
                 href={item.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="block py-3 text-xs font-semibold tracking-widest text-gray-700 hover:text-primary-700 transition-colors"
+                className="flex items-center min-h-[44px] py-3 text-xs font-semibold tracking-widest text-gray-700 hover:text-primary-700 transition-colors"
               >
                 {item.name}
               </Link>
@@ -157,7 +158,7 @@ export default function Header({
             <div>
               <button
                 onClick={() => setMobileBrandsOpen(!mobileBrandsOpen)}
-                className="w-full flex items-center justify-between py-3 text-xs font-semibold tracking-widest text-gray-700 hover:text-primary-700 transition-colors"
+                className="w-full flex items-center justify-between min-h-[44px] py-3 text-xs font-semibold tracking-widest text-gray-700 hover:text-primary-700 transition-colors"
               >
                 {up(dict.brands)}
                 <svg className={`w-3 h-3 transition-transform ${mobileBrandsOpen ? "rotate-180" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -169,7 +170,7 @@ export default function Header({
                   <Link
                     href={`/${locale}/markalarimiz`}
                     onClick={() => setMobileMenuOpen(false)}
-                    className="block py-2 text-xs font-semibold tracking-wider text-primary-700"
+                    className="flex items-center min-h-[44px] py-2 text-xs font-semibold tracking-wider text-primary-700"
                   >
                     {up(dict.brands)}
                   </Link>
@@ -178,7 +179,7 @@ export default function Header({
                       key={brand.slug}
                       href={`/${locale}/markalarimiz/${brand.slug}`}
                       onClick={() => setMobileMenuOpen(false)}
-                      className="block py-2 text-sm text-gray-500 hover:text-primary-700 transition-colors"
+                      className="flex items-center min-h-[44px] py-2 text-sm text-gray-500 hover:text-primary-700 transition-colors"
                     >
                       {brandList[brand.key] || brand.slug}
                     </Link>

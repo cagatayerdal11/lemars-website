@@ -1,6 +1,14 @@
 import Link from "next/link";
 import Image from "next/image";
+import type { Metadata } from "next";
 import { getDictionary, Locale } from "@/i18n/config";
+import { buildMetadata } from "@/lib/seo";
+
+export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
+  const dict = await getDictionary(params.locale as Locale);
+  const s = (dict.seo as Record<string, { title: string; description: string }>).about;
+  return buildMetadata({ locale: params.locale, path: "/hakkimizda", title: s.title, description: s.description });
+}
 
 export default async function Hakkimizda({ params }: { params: { locale: string } }) {
   const dict = await getDictionary(params.locale as Locale);
@@ -31,7 +39,7 @@ export default async function Hakkimizda({ params }: { params: { locale: string 
         <Image src="/istanbul.jpg" alt="" fill className="object-cover opacity-15" />
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
           <p className="text-primary-500 text-xs font-semibold tracking-[0.3em] uppercase mb-6">{t.heroEyebrow as string}</p>
-          <h1 className="text-5xl md:text-6xl font-bold text-white leading-tight max-w-3xl">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold text-white leading-tight max-w-3xl break-words">
             {t.heroTitle as string}
           </h1>
           <p className="text-gray-400 text-lg mt-6 max-w-xl">

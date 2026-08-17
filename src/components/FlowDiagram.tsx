@@ -202,7 +202,7 @@ export default function FlowDiagram({
       <div className="overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0">
         <svg
           viewBox={`0 0 ${width} ${height}`}
-          className="w-full min-w-[960px] h-auto"
+          className="w-full min-w-[720px] md:min-w-[960px] h-auto"
           preserveAspectRatio="xMidYMid meet"
           role="img"
           aria-label={`${leftNumber} ${leftLabel} → LEMARS → ${rightLabels.join(", ")}`}

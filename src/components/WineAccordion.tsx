@@ -83,7 +83,7 @@ export default function WineAccordion({
 
             <div
               className={`transition-all duration-300 ease-in-out overflow-hidden ${
-                openIndex === index ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+                openIndex === index ? "max-h-[700px] opacity-100" : "max-h-0 opacity-0"
               }`}
             >
               <div className="px-5 md:px-6 pb-5 border-t border-gray-100">

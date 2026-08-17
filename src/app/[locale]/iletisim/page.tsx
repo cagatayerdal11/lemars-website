@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { getDictionary, Locale } from "@/i18n/config";
 import MarsLoader from "@/components/MarsLoader";
+import { trackContactAction } from "@/lib/analytics/gtag";
 
 export default function Iletisim({ params }: { params: { locale: string } }) {
   const locale = params.locale;
@@ -24,13 +25,22 @@ export default function Iletisim({ params }: { params: { locale: string } }) {
     e.preventDefault();
     setLoading(true);
     try {
-      await fetch("/api/contact", {
+      const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
+      // Ana ticari metrik: YALNIZCA başarılı form gönderiminde (PII gönderilmez).
+      if (res.ok) {
+        trackContactAction({
+          action_type: "form",
+          cta_location: "contact_form",
+          page_path: `/${locale}/iletisim`,
+          locale,
+        });
+      }
     } catch {
-      // Form submitted
+      // Ağ hatası — event gönderilmez
     }
     setLoading(false);
     setSubmitted(true);
@@ -48,10 +58,10 @@ export default function Iletisim({ params }: { params: { locale: string } }) {
 
   return (
     <>
-      <section className="bg-gray-900 py-24 md:py-32">
+      <section className="bg-gray-900 py-24 md:py-32 hero-glow">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <p className="text-primary-500 text-xs font-semibold tracking-[0.3em] uppercase mb-6">{t.heroEyebrow as string}</p>
-          <h1 className="text-5xl md:text-6xl font-bold text-white leading-tight max-w-3xl">{t.heroTitle as string}</h1>
+          <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold text-white leading-tight max-w-3xl break-words">{t.heroTitle as string}</h1>
           <p className="text-gray-400 text-lg mt-6 max-w-xl">
             {t.heroDesc as string}
           </p>
@@ -132,9 +142,14 @@ export default function Iletisim({ params }: { params: { locale: string } }) {
                     <p className="text-gray-500 text-sm mb-6">{t.successDesc as string}</p>
 
                     <a
-                      href={`https://wa.me/905553643434?text=${encodeURIComponent(`Merhaba, az önce iletişim formunu doldurdum. ${formData.name} — hızlı dönüş için WhatsApp'tan da ulaşıyorum.`)}`}
+                      href={`https://wa.me/905553643434?text=${encodeURIComponent(
+                        locale === "en"
+                          ? `Hello, I just submitted the contact form. ${formData.name} — reaching out via WhatsApp for a quick reply.`
+                          : `Merhaba, az önce iletişim formunu doldurdum. ${formData.name} — hızlı dönüş için WhatsApp'tan da ulaşıyorum.`
+                      )}`}
                       target="_blank"
                       rel="noopener noreferrer"
+                      data-cta="contact_success"
                       className="inline-flex items-center gap-2 px-6 py-3 bg-[#25D366] hover:bg-[#1DA851] text-white font-semibold rounded-lg transition-colors text-sm mb-4"
                     >
                       <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
@@ -193,7 +208,7 @@ export default function Iletisim({ params }: { params: { locale: string } }) {
                         <textarea required rows={5} value={formData.message} onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                           className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent resize-none" />
                       </div>
-                      <p className="text-[10px] text-gray-400">
+                      <p className="text-xs text-gray-500">
                         {t.formKvkk as string}
                       </p>
                       <button type="submit" disabled={loading}

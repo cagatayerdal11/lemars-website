@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
+import type { Metadata } from "next";
 import { getDictionary, Locale } from "@/i18n/config";
+import { buildMetadata } from "@/lib/seo";
 import { notFound } from "next/navigation";
 import WineAccordion from "@/components/WineAccordion";
 
@@ -205,6 +207,28 @@ const brandData: Record<string, BrandInfo> = {
 
 const validBrands = Object.keys(brandData);
 
+export async function generateMetadata({
+  params,
+}: {
+  params: { locale: string; brand: string };
+}): Promise<Metadata> {
+  const info = brandData[params.brand];
+  if (!info) return {};
+  const lang = params.locale === "en" ? "en" : "tr";
+  const category = info.category[lang];
+  const title = `${info.name} | LEMARS`;
+  const description =
+    lang === "en"
+      ? `${info.name} — part of the LEMARS distribution portfolio (${category}). Corporate information.`
+      : `${info.name} — LEMARS distribütörlük portföyünde yer alan ${category.toLowerCase()}. Kurumsal bilgilendirme.`;
+  return buildMetadata({
+    locale: params.locale,
+    path: `/markalarimiz/${params.brand}`,
+    title,
+    description,
+  });
+}
+
 export function generateStaticParams() {
   const locales = ["tr", "en"];
   return locales.flatMap((locale) =>
@@ -237,7 +261,7 @@ export default async function BrandPage({
   return (
     <>
       {/* Hero */}
-      <section className="bg-gray-900 py-24 md:py-32">
+      <section className="bg-gray-900 py-24 md:py-32 hero-glow">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <Link
             href={`/${locale}/markalarimiz`}
@@ -251,7 +275,7 @@ export default async function BrandPage({
           <p className="text-primary-500 text-xs font-semibold tracking-[0.3em] uppercase mb-6">
             {category}
           </p>
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight break-words">
             {info.name}
           </h1>
           <div className="flex items-center gap-2 mt-6">

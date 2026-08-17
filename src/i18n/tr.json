@@ -3,6 +3,17 @@
     "title": "LEMARS Gıda İçecek | Toptan Alkollü İçecek Dağıtım",
     "description": "İstanbul Avrupa Yakası'nda restoran, bar ve perakende satış noktalarına hızlı, güvenilir ve kaliteli alkollü içecek toptan satış ve dağıtım hizmeti."
   },
+  "seo": {
+    "home": { "title": "LEMARS Gıda İçecek | B2B Satış, Tedarik ve Dağıtım", "description": "LEMARS Gıda İçecek, İstanbul Avrupa Yakası'nda işletmelere profesyonel satış, tedarik ve dağıtım hizmetleri sunar." },
+    "about": { "title": "Hakkımızda | LEMARS", "description": "20+ yıllık deneyimiyle LEMARS, İstanbul Avrupa Yakası'nda B2B satış, tedarik ve dağıtımda güvenilir bir çözüm ortağıdır." },
+    "services": { "title": "Hizmetlerimiz | LEMARS", "description": "HoReCa tedarik, perakende dağıtım, lojistik ve satış geliştirme — LEMARS'ın İstanbul Avrupa Yakası'ndaki B2B tedarik çözümleri." },
+    "distributorships": { "title": "Distribütörlüklerimiz | LEMARS", "description": "LEMARS'ın yetkili distribütörlük portföyü ve İstanbul Avrupa Yakası'ndaki toptan dağıtım iş ortaklıkları." },
+    "brands": { "title": "Markalarımız | LEMARS", "description": "LEMARS tarafından İstanbul Avrupa Yakası'nda işletmelere ulaştırılan marka portföyü." },
+    "contact": { "title": "İletişim | LEMARS", "description": "LEMARS Gıda İçecek ile iletişime geçin — İstanbul Avrupa Yakası B2B satış, tedarik ve dağıtım. Adres, telefon ve iletişim formu." },
+    "terms": { "title": "Kullanım Koşulları | LEMARS", "description": "LEMARS Gıda İçecek web sitesi kullanım koşulları." },
+    "privacy": { "title": "KVKK & Çerez Politikası | LEMARS", "description": "6698 sayılı KVKK kapsamında kişisel verilerin işlenmesi ve çerez politikası." },
+    "disclaimer": { "title": "Sorumluluk Reddi | LEMARS", "description": "LEMARS Gıda İçecek yasal uyarı ve sorumluluk reddi beyanı." }
+  },
   "nav": {
     "home": "Anasayfa",
     "about": "Hakkımızda",
