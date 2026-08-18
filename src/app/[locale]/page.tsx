@@ -7,6 +7,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 import AnimatedCounter from "@/components/AnimatedCounter";
 import StatRing from "@/components/StatRing";
 import CoverageMap from "@/components/CoverageMap";
+import FaqSection from "@/components/FaqSection";
 
 export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
   const dict = await getDictionary(params.locale as Locale);
@@ -205,6 +206,8 @@ export default async function Home({ params }: { params: { locale: string } }) {
           </ScrollReveal>
         </div>
       </section>
+
+      <FaqSection locale={locale as Locale} />
     </>
   );
 }

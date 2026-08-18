@@ -10,6 +10,8 @@ import CookieBanner from "@/components/CookieBanner";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import GoogleAnalytics from "@/components/analytics/GoogleAnalytics";
 import AnalyticsClickTracker from "@/components/analytics/AnalyticsClickTracker";
+import ScrollProgress from "@/components/ScrollProgress";
+import MobileActionBar from "@/components/MobileActionBar";
 
 export async function generateMetadata({
   params,
@@ -198,12 +200,14 @@ export default async function LocaleLayout({
       <AgeGate dict={ageGateDict}>
         <GoogleAnalytics />
         <AnalyticsClickTracker />
+        <ScrollProgress />
         <TAPDKBanner dict={tapdkDict} />
         <Header locale={locale} dict={navDict} brandList={brandList} />
         <main className="flex-1">{children}</main>
         <Footer locale={locale} dict={footerDict} navDict={navDict} />
         <CookieBanner dict={cookieDict} locale={locale} />
         <WhatsAppButton />
+        <MobileActionBar locale={locale} />
       </AgeGate>
     </>
   );

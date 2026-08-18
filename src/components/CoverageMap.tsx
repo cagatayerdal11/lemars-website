@@ -201,7 +201,19 @@ export default function CoverageMap({
             {DISTRICTS.map((d) => {
               const la = labelAttrs(d.x, d.y, d.p);
               return (
-                <g key={`d-${d.n}`} className="group cursor-default">
+                <g key={`d-${d.n}`} className="group cursor-pointer">
+                  {/* Vurgulanan rota — ilçeye gelince/dokununca öne çıkar */}
+                  <line
+                    x1={HUB.x}
+                    y1={HUB.y}
+                    x2={d.x}
+                    y2={d.y}
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    className="stroke-primary-500 opacity-0 transition-opacity duration-300 group-hover:opacity-80 group-active:opacity-80"
+                  />
+                  {/* Görünmez, büyük dokunma/hover hedefi */}
+                  <circle cx={d.x} cy={d.y} r="18" fill="transparent" />
                   <circle
                     cx={d.x}
                     cy={d.y}
