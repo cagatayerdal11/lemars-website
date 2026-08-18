@@ -12,6 +12,7 @@ import GoogleAnalytics from "@/components/analytics/GoogleAnalytics";
 import AnalyticsClickTracker from "@/components/analytics/AnalyticsClickTracker";
 import ScrollProgress from "@/components/ScrollProgress";
 import MobileActionBar from "@/components/MobileActionBar";
+import MarsCursor from "@/components/MarsCursor";
 
 export async function generateMetadata({
   params,
@@ -197,6 +198,7 @@ export default async function LocaleLayout({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema) }}
       />
+      <MarsCursor />
       <AgeGate dict={ageGateDict}>
         <GoogleAnalytics />
         <AnalyticsClickTracker />

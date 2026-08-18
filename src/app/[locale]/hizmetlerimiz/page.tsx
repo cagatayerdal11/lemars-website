@@ -1,9 +1,9 @@
 import Link from "next/link";
-import Image from "next/image";
 import type { Metadata } from "next";
 import { getDictionary, Locale } from "@/i18n/config";
 import { buildMetadata } from "@/lib/seo";
 import FlowDiagram from "@/components/FlowDiagram";
+import ServiceVisual from "@/components/ServiceVisual";
 
 export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
   const dict = await getDictionary(params.locale as Locale);
@@ -35,19 +35,6 @@ export default async function Hizmetlerimiz({ params }: { params: { locale: stri
         </div>
       </section>
 
-      {/* Flow Diagram — Brands → LEMARS → Your Business */}
-      <section className="py-24 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <FlowDiagram
-            title={t.flowTitle as string}
-            subtitle={t.flowSubtitle as string}
-            leftNumber={t.flowLeftNumber as string}
-            leftLabel={t.flowLeftLabel as string}
-            rightLabels={flowRightLabels}
-          />
-        </div>
-      </section>
-
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 space-y-32">
           {/* Service 1 */}
@@ -64,27 +51,13 @@ export default async function Hizmetlerimiz({ params }: { params: { locale: stri
                 ))}
               </ul>
             </div>
-            <div className="relative aspect-square max-h-96 rounded-lg overflow-hidden">
-              <Image src="/delivery-truck.jpg" alt="" fill className="object-cover" />
-              <div className="absolute inset-0 bg-gray-900/60 flex items-center justify-center">
-                <div className="text-center">
-                  <p className="text-primary-500 text-6xl font-bold mb-2">01</p>
-                  <p className="text-white text-sm tracking-[0.2em] uppercase">HoReCa</p>
-                </div>
-              </div>
-            </div>
+            <ServiceVisual type="horeca" number="01" label="HoReCa" />
           </div>
 
           {/* Service 2 */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-            <div className="order-2 lg:order-1 relative aspect-square max-h-96 rounded-lg overflow-hidden">
-              <Image src="/hero-warehouse.jpg" alt="" fill className="object-cover" />
-              <div className="absolute inset-0 bg-gray-900/60 flex items-center justify-center">
-                <div className="text-center">
-                  <p className="text-primary-500 text-6xl font-bold mb-2">02</p>
-                  <p className="text-white text-sm tracking-[0.2em] uppercase">{locale === "tr" ? "Perakende" : "Retail"}</p>
-                </div>
-              </div>
+            <div className="order-2 lg:order-1">
+              <ServiceVisual type="retail" number="02" label={locale === "tr" ? "Perakende" : "Retail"} />
             </div>
             <div className="order-1 lg:order-2">
               <p className="text-primary-700 text-xs font-semibold tracking-[0.3em] uppercase mb-6">{t.s2Eyebrow as string}</p>
@@ -114,27 +87,13 @@ export default async function Hizmetlerimiz({ params }: { params: { locale: stri
                 ))}
               </ul>
             </div>
-            <div className="relative aspect-square max-h-96 rounded-lg overflow-hidden">
-              <Image src="/logistics.jpg" alt="" fill className="object-cover" />
-              <div className="absolute inset-0 bg-gray-900/60 flex items-center justify-center">
-                <div className="text-center">
-                  <p className="text-primary-500 text-6xl font-bold mb-2">03</p>
-                  <p className="text-white text-sm tracking-[0.2em] uppercase">{locale === "tr" ? "Lojistik" : "Logistics"}</p>
-                </div>
-              </div>
-            </div>
+            <ServiceVisual type="logistics" number="03" label={locale === "tr" ? "Lojistik" : "Logistics"} />
           </div>
 
           {/* Service 4 */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-            <div className="order-2 lg:order-1 relative aspect-square max-h-96 rounded-lg overflow-hidden">
-              <Image src="/customer-handshake.jpg" alt="" fill className="object-cover" />
-              <div className="absolute inset-0 bg-gray-900/60 flex items-center justify-center">
-                <div className="text-center">
-                  <p className="text-primary-500 text-6xl font-bold mb-2">04</p>
-                  <p className="text-white text-sm tracking-[0.2em] uppercase">{locale === "tr" ? "Pazarlama & Satış" : "Marketing & Sales"}</p>
-                </div>
-              </div>
+            <div className="order-2 lg:order-1">
+              <ServiceVisual type="sales" number="04" label={locale === "tr" ? "Pazarlama & Satış" : "Marketing & Sales"} />
             </div>
             <div className="order-1 lg:order-2">
               <p className="text-primary-700 text-xs font-semibold tracking-[0.3em] uppercase mb-6">{t.s4Eyebrow as string}</p>
@@ -191,6 +150,19 @@ export default async function Hizmetlerimiz({ params }: { params: { locale: stri
             </Link>
             {locale === "tr" ? " üzerinden bizimle iletişime geçebilirsiniz." : " to reach us."}
           </p>
+        </div>
+      </section>
+
+      {/* Flow Diagram — Markalar → LEMARS → İşletmeniz (altta) */}
+      <section className="py-24 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <FlowDiagram
+            title={t.flowTitle as string}
+            subtitle={t.flowSubtitle as string}
+            leftNumber={t.flowLeftNumber as string}
+            leftLabel={t.flowLeftLabel as string}
+            rightLabels={flowRightLabels}
+          />
         </div>
       </section>
 

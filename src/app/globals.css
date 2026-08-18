@@ -119,3 +119,37 @@ details[open] > summary svg { transform: rotate(45deg); }
   .brand-card::after { transition: none; }
   .wa-pulse::before { animation: none; }
 }
+
+/* MARS gezegeni özel imleç (yalnızca masaüstü / fine pointer) */
+.mars-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 34px;
+  height: 34px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  will-change: transform;
+}
+.mars-cursor svg {
+  display: block;
+  transition: transform 0.18s ease;
+  filter: drop-shadow(0 0 6px rgba(249, 115, 22, 0.45));
+}
+.mars-cursor--hover svg { transform: scale(1.35); }
+.mars-cursor--down svg { transform: scale(0.85); }
+body.mars-cursor-on,
+body.mars-cursor-on a,
+body.mars-cursor-on button,
+body.mars-cursor-on [role="button"],
+body.mars-cursor-on summary,
+body.mars-cursor-on label { cursor: none; }
+body.mars-cursor-on input,
+body.mars-cursor-on textarea,
+body.mars-cursor-on select,
+body.mars-cursor-on [contenteditable] { cursor: auto; }
+@media (pointer: coarse) {
+  .mars-cursor { display: none !important; }
+}
