@@ -17,7 +17,8 @@ export interface SendReportResult {
 }
 
 function recipients(): string[] {
-  return (process.env.REPORT_EMAIL_TO || "")
+  // Varsayılan alıcı; Vercel'de REPORT_EMAIL_TO tanımlanırsa onu ezer.
+  return (process.env.REPORT_EMAIL_TO || "cagatayerdal@icloud.com")
     .split(",")
     .map((s) => s.trim())
     .filter(Boolean);
@@ -35,7 +36,11 @@ export async function sendMonthlyReport(
   opts: { isTest?: boolean } = {}
 ): Promise<SendReportResult> {
   const apiKey = process.env.RESEND_API_KEY;
-  const from = process.env.REPORT_EMAIL_FROM;
+  // Varsayılan gönderen: iletişim formuyla aynı (RESEND_API_KEY yeterli).
+  // Doğrulanmış domain için REPORT_EMAIL_FROM=rapor@lemarsgida.com ile ezin.
+  const from =
+    process.env.REPORT_EMAIL_FROM ||
+    "LEMARS Gıda İçecek <onboarding@resend.dev>";
   const to = recipients();
 
   if (!apiKey) return { ok: false, sent: 0, error: "RESEND_API_KEY tanımlı değil." };
