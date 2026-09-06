@@ -4,6 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "compliance": "node scripts/compliance-audit.mjs",
+    "prebuild": "npm run compliance",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
