@@ -22,7 +22,7 @@ import { LAND_PATH, COUNTRY_PATHS, COUNTRY_CENTROIDS, MAP_W, MAP_H } from "./wor
 
 /** Etiket sırası yukarıdan aşağıya — ülke merkezlerinin enlemine göre artan,
  *  böylece kılavuz çizgileri birbirini kesmez. */
-const ORDER = ["ua", "at", "md", "tr", "kr"] as const;
+const ORDER = ["ua", "at", "md", "tr"] as const;
 const HUB = "tr";
 
 // Tuval: harita 0–1000, etiket sütunu 1046'dan başlar.
@@ -47,20 +47,20 @@ const COPY: Record<
   tr: {
     eyebrow: "Küresel Ağımız",
     title: "Distribütörlüklerimizin yayıldığı ülkeler",
-    desc: "İş ortağı üretici ve tedarikçi firmalarımız beş ülkede yer alır. Dağıtım operasyonumuz İstanbul Avrupa Yakası merkezlidir.",
+    desc: "İş ortağı üretici ve tedarikçi firmalarımız dört ülkede yer alır. Dağıtım operasyonumuz İstanbul Avrupa Yakası merkezlidir.",
     note: "Bu harita yalnızca iş ortağı firmalarımızın bulunduğu ülkeleri gösteren kurumsal bilgilendirmedir; ürün, marka, görsel veya tanıtım unsuru içermez.",
-    countries: { ua: "Ukrayna", at: "Avusturya", md: "Moldova", tr: "Türkiye", kr: "Güney Kore" },
+    countries: { ua: "Ukrayna", at: "Avusturya", md: "Moldova", tr: "Türkiye" },
     hubSuffix: " — merkez",
-    alt: "Dünya haritası: distribütörlük ağımızın yayıldığı ülkeler — Ukrayna, Avusturya, Moldova, Güney Kore ve merkezimizin bulunduğu Türkiye.",
+    alt: "Dünya haritası: distribütörlük ağımızın yayıldığı ülkeler — Ukrayna, Avusturya, Moldova ve merkezimizin bulunduğu Türkiye.",
   },
   en: {
     eyebrow: "Our Global Network",
     title: "Countries our distributorships span",
-    desc: "Our partner producers and suppliers are located in five countries. Our distribution operation is based on the European side of Istanbul.",
+    desc: "Our partner producers and suppliers are located in four countries. Our distribution operation is based on the European side of Istanbul.",
     note: "This map is corporate information showing only the countries where our partner companies are located; it contains no product, brand, image or promotional element.",
-    countries: { ua: "Ukraine", at: "Austria", md: "Moldova", tr: "Türkiye", kr: "South Korea" },
+    countries: { ua: "Ukraine", at: "Austria", md: "Moldova", tr: "Türkiye" },
     hubSuffix: " — headquarters",
-    alt: "World map: countries our distributorship network spans — Ukraine, Austria, Moldova, South Korea and Türkiye, where we are based.",
+    alt: "World map: countries our distributorship network spans — Ukraine, Austria, Moldova and Türkiye, where we are based.",
   },
 };
 

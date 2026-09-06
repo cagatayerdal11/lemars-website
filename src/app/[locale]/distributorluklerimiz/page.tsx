@@ -51,11 +51,6 @@ const partners: Partner[] = [
     factsEn: "Ukraine-based beverage producer and distribution group.",
   },
   {
-    name: "Lotte Chilsung Beverage",
-    factsTr: "Güney Kore merkezli içecek üreticisi.",
-    factsEn: "South Korea-based beverage producer.",
-  },
-  {
     name: "Aykut Özkan Şarapçılık",
     factsTr: "Çal / Denizli merkezli üretici firma.",
     factsEn: "Producer based in Çal / Denizli, Türkiye.",
