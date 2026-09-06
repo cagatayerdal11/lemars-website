@@ -7,7 +7,6 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import TAPDKBanner from "@/components/TAPDKBanner";
 import CookieBanner from "@/components/CookieBanner";
-import WhatsAppButton from "@/components/WhatsAppButton";
 import GoogleAnalytics from "@/components/analytics/GoogleAnalytics";
 import AnalyticsClickTracker from "@/components/analytics/AnalyticsClickTracker";
 import ScrollProgress from "@/components/ScrollProgress";
@@ -89,18 +88,16 @@ export default async function LocaleLayout({
     contact: string;
   };
 
-  const brandList = (dict.brandList || {}) as Record<string, string>;
-
   const footerDict = dict.footer as {
     desc: string;
     tapdkNote: string;
+    licenseNote: string;
     pagesTitle: string;
     contactTitle: string;
     address: string;
     addressCity: string;
     email: string;
     phone: string;
-    instagram: string;
     linkedin: string;
     legalNote: string;
     copyright: string;
@@ -117,8 +114,8 @@ export default async function LocaleLayout({
     legalName:
       "LEMARS GIDA İÇECEK SATIŞ PAZARLAMA SANAYİ TİCARET LİMİTED ŞİRKETİ",
     description: isEn
-      ? "LEMARS is a TAPDK-licensed B2B wholesale food & beverage distributor on the European side of Istanbul, Turkey. With 20+ years of experience it supplies businesses — restaurants, bars, hotels, cafés and retail outlets — with sales, supply, logistics and distribution services. It does not sell to end consumers."
-      : "LEMARS, İstanbul Avrupa Yakası'nda faaliyet gösteren TAPDK lisanslı B2B toptan gıda ve içecek dağıtım şirketidir. 20+ yıllık deneyimle restoran, bar, otel, kafe ve perakende satış noktalarına satış, tedarik, lojistik ve dağıtım hizmeti sunar; tüketiciye perakende satış yapmaz.",
+      ? "LEMARS is a B2B wholesale food & beverage distributor on the European side of Istanbul, Türkiye, operating under a wholesale alcoholic beverage sales certificate issued by the Turkish Ministry of Agriculture and Forestry. With 20+ years of experience it supplies licence-holding businesses — restaurants, hotels, cafés and retail outlets — with supply, logistics and distribution services. It does not sell to end consumers and this website is for corporate information only."
+      : "LEMARS, İstanbul Avrupa Yakası'nda faaliyet gösteren, T.C. Tarım ve Orman Bakanlığından alınan toptan alkollü içki satış belgesi kapsamında çalışan B2B toptan gıda ve içecek dağıtım şirketidir. 20+ yıllık deneyimle satış belgesi bulunan restoran, otel, kafe ve perakende satış noktalarına tedarik, lojistik ve dağıtım hizmeti sunar; tüketiciye perakende satış yapmaz. Bu internet sitesi yalnızca kurumsal bilgilendirme amaçlıdır.",
     slogan: isEn
       ? "Reliable Supply, Strong Partnership."
       : "Güvenilir Tedarik, Güçlü Ortaklık.",
@@ -158,7 +155,7 @@ export default async function LocaleLayout({
       "@type": "ContactPoint",
       telephone: "+902128091883",
       email: "info@lemarsgida.com",
-      contactType: "sales",
+      contactType: "corporate inquiries",
       areaServed: "TR",
       availableLanguage: ["Turkish", "English"],
     },
@@ -175,7 +172,6 @@ export default async function LocaleLayout({
       closes: "18:00",
     },
     sameAs: [
-      "https://instagram.com/lemarsgida",
       "https://www.linkedin.com/company/lemars-g%C4%B1da-i%C3%A7ecek/",
     ],
   };
@@ -204,11 +200,10 @@ export default async function LocaleLayout({
         <AnalyticsClickTracker />
         <ScrollProgress />
         <TAPDKBanner dict={tapdkDict} />
-        <Header locale={locale} dict={navDict} brandList={brandList} />
+        <Header locale={locale} dict={navDict} />
         <main className="flex-1">{children}</main>
         <Footer locale={locale} dict={footerDict} navDict={navDict} />
         <CookieBanner dict={cookieDict} locale={locale} />
-        <WhatsAppButton />
         <MobileActionBar locale={locale} />
       </AgeGate>
     </>

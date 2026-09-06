@@ -9,13 +9,16 @@ export async function GET() {
     "FN:LEMARS Gıda İçecek",
     "N:LEMARS Gıda İçecek;;;;",
     "ORG:LEMARS Gıda İçecek Sanayi ve Ticaret Ltd. Şti.",
-    "TITLE:Toptan Alkollü İçecek Dağıtımı",
+    "TITLE:Toptan Tedarik ve Dağıtım",
     "TEL;TYPE=WORK,VOICE:+902128091883",
     "TEL;TYPE=CELL,VOICE:+905553643434",
     "EMAIL;TYPE=WORK,INTERNET:info@lemarsgida.com",
     "ADR;TYPE=WORK:;;Cihangir Mah. Güvercin Cd. No: 2/90-91;Avcılar/İstanbul;;34310;Türkiye",
     "URL:https://www.lemarsgida.com",
-    "NOTE:Çalışma Saatleri: Pazartesi-Cuma 09:00-18:00 | TAPDK Lisanslı Toptan Alkollü İçecek Dağıtımı",
+    // "TAPDK" ibaresi kaldırıldı: TAPDK kapatılmış, görevleri T.C. Tarım ve Orman
+    // Bakanlığı Tütün ve Alkol Dairesi Başkanlığına devredilmiştir. Kartvizit yalnızca
+    // nötr kurumsal künye taşır; ürün/marka tanıtımı içermez.
+    "NOTE:Çalışma Saatleri: Pazartesi-Cuma 09:00-18:00 | B2B toptan tedarik ve dağıtım. Tüketiciye satış yapılmaz.",
     "END:VCARD",
     "",
   ].join("\r\n");

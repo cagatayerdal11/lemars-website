@@ -1,18 +1,45 @@
 {
   "meta": {
-    "title": "LEMARS Gıda İçecek | Toptan Alkollü İçecek Dağıtım",
-    "description": "İstanbul Avrupa Yakası'nda restoran, bar ve perakende satış noktalarına hızlı, güvenilir ve kaliteli alkollü içecek toptan satış ve dağıtım hizmeti."
+    "title": "LEMARS Gıda İçecek | Toptan Tedarik, Lojistik ve Dağıtım",
+    "description": "LEMARS Gıda İçecek, İstanbul Avrupa Yakası'nda satış belgesi bulunan işletmelere toptan tedarik, lojistik ve dağıtım hizmeti verir. Bu site yalnızca kurumsal bilgilendirme amaçlıdır."
   },
   "seo": {
-    "home": { "title": "LEMARS Gıda İçecek | B2B Satış, Tedarik ve Dağıtım", "description": "LEMARS Gıda İçecek, İstanbul Avrupa Yakası'nda işletmelere profesyonel satış, tedarik ve dağıtım hizmetleri sunar." },
-    "about": { "title": "Hakkımızda | LEMARS", "description": "20+ yıllık deneyimiyle LEMARS, İstanbul Avrupa Yakası'nda B2B satış, tedarik ve dağıtımda güvenilir bir çözüm ortağıdır." },
-    "services": { "title": "Hizmetlerimiz | LEMARS", "description": "HoReCa tedarik, perakende dağıtım, lojistik ve satış geliştirme — LEMARS'ın İstanbul Avrupa Yakası'ndaki B2B tedarik çözümleri." },
-    "distributorships": { "title": "Distribütörlüklerimiz | LEMARS", "description": "LEMARS'ın yetkili distribütörlük portföyü ve İstanbul Avrupa Yakası'ndaki toptan dağıtım iş ortaklıkları." },
-    "brands": { "title": "Markalarımız | LEMARS", "description": "LEMARS tarafından İstanbul Avrupa Yakası'nda işletmelere ulaştırılan marka portföyü." },
-    "contact": { "title": "İletişim | LEMARS", "description": "LEMARS Gıda İçecek ile iletişime geçin — İstanbul Avrupa Yakası B2B satış, tedarik ve dağıtım. Adres, telefon ve iletişim formu." },
-    "terms": { "title": "Kullanım Koşulları | LEMARS", "description": "LEMARS Gıda İçecek web sitesi kullanım koşulları." },
-    "privacy": { "title": "KVKK & Çerez Politikası | LEMARS", "description": "6698 sayılı KVKK kapsamında kişisel verilerin işlenmesi ve çerez politikası." },
-    "disclaimer": { "title": "Sorumluluk Reddi | LEMARS", "description": "LEMARS Gıda İçecek yasal uyarı ve sorumluluk reddi beyanı." }
+    "home": {
+      "title": "LEMARS Gıda İçecek | B2B Tedarik, Lojistik ve Dağıtım",
+      "description": "LEMARS Gıda İçecek, İstanbul Avrupa Yakası'nda satış belgesi bulunan işletmelere tedarik, lojistik ve dağıtım hizmeti sunar. Kurumsal bilgilendirme sayfası."
+    },
+    "about": {
+      "title": "Hakkımızda | LEMARS",
+      "description": "LEMARS Gıda İçecek'in faaliyet alanı, deneyimi ve İstanbul Avrupa Yakası'ndaki toptan tedarik ve dağıtım operasyonu hakkında kurumsal bilgi."
+    },
+    "services": {
+      "title": "Hizmetlerimiz | LEMARS",
+      "description": "HoReCa tedarik, perakende dağıtım, lojistik ve satış operasyonu — LEMARS'ın İstanbul Avrupa Yakası'ndaki B2B tedarik süreçleri."
+    },
+    "distributorships": {
+      "title": "Distribütörlüklerimiz | LEMARS",
+      "description": "LEMARS'ın distribütörlük portföyünde yer alan iş ortağı firmalar ve İstanbul Avrupa Yakası'ndaki toptan dağıtım iş birlikleri."
+    },
+    "brands": {
+      "title": "Markalarımız | LEMARS",
+      "description": "LEMARS'ın dağıtımını yaptığı ürün markalarının; reklam, ürün tanıtımı ve görsel unsur içermeyen düz metin listesi."
+    },
+    "contact": {
+      "title": "İletişim | LEMARS",
+      "description": "LEMARS Gıda İçecek kurumsal iletişim bilgileri: adres, telefon, e-posta ve iletişim formu. Bu site üzerinden sipariş alınmaz."
+    },
+    "terms": {
+      "title": "Kullanım Koşulları | LEMARS",
+      "description": "LEMARS Gıda İçecek web sitesi kullanım koşulları."
+    },
+    "privacy": {
+      "title": "KVKK & Çerez Politikası | LEMARS",
+      "description": "6698 sayılı KVKK kapsamında kişisel verilerin işlenmesi ve çerez politikası."
+    },
+    "disclaimer": {
+      "title": "Yasal Uyarı ve Sorumluluk Reddi | LEMARS",
+      "description": "LEMARS Gıda İçecek yasal uyarı ve sorumluluk reddi beyanı."
+    }
   },
   "nav": {
     "home": "Anasayfa",
@@ -34,7 +61,7 @@
     "deniedText": "Bu web sitesine erişim için 18 yaşından büyük olmanız gerekmektedir.",
     "deniedLegal": "4733 Sayılı Kanun ve 4250 Sayılı Kanun gereği alkollü içeceklerin 18 yaşından küçüklere satışı ve sunumu yasaktır.",
     "goBack": "Geri Dön",
-    "legalNote": "Bu siteye girerek, 4733 Sayılı Tütün, Tütün Mamulleri ve Alkollü İçkiler Piyasası Düzenleme Kurumu Kanunu ve 4250 Sayılı İspirto ve İspirtolu İçkiler İnhisarı Kanunu kapsamında 18 yaşından büyük olduğunuzu teyit etmiş olursunuz. Bu site herhangi bir alkollü içki markasının satışını, pazarlamasını veya aracı hizmetini yapmamaktadır. İçerikler tamamen bilgilendirme amaçlıdır.",
+    "legalNote": "Bu siteye girerek, 4250 sayılı İspirto ve İspirtolu İçkiler İnhisarı Kanunu ile 4733 sayılı Kanun kapsamında 18 yaşından büyük olduğunuzu beyan etmiş olursunuz. Bu site kurumsal bilgilendirme amaçlıdır; alkollü içkilerin reklamını veya tüketicilere yönelik tanıtımını yapmaz, bu site üzerinden satış ve sipariş kabul edilmez. Yaş beyanı tek başına mevzuata uygunluk sağlamaz; sitedeki içerikler ilgili mevzuat gözetilerek sınırlandırılmıştır.",
     "birthYearNotSaved": "Doğum yılınız kaydedilmeyecektir."
   },
   "cookie": {
@@ -44,54 +71,54 @@
     "learnMore": "Daha Fazla Bilgi"
   },
   "tapdk": {
-    "banner": "Bu internet sitesi, 4250 sayılı Kanun ve ilgili mevzuat çerçevesinde yalnızca kurumsal ve bilgilendirme amacıyla hazırlanmıştır. Alkollü içeceklere ilişkin reklam, tanıtım, satışa teşvik veya çevrim içi satış amacı taşımaz."
+    "banner": "Bu internet sitesi, 4250 sayılı Kanunun 6 ncı maddesi ile Tütün Mamulleri ve Alkollü İçkilerin Satışına ve Sunumuna İlişkin Usul ve Esaslar Hakkında Yönetmelik çerçevesinde yalnızca kurumsal bilgilendirme amacıyla hazırlanmıştır. Alkollü içkilere ilişkin reklam, tüketicilere yönelik tanıtım, satışa teşvik veya çevrim içi satış amacı taşımaz."
   },
   "home": {
     "heroEyebrow": "İstanbul • Avrupa Yakası • Toptan Dağıtım",
     "heroTitle": "Güvenilir Tedarik,",
     "heroTitleAccent": "Güçlü Ortaklık.",
-    "heroDesc": "Restoran, bar ve perakende satış noktalarına hızlı, güvenilir ve kaliteli alkollü içecek toptan satış hizmeti sunuyoruz.",
+    "heroDesc": "Satış belgesi bulunan işletmelere toptan tedarik, lojistik ve dağıtım hizmeti sunuyoruz. Tüketiciye satış yapılmaz.",
     "ctaAbout": "Bizi Tanıyın",
     "ctaServices": "Hizmetlerimiz",
-    "tapdkBar": "TAPDK LİSANSLI DAĞITIM — 20+ YILLIK DENEYİM",
+    "tapdkBar": "TOPTAN SATIŞ BELGELİ DAĞITIM — 20+ YILLIK DENEYİM",
     "stat1": "1800+ Satış Noktası",
-    "stat2": "400+ Ürün Çeşidi",
+    "stat2": "400+ Ürün Kalemi",
     "feat1Title": "Hızlı Teslimat",
-    "feat1Desc": "İstanbul Avrupa Yakası genelinde aynı gün teslimat imkânı ile işletmenizi hiç stoksuz bırakmıyoruz.",
-    "feat2Title": "Lisanslı Dağıtım",
-    "feat2Desc": "TAPDK lisanslı, tüm yasal mevzuata uygun toptan satış ve dağıtım hizmeti sunuyoruz.",
+    "feat1Desc": "İstanbul Avrupa Yakası genelinde aynı gün teslimat imkânı ile işletmenizin tedarik akışını kesintisiz tutuyoruz.",
+    "feat2Title": "Belgeli Dağıtım",
+    "feat2Desc": "Faaliyetlerimiz, T.C. Tarım ve Orman Bakanlığından alınan toptan alkollü içki satış belgesi kapsamında yürütülür; sevkiyat yalnızca geçerli satış belgesi bulunan işletmelere yapılır.",
     "feat3Title": "Profesyonel Hizmet",
-    "feat3Desc": "Deneyimli ekibimizle işletmenize özel çözümler sunuyor, her aşamada destek sağlıyoruz.",
+    "feat3Desc": "Deneyimli ekibimizle işletmenizin tedarik ve sevkiyat süreçlerini planlıyor, her aşamada operasyonel destek sağlıyoruz.",
     "aboutEyebrow": "Hakkımızda",
     "aboutTitle": "İstanbul'un\nGüvenilir Dağıtım\nOrtağı",
-    "aboutDesc": "LEMARS Gıda İçecek olarak, İstanbul Avrupa Yakası'nda alkollü içecekler alanında toptan satış ve dağıtım hizmeti sunmaktayız. Kaliteli ürün yelpazemiz ve güvenilir lojistik ağımız ile işletmelerin ihtiyaçlarını karşılıyoruz.",
+    "aboutDesc": "LEMARS Gıda İçecek olarak, İstanbul Avrupa Yakası'nda toptan tedarik ve dağıtım hizmeti sunmaktayız. Ürün gruplarımız ve lojistik ağımız ile belgeli işletmelerin tedarik ihtiyaçlarını karşılıyoruz.",
     "aboutMore": "Daha Fazla",
     "stat_sales": "Satış Noktası",
     "stat_experience": "Yıllık Deneyim",
-    "stat_products": "Ürün Çeşidi",
+    "stat_products": "Ürün Kalemi",
     "servicesEyebrow": "Hizmetlerimiz",
     "servicesTitle": "Tedarik Çözümlerimiz",
     "svc1Title": "HoReCa Tedarikçisi",
-    "svc1Desc": "Restoran, bar, meyhane ve eğlence mekânlarının tedarik süreçlerini düzenli ve zamanında yönetiyoruz.",
+    "svc1Desc": "Restoran, otel ve belgeli işletmelerin tedarik süreçlerini düzenli ve zamanında yönetiyoruz.",
     "svc2Title": "Perakende Satış",
-    "svc2Desc": "Market, tekel bayii ve perakende satış noktalarının stok yönetimi ve düzenli tedarik çözümleri.",
+    "svc2Desc": "Market, tekel bayii ve perakende satış noktalarının stok planlaması ve düzenli tedarik süreçleri.",
     "svc3Title": "Lojistik & Dağıtım",
     "svc3Desc": "İstanbul Avrupa Yakası genelinde kendi filo ve lojistik ağımızla hızlı ve güvenli dağıtım.",
-    "svc4Title": "Pazarlama & Tanıtım",
-    "svc4Desc": "Ürünlerinizi geniş portföyümüz ve güçlü dağıtım ağımız ile tüketicilerle buluşturuyoruz.",
+    "svc4Title": "Satış Operasyonu",
+    "svc4Desc": "Sipariş toplama, sevkiyat planlama ve teslimat takibini uçtan uca yönetiyoruz.",
     "svcMore": "Detaylı Bilgi",
     "ctaEyebrow": "İletişim",
     "ctaTitle": "İşletmeniz İçin Doğru\nTedarik Ortağı",
-    "ctaDesc": "Dağıtım ve tedarik stratejinizi birlikte oluşturalım.",
+    "ctaDesc": "Tedarik ve dağıtım süreçleriniz hakkında kurumsal bilgi almak için bize ulaşın.",
     "ctaButton": "İletişime Geçin",
     "ctaPhone": "+90 (212) 809 18 83"
   },
   "coverage": {
     "eyebrow": "Hizmet Bölgemiz",
     "title": "İstanbul Avrupa Yakası'nın tamamına ulaşıyoruz",
-    "desc": "Avcılar'daki merkez depomuzdan çıkan araçlarımız, Avrupa Yakası genelindeki 1800'den fazla satış noktasına güvenli şekilde ulaşır. İşletmeniz nerede olursa olsun, tedarik kesintisiz devam eder.",
+    "desc": "Avcılar'daki merkez depomuzdan çıkan araçlarımız, Avrupa Yakası genelindeki 1800'den fazla belgeli satış noktasına sevkiyat yapar. İşletmeniz nerede olursa olsun, tedarik akışı kesintisiz devam eder.",
     "stat1Value": "1800+",
-    "stat1Label": "Ulaşılan Satış Noktası",
+    "stat1Label": "Ulaşılan Belgeli Satış Noktası",
     "stat2Value": "Tüm İlçeler",
     "stat2Label": "Avrupa Yakası",
     "stat3Value": "Güvenli",
@@ -101,27 +128,27 @@
   "about": {
     "heroEyebrow": "Hakkımızda",
     "heroTitle": "LEMARS Gıda İçecek",
-    "heroDesc": "İstanbul Avrupa Yakası'nda alkollü içecekler alanında toptan satış ve dağıtım hizmeti sunan güvenilir çözüm ortağınız.",
+    "heroDesc": "İstanbul Avrupa Yakası'nda belgeli işletmelere toptan tedarik ve dağıtım hizmeti sunan kurumsal çözüm ortağınız.",
     "expEyebrow": "20+ Yıllık Deneyim",
     "expTitle": "Sektörün Deneyimli ve Güvenilir İsmi",
-    "expP1": "LEMARS Gıda İçecek, 20 yılı aşkın sektör deneyimiyle İstanbul Avrupa Yakası'nda alkollü içecekler alanında toptan satış ve dağıtım hizmeti sunan, TAPDK lisanslı bir firmadır.",
-    "expP2": "Yıllar içinde edindiğimiz piyasa bilgisi ve tüketici alışkanlıklarına hâkimiyetimiz, iş ortaklarımıza stratejik avantaj sağlar. Tedarik zinciri yönetiminden lojistik planlamaya kadar her aşamada biriktirdiğimiz know-how, sektördeki en değerli varlığımızdır.",
-    "expP3": "Nitelikli insan kaynağımız ve modern yönetim anlayışımız ile restoran, bar, otel, market ve tekel bayii gibi 1800'den fazla satış noktasına kesintisiz hizmet sunmaktayız.",
+    "expP1": "LEMARS Gıda İçecek, 20 yılı aşkın sektör deneyimiyle İstanbul Avrupa Yakası'nda toptan tedarik ve dağıtım hizmeti sunan, T.C. Tarım ve Orman Bakanlığından alınan toptan alkollü içki satış belgesi kapsamında faaliyet gösteren bir firmadır.",
+    "expP2": "Yıllar içinde edindiğimiz piyasa ve operasyon bilgisi, iş ortaklarımıza planlama avantajı sağlar. Tedarik zinciri yönetiminden lojistik planlamaya kadar her aşamada biriktirdiğimiz know-how, sektördeki en değerli varlığımızdır.",
+    "expP3": "Nitelikli insan kaynağımız ve modern yönetim anlayışımız ile restoran, otel, market ve tekel bayii gibi 1800'den fazla belgeli satış noktasına kesintisiz sevkiyat sağlamaktayız.",
     "compEyebrow": "Yetkinliklerimiz",
     "comp1Title": "Sektörel Know-How",
     "comp1Desc": "20 yılı aşkın deneyimle biriktirdiğimiz bilgi birikimi, piyasa dinamiklerini doğru okumamızı ve iş ortaklarımıza katma değer sağlamamızı mümkün kılar.",
-    "comp2Title": "Piyasa Bilgisi & Tüketici Alışkanlıkları",
-    "comp2Desc": "Değişen piyasa koşullarını ve tüketici tercihlerini yakından takip ederek, iş ortaklarımızın doğru ürün ve stok kararları vermesine destek oluruz.",
+    "comp2Title": "Piyasa ve Talep Analizi",
+    "comp2Desc": "Değişen piyasa koşullarını ve işletme taleplerini yakından takip ederek, iş ortaklarımızın stok ve sipariş planlaması yapmasına destek oluruz.",
     "comp3Title": "Tedarik Zinciri & Lojistik Yönetimi",
     "comp3Desc": "Tedarikçiden satış noktasına kadar tüm süreci verimli ve kesintisiz yöneterek, işletmelerin operasyonel yükünü hafifletiriz.",
-    "comp4Title": "Pazarlama, Satış & Dağıtım",
-    "comp4Desc": "Ürünlerinizi geniş portföyümüz ve 1800+ satış noktasına ulaşan güçlü dağıtım ağımız ile tüketicilerle buluşturuyoruz. Satış noktasında görünürlük, tanıtım desteği ve pazar penetrasyonu sağlıyoruz.",
+    "comp4Title": "Satış & Dağıtım Operasyonu",
+    "comp4Desc": "Sipariş yönetimi, sevkiyat planlaması ve satış noktası ziyaretleriyle 1800+ belgeli noktaya düzenli tedarik akışını yönetiriz.",
     "comp5Title": "Nitelikli İnsan Kaynağı & Modern Yönetim",
     "comp5Desc": "Alanında uzman kadromuz ve çağdaş yönetim anlayışımızla, hızlı karar alma ve çözüm odaklı hizmet sunuyoruz.",
     "whyEyebrow": "Avantajlarımız",
     "whyTitle": "Neden LEMARS?",
-    "adv1Title": "Geniş Tedarikçi & Ürün Yelpazesi",
-    "adv1Desc": "Yerli ve ithal markalardan oluşan 400'den fazla ürün çeşidi ile her işletmenin ihtiyacını tek noktadan karşılıyoruz.",
+    "adv1Title": "Geniş Tedarikçi Ağı ve Ürün Kalemi",
+    "adv1Desc": "Yerli ve ithal tedarikçilerden oluşan geniş ağımız ve 400'den fazla ürün kalemi ile işletmelerin tedarik ihtiyacını tek noktadan karşılıyoruz.",
     "adv2Title": "Esnek Dağıtım Ağı",
     "adv2Desc": "İstanbul Avrupa Yakası'nın tamamını kapsayan, aynı gün teslimat sunan esnek ve güçlü dağıtım altyapımız.",
     "adv3Title": "Çözüm Odaklı Yönetim",
@@ -130,33 +157,33 @@
     "adv4Desc": "Piyasa bilgisi, tüketici alışkanlıkları ve tedarik zinciri yönetiminde yılların birikimiyle hizmet veriyoruz.",
     "adv5Title": "Nitelikli Ekip",
     "adv5Desc": "Alanında uzman, müşteri odaklı kadromuzla her aşamada profesyonel destek sağlıyoruz.",
-    "adv6Title": "TAPDK Lisanslı Güvence",
-    "adv6Desc": "Tüm faaliyetlerimiz ilgili mevzuata uygun, lisanslı ve denetlenebilir şekilde yürütülmektedir.",
+    "adv6Title": "Belgeli Faaliyet",
+    "adv6Desc": "Faaliyetlerimiz toptan alkollü içki satış belgesi kapsamında, kayıtlı ve denetlenebilir şekilde yürütülmektedir.",
     "ctaTitle": "İş Birliğine Hazır Mısınız?",
-    "ctaDesc": "Dağıtım ve tedarik stratejinizi birlikte oluşturalım.",
+    "ctaDesc": "Tedarik ve dağıtım süreçleriniz hakkında kurumsal bilgi almak için bize ulaşın.",
     "ctaButton": "İletişime Geçin"
   },
   "services": {
     "heroEyebrow": "Hizmetlerimiz",
     "heroTitle": "Tedarik Çözümlerimiz",
-    "heroDesc": "Her ölçekteki işletmeye özel, TAPDK yönetmeliklerine uygun, güvenilir ve hızlı tedarik hizmetleri sunuyoruz.",
+    "heroDesc": "Belgeli işletmelere yönelik, ilgili mevzuat çerçevesinde yürütülen tedarik, lojistik ve sevkiyat hizmetleri.",
     "s1Eyebrow": "01 — HoReCa",
     "s1Title": "Restoran, Bar &\nOtel Tedarikçisi",
-    "s1Desc": "HoReCa sektöründeki işletmelerin tedarik süreçlerini eksiksiz ve zamanında yönetiyoruz. Özel müşteri temsilciniz aracılığıyla işletmenize özel dağıtım planları oluşturuyoruz.",
+    "s1Desc": "HoReCa sektöründeki belgeli işletmelerin tedarik süreçlerini eksiksiz ve zamanında yönetiyoruz. Özel müşteri temsilciniz aracılığıyla işletmenize özel sevkiyat planları oluşturuyoruz.",
     "s1Items": [
       "Restoran ve kafeler için düzenli tedarik",
-      "Bar ve gece kulüpleri için özel çözümler",
+      "Belgeli işletmeler için sevkiyat planlaması",
       "Otel ve tatil köyleri için toplu sipariş",
-      "Etkinlik ve organizasyonlar için özel hizmet"
+      "Sipariş ve teslimat takibi"
     ],
     "s2Eyebrow": "02 — Perakende",
     "s2Title": "Perakende Satış\nNoktaları",
-    "s2Desc": "Market, tekel bayii ve diğer perakende satış noktalarının stok yönetimini kolaylaştırıyor, düzenli ve güvenilir tedarik sağlıyoruz.",
+    "s2Desc": "Market, tekel bayii ve diğer belgeli perakende satış noktalarının stok planlamasını kolaylaştırıyor, düzenli tedarik sağlıyoruz.",
     "s2Items": [
       "Market ve bakkallar için düzenli tedarik",
-      "Tekel bayileri için geniş ürün yelpazesi",
-      "Stok takip ve yönetim desteği",
-      "Rekabetçi toptan fiyat politikası"
+      "Tekel bayileri için geniş ürün kalemi",
+      "Stok takip ve planlama desteği",
+      "Satış belgesi kontrolü ve kayıtlı sevkiyat"
     ],
     "s3Eyebrow": "03 — Lojistik & Teslimat",
     "s3Title": "Lojistik &\nTeslimat Ağı",
@@ -167,20 +194,26 @@
       "Soğuk zincir lojistik altyapısı",
       "GPS takipli güvenli sevkiyat"
     ],
-    "s4Eyebrow": "04 — Pazarlama & Satış",
-    "s4Title": "Pazarlama &\nSatış Geliştirme",
-    "s4Desc": "Ürünlerinizi geniş portföyümüz ve 1800+ satış noktasına ulaşan güçlü ağımız ile tüketicilerle buluşturuyoruz. Satış noktalarında görünürlük, tanıtım desteği ve pazar penetrasyonu sağlıyoruz.",
+    "s4Eyebrow": "04 — Satış Operasyonu",
+    "s4Title": "Satış Operasyonu &\nRaporlama",
+    "s4Desc": "Sipariş toplamadan teslimata kadar tüm satış operasyonunu tek merkezden yönetiyoruz. Rota planlaması, stok devir takibi ve teslimat raporlaması ile iş ortaklarımızın tedarik akışını öngörülebilir kılıyoruz.",
     "s4Items": [
-      "Satış noktasında ürün yerleştirme ve görünürlük",
-      "Marka tanıtım ve promosyon desteği",
-      "1800+ satış noktasına erişim",
-      "Pazar analizi ve satış stratejisi danışmanlığı"
+      "Sipariş toplama ve sevkiyat planlaması",
+      "Rota optimizasyonu ve teslimat takibi",
+      "Stok devir hızı ve tedarik sürekliliği takibi",
+      "1800+ belgeli satış noktasına erişim"
     ],
-    "flowTitle": "Geniş ürün portföyümüzü güçlü dağıtım ağımızla satış noktalarına ulaştırıyoruz.",
+    "flowTitle": "Merkez depomuzdan belgeli satış noktalarına kadar tedarik ve sevkiyat akışını yönetiyoruz.",
     "flowSubtitle": "Detaylar için aşağı kaydırın",
     "flowLeftNumber": "400+",
-    "flowLeftLabel": "Ürün Çeşidi",
-    "flowRightLabels": ["Market", "Bar", "Restoran", "Otel", "Depo"],
+    "flowLeftLabel": "Ürün Kalemi",
+    "flowRightLabels": [
+      "Market",
+      "Bar",
+      "Restoran",
+      "Otel",
+      "Depo"
+    ],
     "productsEyebrow": "Ürünlerimiz",
     "productsTitle": "Ürün Kategorileri",
     "categories": [
@@ -193,15 +226,15 @@
       "Tekila",
       "Likör Çeşitleri"
     ],
-    "productsNote": "Bu kategoriler yalnızca bilgilendirme amaçlıdır. Detaylı bilgi için bizimle iletişime geçebilirsiniz.",
-    "ctaTitle": "İşletmenize Özel Teklif Alın",
-    "ctaDesc": "İhtiyaçlarınızı dinliyor, size özel tedarik planı oluşturuyoruz.",
-    "ctaButton": "Teklif Alın"
+    "productsNote": "Bu liste yalnızca faaliyet alanımızı gösteren kategori adlarından oluşur; ürün tanıtımı veya reklam niteliği taşımaz.",
+    "ctaTitle": "Tedarik Süreciniz Hakkında Bilgi Alın",
+    "ctaDesc": "İhtiyaçlarınızı dinliyor, işletmenize uygun sevkiyat planını birlikte oluşturuyoruz.",
+    "ctaButton": "İletişime Geçin"
   },
   "contact": {
     "heroEyebrow": "İletişim",
     "heroTitle": "Bize Ulaşın",
-    "heroDesc": "Dağıtım ve pazarlama stratejinizi birlikte oluşturalım. İşletmenize özel çözümler için bize ulaşın.",
+    "heroDesc": "Kurumsal iletişim, tedarik süreci ve iş birliği talepleriniz için bize ulaşın.",
     "infoTitle": "İletişim Bilgileri",
     "phoneLabel": "Telefon",
     "phoneNumber": "+90 (212) 809 18 83",
@@ -215,9 +248,9 @@
     "addressDirection": "Yol tarifi al",
     "whatsappLabel": "WhatsApp",
     "whatsappNumber": "+90 (555) 364 34 34",
-    "whatsappNote": "Hızlı iletişim",
+    "whatsappNote": "Kurumsal iletişim hattı",
     "formTitle": "Bize Mesaj Gönderin",
-    "formDesc": "Aşağıdaki formu doldurarak bize ulaşabilirsiniz.",
+    "formDesc": "Aşağıdaki formu doldurarak kurumsal iletişim taleplerinizi iletebilirsiniz.",
     "formName": "Ad Soyad *",
     "formCompany": "Şirket / İşletme",
     "formEmail": "E-posta *",
@@ -226,8 +259,8 @@
     "formMessage": "Mesajınız *",
     "formSubjectOptions": [
       "Konu Seçin",
-      "Tedarik Talebi",
-      "Fiyat Bilgisi",
+      "Kurumsal Bilgi Talebi",
+      "Tedarik Süreci",
       "İş Birliği",
       "Diğer"
     ],
@@ -239,45 +272,46 @@
     "successNew": "Yeni Mesaj Gönder",
     "mapTitle": "LEMARS Gıda İçecek",
     "mapAddress": "Cihangir Mah. Güvercin Cd. No: 2/90-91, 34310 Avcılar/İstanbul",
-    "mapDirection": "Yol Tarifi Al"
+    "mapDirection": "Yol Tarifi Al",
+    "formNotice": "Bu form yalnızca kurumsal iletişim amaçlıdır. Bu internet sitesi üzerinden sipariş alınmaz, satış yapılmaz ve fiyat bildirimi yapılmaz. Tedarik ilişkisi yalnızca geçerli satış belgesi bulunan işletmelerle, fiziki işyerimiz üzerinden kurulur."
   },
   "distributorships": {
     "heroEyebrow": "İş Ortaklarımız",
     "heroTitle": "Distribütörlüklerimiz",
-    "heroDesc": "Türkiye'nin ve dünyanın önde gelen içecek üreticilerinin İstanbul Avrupa Yakası distribütörüyüz.",
+    "heroDesc": "İstanbul Avrupa Yakası'nda distribütörlüğünü yürüttüğümüz üretici ve tedarikçi firmalar.",
     "sectionEyebrow": "Çalıştığımız Firmalar",
     "sectionTitle": "Distribütörlük Portföyümüz",
-    "sectionDesc": "Aşağıdaki firmaların yetkili distribütörü olarak İstanbul Avrupa Yakası genelinde toptan satış ve dağıtım hizmeti sunmaktayız.",
-    "placeholder": "Firma Logosu",
-    "ctaDesc": "Distribütörlük portföyümüz hakkında detaylı bilgi almak için bizimle iletişime geçin.",
-    "ctaButton": "İletişime Geçin"
+    "sectionDesc": "Aşağıdaki firmaların distribütörü olarak İstanbul Avrupa Yakası genelinde toptan tedarik ve dağıtım hizmeti sunmaktayız. Bu bölüm kurumsal bilgilendirme amaçlıdır.",
+    "ctaDesc": "Distribütörlük portföyümüz hakkında kurumsal bilgi almak için bizimle iletişime geçin.",
+    "ctaButton": "İletişime Geçin",
+    "brandsNote": "Ürün markalarının adları bu sayfada yayımlanmaz. Dağıtımını yaptığımız ürün markalarının düz metin listesi, Satış ve Sunum Yönetmeliğinin 11 inci maddesinin dördüncü fıkrası uyarınca yalnızca sitenin ürünler bölümünde (Markalarımız sayfasında) yer alır."
   },
   "brands": {
     "heroEyebrow": "Ürün Portföyü",
     "heroTitle": "Markalarımız",
-    "heroDesc": "Geniş ürün portföyümüzle işletmenizin ihtiyacına uygun çözümler sunuyoruz.",
-    "sectionEyebrow": "Sattığımız Ürünler",
-    "sectionTitle": "Marka Portföyümüz",
-    "sectionDesc": "Dünya ve Türkiye'nin önde gelen içecek markalarını işletmenize ulaştırıyoruz.",
-    "placeholder": "Marka Logosu",
-    "ctaDesc": "Ürün portföyümüz ve fiyat bilgileri için bizimle iletişime geçin.",
-    "ctaButton": "Fiyat Bilgisi Alın"
+    "heroDesc": "Dağıtımını yaptığımız ürün markalarının; reklam, ürün tanıtımı ve görsel unsur içermeyen düz metin listesi.",
+    "sectionEyebrow": "Dağıtımını Yaptığımız Markalar",
+    "sectionTitle": "Marka Listesi",
+    "sectionDesc": "Aşağıda, dağıtımını yaptığımız ürün markaları liste hâlinde yer almaktadır.",
+    "ctaDesc": "Distribütörlük ve tedarik süreçleri hakkında kurumsal bilgi için bizimle iletişime geçin.",
+    "ctaButton": "İletişime Geçin",
+    "listNotice": "Bu liste, Tütün Mamulleri ve Alkollü İçkilerin Satışına ve Sunumuna İlişkin Usul ve Esaslar Hakkında Yönetmeliğin 11 inci maddesinin dördüncü fıkrası uyarınca; reklam ve ürün tanıtımı yapılmaksızın ve görsel unsur kullanılmaksızın yalnızca marka adlarından oluşacak şekilde sunulmaktadır. Ürün görseli, ambalaj görseli, marka logosu, tadım/aroma anlatımı ve fiyat bilgisi bu sitede yayımlanmaz."
   },
   "legal": {
     "terms": {
       "title": "Kullanım Koşulları",
-      "lastUpdate": "Son güncelleme: 2024",
+      "lastUpdate": "Son güncelleme: 5 Eylül 2026",
       "section1": {
         "title": "1. Genel Hükümler",
         "content": "Bu web sitesi, LEMARS Gıda İçecek Sanayi ve Ticaret Limited Şirketi (\"LEMARS\") tarafından yalnızca bilgilendirme amacıyla hazırlanmıştır. Siteye erişerek ve siteyi kullanarak aşağıdaki koşulları kabul etmiş sayılırsınız."
       },
       "section2": {
         "title": "2. Sitenin Amacı",
-        "content": "Bu site, herhangi bir alkollü içki markasının satışını, pazarlamasını veya aracı hizmetini yapmamaktadır. İçerikler tamamen kurumsal bilgilendirme amaçlı olup, 4733 Sayılı Tütün, Tütün Mamulleri ve Alkollü İçkiler Piyasası Düzenleme Kurumu Teşkilât ve Görevleri Hakkında Kanun ve 4250 Sayılı İspirto ve İspirtolu İçkiler İnhisarı Kanunu ile ilgili yönetmeliklerin reklam yasağı hükümlerine uygun olarak hazırlanmıştır."
+        "content": "Bu site, alkollü içkilerin reklamını, tüketicilere yönelik tanıtımını veya satışını yapmaz; satışa aracılık etmez. İçerikler kurumsal bilgilendirme amaçlı olup, 4250 sayılı İspirto ve İspirtolu İçkiler İnhisarı Kanununun 6 ncı maddesi, 4733 sayılı Tütün, Tütün Mamulleri ve Alkol Piyasasının Düzenlenmesine Dair Kanun ile Tütün Mamulleri ve Alkollü İçkilerin Satışına ve Sunumuna İlişkin Usul ve Esaslar Hakkında Yönetmeliğin (özellikle 11 inci ve 20 nci maddelerinin) reklam ve tanıtım yasağı hükümleri gözetilerek hazırlanmıştır."
       },
       "section3": {
         "title": "3. Yaş Sınırlaması",
-        "content": "Bu web sitesine erişim, 18 yaşından büyük kişilerle sınırlıdır. Siteye giriş yaparak 18 yaşından büyük olduğunuzu teyit etmiş olursunuz. 18 yaşından küçük kişilerin bu siteyi kullanması kesinlikle yasaktır."
+        "content": "Bu web sitesi 18 yaşından büyük kişilere yöneliktir. Siteye girişte, 18 yaşından büyük olduğunuza ilişkin bir beyan alınır; bu, beyan usulüne dayanan bir kontroldür ve teknik olarak yaşınızı doğrulamaz. Yaş beyanı, sitedeki içeriklerin mevzuata uygunluğu bakımından tek başına bir muafiyet sağlamaz; içerikler ayrıca sınırlandırılmıştır."
       },
       "section4": {
         "title": "4. Fikri Mülkiyet Hakları",
@@ -288,8 +322,12 @@
         "content": "LEMARS Gıda İçecek, bu kullanım koşullarını önceden bildirimde bulunmaksızın değiştirme hakkını saklı tutar. Güncel koşullar her zaman bu sayfada yayınlanır."
       },
       "section6": {
-        "title": "6. Uygulanacak Hukuk",
+        "title": "7. Uygulanacak Hukuk",
         "content": "Bu kullanım koşulları Türkiye Cumhuriyeti kanunlarına tâbidir. Uyuşmazlıklarda İstanbul Mahkemeleri ve İcra Daireleri yetkilidir."
+      },
+      "section7": {
+        "title": "6. Sipariş ve Satış",
+        "content": "Bu internet sitesi üzerinden alkollü içki satışı yapılmaz, sipariş alınmaz ve fiyat bildirimi yapılmaz. Tedarik ilişkisi yalnızca geçerli satış belgesi bulunan işletmelerle, fiziki işyerimiz üzerinden kurulur. Tüketicilere yönelik çevrim içi satış, ilgili mevzuat uyarınca yasaktır."
       }
     },
     "privacy": {
@@ -321,11 +359,11 @@
       },
       "section4": {
         "title": "4. Verilerin Aktarılması",
-        "content": "Kişisel verileriniz, yasal zorunluluklar dışında üçüncü taraflarla paylaşılmamaktadır. Verileriniz yurt dışına aktarılmamaktadır."
+        "content": "Kişisel verileriniz, yasal zorunluluklar ile aşağıda belirtilen hizmet sağlayıcıları dışında üçüncü taraflarla paylaşılmamaktadır. İletişim formu mesajları e-posta gönderim hizmeti üzerinden iletilir ve şirketimizin kurumsal WhatsApp hattına bildirim olarak düşer; açık rızanız hâlinde çalışan analitik çerezler için Google Analytics kullanılır. Bu hizmet sağlayıcılarının sunucuları yurt dışında bulunduğundan, verileriniz 6698 sayılı Kanunun 9 uncu maddesi kapsamında yurt dışına aktarılmaktadır. Aktarım, talebinizin karşılanması ve site kullanımının ölçülmesi amacıyla sınırlıdır."
       },
       "section5": {
         "title": "5. Çerez Politikası",
-        "content": "Bu web sitesi, kullanıcı deneyimini iyileştirmek amacıyla çerez (cookie) kullanabilmektedir. Zorunlu çerezler sitenin düzgün çalışması için gereklidir. Analitik veya pazarlama amaçlı çerez kullanılmamaktadır."
+        "content": "Bu web sitesi, kullanıcı deneyimini iyileştirmek ve site kullanımını ölçmek amacıyla çerez (cookie) kullanabilmektedir. Zorunlu çerezler sitenin düzgün çalışması için gereklidir. Analitik çerezler yalnızca açık rızanız hâlinde çalıştırılır; pazarlama amaçlı çerez kullanılmamaktadır."
       },
       "section6": {
         "title": "6. Haklarınız",
@@ -345,15 +383,15 @@
       }
     },
     "disclaimer": {
-      "title": "Sorumluluk Reddi Beyanı",
+      "title": "Yasal Uyarı ve Sorumluluk Reddi",
       "subtitle": "Yasal Uyarı ve Feragat Bildirimi",
       "section1": {
         "title": "1. Genel Bilgilendirme",
-        "content": "Bu web sitesinde yer alan bilgiler, LEMARS Gıda İçecek Sanayi ve Ticaret Limited Şirketi tarafından genel bilgilendirme amacıyla sunulmaktadır. Bu site, herhangi bir alkollü içki markasının satışını, pazarlamasını veya aracı hizmetini yapmamaktadır."
+        "content": "Bu web sitesinde yer alan bilgiler, LEMARS Gıda İçecek Sanayi ve Ticaret Limited Şirketi tarafından kurumsal bilgilendirme amacıyla sunulmaktadır. Bu site, alkollü içkilerin satışını, pazarlamasını, tüketicilere yönelik tanıtımını veya satışa aracılık hizmetini yapmamaktadır."
       },
       "section2": {
-        "title": "2. Reklam Yasağı Uyumu",
-        "content": "Bu site, 4733 Sayılı Kanun ve 4250 Sayılı İspirto ve İspirtolu İçkiler İnhisarı Kanunu ile TAPDK düzenlemelerinin reklam ve tanıtım yasağı hükümlerine tam uyum gösterecek şekilde hazırlanmıştır. Sitede yer alan hiçbir içerik, alkollü içecek tüketimini teşvik veya özendirme amacı taşımamaktadır."
+        "title": "2. Reklam ve Tanıtım Yasağına İlişkin Beyan",
+        "content": "Sitedeki içerikler; 4250 sayılı Kanunun 6 ncı maddesi, 4733 sayılı Kanun ve Tütün Mamulleri ve Alkollü İçkilerin Satışına ve Sunumuna İlişkin Usul ve Esaslar Hakkında Yönetmeliğin reklam, tanıtım ve teşvik yasağı hükümleri gözetilerek hazırlanmıştır. Sitede alkollü içki tüketimini teşvik veya özendirme amacı taşıyan içerik, tadım/aroma anlatımı, ürün ve ambalaj görseli, marka logosu, fiyat bildirimi ya da kampanya duyurusu bulunmaz. Bu beyan, içeriklerin her koşulda mevzuata uygunluğu yönünde bir garanti niteliğinde değildir; mevzuat değişiklikleri düzenli olarak takip edilir."
       },
       "section3": {
         "title": "3. Bilgilerin Doğruluğu",
@@ -367,21 +405,11 @@
         "title": "5. Sorumluluk Sınırlaması",
         "content": "Sitedeki bilgilerin yanlış kullanımından, eksik veya hatalı anlaşılmasından doğacak zararlardan LEMARS Gıda İçecek yönetimi sorumlu tutulamaz. Kullanıcılar, sitedeki bilgileri kendi sorumluluklarında kullanmayı kabul eder."
       },
-      "warning": "Alkol sağlığa zararlıdır. Alkol dostunuz değildir. 18 yaşından küçüklere alkollü içecek satışı ve sunumu, 4733 ve 4250 Sayılı Kanunlar kapsamında yasaktır."
+      "warning": "Alkol sağlığa zararlıdır. Alkol dostunuz değildir. 18 yaşından küçüklere alkollü içki satışı ve sunumu, 4250 ve 4733 sayılı Kanunlar kapsamında yasaktır."
     }
   },
-  "brandPage": {
-    "backLink": "Markalarımıza Dön",
-    "heroEyebrow": "Marka Detayı",
-    "descPlaceholder": "Bu marka hakkında detaylı bilgi yakında eklenecektir. Ürün portföyümüz ve fiyat bilgileri için bizimle iletişime geçin.",
-    "logoPlaceholder": "Marka Logosu",
-    "ctaTitle": "Bu Marka Hakkında Bilgi Alın",
-    "ctaDesc": "Ürün çeşitleri ve fiyat bilgileri için bizimle iletişime geçin.",
-    "ctaButton": "İletişime Geçin",
-    "notFound": "Marka bulunamadı.",
-    "notFoundBack": "Markalarımıza Dön"
-  },
   "brandList": {
+    "ottakringer": "Ottakringer",
     "scotch-blue": "Scotch Blue",
     "hlibny-dar": "Hlibny Dar",
     "marengo": "Marengo",
@@ -391,7 +419,7 @@
     "isabey": "İsabey"
   },
   "footer": {
-    "desc": "İstanbul Avrupa Yakası'nda alkollü içecekler alanında toptan satış ve dağıtım hizmeti sunan firmamız, restoran, bar ve perakende satış noktalarına güvenilir tedarik çözümleri sağlar.",
+    "desc": "İstanbul Avrupa Yakası'nda belgeli işletmelere toptan tedarik, lojistik ve dağıtım hizmeti sunmaktayız. Tüketiciye satış yapılmaz.",
     "tapdkNote": "Alkol sağlığa zararlıdır. Alkol dostunuz değildir. Alkollü içecekler 18 yaşını doldurmamış kişilere satılamaz ve sunulamaz.",
     "pagesTitle": "Sayfalar",
     "contactTitle": "İletişim",
@@ -401,10 +429,11 @@
     "phone": "+90 (212) 809 18 83",
     "instagram": "@lemarsgida",
     "linkedin": "LinkedIn",
-    "legalNote": "Yasal Bilgilendirme: Bu internet sitesi yalnızca kurumsal ve teknik bilgilendirme amacıyla hazırlanmıştır. İçerikler, 4250 sayılı İspirto ve İspirtolu İçkiler İnhisarı Kanunu ile ilgili ikincil mevzuat kapsamında tüketicilere yönelik reklam, tanıtım, özendirme, promosyon, kampanya veya satış iletişimi niteliği taşımaz. Bu site üzerinden tüketiciye çevrim içi satış yapılmaz, sipariş alınmaz ve satışa yönlendirme amacı güdülmez. İçerikler ilgili mevzuat dikkate alınarak hazırlanmıştır.",
+    "legalNote": "Bu internet sitesi yalnızca kurumsal bilgilendirme amacıyla hazırlanmıştır. İçerikler; 4250 sayılı İspirto ve İspirtolu İçkiler İnhisarı Kanununun 6 ncı maddesi ile Tütün Mamulleri ve Alkollü İçkilerin Satışına ve Sunumuna İlişkin Usul ve Esaslar Hakkında Yönetmelik hükümleri gözetilerek hazırlanmış olup, alkollü içkilere ilişkin reklam, tüketicilere yönelik tanıtım, özendirme, promosyon, kampanya, fiyat bildirimi veya satış iletişimi niteliği taşımaz. Bu site üzerinden tüketiciye çevrim içi satış yapılmaz ve sipariş alınmaz. Tedarik ilişkisi yalnızca geçerli satış belgesi bulunan işletmelerle, fiziki işyerimiz üzerinden kurulur.",
     "copyright": "© {year} LEMARS Gıda İçecek. Tüm hakları saklıdır.",
     "termsLink": "Kullanım Koşulları",
     "privacyLink": "KVKK & Çerez Politikası",
-    "disclaimerLink": "Sorumluluk Reddi"
+    "disclaimerLink": "Sorumluluk Reddi",
+    "licenseNote": "Faaliyetlerimiz, T.C. Tarım ve Orman Bakanlığından alınan toptan alkollü içki satış belgesi kapsamında yürütülmektedir."
   }
 }

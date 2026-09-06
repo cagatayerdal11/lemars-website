@@ -9,9 +9,12 @@ const poppins = Poppins({
   variable: "--font-poppins",
 });
 
+// Kök metadata yalnızca /[locale] dışındaki rotalar (ör. /admin) için geçerlidir;
+// herkese açık sayfaların başlık/açıklaması src/app/[locale]/layout.tsx ve
+// buildMetadata() üzerinden gelir. Ürün/marka tanıtımı içermez.
 export const metadata: Metadata = {
-  title: "LEMARS Gida Icecek",
-  description: "Toptan Alkollü Icecek Dagitimi",
+  title: "LEMARS Gıda İçecek",
+  description: "Toptan tedarik, lojistik ve dağıtım — kurumsal bilgilendirme.",
 };
 
 export default function RootLayout({

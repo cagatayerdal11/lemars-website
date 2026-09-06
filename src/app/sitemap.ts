@@ -1,9 +1,12 @@
 import type { MetadataRoute } from "next";
 import { SITE_URL } from "@/lib/seo";
 
-// Public, indexable routes only. Excludes: /api, /admin, and individual
-// brand-detail pages (/markalarimiz/[brand]) — kept out pending compliance
-// review, per project decision. Same Turkish slug is used for both locales.
+// Yalnızca herkese açık ve indekslenebilir rotalar. Hariç: /api, /admin.
+// Marka detay sayfaları (/markalarimiz/[brand]) mevzuat uyumu kapsamında TAMAMEN
+// KALDIRILMIŞTIR (bkz. next.config.js kalıcı yönlendirmeleri); bu nedenle sitemap
+// dışında bırakılmaları yeterli değildi, rotanın kendisi de silinmiştir.
+// Dayanak: Satış ve Sunum Yönetmeliği m.11/4; 4250 s.K. m.6/1.
+// Her iki dilde de aynı Türkçe slug kullanılır.
 const PUBLIC_PATHS = [
   "",
   "/hakkimizda",

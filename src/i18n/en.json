@@ -1,18 +1,45 @@
 {
   "meta": {
-    "title": "LEMARS Food & Beverage | Wholesale Alcoholic Beverage Distribution",
-    "description": "Fast, reliable, and quality wholesale alcoholic beverage distribution services for restaurants, bars, and retail outlets across Istanbul's European side."
+    "title": "LEMARS Food & Beverage | Wholesale Supply, Logistics and Distribution",
+    "description": "LEMARS Food & Beverage provides wholesale supply, logistics and distribution services to licence-holding businesses on the European side of Istanbul. This site is for corporate information only."
   },
   "seo": {
-    "home": { "title": "LEMARS | B2B Sales, Supply & Distribution", "description": "LEMARS provides professional B2B sales, supply and distribution services to businesses across Istanbul's European Side." },
-    "about": { "title": "About Us | LEMARS", "description": "With 20+ years of experience, LEMARS is a trusted B2B sales, supply and distribution partner across Istanbul's European Side." },
-    "services": { "title": "Services | LEMARS", "description": "HoReCa supply, retail distribution, logistics and sales development — LEMARS's B2B supply solutions across Istanbul's European Side." },
-    "distributorships": { "title": "Distributorships | LEMARS", "description": "LEMARS's authorized distributorship portfolio and wholesale distribution partnerships across Istanbul's European Side." },
-    "brands": { "title": "Brands | LEMARS", "description": "The brand portfolio LEMARS delivers to businesses across Istanbul's European Side." },
-    "contact": { "title": "Contact | LEMARS", "description": "Contact LEMARS — B2B sales, supply and distribution across Istanbul's European Side. Address, phone and contact form." },
-    "terms": { "title": "Terms of Use | LEMARS", "description": "LEMARS Gıda İçecek website terms of use." },
-    "privacy": { "title": "Privacy & Cookie Policy | LEMARS", "description": "Processing of personal data and cookie policy under Turkish KVKK (Law No. 6698)." },
-    "disclaimer": { "title": "Disclaimer | LEMARS", "description": "LEMARS Gıda İçecek legal notice and disclaimer." }
+    "home": {
+      "title": "LEMARS Food & Beverage | B2B Supply, Logistics and Distribution",
+      "description": "LEMARS Food & Beverage provides supply, logistics and distribution services to licence-holding businesses on the European side of Istanbul. Corporate information page."
+    },
+    "about": {
+      "title": "About Us | LEMARS",
+      "description": "Corporate information on LEMARS Food & Beverage: field of activity, experience and wholesale supply and distribution operations on the European side of Istanbul."
+    },
+    "services": {
+      "title": "Our Services | LEMARS",
+      "description": "HoReCa supply, retail distribution, logistics and sales operations — LEMARS's B2B supply processes on the European side of Istanbul."
+    },
+    "distributorships": {
+      "title": "Our Distributorships | LEMARS",
+      "description": "Partner companies in the LEMARS distributorship portfolio and wholesale distribution collaborations on the European side of Istanbul."
+    },
+    "brands": {
+      "title": "Our Brands | LEMARS",
+      "description": "A plain-text list of the product brands distributed by LEMARS, containing no advertising, product promotion or visual elements."
+    },
+    "contact": {
+      "title": "Contact | LEMARS",
+      "description": "LEMARS Food & Beverage corporate contact details: address, phone, e-mail and contact form. No orders are taken through this website."
+    },
+    "terms": {
+      "title": "Terms of Use | LEMARS",
+      "description": "LEMARS Gıda İçecek website terms of use."
+    },
+    "privacy": {
+      "title": "Privacy & Cookie Policy | LEMARS",
+      "description": "Processing of personal data and cookie policy under Turkish KVKK (Law No. 6698)."
+    },
+    "disclaimer": {
+      "title": "Legal Notice and Disclaimer | LEMARS",
+      "description": "LEMARS Gıda İçecek legal notice and disclaimer."
+    }
   },
   "nav": {
     "home": "Home",
@@ -34,7 +61,7 @@
     "deniedText": "You must be 18 years or older to access this website.",
     "deniedLegal": "In accordance with Turkish Law No. 4733 and Law No. 4250, the sale and serving of alcoholic beverages to persons under 18 years of age is strictly prohibited.",
     "goBack": "Go Back",
-    "legalNote": "By entering this site, you confirm that you are 18 years of age or older in accordance with Turkish Law No. 4733 (TAPDK Regulation) and Law No. 4250 (Alcoholic Beverages Regulation). This website does not sell, market, or act as an intermediary for any alcoholic beverage brand. All content is for informational purposes only.",
+    "legalNote": "By entering this site you declare that you are 18 years of age or older, in accordance with Turkish Law No. 4250 and Law No. 4733. This site is for corporate information purposes only; it does not advertise alcoholic beverages or promote them to consumers, and no sales or orders are accepted through it. An age declaration alone does not establish regulatory compliance; the content of this site has additionally been restricted.",
     "birthYearNotSaved": "Your birth year will not be saved."
   },
   "cookie": {
@@ -44,54 +71,54 @@
     "learnMore": "Learn More"
   },
   "tapdk": {
-    "banner": "This website has been prepared solely for corporate and informational purposes in accordance with Turkish Law No. 4250 and related regulations. It does not serve the purpose of advertising, promotion, sales incentive, or online sales of alcoholic beverages."
+    "banner": "This website has been prepared solely for corporate information purposes within the framework of Article 6 of Turkish Law No. 4250 and the Regulation on the Procedures and Principles Governing the Sale and Presentation of Tobacco Products and Alcoholic Beverages. It does not serve the purpose of advertising, consumer-facing promotion, sales incentive or online sale of alcoholic beverages."
   },
   "home": {
     "heroEyebrow": "Istanbul • European Side • Wholesale Distribution",
     "heroTitle": "Reliable Supply,",
     "heroTitleAccent": "Strong Partnership.",
-    "heroDesc": "We provide fast, reliable, and quality wholesale alcoholic beverage distribution services to restaurants, bars, and retail outlets.",
+    "heroDesc": "We provide wholesale supply, logistics and distribution services to licence-holding businesses. No sales are made to consumers.",
     "ctaAbout": "Get to Know Us",
     "ctaServices": "Our Services",
-    "tapdkBar": "TAPDK LICENSED DISTRIBUTION — 20+ YEARS OF EXPERIENCE",
+    "tapdkBar": "LICENCED WHOLESALE DISTRIBUTION — 20+ YEARS OF EXPERIENCE",
     "stat1": "1,800+ Points of Sale",
-    "stat2": "400+ Product Varieties",
+    "stat2": "400+ Product Lines",
     "feat1Title": "Fast Delivery",
-    "feat1Desc": "With same-day delivery across Istanbul's European side, we ensure your business never runs out of stock.",
-    "feat2Title": "Licensed Distribution",
-    "feat2Desc": "We provide TAPDK-licensed wholesale distribution services in full compliance with all applicable regulations.",
+    "feat1Desc": "With same-day delivery across Istanbul's European side, we keep your supply flow uninterrupted.",
+    "feat2Title": "Licenced Distribution",
+    "feat2Desc": "Our operations are carried out under a wholesale alcoholic beverage sales certificate issued by the Turkish Ministry of Agriculture and Forestry; deliveries are made only to businesses holding a valid sales certificate.",
     "feat3Title": "Professional Service",
-    "feat3Desc": "Our experienced team delivers tailored solutions for your business with dedicated support at every stage.",
+    "feat3Desc": "Our experienced team plans your supply and delivery processes and provides operational support at every stage.",
     "aboutEyebrow": "About Us",
     "aboutTitle": "Istanbul's\nTrusted Distribution\nPartner",
-    "aboutDesc": "At LEMARS Food & Beverage, we provide wholesale distribution services for alcoholic beverages across Istanbul's European side. We serve our clients with a quality product range and a reliable logistics network.",
+    "aboutDesc": "At LEMARS Food & Beverage we provide wholesale supply and distribution services across Istanbul's European side. Our product lines and logistics network meet the supply needs of licence-holding businesses.",
     "aboutMore": "Learn More",
     "stat_sales": "Points of Sale",
     "stat_experience": "Years of Experience",
-    "stat_products": "Product Varieties",
+    "stat_products": "Product Lines",
     "servicesEyebrow": "Our Services",
     "servicesTitle": "Supply Solutions",
     "svc1Title": "HoReCa Supplier",
-    "svc1Desc": "We manage the supply chain for restaurants, bars, taverns, and entertainment venues with consistent and timely service.",
+    "svc1Desc": "We manage the supply processes of restaurants, hotels and licence-holding businesses consistently and on time.",
     "svc2Title": "Retail Distribution",
-    "svc2Desc": "Inventory management and regular supply solutions for grocery stores, liquor shops, and retail outlets.",
+    "svc2Desc": "Stock planning and regular supply processes for grocery stores, licenced retailers and retail points of sale.",
     "svc3Title": "Logistics & Distribution",
     "svc3Desc": "Fast and secure distribution across Istanbul's European side through our own fleet and logistics network.",
-    "svc4Title": "Marketing & Promotion",
-    "svc4Desc": "We connect your products with consumers through our extensive portfolio and strong distribution network.",
+    "svc4Title": "Sales Operations",
+    "svc4Desc": "We manage order collection, delivery planning and delivery tracking end to end.",
     "svcMore": "Learn More",
     "ctaEyebrow": "Contact",
     "ctaTitle": "The Right Supply\nPartner for Your Business",
-    "ctaDesc": "Let's build your distribution and supply strategy together.",
+    "ctaDesc": "Contact us for corporate information about your supply and distribution processes.",
     "ctaButton": "Get in Touch",
     "ctaPhone": "+90 (212) 809 18 83"
   },
   "coverage": {
     "eyebrow": "Our Service Area",
     "title": "We reach all of Istanbul's European Side",
-    "desc": "From our central depot in Avcılar, our fleet safely reaches 1800+ points of sale across the European Side. Wherever your business is, supply never stops.",
+    "desc": "Vehicles leaving our central depot in Avcılar deliver to more than 1,800 licence-holding points of sale across the European side. Wherever your business is, the supply flow continues without interruption.",
     "stat1Value": "1800+",
-    "stat1Label": "Points of Sale Reached",
+    "stat1Label": "Licenced Points of Sale Served",
     "stat2Value": "All Districts",
     "stat2Label": "European Side",
     "stat3Value": "Reliable",
@@ -101,27 +128,27 @@
   "about": {
     "heroEyebrow": "About Us",
     "heroTitle": "LEMARS Food & Beverage",
-    "heroDesc": "Your trusted wholesale distribution partner for alcoholic beverages across Istanbul's European side.",
+    "heroDesc": "Your corporate partner for wholesale supply and distribution to licence-holding businesses on Istanbul's European side.",
     "expEyebrow": "20+ Years of Experience",
     "expTitle": "An Experienced and Trusted Name in the Industry",
-    "expP1": "LEMARS Food & Beverage is a TAPDK-licensed company providing wholesale distribution services for alcoholic beverages across Istanbul's European side, backed by over 20 years of industry experience.",
-    "expP2": "The market insight and consumer behavior expertise we've built over the years give our partners a strategic advantage. Our accumulated know-how in supply chain management and logistics planning is our most valuable asset in the industry.",
-    "expP3": "With our qualified workforce and modern management approach, we provide uninterrupted service to over 1,800 points of sale, including restaurants, bars, hotels, grocery stores, and liquor shops.",
+    "expP1": "LEMARS Food & Beverage is a company with over 20 years of sector experience providing wholesale supply and distribution services on Istanbul's European side, operating under a wholesale alcoholic beverage sales certificate issued by the Turkish Ministry of Agriculture and Forestry.",
+    "expP2": "The market and operational knowledge we have gained over the years gives our business partners a planning advantage. The know-how we have accumulated at every stage, from supply chain management to logistics planning, is our most valuable asset in the sector.",
+    "expP3": "With our qualified workforce and modern management approach, we provide uninterrupted delivery to more than 1,800 licence-holding points of sale such as restaurants, hotels, grocery stores and licenced retailers.",
     "compEyebrow": "Our Competencies",
     "comp1Title": "Industry Know-How",
     "comp1Desc": "Over 20 years of accumulated knowledge enables us to accurately assess market dynamics and deliver added value to our partners.",
-    "comp2Title": "Market Intelligence & Consumer Insights",
-    "comp2Desc": "We closely track evolving market conditions and consumer preferences, supporting our partners in making sound product and inventory decisions.",
+    "comp2Title": "Market and Demand Analysis",
+    "comp2Desc": "By closely following changing market conditions and business demand, we support our partners in stock and order planning.",
     "comp3Title": "Supply Chain & Logistics Management",
     "comp3Desc": "We efficiently manage the entire process from supplier to point of sale, reducing the operational burden on businesses.",
-    "comp4Title": "Marketing, Sales & Distribution",
-    "comp4Desc": "We connect your products with consumers through our broad portfolio and distribution network reaching 1,800+ points of sale. We provide point-of-sale visibility, promotional support, and market penetration.",
+    "comp4Title": "Sales & Distribution Operations",
+    "comp4Desc": "Through order management, delivery planning and point-of-sale visits, we manage a steady supply flow to 1,800+ licence-holding points.",
     "comp5Title": "Qualified Workforce & Modern Management",
     "comp5Desc": "With our team of industry experts and contemporary management practices, we deliver fast decision-making and solution-oriented service.",
     "whyEyebrow": "Our Advantages",
     "whyTitle": "Why LEMARS?",
-    "adv1Title": "Broad Supplier & Product Range",
-    "adv1Desc": "With over 400 products from domestic and imported brands, we serve as a one-stop solution for every business need.",
+    "adv1Title": "Broad Supplier Network and Product Range",
+    "adv1Desc": "With our broad network of domestic and imported suppliers and more than 400 product lines, we meet businesses' supply needs from a single source.",
     "adv2Title": "Flexible Distribution Network",
     "adv2Desc": "Our flexible and robust distribution infrastructure covers all of Istanbul's European side with same-day delivery.",
     "adv3Title": "Solution-Oriented Management",
@@ -130,33 +157,33 @@
     "adv4Desc": "We leverage decades of expertise in market intelligence, consumer trends, and supply chain management.",
     "adv5Title": "Qualified Team",
     "adv5Desc": "Our customer-focused team of specialists provides professional support at every stage of the process.",
-    "adv6Title": "TAPDK Licensed Assurance",
-    "adv6Desc": "All our operations are conducted in full compliance with applicable regulations, fully licensed and auditable.",
+    "adv6Title": "Licenced Operations",
+    "adv6Desc": "Our activities are carried out under a wholesale alcoholic beverage sales certificate, on a recorded and auditable basis.",
     "ctaTitle": "Ready to Partner Up?",
-    "ctaDesc": "Let's build your distribution and supply strategy together.",
+    "ctaDesc": "Contact us for corporate information about your supply and distribution processes.",
     "ctaButton": "Get in Touch"
   },
   "services": {
     "heroEyebrow": "Our Services",
     "heroTitle": "Supply Solutions",
-    "heroDesc": "We offer reliable and fast supply services tailored to businesses of every scale, in full compliance with TAPDK regulations.",
+    "heroDesc": "Supply, logistics and delivery services for licence-holding businesses, carried out within the framework of applicable legislation.",
     "s1Eyebrow": "01 — HoReCa",
     "s1Title": "Restaurant, Bar &\nHotel Supplier",
-    "s1Desc": "We manage the supply chain for HoReCa businesses seamlessly and on time. Through your dedicated account representative, we create distribution plans tailored to your establishment.",
+    "s1Desc": "We manage the supply processes of licence-holding HoReCa businesses fully and on time. Through your dedicated account representative, we create delivery plans tailored to your establishment.",
     "s1Items": [
-      "Regular supply for restaurants and cafes",
-      "Custom solutions for bars and nightclubs",
+      "Regular supply for restaurants and cafés",
+      "Delivery planning for licence-holding businesses",
       "Bulk ordering for hotels and resorts",
-      "Specialized services for events and functions"
+      "Order and delivery tracking"
     ],
     "s2Eyebrow": "02 — Retail",
     "s2Title": "Retail Points\nof Sale",
-    "s2Desc": "We simplify inventory management and provide consistent, reliable supply for grocery stores, liquor shops, and other retail outlets.",
+    "s2Desc": "We simplify stock planning and provide consistent supply for grocery stores, licenced retailers and other licence-holding retail outlets.",
     "s2Items": [
       "Regular supply for grocery and convenience stores",
-      "Extensive product range for liquor retailers",
-      "Inventory tracking and management support",
-      "Competitive wholesale pricing policy"
+      "Wide product range for licenced retailers",
+      "Stock tracking and planning support",
+      "Sales certificate verification and recorded delivery"
     ],
     "s3Eyebrow": "03 — Logistics & Delivery",
     "s3Title": "Logistics &\nDelivery Network",
@@ -167,20 +194,26 @@
       "Cold chain logistics infrastructure",
       "GPS-tracked secure delivery"
     ],
-    "s4Eyebrow": "04 — Marketing & Sales",
-    "s4Title": "Marketing &\nSales Development",
-    "s4Desc": "We connect your products with consumers through our extensive portfolio and a strong network reaching 1,800+ points of sale. We provide point-of-sale visibility, promotional support, and market penetration.",
+    "s4Eyebrow": "04 — Sales Operations",
+    "s4Title": "Sales Operations &\nReporting",
+    "s4Desc": "We manage the entire sales operation from order collection to delivery from a single centre. Route planning, stock turnover tracking and delivery reporting make our partners' supply flow predictable.",
     "s4Items": [
-      "Product placement and visibility at points of sale",
-      "Brand promotion and marketing support",
-      "Access to a network of 1,800+ points of sale",
-      "Market analysis and sales strategy consulting"
+      "Order collection and delivery planning",
+      "Route optimisation and delivery tracking",
+      "Stock turnover and supply continuity monitoring",
+      "Access to 1,800+ licence-holding points of sale"
     ],
-    "flowTitle": "We deliver our wide product portfolio to points of sale through our strong distribution network.",
+    "flowTitle": "We manage the supply and delivery flow from our central depot to licence-holding points of sale.",
     "flowSubtitle": "Scroll down for the details",
     "flowLeftNumber": "400+",
-    "flowLeftLabel": "Product Varieties",
-    "flowRightLabels": ["Retail", "Bar", "Restaurant", "Hotel", "Warehouse"],
+    "flowLeftLabel": "Product Lines",
+    "flowRightLabels": [
+      "Retail",
+      "Bar",
+      "Restaurant",
+      "Hotel",
+      "Warehouse"
+    ],
     "productsEyebrow": "Our Products",
     "productsTitle": "Product Categories",
     "categories": [
@@ -193,15 +226,15 @@
       "Tequila",
       "Liqueur Varieties"
     ],
-    "productsNote": "These categories are for informational purposes only. Please contact us for detailed information.",
-    "ctaTitle": "Get a Custom Quote for Your Business",
-    "ctaDesc": "We listen to your needs and create a supply plan tailored to you.",
-    "ctaButton": "Request a Quote"
+    "productsNote": "This list consists only of category names describing our field of activity; it does not constitute product promotion or advertising.",
+    "ctaTitle": "Get Information About Your Supply Process",
+    "ctaDesc": "We listen to your needs and build a delivery plan suited to your business.",
+    "ctaButton": "Get in Touch"
   },
   "contact": {
     "heroEyebrow": "Contact",
     "heroTitle": "Get in Touch",
-    "heroDesc": "Let's build your distribution and marketing strategy together. Reach out to us for solutions tailored to your business.",
+    "heroDesc": "Contact us for corporate enquiries, supply processes and partnership requests.",
     "infoTitle": "Contact Information",
     "phoneLabel": "Phone",
     "phoneNumber": "+90 (212) 809 18 83",
@@ -215,9 +248,9 @@
     "addressDirection": "Get directions",
     "whatsappLabel": "WhatsApp",
     "whatsappNumber": "+90 (555) 364 34 34",
-    "whatsappNote": "Quick contact",
+    "whatsappNote": "Corporate contact line",
     "formTitle": "Send Us a Message",
-    "formDesc": "Fill out the form below to reach us.",
+    "formDesc": "Use the form below to send us your corporate enquiries.",
     "formName": "Full Name *",
     "formCompany": "Company / Business",
     "formEmail": "Email *",
@@ -226,9 +259,9 @@
     "formMessage": "Your Message *",
     "formSubjectOptions": [
       "Select a Subject",
-      "Supply Request",
-      "Pricing Inquiry",
-      "Business Partnership",
+      "Corporate Enquiry",
+      "Supply Process",
+      "Partnership",
       "Other"
     ],
     "formKvkk": "Your personal data is protected under Turkish Law No. 6698 (KVKK - Personal Data Protection Law).",
@@ -239,45 +272,46 @@
     "successNew": "Send Another Message",
     "mapTitle": "LEMARS Food & Beverage",
     "mapAddress": "Cihangir Mah. Guvercin Cd. No: 2/90-91, 34310 Avcilar/Istanbul, Turkey",
-    "mapDirection": "Get Directions"
+    "mapDirection": "Get Directions",
+    "formNotice": "This form is for corporate communication only. No orders are taken, no sales are made and no price information is provided through this website. A supply relationship is established only with businesses holding a valid sales certificate, through our physical place of business."
   },
   "distributorships": {
     "heroEyebrow": "Our Partners",
     "heroTitle": "Our Distributorships",
-    "heroDesc": "We are the authorized distributor for leading domestic and international beverage producers across Istanbul's European side.",
+    "heroDesc": "Producer and supplier companies whose distributorship we carry out on Istanbul's European side.",
     "sectionEyebrow": "Partner Companies",
     "sectionTitle": "Distributorship Portfolio",
-    "sectionDesc": "As the authorized distributor for the following companies, we provide wholesale distribution services throughout Istanbul's European side.",
-    "placeholder": "Company Logo",
-    "ctaDesc": "Contact us for detailed information about our distributorship portfolio.",
-    "ctaButton": "Get in Touch"
+    "sectionDesc": "As the distributor for the companies listed below, we provide wholesale supply and distribution services across Istanbul's European side. This section is for corporate information purposes.",
+    "ctaDesc": "Contact us for corporate information about our distributorship portfolio.",
+    "ctaButton": "Get in Touch",
+    "brandsNote": "Product brand names are not published on this page. The plain-text list of the product brands we distribute appears only in the products section of the site (the Brands page), pursuant to Article 11(4) of the Regulation on the Sale and Presentation of Tobacco Products and Alcoholic Beverages."
   },
   "brands": {
     "heroEyebrow": "Product Portfolio",
     "heroTitle": "Our Brands",
-    "heroDesc": "We offer solutions tailored to your business needs through our extensive product portfolio.",
-    "sectionEyebrow": "Products We Distribute",
-    "sectionTitle": "Brand Portfolio",
-    "sectionDesc": "We bring the leading beverage brands from Turkey and around the world to your business.",
-    "placeholder": "Brand Logo",
-    "ctaDesc": "Contact us for product portfolio and pricing information.",
-    "ctaButton": "Request Pricing"
+    "heroDesc": "A plain-text list of the product brands we distribute, containing no advertising, product promotion or visual elements.",
+    "sectionEyebrow": "Brands We Distribute",
+    "sectionTitle": "Brand List",
+    "sectionDesc": "The product brands we distribute are listed below.",
+    "ctaDesc": "Contact us for corporate information about distributorship and supply processes.",
+    "ctaButton": "Get in Touch",
+    "listNotice": "Pursuant to Article 11(4) of the Regulation on the Procedures and Principles Governing the Sale and Presentation of Tobacco Products and Alcoholic Beverages, this list is presented as brand names only, without advertising, product promotion or visual elements. Product images, packaging images, brand logos, tasting or aroma descriptions and price information are not published on this website."
   },
   "legal": {
     "terms": {
       "title": "Terms of Use",
-      "lastUpdate": "Last updated: 2024",
+      "lastUpdate": "Last updated: 5 September 2026",
       "section1": {
         "title": "1. General Provisions",
         "content": "This website has been prepared solely for informational purposes by LEMARS Food & Beverage Industry and Trade Limited Company (\"LEMARS\"). By accessing and using this website, you agree to the following terms and conditions."
       },
       "section2": {
         "title": "2. Purpose of the Website",
-        "content": "This website does not sell, market, or act as an intermediary for any alcoholic beverage brand. All content is intended for corporate informational purposes only and has been prepared in compliance with the advertising prohibition provisions of Turkish Law No. 4733 (TAPDK Organization and Duties Act) and Law No. 4250 (Alcohol and Alcoholic Beverages Monopoly Act) and their associated regulations."
+        "content": "This site does not advertise alcoholic beverages, promote them to consumers, sell them or act as an intermediary for their sale. The content is for corporate information purposes and has been prepared having regard to the advertising and promotion prohibitions of Article 6 of Law No. 4250, Law No. 4733 on the Regulation of the Tobacco, Tobacco Products and Alcohol Market, and the Regulation on the Procedures and Principles Governing the Sale and Presentation of Tobacco Products and Alcoholic Beverages (in particular Articles 11 and 20)."
       },
       "section3": {
         "title": "3. Age Restriction",
-        "content": "Access to this website is restricted to persons 18 years of age and older. By entering this site, you confirm that you are over 18 years of age. Use of this website by persons under 18 is strictly prohibited."
+        "content": "This website is intended for persons over the age of 18. On entry you are asked to declare that you are over 18; this is a self-declaration control and does not technically verify your age. An age declaration alone does not create an exemption as regards the compliance of the site's content with applicable legislation; the content has additionally been restricted."
       },
       "section4": {
         "title": "4. Intellectual Property Rights",
@@ -288,8 +322,12 @@
         "content": "LEMARS Food & Beverage reserves the right to modify these terms of use without prior notice. The current terms are always published on this page."
       },
       "section6": {
-        "title": "6. Governing Law",
+        "title": "7. Governing Law",
         "content": "These terms of use are governed by the laws of the Republic of Turkey. The courts and enforcement offices of Istanbul shall have exclusive jurisdiction over any disputes."
+      },
+      "section7": {
+        "title": "6. Orders and Sales",
+        "content": "No alcoholic beverages are sold, no orders are taken and no price notifications are made through this website. A supply relationship is established only with businesses holding a valid sales certificate, through our physical place of business. Online sales to consumers are prohibited under applicable legislation."
       }
     },
     "privacy": {
@@ -321,11 +359,11 @@
       },
       "section4": {
         "title": "4. Data Transfer",
-        "content": "Your personal data is not shared with third parties except as required by law. Your data is not transferred outside of Turkey."
+        "content": "Your personal data is not shared with third parties other than as required by law and with the service providers set out below. Contact form messages are delivered via an e-mail delivery service and are also pushed as a notification to our corporate WhatsApp line; where you have given explicit consent, Google Analytics is used for analytics cookies. Because the servers of these service providers are located abroad, your data is transferred abroad within the meaning of Article 9 of Law No. 6698. The transfer is limited to responding to your request and measuring use of the site."
       },
       "section5": {
         "title": "5. Cookie Policy",
-        "content": "This website may use cookies to improve user experience. Essential cookies are required for the website to function properly. No analytics or marketing cookies are used."
+        "content": "This website may use cookies to improve the user experience and measure site usage. Essential cookies are required for the site to function properly. Analytics cookies are only activated with your explicit consent; no marketing cookies are used."
       },
       "section6": {
         "title": "6. Your Rights",
@@ -345,15 +383,15 @@
       }
     },
     "disclaimer": {
-      "title": "Disclaimer",
+      "title": "Legal Notice and Disclaimer",
       "subtitle": "Legal Notice and Disclaimer Statement",
       "section1": {
         "title": "1. General Information",
-        "content": "The information contained on this website is provided by LEMARS Food & Beverage Industry and Trade Limited Company for general informational purposes. This website does not sell, market, or act as an intermediary for any alcoholic beverage brand."
+        "content": "The information on this website is provided by LEMARS Gıda İçecek Sanayi ve Ticaret Limited Şirketi for corporate information purposes. This site does not sell or market alcoholic beverages, promote them to consumers, or act as an intermediary for their sale."
       },
       "section2": {
-        "title": "2. Advertising Prohibition Compliance",
-        "content": "This website has been prepared in full compliance with the advertising and promotion prohibition provisions of Turkish Law No. 4733, Law No. 4250 (Alcohol and Alcoholic Beverages Monopoly Act), and TAPDK regulations. No content on this website is intended to encourage or promote the consumption of alcoholic beverages."
+        "title": "2. Statement on the Advertising and Promotion Prohibition",
+        "content": "The content of this site has been prepared having regard to the advertising, promotion and inducement prohibitions of Article 6 of Law No. 4250, Law No. 4733 and the Regulation on the Procedures and Principles Governing the Sale and Presentation of Tobacco Products and Alcoholic Beverages. The site contains no content intended to encourage or induce the consumption of alcoholic beverages, no tasting or aroma descriptions, no product or packaging images, no brand logos, no price notifications and no campaign announcements. This statement does not constitute a guarantee that the content complies with applicable legislation in all circumstances; legislative developments are monitored on an ongoing basis."
       },
       "section3": {
         "title": "3. Accuracy of Information",
@@ -367,21 +405,11 @@
         "title": "5. Limitation of Liability",
         "content": "LEMARS Food & Beverage management shall not be held liable for damages arising from the misuse, incomplete understanding, or misinterpretation of information on this website. Users accept that they use the information on this website at their own risk."
       },
-      "warning": "Alcohol is harmful to your health. Alcohol is not your friend. The sale and serving of alcoholic beverages to persons under 18 is prohibited under Turkish Laws No. 4733 and No. 4250."
+      "warning": "Alcohol is harmful to your health. Alcohol is not your friend. The sale and serving of alcoholic beverages to persons under 18 is prohibited under Laws No. 4250 and No. 4733."
     }
   },
-  "brandPage": {
-    "backLink": "Back to Our Brands",
-    "heroEyebrow": "Brand Detail",
-    "descPlaceholder": "Detailed information about this brand will be available soon. Contact us for product portfolio and pricing information.",
-    "logoPlaceholder": "Brand Logo",
-    "ctaTitle": "Get Information About This Brand",
-    "ctaDesc": "Contact us for product varieties and pricing information.",
-    "ctaButton": "Get in Touch",
-    "notFound": "Brand not found.",
-    "notFoundBack": "Back to Our Brands"
-  },
   "brandList": {
+    "ottakringer": "Ottakringer",
     "scotch-blue": "Scotch Blue",
     "hlibny-dar": "Hlibny Dar",
     "marengo": "Marengo",
@@ -391,7 +419,7 @@
     "isabey": "İsabey"
   },
   "footer": {
-    "desc": "Our company provides wholesale distribution services for alcoholic beverages across Istanbul's European side, offering reliable supply solutions to restaurants, bars, and retail outlets.",
+    "desc": "We provide wholesale supply, logistics and distribution services to licence-holding businesses on Istanbul's European side. No sales are made to consumers.",
     "tapdkNote": "Alcohol is harmful to your health. Alcohol is not your friend. Alcoholic beverages may not be sold or served to persons under 18 years of age.",
     "pagesTitle": "Pages",
     "contactTitle": "Contact",
@@ -401,10 +429,11 @@
     "phone": "+90 (212) 809 18 83",
     "instagram": "@lemarsgida",
     "linkedin": "LinkedIn",
-    "legalNote": "Legal Notice: This website has been prepared solely for corporate and technical informational purposes. Its content does not constitute advertising, promotion, incentive, campaign, or sales communication directed at consumers under Law No. 4250 (Alcohol and Alcoholic Beverages Monopoly Act) and related secondary legislation. No online consumer sales are conducted, no orders are accepted, and no sales referrals are intended through this website. All content has been prepared in consideration of applicable legislation.",
+    "legalNote": "This website has been prepared solely for corporate information purposes. Its content has been prepared having regard to Article 6 of Law No. 4250 (Spirits and Spirituous Beverages Monopoly Act) and the Regulation on the Procedures and Principles Governing the Sale and Presentation of Tobacco Products and Alcoholic Beverages, and does not constitute advertising, consumer-facing promotion, inducement, campaign, price notification or sales communication in respect of alcoholic beverages. No online consumer sales are made and no orders are accepted through this website. A supply relationship is established only with businesses holding a valid sales certificate, through our physical place of business.",
     "copyright": "© {year} LEMARS Food & Beverage. All rights reserved.",
     "termsLink": "Terms of Use",
     "privacyLink": "Privacy & Cookie Policy",
-    "disclaimerLink": "Disclaimer"
+    "disclaimerLink": "Disclaimer",
+    "licenseNote": "Our operations are carried out under a wholesale alcoholic beverage sales certificate issued by the Turkish Ministry of Agriculture and Forestry."
   }
 }

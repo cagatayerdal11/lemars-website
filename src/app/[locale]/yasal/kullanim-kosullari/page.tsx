@@ -19,6 +19,8 @@ export default async function KullanimKosullari({ params }: { params: { locale: 
     t.section3 as { title: string; content: string },
     t.section4 as { title: string; content: string },
     t.section5 as { title: string; content: string },
+    // Yeni bölüm: sipariş/satış yapılmadığına ilişkin açık beyan (Yönetmelik m.11/1-2).
+    t.section7 as { title: string; content: string },
     t.section6 as { title: string; content: string },
   ];
 

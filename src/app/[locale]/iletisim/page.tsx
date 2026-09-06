@@ -10,7 +10,7 @@ export default function Iletisim({ params }: { params: { locale: string } }) {
   const [t, setT] = useState<Record<string, unknown> | null>(null);
 
   const [formData, setFormData] = useState({
-    name: "", company: "", email: "", phone: "", subject: "", message: "",
+    name: "", company: "", email: "", phone: "", subject: "", message: "", acknowledge: false,
   });
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -115,18 +115,6 @@ export default function Iletisim({ params }: { params: { locale: string } }) {
                 </div>
               </a>
 
-              <a href="https://wa.me/905553643434" target="_blank" rel="noopener noreferrer" className="flex items-start gap-4 p-5 bg-gray-50 rounded-lg hover:bg-green-50 transition-colors group">
-                <div className="w-10 h-10 bg-green-100 text-green-700 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-gray-900 text-sm">{t.whatsappLabel as string}</h3>
-                  <p className="text-green-700 font-medium text-sm">{t.whatsappNumber as string}</p>
-                  <p className="text-gray-400 text-xs mt-1">{t.whatsappNote as string}</p>
-                </div>
-              </a>
             </div>
 
             <div className="lg:col-span-2">
@@ -141,25 +129,8 @@ export default function Iletisim({ params }: { params: { locale: string } }) {
                     <h3 className="text-xl font-bold text-gray-900 mb-2">{t.successTitle as string}</h3>
                     <p className="text-gray-500 text-sm mb-6">{t.successDesc as string}</p>
 
-                    <a
-                      href={`https://wa.me/905553643434?text=${encodeURIComponent(
-                        locale === "en"
-                          ? `Hello, I just submitted the contact form. ${formData.name} — reaching out via WhatsApp for a quick reply.`
-                          : `Merhaba, az önce iletişim formunu doldurdum. ${formData.name} — hızlı dönüş için WhatsApp'tan da ulaşıyorum.`
-                      )}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      data-cta="contact_success"
-                      className="inline-flex items-center gap-2 px-6 py-3 bg-[#25D366] hover:bg-[#1DA851] text-white font-semibold rounded-lg transition-colors text-sm mb-4"
-                    >
-                      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-                      </svg>
-                      {locale === "tr" ? "WhatsApp ile Hızlı Dönüş" : "Quick Reply via WhatsApp"}
-                    </a>
-
                     <div>
-                      <button onClick={() => { setSubmitted(false); setFormData({ name: "", company: "", email: "", phone: "", subject: "", message: "" }); }} className="text-primary-700 text-sm font-semibold hover:underline">
+                      <button onClick={() => { setSubmitted(false); setFormData({ name: "", company: "", email: "", phone: "", subject: "", message: "", acknowledge: false }); }} className="text-primary-700 text-sm font-semibold hover:underline">
                         {t.successNew as string}
                       </button>
                     </div>
@@ -167,7 +138,16 @@ export default function Iletisim({ params }: { params: { locale: string } }) {
                 ) : (
                   <>
                     <h2 className="text-xl font-bold text-gray-900 mb-1">{t.formTitle as string}</h2>
-                    <p className="text-gray-500 text-sm mb-8">{t.formDesc as string}</p>
+                    <p className="text-gray-500 text-sm mb-4">{t.formDesc as string}</p>
+                    {/*
+                      Mevzuat notu — Satış ve Sunum Yönetmeliği m.11/1 (tüketicilere bilgi
+                      toplumu hizmetleri ile satış sistemi kurulamaz), m.11/2 (belgeli
+                      satıcılara satışta fiziki işyeri ve Kuruma bildirilmiş ortam şartı),
+                      m.21/2 (fiyat duyurusu yasağı). Form yalnızca kurumsal iletişimdir.
+                    */}
+                    <p className="text-xs text-gray-500 leading-relaxed bg-white border border-gray-200 rounded-lg p-4 mb-8">
+                      {t.formNotice as string}
+                    </p>
 
                     <form onSubmit={handleSubmit} className="space-y-5">
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -211,7 +191,21 @@ export default function Iletisim({ params }: { params: { locale: string } }) {
                       <p className="text-xs text-gray-500">
                         {t.formKvkk as string}
                       </p>
-                      <button type="submit" disabled={loading}
+                      <label className="flex items-start gap-3 text-xs text-gray-600 leading-relaxed cursor-pointer">
+                        <input
+                          type="checkbox"
+                          required
+                          checked={formData.acknowledge}
+                          onChange={(e) => setFormData({ ...formData, acknowledge: e.target.checked })}
+                          className="mt-0.5 h-4 w-4 flex-shrink-0 accent-primary-700"
+                        />
+                        <span>
+                          {locale === "en"
+                            ? "I understand that this form is not intended for consumer alcoholic beverage orders, online sales or product promotion."
+                            : "Bu formun tüketiciye yönelik alkollü içki siparişi, çevrim içi satış veya ürün tanıtımı amacı taşımadığını anlıyorum."}
+                        </span>
+                      </label>
+                      <button type="submit" disabled={loading || !formData.acknowledge}
                         className="w-full py-3.5 bg-primary-700 text-white font-semibold rounded-lg hover:bg-primary-800 transition-all text-sm uppercase tracking-wider disabled:opacity-50 flex items-center justify-center gap-3">
                         {loading ? (
                           <>

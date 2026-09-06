@@ -2,40 +2,35 @@
 
 import { usePathname } from "next/navigation";
 
-const brandNames: Record<string, string> = {
-  "scotch-blue": "Scotch Blue",
-  "hlibny-dar": "Hlibny Dar",
-  "marengo": "Marengo",
-  "suvorov": "Suvorov",
-  "cool": "COOL",
-  "cumbus": "Cümbüş",
-  "isabey": "İsabey",
-};
-
+/**
+ * Kurumsal WhatsApp iletişim butonu.
+ *
+ * DEĞİŞİKLİK GEREKÇESİ: Önceki sürümde buton, bulunulan marka detay sayfasına göre
+ * "Merhaba, {Marka} markası hakkında bilgi almak istiyorum." gibi MARKA BAZLI ön
+ * doldurulmuş mesajlar ve "tedarik teklifi almak istiyorum" gibi satış/teklif
+ * çağrıları üretiyordu. Bu, herkese açık bir sayfadan marka bazlı ürün talebi ve
+ * fiyat/teklif iletişimini kolaylaştırdığı için kaldırılmıştır.
+ *
+ * Dayanak:
+ *  - 4250 s.K. m.6/1, 1. cümle: alkollü içkilerin her ne surette olursa olsun reklamı
+ *    ve tüketicilere yönelik tanıtımı yapılamaz.
+ *  - Satış ve Sunum Yönetmeliği m.11/1: alkollü içkilerin tüketicilere satışını bilgi
+ *    toplumu hizmetleri ile yapmak üzere satış sistemi kurulamaz veya faaliyette
+ *    bulunulamaz. (m.26/3-f: ihlalde 5651 sayılı Kanun uyarınca erişimin engellenmesi.)
+ *  - Yönetmelik m.21/2-3: marka/logo kullanılarak bildirim ve fiyat duyurusu yapılamaz;
+ *    aykırı fiyat bildirimi reklam sayılır.
+ *
+ * Bu buton yalnızca NÖTR bir kurumsal iletişim kanalıdır; ürün, marka, sipariş veya
+ * fiyat bilgisi taşımaz.
+ */
 export default function WhatsAppButton() {
   const pathname = usePathname();
   const phone = "905553643434";
-
   const isEn = pathname.startsWith("/en");
-  const brandMatch = pathname.match(/\/markalarimiz\/([^/]+)/);
-  const brand = brandMatch ? brandNames[brandMatch[1]] : undefined;
 
-  let message: string;
-  if (isEn) {
-    if (brand) message = `Hello, I'd like to get information about the ${brand} brand.`;
-    else if (pathname.includes("/iletisim")) message = "Hello, I'd like to request a supply quote.";
-    else if (pathname.includes("/hizmetlerimiz")) message = "Hello, I'd like to get information about your services.";
-    else if (pathname.includes("/distributorluklerimiz")) message = "Hello, I'd like to get information about your distributorship portfolio.";
-    else if (pathname.includes("/hakkimizda")) message = "Hello, I'd like to get information about LEMARS Gıda İçecek.";
-    else message = "Hello, I'm reaching out via the LEMARS Gıda İçecek website. I'd like to get some information.";
-  } else {
-    if (brand) message = `Merhaba, ${brand} markası hakkında bilgi almak istiyorum.`;
-    else if (pathname.includes("/iletisim")) message = "Merhaba, tedarik teklifi almak istiyorum.";
-    else if (pathname.includes("/hizmetlerimiz")) message = "Merhaba, hizmetleriniz hakkında bilgi almak istiyorum.";
-    else if (pathname.includes("/distributorluklerimiz")) message = "Merhaba, distribütörlük portföyünüz hakkında bilgi almak istiyorum.";
-    else if (pathname.includes("/hakkimizda")) message = "Merhaba, LEMARS Gıda İçecek hakkında bilgi almak istiyorum.";
-    else message = "Merhaba, LEMARS Gıda İçecek websitesinden ulaşıyorum. Bilgi almak istiyorum.";
-  }
+  const message = isEn
+    ? "Hello, I am contacting LEMARS Gıda İçecek regarding a corporate enquiry."
+    : "Merhaba, LEMARS Gıda İçecek ile kurumsal bir konuda iletişime geçmek istiyorum.";
 
   const encodedMessage = encodeURIComponent(message);
 
@@ -44,7 +39,7 @@ export default function WhatsAppButton() {
       href={`https://wa.me/${phone}?text=${encodedMessage}`}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="WhatsApp"
+      aria-label={isEn ? "WhatsApp corporate contact" : "WhatsApp kurumsal iletişim"}
       data-cta="floating_button"
       className="wa-pulse fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#25D366] hover:bg-[#1DA851] text-white rounded-full hidden lg:flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
     >

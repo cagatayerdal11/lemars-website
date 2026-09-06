@@ -59,71 +59,33 @@ function DeliveryTruck({ pathId, begin, dur }: { pathId: string; begin: number; 
   );
 }
 
-// Cartoon crate with 3 liquor bottles sticking out — 100x100 local coords
-function BottleCrateIcon({ cx, cy }: { cx: number; cy: number }) {
+/**
+ * Nötr sevkiyat kolisi ikonu — 100x100 yerel koordinat.
+ *
+ * Önceki sürümde bu ikon şarap / viski / beyaz alkol şişeleri ve etiketleri çizen bir
+ * "içki kasası" illüstrasyonuydu. Alkollü içki ÜRÜN ve AMBALAJ görselleştirmesi
+ * niteliğinde olduğu için kaldırılmıştır.
+ * Dayanak: Satış ve Sunum Yönetmeliği m.11/4 ("görsel unsurlar kullanmaksızın"),
+ * m.20/1 (her ne surette olursa olsun reklam ve tüketicilere yönelik tanıtım yasağı).
+ * Yerine ürün tanıtımı içermeyen, jenerik bir lojistik kolisi kullanılmıştır.
+ */
+function ShipmentBoxIcon({ cx, cy }: { cx: number; cy: number }) {
   return (
     <g transform={`translate(${cx - 50}, ${cy - 50})`}>
-      {/* ---- Bottle 1: Wine (left, dark red) ---- */}
-      <rect x="14" y="8" width="12" height="4" rx="1" fill="#451a03" />
-      <rect x="16" y="12" width="8" height="6" fill="#7f1d1d" />
-      <path
-        d="M 10 22 Q 10 26 14 27 L 14 66 Q 14 68 16 68 L 24 68 Q 26 68 26 66 L 26 27 Q 30 26 30 22 Z"
-        fill="#991b1b"
-        stroke="#7f1d1d"
-        strokeWidth="0.8"
-      />
-      {/* Wine label */}
-      <rect x="12" y="38" width="16" height="14" rx="0.5" fill="#fef3c7" stroke="#92400e" strokeWidth="0.5" />
-      <rect x="14" y="42" width="12" height="1.2" fill="#7f1d1d" />
-      <rect x="14" y="45" width="8" height="1" fill="#92400e" opacity="0.6" />
-      <rect x="14" y="47" width="10" height="1" fill="#92400e" opacity="0.6" />
-      {/* Highlight */}
-      <rect x="12" y="28" width="1.8" height="34" rx="0.5" fill="white" opacity="0.28" />
-
-      {/* ---- Bottle 2: Whisky (center, tallest, amber) ---- */}
-      <rect x="42" y="4" width="14" height="4" rx="1" fill="#451a03" />
-      <rect x="44" y="8" width="10" height="8" fill="#b45309" />
-      <path
-        d="M 38 18 Q 38 22 42 23 L 42 66 Q 42 68 44 68 L 54 68 Q 56 68 56 66 L 56 23 Q 60 22 60 18 Z"
-        fill="#d97706"
-        stroke="#92400e"
-        strokeWidth="0.8"
-      />
-      {/* Whisky label */}
-      <rect x="40" y="36" width="18" height="16" rx="0.5" fill="#fef3c7" stroke="#92400e" strokeWidth="0.5" />
-      <rect x="42" y="40" width="14" height="1.5" fill="#92400e" />
-      <rect x="42" y="44" width="10" height="1" fill="#92400e" opacity="0.6" />
-      <rect x="42" y="46" width="12" height="1" fill="#92400e" opacity="0.6" />
-      {/* Highlight */}
-      <rect x="40" y="24" width="2" height="38" rx="0.5" fill="white" opacity="0.28" />
-
-      {/* ---- Bottle 3: Clear spirit (right, blue tint) ---- */}
-      <rect x="72" y="10" width="12" height="4" rx="1" fill="#1e293b" />
-      <rect x="74" y="14" width="8" height="6" fill="#94a3b8" />
-      <path
-        d="M 68 24 Q 68 28 72 29 L 72 66 Q 72 68 74 68 L 82 68 Q 84 68 84 66 L 84 29 Q 88 28 88 24 Z"
-        fill="#cbd5e1"
-        stroke="#64748b"
-        strokeWidth="0.8"
-      />
-      {/* Clear-spirit label */}
-      <rect x="70" y="40" width="16" height="14" rx="0.5" fill="#fef3c7" stroke="#92400e" strokeWidth="0.5" />
-      <rect x="72" y="44" width="12" height="1.2" fill="#1e40af" />
-      <rect x="72" y="47" width="8" height="1" fill="#1e40af" opacity="0.6" />
-      {/* Highlight */}
-      <rect x="70" y="30" width="1.8" height="32" rx="0.5" fill="white" opacity="0.35" />
-
-      {/* ---- Wooden Crate ---- */}
-      <rect x="4" y="66" width="92" height="28" rx="2" fill="#92400e" stroke="#78350f" strokeWidth="1.2" />
-      {/* Top rim (darker, opening) */}
-      <rect x="4" y="66" width="92" height="4" fill="#78350f" />
-      {/* Wood plank lines */}
-      <line x1="4" y1="76" x2="96" y2="76" stroke="#78350f" strokeWidth="0.6" opacity="0.7" />
-      <line x1="4" y1="85" x2="96" y2="85" stroke="#78350f" strokeWidth="0.6" opacity="0.7" />
-      {/* Vertical slats */}
-      <line x1="28" y1="70" x2="28" y2="94" stroke="#78350f" strokeWidth="0.6" opacity="0.5" />
-      <line x1="50" y1="70" x2="50" y2="94" stroke="#78350f" strokeWidth="0.6" opacity="0.5" />
-      <line x1="72" y1="70" x2="72" y2="94" stroke="#78350f" strokeWidth="0.6" opacity="0.5" />
+      {/* Alt koli */}
+      <rect x="10" y="46" width="80" height="44" rx="4" fill="#fdba74" stroke="#c2410c" strokeWidth="2" />
+      <rect x="10" y="46" width="80" height="10" rx="2" fill="#fb923c" />
+      <line x1="50" y1="56" x2="50" y2="90" stroke="#c2410c" strokeWidth="1.6" opacity="0.55" />
+      {/* Bantlar */}
+      <rect x="42" y="46" width="16" height="44" fill="#fed7aa" opacity="0.85" />
+      {/* Üst koli */}
+      <rect x="22" y="14" width="56" height="34" rx="4" fill="#fed7aa" stroke="#c2410c" strokeWidth="2" />
+      <rect x="22" y="14" width="56" height="8" rx="2" fill="#fdba74" />
+      <line x1="50" y1="22" x2="50" y2="48" stroke="#c2410c" strokeWidth="1.4" opacity="0.5" />
+      {/* Sevkiyat etiketi — yazı yok, yalnız çizgiler */}
+      <rect x="30" y="28" width="20" height="13" rx="1.5" fill="#fff" stroke="#c2410c" strokeWidth="1" />
+      <line x1="33" y1="32" x2="47" y2="32" stroke="#c2410c" strokeWidth="1.2" opacity="0.7" />
+      <line x1="33" y1="36" x2="43" y2="36" stroke="#c2410c" strokeWidth="1.2" opacity="0.45" />
     </g>
   );
 }
@@ -132,8 +94,9 @@ function BottleCrateIcon({ cx, cy }: { cx: number; cy: number }) {
 const rightIcons = [
   // 0 — Market (shopping bag with handle)
   "M 8 14 L 32 14 L 30 36 L 10 36 Z M 14 14 L 14 9 Q 14 4 20 4 Q 26 4 26 9 L 26 14",
-  // 1 — Bar (martini glass)
-  "M 7 8 L 33 8 L 22 22 L 22 32 L 28 36 L 12 36 L 18 32 L 18 22 Z M 13 12 L 27 12",
+  // 1 — Bar / işletme (tezgâh + tente) — tüketim kabı (kadeh) görseli kullanılmaz.
+  // Dayanak: 4250 s.K. m.6/1 (tüketicilere yönelik tanıtım/özendirme yasağı).
+  "M 5 14 L 35 14 L 32 21 L 8 21 Z M 8 21 L 8 36 L 32 36 L 32 21 M 5 14 L 8 6 L 32 6 L 35 14 M 13 36 L 13 26 L 21 26 L 21 36 M 25 26 L 31 26",
   // 2 — Restaurant (plate + fork & knife)
   "M 20 22 m -8 0 a 8 8 0 1 0 16 0 a 8 8 0 1 0 -16 0 M 20 22 m -5.5 0 a 5.5 5.5 0 1 0 11 0 a 5.5 5.5 0 1 0 -11 0 M 8 6 L 8 32 M 6 6 L 6 13 M 10 6 L 10 13 M 32 6 L 32 32 M 30 6 L 30 13 Q 30 15 32 15",
   // 3 — Hotel (multi-story building)
@@ -282,7 +245,7 @@ export default function FlowDiagram({
             />
           ))}
 
-          {/* ---- LEFT NODE: 400+ Ürün Çeşidi with bottle-crate illustration ---- */}
+          {/* ---- SOL DÜĞÜM: ürün kalemi sayısı + nötr sevkiyat kolisi ikonu ---- */}
           <g filter="url(#nodeShadow)">
             <rect
               x={leftPosition.x - leftNodeSize / 2}
@@ -295,7 +258,7 @@ export default function FlowDiagram({
               strokeWidth="2"
             />
           </g>
-          <BottleCrateIcon cx={leftPosition.x} cy={leftPosition.y - 6} />
+          <ShipmentBoxIcon cx={leftPosition.x} cy={leftPosition.y - 6} />
 
           {/* Left labels below the node */}
           <text

@@ -4,7 +4,7 @@
  * Koyu marka zemini + turuncu çizgi sanatı.
  */
 
-type ServiceType = "horeca" | "retail" | "logistics" | "sales";
+type ServiceType = "horeca" | "retail" | "logistics" | "operations";
 
 const ORANGE = "#E8611A";
 const ORANGE_2 = "#f97316";
@@ -100,23 +100,43 @@ function Art({ type }: { type: ServiceType }) {
     );
   }
 
-  // sales — pazarlama & satış: büyüyen çubuklar + yükselen çizgi
-  const bars = [70, 110, 95, 150, 175];
+  // operations — operasyon & tedarik koordinasyonu: bağlı süreç düğümleri + sıralı onay
+  // ve akan koordinasyon. Satış/pazarlama/tanıtım grafiği KULLANILMAZ
+  // (4250 s.K. m.6/1; Satış ve Sunum Yönetmeliği m.11 ve m.20).
+  const steps = [80, 160, 240, 320];
   return (
     <svg viewBox="0 0 400 300" className="absolute inset-0 w-full h-full" aria-hidden="true">
-      <line x1="40" y1="250" x2="370" y2="250" stroke="#334155" strokeWidth="1.5" />
-      {bars.map((h, i) => (
-        <rect key={i} x={60 + i * 62} y={250 - h} width="34" height={h} rx="3" fill={i === bars.length - 1 ? ORANGE : "#334155"}>
-          <animate attributeName="height" values={`0;${h}`} dur="0.9s" begin={`${i * 0.15}s`} fill="freeze" calcMode="spline" keySplines="0.2 0.7 0.2 1" keyTimes="0;1" />
-          <animate attributeName="y" values={`250;${250 - h}`} dur="0.9s" begin={`${i * 0.15}s`} fill="freeze" calcMode="spline" keySplines="0.2 0.7 0.2 1" keyTimes="0;1" />
-        </rect>
+      <line x1="80" y1="150" x2="320" y2="150" stroke="#334155" strokeWidth="2" />
+      {steps.map((x, i) => (
+        <g key={i}>
+          <rect
+            x={x - 26}
+            y={124}
+            width="52"
+            height="52"
+            rx="8"
+            fill="#0d1523"
+            stroke={i === steps.length - 1 ? ORANGE : "#475569"}
+            strokeWidth="1.8"
+          />
+          <path
+            d={`M ${x - 10} 150 l 6 7 l 13 -15`}
+            fill="none"
+            stroke={ORANGE}
+            strokeWidth="2.6"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeDasharray="34"
+            strokeDashoffset="34"
+          >
+            <animate attributeName="stroke-dashoffset" values="34;0" dur="0.5s" begin={`${i * 0.5}s`} fill="freeze" />
+          </path>
+        </g>
       ))}
-      <polyline points="77,180 139,150 201,165 263,100 325,60" fill="none" stroke={ORANGE_2} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" strokeDasharray="320" strokeDashoffset="320">
-        <animate attributeName="stroke-dashoffset" values="320;0" dur="1.6s" begin="0.6s" fill="freeze" />
-      </polyline>
-      <path d="M 325 60 l -14 4 l 6 -13 z" fill={ORANGE_2} opacity="0">
-        <animate attributeName="opacity" values="0;1" dur="0.3s" begin="2.1s" fill="freeze" />
-      </path>
+      <circle r="4" fill={ORANGE_3}>
+        <animateMotion dur="3s" repeatCount="indefinite" path="M 80 150 L 320 150" keyPoints="0;1" keyTimes="0;1" calcMode="spline" keySplines="0.4 0 0.2 1" />
+        <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.85;1" dur="3s" repeatCount="indefinite" />
+      </circle>
     </svg>
   );
 }

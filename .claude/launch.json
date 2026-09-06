@@ -3,9 +3,9 @@
   "configurations": [
     {
       "name": "lemars-dev",
-      "runtimeExecutable": "/Users/cagatayerdal/.nvm/versions/node/v20.20.2/bin/node",
-      "runtimeArgs": ["./node_modules/.bin/next", "dev"],
-      "port": 3000
+      "runtimeExecutable": "bash",
+      "runtimeArgs": ["-lc", "export PATH=\"$HOME/.nvm/versions/node/v20.20.2/bin:$PATH\"; exec npx next dev -p 3111"],
+      "port": 3111
     }
   ]
 }

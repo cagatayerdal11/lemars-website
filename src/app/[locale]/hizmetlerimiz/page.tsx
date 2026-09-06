@@ -93,7 +93,7 @@ export default async function Hizmetlerimiz({ params }: { params: { locale: stri
           {/* Service 4 */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <div className="order-2 lg:order-1">
-              <ServiceVisual type="sales" number="04" label={locale === "tr" ? "Pazarlama & Satış" : "Marketing & Sales"} />
+              <ServiceVisual type="operations" number="04" label={locale === "tr" ? "Operasyon Koordinasyonu" : "Operations Coordination"} />
             </div>
             <div className="order-1 lg:order-2">
               <p className="text-primary-700 text-xs font-semibold tracking-[0.3em] uppercase mb-6">{t.s4Eyebrow as string}</p>
@@ -125,30 +125,15 @@ export default async function Hizmetlerimiz({ params }: { params: { locale: stri
               </div>
             ))}
           </div>
-          <p className="mt-8 text-center text-xs text-gray-400">
-            {locale === "tr"
-              ? "Bu kategoriler yalnızca bilgilendirme amaçlıdır. Detaylı bilgi için "
-              : "These categories are for informational purposes only. For detailed information, "}
-            <a
-              href={`https://wa.me/905553643434?text=${encodeURIComponent(
-                locale === "en"
-                  ? "Hello, I'd like to get information about your product categories."
-                  : "Merhaba, ürün kategorileri hakkında bilgi almak istiyorum."
-              )}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-green-600 hover:text-green-700 font-semibold underline underline-offset-2"
-            >
-              WhatsApp
-            </a>
-            {locale === "tr" ? " veya " : " or "}
-            <Link
-              href={`/${locale}/iletisim`}
-              className="text-primary-700 hover:text-primary-800 font-semibold underline underline-offset-2"
-            >
-              {locale === "tr" ? "iletişim sayfamız" : "our contact page"}
-            </Link>
-            {locale === "tr" ? " üzerinden bizimle iletişime geçebilirsiniz." : " to reach us."}
+          {/*
+            Kategori listesinin altındaki WhatsApp derin bağlantısı KALDIRILDI.
+            Gerekçe: herkese açık bir sayfadan ürün kategorisi bazlı talep iletimini
+            kolaylaştırıyordu. Dayanak: Satış ve Sunum Yönetmeliği m.11/1 (tüketicilere
+            bilgi toplumu hizmetleri ile satış sistemi kurulamaz) ve 4250 s.K. m.6/1
+            (tüketicilere yönelik tanıtım / satışa teşvik yasağı).
+          */}
+          <p className="mt-8 text-center text-xs text-gray-400 max-w-2xl mx-auto leading-relaxed">
+            {t.productsNote as string}
           </p>
         </div>
       </section>

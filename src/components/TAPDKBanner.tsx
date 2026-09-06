@@ -1,3 +1,11 @@
+/**
+ * Site genelinde görünen yasal bilgilendirme bandı.
+ *
+ * NOT: Bileşen adı geçmişten gelen "TAPDKBanner" olarak korunmuştur (iç isimlendirme).
+ * Kullanıcıya görünen metinde "TAPDK" ibaresi KULLANILMAZ: TAPDK kapatılmış olup
+ * görevleri T.C. Tarım ve Orman Bakanlığı Tütün ve Alkol Dairesi Başkanlığına
+ * devredilmiştir. Bant metni i18n `tapdk.banner` anahtarından gelir.
+ */
 interface TAPDKBannerDict {
   banner: string;
 }
