@@ -84,8 +84,7 @@ export default async function LocaleLayout({
     about: string;
     services: string;
     distributorships: string;
-    brands: string;
-    contact: string;
+      contact: string;
   };
 
   const footerDict = dict.footer as {

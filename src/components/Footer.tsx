@@ -26,7 +26,6 @@ interface NavDict {
   about: string;
   services: string;
   distributorships: string;
-  brands: string;
   contact: string;
 }
 
@@ -44,7 +43,6 @@ export default function Footer({
     { name: navDict.about, href: `/${locale}/hakkimizda` },
     { name: navDict.services, href: `/${locale}/hizmetlerimiz` },
     { name: navDict.distributorships, href: `/${locale}/distributorluklerimiz` },
-    { name: navDict.brands, href: `/${locale}/markalarimiz` },
     { name: navDict.contact, href: `/${locale}/iletisim` },
   ];
 

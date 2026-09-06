@@ -20,10 +20,6 @@
       "title": "Distribütörlüklerimiz | LEMARS",
       "description": "LEMARS'ın distribütörlük portföyünde yer alan iş ortağı firmalar ve İstanbul Avrupa Yakası'ndaki toptan dağıtım iş birlikleri."
     },
-    "brands": {
-      "title": "Markalarımız | LEMARS",
-      "description": "LEMARS'ın dağıtımını yaptığı ürün markalarının; reklam, ürün tanıtımı ve görsel unsur içermeyen düz metin listesi."
-    },
     "contact": {
       "title": "İletişim | LEMARS",
       "description": "LEMARS Gıda İçecek kurumsal iletişim bilgileri: adres, telefon, e-posta ve iletişim formu. Bu site üzerinden sipariş alınmaz."
@@ -46,7 +42,6 @@
     "about": "Hakkımızda",
     "services": "Hizmetlerimiz",
     "distributorships": "Distribütörlüklerimiz",
-    "brands": "Markalarımız",
     "contact": "İletişim"
   },
   "ageGate": {
@@ -284,18 +279,7 @@
     "sectionDesc": "Aşağıdaki firmaların distribütörü olarak İstanbul Avrupa Yakası genelinde toptan tedarik ve dağıtım hizmeti sunmaktayız. Bu bölüm kurumsal bilgilendirme amaçlıdır.",
     "ctaDesc": "Distribütörlük portföyümüz hakkında kurumsal bilgi almak için bizimle iletişime geçin.",
     "ctaButton": "İletişime Geçin",
-    "brandsNote": "Ürün markalarının adları bu sayfada yayımlanmaz. Dağıtımını yaptığımız ürün markalarının düz metin listesi, Satış ve Sunum Yönetmeliğinin 11 inci maddesinin dördüncü fıkrası uyarınca yalnızca sitenin ürünler bölümünde (Markalarımız sayfasında) yer alır."
-  },
-  "brands": {
-    "heroEyebrow": "Ürün Portföyü",
-    "heroTitle": "Markalarımız",
-    "heroDesc": "Dağıtımını yaptığımız ürün markalarının; reklam, ürün tanıtımı ve görsel unsur içermeyen düz metin listesi.",
-    "sectionEyebrow": "Dağıtımını Yaptığımız Markalar",
-    "sectionTitle": "Marka Listesi",
-    "sectionDesc": "Aşağıda, dağıtımını yaptığımız ürün markaları liste hâlinde yer almaktadır.",
-    "ctaDesc": "Distribütörlük ve tedarik süreçleri hakkında kurumsal bilgi için bizimle iletişime geçin.",
-    "ctaButton": "İletişime Geçin",
-    "listNotice": "Bu liste, Tütün Mamulleri ve Alkollü İçkilerin Satışına ve Sunumuna İlişkin Usul ve Esaslar Hakkında Yönetmeliğin 11 inci maddesinin dördüncü fıkrası uyarınca; reklam ve ürün tanıtımı yapılmaksızın ve görsel unsur kullanılmaksızın yalnızca marka adlarından oluşacak şekilde sunulmaktadır. Ürün görseli, ambalaj görseli, marka logosu, tadım/aroma anlatımı ve fiyat bilgisi bu sitede yayımlanmaz."
+    "brandsNote": "Bu sayfada yalnızca iş ortağı üretici ve tedarikçi firmaların ticaret unvanları ile nötr künye bilgileri yer alır. Alkollü içki ürün markalarının adları, marka logoları, ürün ve ambalaj görselleri, tadım/aroma anlatımı ve fiyat bilgisi bu internet sitesinde yayımlanmaz."
   },
   "legal": {
     "terms": {
@@ -407,16 +391,6 @@
       },
       "warning": "Alkol sağlığa zararlıdır. Alkol dostunuz değildir. 18 yaşından küçüklere alkollü içki satışı ve sunumu, 4250 ve 4733 sayılı Kanunlar kapsamında yasaktır."
     }
-  },
-  "brandList": {
-    "ottakringer": "Ottakringer",
-    "scotch-blue": "Scotch Blue",
-    "hlibny-dar": "Hlibny Dar",
-    "marengo": "Marengo",
-    "suvorov": "Suvorov",
-    "cool": "COOL",
-    "cumbus": "Cümbüş",
-    "isabey": "İsabey"
   },
   "footer": {
     "desc": "İstanbul Avrupa Yakası'nda belgeli işletmelere toptan tedarik, lojistik ve dağıtım hizmeti sunmaktayız. Tüketiciye satış yapılmaz.",

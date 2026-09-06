@@ -11,13 +11,12 @@ interface NavDict {
   about: string;
   services: string;
   distributorships: string;
-  brands: string;
   contact: string;
 }
 
-// NOT: Marka açılır menüsü kaldırıldı. Marka adları yalnızca /markalarimiz sayfasında,
-// Satış ve Sunum Yönetmeliği m.11/4 uyarınca düz metin liste olarak yayımlanır;
-// navigasyonda marka bazlı bağlantı ve marka detay sayfası bulunmaz.
+// NOT: Marka açılır menüsü, marka detay sayfaları ve marka listesi sayfası
+// kaldırılmıştır. Navigasyonda marka bazlı hiçbir bağlantı bulunmaz; iş ortağı
+// firmalar yalnızca "Distribütörlüklerimiz" sayfasında nötr metin olarak yer alır.
 // NOT: Instagram ve WhatsApp kısayolları başlıktan kaldırıldı (4250 s.K. m.6/1 ve
 // Yön. m.11 kapsamında tüketiciye yönelik tanıtım/satışa teşvik bağlantısı oluşturmamak için).
 // Kurumsal LinkedIn ve harita (fiziki adres) bilgilendirme amaçlı korunur.
@@ -38,7 +37,6 @@ export default function Header({
     { name: up(dict.about), href: `/${locale}/hakkimizda` },
     { name: up(dict.services), href: `/${locale}/hizmetlerimiz` },
     { name: up(dict.distributorships), href: `/${locale}/distributorluklerimiz` },
-    { name: up(dict.brands), href: `/${locale}/markalarimiz` },
   ];
 
   return (

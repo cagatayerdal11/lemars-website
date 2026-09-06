@@ -19,13 +19,13 @@ import PartnerWorldMap from "@/components/PartnerWorldMap";
  *    kapsam tartışmalıdır — bu nedenle firma logoları da muhafazakâr biçimde
  *    kaldırılmıştır).
  *
- * İKİNCİ İNCELEME (6 Eylül 2026) — ÜRÜN MARKASI ADLARI BU SAYFADAN KALDIRILDI:
- * m.11/4'ün izni, marka adlarının "Kurumsal internet sitelerinin ÜRÜNLER BÖLÜMÜNDE"
- * liste hâlinde yayımlanmasıyla sınırlıdır. Distribütörlükler sayfası ürünler bölümü
- * değildir; marka adlarının burada tekrarlanması izin kapsamı dışında kalır ve ayrı
- * bir tanıtım olarak değerlendirilebilir. Marka adları yalnızca /markalarimiz
- * sayfasında yayımlanır; bu sayfada yalnızca ÜRETİCİ/TEDARİKÇİ FİRMA UNVANI ile
- * nötr künye bilgisi yer alır.
+ * ÜÇÜNCÜ İNCELEME (6 Eylül 2026) — MARKA LİSTESİ SAYFASI TAMAMEN KALDIRILDI:
+ * /markalarimiz sayfası bu sayfayla içerik olarak örtüştüğü için silinmiş ve kalıcı
+ * olarak buraya yönlendirilmiştir. Sonuç olarak alkollü içki ÜRÜN MARKASI ADLARI
+ * artık sitenin hiçbir yerinde yayımlanmamaktadır. m.11/4'ün tanıdığı "ürünler
+ * bölümünde düz metin marka listesi" iznine dayanılmamakta, daha dar bir çizgi
+ * benimsenmektedir. Bu sayfada yalnızca ÜRETİCİ/TEDARİKÇİ FİRMA UNVANI ile nötr
+ * künye bilgisi yer alır.
  *
  * Bu sayfada BULUNMAZ: firma/marka logosu, ürün görseli, ürün markası adı, ürün övgüsü
  * ("prestijli", "köklü", "yüksek segment" vb.), tadım anlatımı, fiyat bilgisi.

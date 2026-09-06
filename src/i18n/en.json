@@ -20,10 +20,6 @@
       "title": "Our Distributorships | LEMARS",
       "description": "Partner companies in the LEMARS distributorship portfolio and wholesale distribution collaborations on the European side of Istanbul."
     },
-    "brands": {
-      "title": "Our Brands | LEMARS",
-      "description": "A plain-text list of the product brands distributed by LEMARS, containing no advertising, product promotion or visual elements."
-    },
     "contact": {
       "title": "Contact | LEMARS",
       "description": "LEMARS Food & Beverage corporate contact details: address, phone, e-mail and contact form. No orders are taken through this website."
@@ -46,7 +42,6 @@
     "about": "About Us",
     "services": "Services",
     "distributorships": "Distributorships",
-    "brands": "Our Brands",
     "contact": "Contact"
   },
   "ageGate": {
@@ -284,18 +279,7 @@
     "sectionDesc": "As the distributor for the companies listed below, we provide wholesale supply and distribution services across Istanbul's European side. This section is for corporate information purposes.",
     "ctaDesc": "Contact us for corporate information about our distributorship portfolio.",
     "ctaButton": "Get in Touch",
-    "brandsNote": "Product brand names are not published on this page. The plain-text list of the product brands we distribute appears only in the products section of the site (the Brands page), pursuant to Article 11(4) of the Regulation on the Sale and Presentation of Tobacco Products and Alcoholic Beverages."
-  },
-  "brands": {
-    "heroEyebrow": "Product Portfolio",
-    "heroTitle": "Our Brands",
-    "heroDesc": "A plain-text list of the product brands we distribute, containing no advertising, product promotion or visual elements.",
-    "sectionEyebrow": "Brands We Distribute",
-    "sectionTitle": "Brand List",
-    "sectionDesc": "The product brands we distribute are listed below.",
-    "ctaDesc": "Contact us for corporate information about distributorship and supply processes.",
-    "ctaButton": "Get in Touch",
-    "listNotice": "Pursuant to Article 11(4) of the Regulation on the Procedures and Principles Governing the Sale and Presentation of Tobacco Products and Alcoholic Beverages, this list is presented as brand names only, without advertising, product promotion or visual elements. Product images, packaging images, brand logos, tasting or aroma descriptions and price information are not published on this website."
+    "brandsNote": "This page contains only the trade names and neutral corporate details of our partner producers and suppliers. Alcoholic beverage product brand names, brand logos, product and packaging images, tasting or aroma descriptions and price information are not published on this website."
   },
   "legal": {
     "terms": {
@@ -407,16 +391,6 @@
       },
       "warning": "Alcohol is harmful to your health. Alcohol is not your friend. The sale and serving of alcoholic beverages to persons under 18 is prohibited under Laws No. 4250 and No. 4733."
     }
-  },
-  "brandList": {
-    "ottakringer": "Ottakringer",
-    "scotch-blue": "Scotch Blue",
-    "hlibny-dar": "Hlibny Dar",
-    "marengo": "Marengo",
-    "suvorov": "Suvorov",
-    "cool": "COOL",
-    "cumbus": "Cümbüş",
-    "isabey": "İsabey"
   },
   "footer": {
     "desc": "We provide wholesale supply, logistics and distribution services to licence-holding businesses on Istanbul's European side. No sales are made to consumers.",

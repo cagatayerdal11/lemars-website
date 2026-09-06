@@ -5,9 +5,10 @@
 // m.11/4 1. cümlesi ("reklam ve ürün tanıtımı yapılmaksızın ve görsel unsurlar
 // kullanmaksızın liste halinde") ile 4250 s.K. m.6/1 kapsamında yayımdan kaldırılmıştır.
 //
-// Marka ADLARI üst sayfada (/markalarimiz) düz metin liste olarak yayımlanmaya devam
-// ettiği için kalıcı yönlendirme ana sayfaya değil, İÇERİĞİN DEVREDİLDİĞİ ÜST SAYFAYA
-// yapılır. Eski içerik git geçmişinde korunur (bfee389 ve öncesi).
+// /markalarimiz sayfası da kaldırılmıştır: distribütörlükler sayfasıyla içerik olarak
+// örtüştüğü için tek sayfada birleştirilmiştir. Bu nedenle hem marka detay sayfaları
+// hem de /markalarimiz kalıcı olarak /distributorluklerimiz sayfasına yönlendirilir —
+// içeriğin devredildiği sayfa burasıdır. Eski içerik git geçmişinde korunur.
 //
 // Kaldırılan statik dosyalar (public/drinks-hero.jpg, public/drinks-illustration.svg,
 // public/brands/*.png) dizinden silindiği için doğrudan URL ile istendiğinde 404 döner;
@@ -38,14 +39,21 @@ const nextConfig = {
       ...["tr", "en"].flatMap((locale) =>
         REMOVED_BRAND_SLUGS.map((slug) => ({
           source: `/${locale}/markalarimiz/${slug}`,
-          destination: `/${locale}/markalarimiz`,
+          destination: `/${locale}/distributorluklerimiz`,
           permanent: true,
         }))
       ),
+      // Kaldırılan marka listesi sayfası
+      ...["tr", "en"].map((locale) => ({
+        source: `/${locale}/markalarimiz`,
+        destination: `/${locale}/distributorluklerimiz`,
+        permanent: true,
+      })),
+      { source: "/markalarimiz", destination: "/tr/distributorluklerimiz", permanent: true },
       // Locale öneki olmayan eski bağlantılar
       ...REMOVED_BRAND_SLUGS.map((slug) => ({
         source: `/markalarimiz/${slug}`,
-        destination: "/tr/markalarimiz",
+        destination: "/tr/distributorluklerimiz",
         permanent: true,
       })),
     ];

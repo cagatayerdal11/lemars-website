@@ -189,6 +189,36 @@ next.config.js                                     kaldırılan 14 marka sayfas�
 | **Ottakringer logosu** | **EKLENMEDİ.** Talep edilmişti; Y1 "görsel unsurlar kullanmaksızın" şartına aykırı olduğu ve 4250 m.6/1'in 7584 ile eklenen cümlesinin üretici firma logolarını da saydığı için uygulanmadı. Logo ancak Y2 kapsamındaki parola korumalı bayi alanında kullanılabilir. Ayrıca Ottakringer'dan kullanım izni gerekir. | **Y1**, K5, §6.2 |
 | **Dünya haritası** (`src/components/PartnerWorldMap.tsx`) | Distribütörlükler sayfasının en altına, iş ortaklarının bulunduğu **ülkeleri** gösteren statik SVG harita. Açık tema, marka renkleri (#E8611A / #c2410c), harici bağımlılık ve animasyon yok. Yalnızca ülke adları: Güney Kore, Avusturya, Ukrayna, Moldova, Türkiye (merkez). | Marka/ürün/logo unsuru içermediğinden yasak kapsamı dışında; coğrafi kapsam kurumsal bilgilendirmedir |
 
+## 3.2 Marka listesi sayfası kaldırıldı (6 Eylül 2026, ikinci yayın)
+
+`/markalarimiz` sayfası, distribütörlükler sayfasıyla içerik olarak örtüştüğü için
+**tamamen silinmiştir** (TR + EN). Sonuç: alkollü içki **ürün markası adları artık
+sitenin hiçbir yerinde yayımlanmamaktadır**.
+
+| Değişiklik | Ayrıntı |
+|---|---|
+| Rota | `src/app/[locale]/markalarimiz/` silindi |
+| Yönlendirme | `/{tr,en}/markalarimiz` → **308** → `/{tr,en}/distributorluklerimiz`. Marka detay slug'larının yönlendirmesi de artık aynı hedefe gider (önceden `/markalarimiz` idi, o sayfa da kalktığı için zincirli yönlendirme oluşmasın diye güncellendi) |
+| Navigasyon | Header ve footer'dan "Markalarımız / Our Brands" bağlantısı kaldırıldı; `nav.brands` anahtarı ve `NavDict` tipinden de çıkarıldı |
+| i18n | `brands.*`, `brandList.*`, `seo.brands`, `nav.brands` anahtarları her iki dilde silindi |
+| Sitemap | `/markalarimiz` çıkarıldı — artık 8 yol × 2 dil |
+| `llms.txt` | Kaldırılan sayfanın satırı çıkarıldı |
+| Distribütörlükler notu | Yeni metin: sayfada yalnızca iş ortağı firma unvanı ve nötr künye bulunduğu, ürün markası adı / logo / görsel / tadım / fiyat yayımlanmadığı belirtiliyor |
+
+**Hukuki sonuç — bilinçli olarak daha dar bir çizgi:** Yönetmelik m.11/4'ün 1. cümlesi,
+kurumsal sitenin ürünler bölümünde düz metin marka listesine **açıkça izin veriyordu**;
+bu izin artık kullanılmamaktadır. Bu, mevzuatın gerektirdiğinden daha muhafazakâr bir
+tercihtir ve riski azaltır. **Geri dönmek istenirse** sayfa `9614bcd` commit'inde tam
+hâliyle korunmaktadır.
+
+**Sitede kalan tek marka izi:** distribütörlükler sayfasındaki iş ortağı firma
+unvanları (ör. "Ottakringer Brauerei", "Bayadera Group"). Bunlar ürün markası değil,
+**ticaret unvanıdır**; ancak bazı firmalarda unvan ile marka örtüşmektedir
+(Ottakringer). 4250 m.6/1'in 7584 ile eklenen cümlesi firma isimlerini de kapsıyor
+olmakla birlikte lafzen **fiziksel mekânları** saymaktadır — internet sitesi
+bakımından kapsam tartışmalıdır (§6.2). İş ortağı listesinin tamamen kaldırılması
+istenirse ayrıca uygulanabilir.
+
 ## 4. Kaldırılmayanlar ve gerekçesi
 
 | Öğe | Karar | Gerekçe |

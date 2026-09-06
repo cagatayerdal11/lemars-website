@@ -2,9 +2,10 @@ import type { MetadataRoute } from "next";
 import { SITE_URL } from "@/lib/seo";
 
 // Yalnızca herkese açık ve indekslenebilir rotalar. Hariç: /api, /admin.
-// Marka detay sayfaları (/markalarimiz/[brand]) mevzuat uyumu kapsamında TAMAMEN
-// KALDIRILMIŞTIR (bkz. next.config.js kalıcı yönlendirmeleri); bu nedenle sitemap
-// dışında bırakılmaları yeterli değildi, rotanın kendisi de silinmiştir.
+// Marka detay sayfaları (/markalarimiz/[brand]) ve marka listesi sayfası
+// (/markalarimiz) mevzuat uyumu kapsamında TAMAMEN KALDIRILMIŞTIR (bkz.
+// next.config.js kalıcı yönlendirmeleri); sitemap dışında bırakmak yeterli
+// değildi, rotaların kendisi de silinmiştir.
 // Dayanak: Satış ve Sunum Yönetmeliği m.11/4; 4250 s.K. m.6/1.
 // Her iki dilde de aynı Türkçe slug kullanılır.
 const PUBLIC_PATHS = [
@@ -12,7 +13,6 @@ const PUBLIC_PATHS = [
   "/hakkimizda",
   "/hizmetlerimiz",
   "/distributorluklerimiz",
-  "/markalarimiz",
   "/iletisim",
   "/yasal/kullanim-kosullari",
   "/yasal/kvkk",

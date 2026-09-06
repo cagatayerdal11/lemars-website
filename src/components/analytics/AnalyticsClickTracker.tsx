@@ -29,18 +29,9 @@ function detect(anchor: HTMLAnchorElement): Detected {
   if (protocol === "tel:") return { kind: "contact", action: "phone" };
   if (protocol === "mailto:") return { kind: "contact", action: "email" };
 
-  if (
-    host === "wa.me" ||
-    host === "api.whatsapp.com" ||
-    host === "web.whatsapp.com" ||
-    host.endsWith(".whatsapp.com")
-  ) {
-    return { kind: "contact", action: "whatsapp" };
-  }
-
-  if (host === "instagram.com" || host.endsWith(".instagram.com")) {
-    return { kind: "social", network: "instagram" };
-  }
+  // NOT: WhatsApp ve Instagram tespiti kaldırıldı — bu kamuya açık CTA'lar mevzuat
+  // uyumu kapsamında siteden çıkarıldığı için ölçüm de yapılmaz. Yalnızca telefon,
+  // e-posta ve kurumsal LinkedIn ölçülür.
   if (host === "linkedin.com" || host.endsWith(".linkedin.com")) {
     return { kind: "social", network: "linkedin" };
   }

@@ -57,7 +57,6 @@ işletmelere toptan tedarik sağlar.
 - Hakkımızda / About: https://www.lemarsgida.com/tr/hakkimizda
 - Hizmetlerimiz / Services: https://www.lemarsgida.com/tr/hizmetlerimiz
 - Distribütörlüklerimiz / Distributorships: https://www.lemarsgida.com/tr/distributorluklerimiz
-- Markalarımız (düz metin marka listesi) / Brands (plain-text list): https://www.lemarsgida.com/tr/markalarimiz
 - İletişim / Contact: https://www.lemarsgida.com/tr/iletisim
 
 ## Sık sorulan sorular / FAQ
