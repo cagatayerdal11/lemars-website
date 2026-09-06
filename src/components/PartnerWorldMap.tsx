@@ -23,7 +23,6 @@ import { LAND_PATH, COUNTRY_PATHS, COUNTRY_CENTROIDS, MAP_W, MAP_H } from "./wor
 /** Etiket sırası yukarıdan aşağıya — ülke merkezlerinin enlemine göre artan,
  *  böylece kılavuz çizgileri birbirini kesmez. */
 const ORDER = ["ua", "at", "md", "tr"] as const;
-const HUB = "tr";
 
 // Tuval: harita 0–1000, etiket sütunu 1046'dan başlar.
 const VB_W = 1360;
@@ -40,7 +39,6 @@ const COPY: Record<
     desc: string;
     note: string;
     countries: Record<string, string>;
-    hubSuffix: string;
     alt: string;
   }
 > = {
@@ -50,8 +48,7 @@ const COPY: Record<
     desc: "İş ortağı üretici ve tedarikçi firmalarımız dört ülkede yer alır. Dağıtım operasyonumuz İstanbul Avrupa Yakası merkezlidir.",
     note: "Bu harita yalnızca iş ortağı firmalarımızın bulunduğu ülkeleri gösteren kurumsal bilgilendirmedir; ürün, marka, görsel veya tanıtım unsuru içermez.",
     countries: { ua: "Ukrayna", at: "Avusturya", md: "Moldova", tr: "Türkiye" },
-    hubSuffix: " — merkez",
-    alt: "Dünya haritası: distribütörlük ağımızın yayıldığı ülkeler — Ukrayna, Avusturya, Moldova ve merkezimizin bulunduğu Türkiye.",
+    alt: "Dünya haritası: distribütörlük ağımızın yayıldığı ülkeler — Ukrayna, Avusturya, Moldova ve Türkiye.",
   },
   en: {
     eyebrow: "Our Global Network",
@@ -59,8 +56,7 @@ const COPY: Record<
     desc: "Our partner producers and suppliers are located in four countries. Our distribution operation is based on the European side of Istanbul.",
     note: "This map is corporate information showing only the countries where our partner companies are located; it contains no product, brand, image or promotional element.",
     countries: { ua: "Ukraine", at: "Austria", md: "Moldova", tr: "Türkiye" },
-    hubSuffix: " — headquarters",
-    alt: "World map: countries our distributorship network spans — Ukraine, Austria, Moldova and Türkiye, where we are based.",
+    alt: "World map: countries our distributorship network spans — Ukraine, Austria, Moldova and Türkiye.",
   },
 };
 
@@ -81,7 +77,6 @@ export default function PartnerWorldMap({ locale }: { locale: Locale }) {
     key,
     labelY: FIRST_Y + i * ROW_GAP,
     centroid: COUNTRY_CENTROIDS[key],
-    isHub: key === HUB,
   }));
 
   return (
@@ -118,7 +113,7 @@ export default function PartnerWorldMap({ locale }: { locale: Locale }) {
               <path
                 key={key}
                 d={COUNTRY_PATHS[key]}
-                fill={key === HUB ? "#c2410c" : "#E8611A"}
+                fill="#E8611A"
                 aria-hidden="true"
               />
             ))}
@@ -137,8 +132,8 @@ export default function PartnerWorldMap({ locale }: { locale: Locale }) {
                   key={r.key}
                   cx={r.centroid[0]}
                   cy={r.centroid[1]}
-                  r={r.isHub ? 5 : 4}
-                  fill={r.isHub ? "#c2410c" : "#E8611A"}
+                  r={4}
+                  fill="#E8611A"
                 />
               ))}
 
@@ -148,11 +143,9 @@ export default function PartnerWorldMap({ locale }: { locale: Locale }) {
                     key={r.key}
                     x={LABEL_X}
                     y={r.labelY + 6}
-                    fill={r.isHub ? "#c2410c" : "#1f2937"}
-                    fontWeight={r.isHub ? 600 : 400}
+                    fill="#1f2937"
                   >
                     {t.countries[r.key]}
-                    {r.isHub ? t.hubSuffix : ""}
                   </text>
                 ))}
               </g>
@@ -166,13 +159,10 @@ export default function PartnerWorldMap({ locale }: { locale: Locale }) {
             <li key={r.key} className="flex items-center gap-2 text-sm text-gray-700">
               <span
                 className="w-2 h-2 rounded-full flex-shrink-0"
-                style={{ backgroundColor: r.isHub ? "#c2410c" : "#E8611A" }}
+                style={{ backgroundColor: "#E8611A" }}
                 aria-hidden="true"
               />
-              <span className={r.isHub ? "font-semibold text-primary-800" : ""}>
-                {t.countries[r.key]}
-                {r.isHub ? t.hubSuffix : ""}
-              </span>
+              <span>{t.countries[r.key]}</span>
             </li>
           ))}
         </ul>
