@@ -205,14 +205,39 @@ next.config.js                                     kaldırılan 14 marka sayfas�
 
 ## 5. Test sonuçları
 
+**ÖNEMLİ — ÇALIŞMA KOPYASI DEĞİŞTİ.** Proje `~/Documents` altında olduğu için iCloud
+Drive senkronizasyonundadır; `node_modules` dosyaları buluta taşınmış ve okunmaları
+`ETIMEDOUT` ile zaman aşımına uğrayarak hem `next build`'i hem `next dev`'i kilitlemişti
+(`readFileSync … node_modules/next/dist/server/config.js`). Bu nedenle çalışma kopyası
+**`~/Projects/lemars-website`** (iCloud dışı) olarak taşınmıştır. Orada `npm install`
+5 saniyede, build ise sorunsuz tamamlanmaktadır. Aynı `.git` ve `origin` uzak deposu
+oradadır; **bundan sonra bu kopya kullanılmalıdır.**
+
 | Test | Sonuç |
 |------|-------|
-| `tsc --noEmit` (Node 20.20.2) | *(bkz. çalıştırma çıktısı — §5.1)* |
-| `next build` | *(bkz. §5.1)* |
+| `tsc --noEmit` (Node 20.20.2) | ✅ Temiz (hata yok) |
+| `next build` | ✅ Başarılı (exit 0). 21 rota derlendi; `/[locale]/markalarimiz/[brand]` rotası **listede yok** |
+| `next start` + doğrudan URL testleri | ✅ Aşağıda |
 | TR/EN i18n anahtar eşitliği | ✅ 322 = 322, tek yönlü fark yok |
 | Kalan `markalarimiz/<slug>` bağlantısı | ✅ Kodda yok (yalnız `next.config.js` yönlendirmeleri) |
 | Kalan "TAPDK" kullanıcı metni | ✅ Yok (yalnız iç bileşen adı + açıklayıcı yorumlar) |
 | Riskli kelime taraması (tadım, aroma, damak, içim, kokteyl, shot, eşlik eder, premium, promosyon, fiyat bilgisi, teklif al…) | ✅ Yalnızca **mevzuat notlarının kendisinde** ve kod yorumlarında geçiyor |
+
+**Doğrudan URL testleri (yerel `next start`, port 3111):**
+
+| Test | Beklenen | Sonuç |
+|------|----------|-------|
+| 7 marka × 2 dil = 14 marka detay URL'i | Kalıcı yönlendirme | ✅ **308** → `/{locale}/markalarimiz` (Next.js `permanent: true` için 308 üretir; 301 ile SEO açısından eşdeğerdir) |
+| `/drinks-hero.jpg`, `/drinks-illustration.svg` | 404 | ✅ 404 |
+| `/brands/*.png` (7 logo) | 404 | ✅ 404 |
+| 9 TR sayfası + 3 EN sayfası | 200 | ✅ 200 |
+| `/sitemap.xml`, `/robots.txt`, `/api/vcard` | 200 | ✅ 200 |
+
+**Görsel doğrulama (ekran görüntüsü alındı):**
+- `/tr/markalarimiz` — 8 marka adı düz metin listesi (Ottakringer dâhil), logo/kategori/menşe/bağlantı yok, altta mevzuat dayanağı notu. ✅
+- `/tr/distributorluklerimiz` — 6 iş ortağı nötr metin listesi (Ottakringer en üstte), logo yok. ✅
+- Dünya haritası — beş ülke turuncu vurgulu, kılavuz çizgileri kesişmiyor, marka/ürün unsuru yok. ✅
+- **"Önce" görüntüsü canlı siteden alındı:** `/tr/markalarimiz/scotch-blue` üzerinde marka logosu, tam tadım anlatımı, "fiyat bilgileri için iletişime geçin" çağrısı ve footer'da "TAPDK Lisans Bilgisi" ibaresi görüldü — tespitlerin tamamı doğrulandı.
 
 **Yapılmayan testler (dürüstlük notu):**
 - Gerçek kişilere **hiçbir** e-posta/WhatsApp mesajı gönderilmedi. İletişim formu **uçtan uca test
